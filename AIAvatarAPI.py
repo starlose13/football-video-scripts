@@ -1,5 +1,6 @@
 import requests
 import sys
+import re
 from dotenv import load_dotenv
 import os
 from datetime import datetime
@@ -628,6 +629,16 @@ def generate_long_form_output(row_number, team_a_name, team_b_name, a_odds_varia
         return f"No detailed analysis available for row number {row_number}"
 
 
+# Function to sanitize text (removes non-ASCII characters and unsupported symbols)
+def sanitize_text(text):
+    # Remove non-ASCII characters
+    sanitized_text = text.encode('ascii', 'ignore').decode('ascii')
+
+    # Optionally, remove or replace other problematic characters like "▒"
+    sanitized_text = re.sub(r'[^\x00-\x7F]+', '', sanitized_text)
+
+    # Strip leading/trailing spaces and return
+    return sanitized_text.strip()
 
 def generate_video_script(game_data, prediction_result, row_number):
     # Generate dynamic text based on the long-form output that reflects the prediction
@@ -635,10 +646,10 @@ def generate_video_script(game_data, prediction_result, row_number):
     
     # Create the prompt for OpenAI
     prompt = f"""
-
+    
     Write the output from the ({long_form_output}) in a more explicit and attractive way. Also, randomly change it to make the output reckless.But it should not be longer than 3600 characters
     also The time to read this output should be less than 20 seconds
-    Ensure it is dynamic and football-like in tone.
+    Ensure it is dynamic and football-like in tone and only use the upper intermediate English words.
     in the output , Avoid using special characters such as ##, [], --, ** (e.g.,###Promotional Text;---[Introduction]*).
     """
 
@@ -651,141 +662,14 @@ def generate_video_script(game_data, prediction_result, row_number):
         ],
         max_tokens=400
     )
+    generated_script = response['choices'][0]['message']['content'].strip()
 
+    # Sanitize the generated text before using it
+    sanitized_script = sanitize_text(generated_script)
+
+    return sanitized_script
     # Extract and return the generated script
-    return response['choices'][0]['message']['content'].strip()
 
-
-# Function to check the render status of the video
-def check_render_status(preview_id):
-    url = f"https://api.creatify.ai/api/ai_shorts/{preview_id}/"
-    headers = {
-        "X-API-ID": os.getenv("CREATIFY_API_ID"),
-        "X-API-KEY": os.getenv("CREATIFY_API_KEY")
-    }
-
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            render_data = response.json()
-            logging.info(f"Render status: {render_data['status']}")
-            return render_data
-        else:
-            logging.error(f"Error checking render status: {response.text}")
-            return None
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error in checking render status: {e}")
-        return None
-
-
-
-# Function to check the status of the preview
-def check_preview_status(preview_id):
-    url = f"https://api.creatify.ai/api/ai_shorts/{preview_id}/"
-    headers = {
-        "X-API-ID": os.getenv("CREATIFY_API_ID"),
-        "X-API-KEY": os.getenv("CREATIFY_API_KEY")
-    }
-
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            preview_data = response.json()
-            logging.info(f"Preview status: {preview_data['status']}")
-            return preview_data
-        else:
-            logging.error(f"Error checking preview status: {response.text}")
-            return None
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error in checking preview status: {e}")
-        return None
-    
-# Function to generate AI Shorts video preview
-def generate_ai_shorts_preview(script, aspect_ratio="9x16", style="4K realistic"):
-    url = "https://api.creatify.ai/api/ai_shorts/preview/"
-    headers = {
-        "X-API-ID": os.getenv("CREATIFY_API_ID"),
-        "X-API-KEY": os.getenv("CREATIFY_API_KEY"),
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "script": script,
-        "aspect_ratio": aspect_ratio,
-        "style": style
-    }
-
-    try:
-        response = requests.post(url, json=payload, headers=headers)
-        if response.status_code == 200:
-            preview_data = response.json()
-            logging.info(f"Preview generated successfully: {preview_data}")
-            return preview_data['id']  # Return the preview ID
-        else:
-            logging.error(f"Error generating preview: {response.text}")
-            return None
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error in preview generation: {e}")
-        return None
-
-# Function to render the AI Shorts video
-def render_ai_shorts_video(preview_id):
-    url = f"https://api.creatify.ai/api/ai_shorts/{preview_id}/render/"
-    headers = {
-        "X-API-ID": os.getenv("CREATIFY_API_ID"),
-        "X-API-KEY": os.getenv("CREATIFY_API_KEY"),
-        "Content-Type": "application/json"
-    }
-
-    try:
-        response = requests.post(url, headers=headers)
-        if response.status_code == 200:
-            logging.info(f"Video rendering started for preview ID: {preview_id}")
-            return True
-        else:
-            logging.error(f"Error rendering video: {response.text}")
-            return False
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error in rendering video: {e}")
-        return False
-
-def send_to_creatify(video_script):
-    preview_id = generate_ai_shorts_preview(video_script)
-    if preview_id:
-        start_time = time.time()
-        timeout = 900  # 15 minutes
-
-        while True:
-            preview_data = check_preview_status(preview_id)
-            if preview_data and preview_data['status'] == 'done':
-                logging.info(f"Preview generated: {preview_data}")
-                break
-
-            if time.time() - start_time > timeout:
-                logging.error("Preview generation timeout.")
-                return None  # Return early to avoid infinite wait
-
-            time.sleep(10)  # Poll every 10 seconds
-
-        # Proceed to render the video
-        if render_ai_shorts_video(preview_id):
-            while True:
-                render_data = check_render_status(preview_id)
-                if render_data and render_data['status'] == 'done':
-                    logging.info(f"Video render completed: {render_data}")
-                    return render_data['video_output']
-
-                if time.time() - start_time > timeout:
-                    logging.error("Video rendering timeout.")
-                    return None
-
-                time.sleep(10)
-        else:
-            logging.error("Error starting video rendering.")
-            return None
-    else:
-        logging.error("Error generating video preview.")
-        return None
-    
 
 # Function to upload the video script to GitHub
 def upload_file_to_github(repo_name, file_path, commit_message):
@@ -843,41 +727,123 @@ def enable_github_pages(repo_name):
     else:
         print(f"Failed to enable GitHub Pages: {response.json()}")
         return None
+# Function to queue AI Avatar lipsync task (simplified version)
+def generate_ai_avatar_lipsync(script, creator="5021bec0-f33f-43e6-b0e3-1cb7f76003c6", aspect_ratio="1:1"):
+    url = "https://api.creatify.ai/api/lipsyncs/"
+    headers = {
+        "X-API-ID": os.getenv("CREATIFY_API_ID"),
+        "X-API-KEY": os.getenv("CREATIFY_API_KEY"),
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "text": script,  # The video script generated by OpenAI
+        "creator": creator,
+        "aspect_ratio": aspect_ratio,
+        # Removed optional fields: no_caption, no_music, caption_style
+    }
+
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        if response.status_code == 200:
+            avatar_data = response.json()
+            logging.info(f"Lipsync task queued successfully: {avatar_data}")
+            return avatar_data['id']  # Return the lipsync ID
+        else:
+            logging.error(f"Error queuing lipsync task: {response.text}")
+            return None
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error in lipsync task queueing: {e}")
+        return None
 
 
+
+# Function to check the status of the AI Avatar lipsync video (replaces check_preview_status and check_render_status)
+def check_ai_avatar_status(lipsync_id):
+    url = f"https://api.creatify.ai/api/lipsyncs/{lipsync_id}/"
+    headers = {
+        "X-API-ID": os.getenv("CREATIFY_API_ID"),
+        "X-API-KEY": os.getenv("CREATIFY_API_KEY")
+    }
+
+    try:
+        response = requests.get(url, headers=headers)
+        if response.status_code == 200:
+            lipsync_data = response.json()
+            logging.info(f"Lipsync video status: {lipsync_data['status']}")
+            return lipsync_data
+        else:
+            logging.error(f"Error checking lipsync status: {response.text}")
+            return None
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error in checking lipsync status: {e}")
+        return None
+    
+
+def send_to_ai_avatar(video_script):
+    lipsync_id = generate_ai_avatar_lipsync(video_script)
+    if lipsync_id:
+        start_time = time.time()
+        timeout = 1200  # Extend timeout to 20 minutes
+        wait_time = 20  # Start with a 20-second interval
+        max_wait_time = 60  # Maximum wait time between retries
+
+        while True:
+            lipsync_data = check_ai_avatar_status(lipsync_id)
+            if lipsync_data:
+                if lipsync_data['status'] == 'done':
+                    logging.info(f"Lipsync video generated: {lipsync_data}")
+                    return lipsync_data['output']  # Return the video URL
+                elif lipsync_data['status'] == 'failed':
+                    logging.error(f"Lipsync generation failed: {lipsync_data.get('failed_reason', 'Unknown reason')}")
+                    return None  # Handle failure case
+                elif lipsync_data['status'] == 'in_queue':
+                    logging.info(f"Video is still in queue. Waiting for {wait_time} seconds before retrying.")
+                    time.sleep(wait_time)
+                    wait_time = min(wait_time * 2, max_wait_time)  # Exponential backoff
+                else:
+                    logging.warning(f"Unexpected status: {lipsync_data['status']}. Retrying...")
+            else:
+                logging.error("Failed to retrieve lipsync data.")
+                return None
+
+            if time.time() - start_time > timeout:
+                logging.error("Lipsync video generation timeout.")
+                return None  # Return early to avoid infinite wait
+
+    else:
+        logging.error("Error queuing AI Avatar video.")
+        return None
+    
+
+
+# Main function to execute the script
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
-    # Fetch the match data, which includes prediction result and row number
+    # Fetch the match data
     match_data_list = fetch_odds_rank_and_last_5_games()
 
-    # for game_data in match_data_list:
-    #     home_team = game_data['home_team']
-    #     away_team = game_data['away_team']
+    for game_data in match_data_list:
+        home_team = game_data['home_team']
+        away_team = game_data['away_team']
 
         # Generate the video script using the precomputed prediction result and row number
-        # video_script = generate_video_script(game_data, game_data['prediction_result'], game_data['row_number'])
+        video_script = generate_video_script(game_data, game_data['prediction_result'], game_data['row_number'])
 
         # Log the generated script
-        # print(f"Generated Video Script for {home_team} vs {away_team}:\n", video_script)
+        print(f"Generated Video Script for {home_team} vs {away_team}:\n", video_script)
 
-        # # Send the script to creatify.ai and generate a video
-        # video_id = send_to_creatify(video_script)  # Remove home_team and away_team
+        # Send the script to AI Avatar and generate a video
+        video_url = send_to_ai_avatar(video_script)
 
-        # if video_id:
-        #     logging.info(f"Video generation started with ID: {video_id}")
-            
-        #     # Optionally, you can check the video status periodically (or in a separate function)
-        #     video_output = check_render_status(video_id)  # Replaced check_video_status with check_render_status
-        #     if video_output:
-        #         logging.info(f"Video ready: {video_output['video_output']}")
-        #         print(f"Video for {home_team} vs {away_team} is ready: {video_output['video_output']}")
-        #     else:
-        #         logging.info(f"Video for {home_team} vs {away_team} is still processing.")
-        # else:
-        #     logging.error(f"Error generating video for {home_team} vs {away_team}.")
+        if video_url:
+            logging.info(f"Video ready: {video_url}")
+            print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
+        else:
+            logging.error(f"Error generating video for {home_team} vs {away_team}.")
 
     print("All matches processed successfully.")
 
 
 if __name__ == "__main__":
     main()
+
