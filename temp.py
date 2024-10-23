@@ -4,7 +4,6 @@ import logging
 import time
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
-
 from AIAvatarAPI import calculate_points, calculate_points_summary, calculate_rank_difference, classify_a_points, classify_a_team, classify_b_points, classify_b_team, generate_result, generate_video_script
 
 # Function to fetch odds, rank, and last 5 games for both teams
@@ -98,12 +97,11 @@ def fetch_odds_rank_and_last_5_games():
             'row_number': row_number
         }
 
-        match_data_list.append(game_data)
+        # Return the first match data (since you only want to process one match)
+        return game_data
 
-    print("All games processed successfully.")
-    return match_data_list
 
-# Function to generate match image (assuming it’s part of ImageGenerator.py)
+# Function to generate match image
 def generate_match_image(match_data, match_number):
     # Load the template image
     img = Image.open("./assets/match-template.png")
@@ -136,88 +134,87 @@ def generate_match_image(match_data, match_number):
     print(f"Generated image for match {match_number} at {output_path}")
     return output_path  # Return the image path to be used in Synthesia
 
+
 # Function to send the video script to Synthesia and generate the video
-def send_to_synthesia(video_script, home_team_name, away_team_name, background_image_path):
+def send_to_synthesia(video_script, home_team_name, away_team_name, background_image_url):
+    # Synthesia API URL to create video directly
     url = "https://api.synthesia.io/v2/videos"
     
+    # Replace with your actual avatar ID (e.g., "anna_costume1_cameraA")
+    avatar_id = "8f145381-e0d4-48e8-9a08-963430d58a5c"  # Adjust this with the avatar you want to use
+    video_title = f"Prediction tip for {home_team_name} vs {away_team_name}"
+    # Prepare the payload
     payload = {
-        "test": False,  # Set to True if you are testing
-        "title": f"Prediction tip for {home_team_name} vs {away_team_name}",
-        "scriptText": video_script,  # Use the generated script here
-        "avatar": "8f145381-e0d4-48e8-9a08-963430d58a5c",  # Fixed avatar ID
-        "background": background_image_path,  # The image generated for this match
-        "visibility": "private",  # Keep the video private
-        "aspectRatio": "16:9"
+        "test": True,  # Set to True for testing with a watermark
+        "title": video_title,  # Title of the video
+        "description": video_script,  # Include the script as the description
+        "visibility": "public",  # Make video public for sharing
+        "input": [
+            {
+                "scriptText": video_script,  # Script text for the video
+                "avatar": avatar_id,  # Avatar to use for the video
+                "background": background_image_url  # Public URL for the background image
+            }
+        ],
+        "aspectRatio": "16:9",  # Aspect ratio for the video
+        # Optional: add soundtrack and CTA settings if needed
     }
     
+    # API Headers (include your Synthesia API key here)
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": f"Bearer {os.getenv('SYNTHESIA_API_KEY')}"  # Synthesia API key from .env
+        "Authorization": "016c0c7b5103c404a5569f109ebf569e"
     }
     
+    # Make the request
     try:
         response = requests.post(url, json=payload, headers=headers)
-        if response.status_code == 201:  # 201 Created
+        print(f"Response status code: {response.status_code}")
+        print(f"Response text: {response.text}")
+        
+        if response.status_code == 201:  # Success
             video_data = response.json()
             logging.info(f"Synthesia video created: {video_data}")
-            return video_data['id']  # Return the video ID
+            print(f"Synthesia video created: {video_data}")
+            return video_data['id']
         else:
-            logging.error(f"Error creating Synthesia video: {response.text}")
+            logging.error(f"Error creating Synthesia video. Status code: {response.status_code}, Response: {response.text}")
+            print(f"Error creating Synthesia video. Status code: {response.status_code}, Response: {response.text}")
             return None
     except requests.exceptions.RequestException as e:
         logging.error(f"Error in Synthesia video creation: {e}")
+        print(f"Error in Synthesia video creation: {e}")
         return None
 
-# Function to check the status of the Synthesia video
-def check_synthesia_video_status(video_id):
-    url = f"https://api.synthesia.io/v2/videos/{video_id}"
-    headers = {
-        "accept": "application/json",
-        "Authorization": f"Bearer {os.getenv('SYNTHESIA_API_KEY')}"
-    }
-    
-    try:
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
-            video_data = response.json()
-            logging.info(f"Synthesia video status: {video_data['status']}")
-            return video_data
-        else:
-            logging.error(f"Error checking Synthesia video status: {response.text}")
-            return None
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error in checking Synthesia video status: {e}")
-        return None
+
 
 # Main function to execute the script
 def main():
-    # Fetch the match data
-    match_data_list = fetch_odds_rank_and_last_5_games()
+    # Fetch the first match data
+    match_data = fetch_odds_rank_and_last_5_games()
 
-    for i, match_data in enumerate(match_data_list):
-        home_team = match_data['home_team']
-        away_team = match_data['away_team']
+    home_team = match_data['home_team']
+    away_team = match_data['away_team']
 
-        # Generate the match image
-        background_image_path = generate_match_image(match_data, i + 1)  # Generate image for each match
+    # Generate the match image
+    background_image_path = generate_match_image(match_data, 1)  # Generate image for the match
 
-        # Generate the video script using the precomputed prediction result and row number
-        video_script = generate_video_script(match_data, match_data['prediction_result'], match_data['row_number'])
+    # Generate the video script using the precomputed prediction result and row number
+    video_script = generate_video_script(match_data, match_data['prediction_result'], match_data['row_number'])
 
-        # Log the generated script
-        print(f"Generated Video Script for {home_team} vs {away_team}:\n", video_script)
+    # Log the generated script
+    print(f"Generated Video Script for {home_team} vs {away_team}:\n", video_script)
 
-        # Send the script to Synthesia and generate a video
-        video_url = send_to_synthesia(video_script, home_team, away_team, background_image_path)
+    # Send the script to Synthesia and generate a video
+    video_url = send_to_synthesia(video_script, home_team, away_team, background_image_path)
 
-        if video_url:
-            logging.info(f"Video ready: {video_url}")
-            print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
-        else:
-            logging.error(f"Error generating video for {home_team} vs {away_team}.")
+    if video_url:
+        logging.info(f"Video ready: {video_url}")
+        print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
+    else:
+        logging.error(f"Error generating video for {home_team} vs {away_team}.")
 
-    print("All matches processed successfully.")
 
 if __name__ == "__main__":
     main()

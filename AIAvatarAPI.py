@@ -646,11 +646,14 @@ def generate_video_script(game_data, prediction_result, row_number):
     
     # Create the prompt for OpenAI
     prompt = f"""
-    
-    Write the output from the ({long_form_output}) in a more explicit and attractive way. Also, randomly change it to make the output reckless.But it should not be longer than 3600 characters
-    also The time to read this output should be less than 20 seconds
-    Ensure it is dynamic and football-like in tone and only use the upper intermediate English words.
-    in the output , Avoid using special characters such as ##, [], --, ** (e.g.,###Promotional Text;---[Introduction]*).
+    The final script should be less than 1500 characters.
+    ACT as a football analyst in a TV show, sharing insights and observations about the upcoming football match. Imagine you are an American analyst with an English accent, who is enthusiastic about football. Your language level should be upper intermediate.
+
+    Provide analysis and key insights for people who are interested in understanding the game better and making informed predictions.
+
+    From now on, you will read the ({long_form_output}) data, which contains team names, odds, 5 recent match results, and team rankings, then generate a script of fewer than 1500 characters. The output should be concise and engaging enough to be read in less than 20 seconds.
+
+    In your script, avoid using any special characters such as ##, [], --, ** (e.g.,###Promotional Text;---[Introduction]*) and avoid using words like "bet," "betting," "wager," or "stake." Instead, focus on words like "prediction" or "forecast." Keep the tone friendly, insightful, and focused on the enjoyment of the game.
     """
 
     # Use OpenAI API to generate the video script
@@ -833,13 +836,13 @@ def main():
         print(f"Generated Video Script for {home_team} vs {away_team}:\n", video_script)
 
         # Send the script to AI Avatar and generate a video
-        video_url = send_to_ai_avatar(video_script)
+        # video_url = send_to_ai_avatar(video_script)
 
-        if video_url:
-            logging.info(f"Video ready: {video_url}")
-            print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
-        else:
-            logging.error(f"Error generating video for {home_team} vs {away_team}.")
+        # if video_url:
+        #     logging.info(f"Video ready: {video_url}")
+        #     print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
+        # else:
+        #     logging.error(f"Error generating video for {home_team} vs {away_team}.")
 
     print("All matches processed successfully.")
 
