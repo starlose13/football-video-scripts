@@ -25,6 +25,8 @@ def fetch_odds_rank_and_last_5_games():
         match_id = match['id']
         home_team_name = match['home']['name']
         away_team_name = match['away']['name']
+        home_team_logo = match['home']['logo']
+        away_team_logo = match['away']['logo']
         home_odds = match['odds']['home']
         away_odds = match['odds']['away']
         league = match['competition']['name']
@@ -33,6 +35,7 @@ def fetch_odds_rank_and_last_5_games():
         start_time = datetime.strptime(start_time_str, "%Y-%m-%dT%H:%M:%SZ")
         day = start_time.strftime("%A")
         time = start_time.strftime("%H:%M")
+
 
         if home_odds < away_odds:
             a_team_name, b_team_name = home_team_name, away_team_name
@@ -64,6 +67,8 @@ def fetch_odds_rank_and_last_5_games():
             'match_id': match_id,
             'home_team': home_team_name,
             'away_team': away_team_name,
+            'home_team_logo': home_team_logo,
+            'away_team_logo': away_team_logo,
             'a_team_name': a_team_name,
             'b_team_name': b_team_name,
             'a_team_odds': a_odds,
@@ -100,13 +105,17 @@ def generate_match_image(match_data, match_number):
 
     home_team_name = match_data['home_team']
     away_team_name = match_data['away_team']
+    home_team_logo = match_data['home_team_logo']
+    away_team_logo = match_data['away_team_logo']
     league = match_data['league']
     stadium = match_data['stadium']
     day = match_data['day']
     time = match_data['time']
 
-    draw.text((320, 615), home_team_name, fill="white", font=font_team)
-    draw.text((img.width - 630, 615), away_team_name, fill="white", font=font_team)
+    draw.text((750, 472), home_team_name, fill="white", font=font_team)
+    draw.text((img.width - 630, 472), away_team_name, fill="white", font=font_team)
+    draw.text((img.width - 460, 472), home_team_logo, fill="white", font=font_team)
+    draw.text((img.width - 3200, 472), away_team_logo, fill="white", font=font_team)
     draw.text((img.width - 1140, 425), league, fill="white", font=font_league)
     draw.text((img.width - 1140, 845), f"{day} {time}", fill="white", font=font_details)
     draw.text((img.width - 1140, 950), stadium, fill="white", font=font_details)
@@ -231,12 +240,12 @@ def main():
 
     print(f"Generated Video Script for {home_team} vs {away_team}:\n{video_script}")
 
-    video_url = send_to_synthesia(video_script, home_team, away_team, github_image_url)
+    # video_url = send_to_synthesia(video_script, home_team, away_team, github_image_url)
 
-    if video_url:
-        print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
-    else:
-        print(f"Error generating video for {home_team} vs {away_team}.")
+    # if video_url:
+    #     print(f"Video for {home_team} vs {away_team} is ready: {video_url}")
+    # else:
+    #     print(f"Error generating video for {home_team} vs {away_team}.")
 
 if __name__ == "__main__":
     main()
