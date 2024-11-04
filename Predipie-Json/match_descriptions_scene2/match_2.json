@@ -1,0 +1,13 @@
+{
+    "description": "\"Empoli clashes with Como in a gripping Serie B showdown!\"",
+    "home_team": {
+        "name": "Empoli",
+        "logo": "https://img.thesports.com/football/team/6f5c8da569fe222bea0134717d622cb0.png",
+        "country": "Italy"
+    },
+    "away_team": {
+        "name": "Como",
+        "logo": "https://img.thesports.com/football/team/5f7059f40965e5a2cc00987e6bac2f32.png",
+        "country": "Italy"
+    }
+}

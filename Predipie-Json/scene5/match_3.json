@@ -1,0 +1,29 @@
+{
+    "description": "The home team enters the match with four draws and a loss in their last five games, while the away team has struggled more, managing just one draw amid four defeats.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "d",
+                "d",
+                "d",
+                "d",
+                "l"
+            ],
+            "wins": 0,
+            "draws": 4,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "l",
+                "l",
+                "d",
+                "l",
+                "l"
+            ],
+            "wins": 0,
+            "draws": 1,
+            "losses": 4
+        }
+    }
+}

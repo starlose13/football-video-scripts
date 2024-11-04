@@ -1,0 +1,21 @@
+{
+    "description": "As the fall season embraces the vibrant hues of November, a thrilling football encounter is set to unfold between Empoli and Como. The match is scheduled to take place on Monday, November 4th, 2024, with a kick-off time of",
+    "match_date": "2024-11-04",
+    "match_time": "05:30 PM",
+    "match_day": "Monday",
+    "odds": {
+        "home": 2.75,
+        "draw": 3.1,
+        "away": 2.7
+    },
+    "home_team": {
+        "name": "Empoli",
+        "logo": "https://img.thesports.com/football/team/6f5c8da569fe222bea0134717d622cb0.png",
+        "country": "Italy"
+    },
+    "away_team": {
+        "name": "Como",
+        "logo": "https://img.thesports.com/football/team/5f7059f40965e5a2cc00987e6bac2f32.png",
+        "country": "Italy"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "description": "\"Clash of styles! RC Celta battles Getafe in a tense LaLiga showdown.\"",
+    "home_team": {
+        "name": "RC Celta",
+        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
+        "country": "Spain"
+    },
+    "away_team": {
+        "name": "Getafe",
+        "logo": "https://img.thesports.com/football/team/36bf5bf0c8fdf08c1270124808f060e1.png",
+        "country": "Spain"
+    }
+}

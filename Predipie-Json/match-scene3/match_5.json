@@ -1,0 +1,21 @@
+{
+    "description": "The upcoming clash between RC Celta and Getafe is poised to ignite excitement as it takes place under the floodlights on Monday, November 4, 2024. The match is scheduled for an 08:00 PM kickoff, setting the",
+    "match_date": "2024-11-04",
+    "match_time": "08:00 PM",
+    "match_day": "Monday",
+    "odds": {
+        "home": 2.1,
+        "draw": 3.0,
+        "away": 4.0
+    },
+    "home_team": {
+        "name": "RC Celta",
+        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
+        "country": "Spain"
+    },
+    "away_team": {
+        "name": "Getafe",
+        "logo": "https://img.thesports.com/football/team/36bf5bf0c8fdf08c1270124808f060e1.png",
+        "country": "Spain"
+    }
+}

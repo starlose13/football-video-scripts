@@ -1,0 +1,13 @@
+{
+    "description": "\"Parma vs Genoa: A thrilling clash as two Serie A stalwarts fight to climb the table!\"",
+    "home_team": {
+        "name": "Parma",
+        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
+        "country": "Italy"
+    },
+    "away_team": {
+        "name": "Genoa",
+        "logo": "https://img.thesports.com/football/team/51474fb68c7da46b9c20ebddccec7766.png",
+        "country": "Italy"
+    }
+}

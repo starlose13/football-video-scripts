@@ -1,0 +1,29 @@
+{
+    "description": "The home team has been consistent (1W, 3D, 1L), while the away side is unpredictable with 2 wins, 1 draw, and 2 losses.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "d",
+                "d",
+                "d",
+                "w",
+                "l"
+            ],
+            "wins": 1,
+            "draws": 3,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "w",
+                "l",
+                "l",
+                "w",
+                "d"
+            ],
+            "wins": 2,
+            "draws": 1,
+            "losses": 2
+        }
+    }
+}

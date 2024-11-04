@@ -1,0 +1,13 @@
+{
+    "description": "\"Al Hilal clashes with Esteghlal Tehran in an electrifying battle for supremacy!\"",
+    "home_team": {
+        "name": "Al Hilal",
+        "logo": "https://img.thesports.com/football/team/07a555616afab7be32e00150eacf4197.png",
+        "country": "Saudi Arabia"
+    },
+    "away_team": {
+        "name": "Esteghlal Tehran",
+        "logo": "https://img.thesports.com/football/team/48f908d6c42e0bf4e9f83c4841d76bea.png",
+        "country": "Iran"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "description": "As the sun sets on Monday, November 4th, 2024, the stage is set for an enthralling encounter between two of Asia's footballing powerhouses: Al Hilal from Saudi Arabia and Esteghlal Tehran from Iran",
+    "match_date": "2024-11-04",
+    "match_time": "06:00 PM",
+    "match_day": "Monday",
+    "odds": {
+        "home": 1.17,
+        "draw": 7.5,
+        "away": 11.0
+    },
+    "home_team": {
+        "name": "Al Hilal",
+        "logo": "https://img.thesports.com/football/team/07a555616afab7be32e00150eacf4197.png",
+        "country": "Saudi Arabia"
+    },
+    "away_team": {
+        "name": "Esteghlal Tehran",
+        "logo": "https://img.thesports.com/football/team/48f908d6c42e0bf4e9f83c4841d76bea.png",
+        "country": "Iran"
+    }
+}

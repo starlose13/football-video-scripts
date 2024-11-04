@@ -1,0 +1,29 @@
+{
+    "description": "The home team enters the match in strong form, winning 4 out of their last 5 games. The away team has been inconsistent, with 2 wins, 1 draw, and 2 losses in their recent matches.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "w",
+                "w",
+                "w",
+                "l",
+                "w"
+            ],
+            "wins": 4,
+            "draws": 0,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "l",
+                "l",
+                "w",
+                "d",
+                "w"
+            ],
+            "wins": 2,
+            "draws": 1,
+            "losses": 2
+        }
+    }
+}

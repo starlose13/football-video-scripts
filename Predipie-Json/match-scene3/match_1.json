@@ -1,0 +1,21 @@
+{
+    "description": "As the evening descends on Monday, November 4, 2024, football fans will be eagerly anticipating a thrilling Serie A clash between Lazio and Cagliari, set to kick off at 07:45 PM. The match will take",
+    "match_date": "2024-11-04",
+    "match_time": "07:45 PM",
+    "match_day": "Monday",
+    "odds": {
+        "home": 1.53,
+        "draw": 4.0,
+        "away": 6.5
+    },
+    "home_team": {
+        "name": "Lazio",
+        "logo": "https://img.thesports.com/football/team/5a2ff46efa33abc6b2908eb6279dfbf8.png",
+        "country": "Italy"
+    },
+    "away_team": {
+        "name": "Cagliari",
+        "logo": "https://img.thesports.com/football/team/cd3683db19fcf1166a79a2ddc8261faa.png",
+        "country": "Italy"
+    }
+}

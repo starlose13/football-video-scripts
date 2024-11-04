@@ -1,0 +1,13 @@
+{
+    "description": "Lazio clashes with Cagliari in a thrilling Serie A showdown!",
+    "home_team": {
+        "name": "Lazio",
+        "logo": "https://img.thesports.com/football/team/5a2ff46efa33abc6b2908eb6279dfbf8.png",
+        "country": "Italy"
+    },
+    "away_team": {
+        "name": "Cagliari",
+        "logo": "https://img.thesports.com/football/team/cd3683db19fcf1166a79a2ddc8261faa.png",
+        "country": "Italy"
+    }
+}
