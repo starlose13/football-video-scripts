@@ -14,8 +14,10 @@ url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 # Function to generate a match description with recent form using the ChatGPT API
 def generate_match_description_with_recent_form(host_team, guest_team, host_results, host_wins, host_draws, host_losses, guest_results, guest_wins, guest_draws, guest_losses):
     # Create a prompt for OpenAI to generate the description
-    prompt = (f"The home team’s recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
-              f"while the away team has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses}). less than 200 character ")
+    prompt = (
+    f"[Generate a concise description of each team’s recent form, using full words for clarity and avoiding abbreviations like 'W', 'D', or 'L'. Focus on readability. Limit to 200 characters.] "
+    f"The home team’s recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
+    f"while the away team has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses}).")
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(

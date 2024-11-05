@@ -1,8 +1,8 @@
 {
-    "description": "Parma (1.73) is favored at home against Genoa (4.75) with a draw at 3.8.",
+    "description": "Slovan Bratislava has victory odds set at 3.75. Dinamo Zagreb is favored with winning odds at 1.91. The odds that the match will conclude in a draw are also listed at 3.75.",
     "odds": {
-        "home": 1.73,
-        "away": 4.75,
-        "draw": 3.8
+        "home": 3.75,
+        "away": 1.91,
+        "draw": 3.75
     }
 }

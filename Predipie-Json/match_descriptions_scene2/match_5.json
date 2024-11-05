@@ -1,13 +1,13 @@
 {
-    "description": "\"Clash of styles! RC Celta battles Getafe in a tense LaLiga showdown.\"",
+    "description": "[Pause and smile] Get ready for a thrilling clash as Celtic FC takes on RB Leipzig! Sparks will fly in this action-packed battle. Don't miss it!",
     "home_team": {
-        "name": "RC Celta",
-        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
-        "country": "Spain"
+        "name": "Celtic FC",
+        "logo": "https://img.thesports.com/football/team/4952d00987ef86afeda3204d66ac3fd6.png",
+        "country": "Scotland"
     },
     "away_team": {
-        "name": "Getafe",
-        "logo": "https://img.thesports.com/football/team/36bf5bf0c8fdf08c1270124808f060e1.png",
-        "country": "Spain"
+        "name": "RB Leipzig",
+        "logo": "https://img.thesports.com/football/team/26a59fe5653a96ba72f4f1e4e08b6d4b.png",
+        "country": "Germany"
     }
 }

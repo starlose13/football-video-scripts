@@ -1,13 +1,13 @@
 {
-    "description": "Lazio clashes with Cagliari in a thrilling Serie A showdown!",
+    "description": "[Pause and smile] Gear up for an exhilarating clash as LOSC Lille takes on Juventus! Expect fierce tackles, strategic plays, and non-stop action. Don't miss it!",
     "home_team": {
-        "name": "Lazio",
-        "logo": "https://img.thesports.com/football/team/5a2ff46efa33abc6b2908eb6279dfbf8.png",
-        "country": "Italy"
+        "name": "LOSC Lille",
+        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Cagliari",
-        "logo": "https://img.thesports.com/football/team/cd3683db19fcf1166a79a2ddc8261faa.png",
+        "name": "Juventus",
+        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
         "country": "Italy"
     }
 }

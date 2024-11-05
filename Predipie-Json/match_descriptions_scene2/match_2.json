@@ -1,13 +1,13 @@
 {
-    "description": "\"Empoli clashes with Como in a gripping Serie B showdown!\"",
+    "description": "[Pause and smile] Get ready for a thrilling clash as PSV Eindhoven takes on Girona FC! Expect non-stop action and unforgettable plays. Don't miss it!",
     "home_team": {
-        "name": "Empoli",
-        "logo": "https://img.thesports.com/football/team/6f5c8da569fe222bea0134717d622cb0.png",
-        "country": "Italy"
+        "name": "PSV Eindhoven",
+        "logo": "https://img.thesports.com/football/team/cad5af4d1ff0e6f3119af3d273d95d31.png",
+        "country": "Netherlands"
     },
     "away_team": {
-        "name": "Como",
-        "logo": "https://img.thesports.com/football/team/5f7059f40965e5a2cc00987e6bac2f32.png",
-        "country": "Italy"
+        "name": "Girona FC",
+        "logo": "https://img.thesports.com/football/team/006ce259b33ef72dd5570cfa8dc39f38.png",
+        "country": "Spain"
     }
 }

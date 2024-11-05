@@ -1,29 +1,29 @@
 {
-    "description": "The home team is unbeaten in their last 5 games (4 wins, 1 draw), while the away team has struggled, losing 4 out of their last 5 matches, winning just once.",
+    "description": "The home team has won two, drawn two, and lost one of their last five matches. Meanwhile, the away team has one win, one draw, and three losses in their recent outings.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "d",
-                "w",
-                "w",
+                "l",
+                "d",
                 "w",
                 "w"
             ],
-            "wins": 4,
-            "draws": 1,
-            "losses": 0
+            "wins": 2,
+            "draws": 2,
+            "losses": 1
         },
         "away_team": {
             "last_5_matches": [
                 "l",
+                "d",
                 "l",
-                "l",
-                "l",
-                "w"
+                "w",
+                "l"
             ],
             "wins": 1,
-            "draws": 0,
-            "losses": 4
+            "draws": 1,
+            "losses": 3
         }
     }
 }

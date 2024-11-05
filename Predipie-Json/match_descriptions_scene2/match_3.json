@@ -1,13 +1,13 @@
 {
-    "description": "\"Parma vs Genoa: A thrilling clash as two Serie A stalwarts fight to climb the table!\"",
+    "description": "[Pause and smile] Dive into the thrill! Slovan Bratislvava clashes with Dinamo Zagreb in a heart-pounding face-off! Who will dominate the field today? [Point to the game]",
     "home_team": {
-        "name": "Parma",
-        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
-        "country": "Italy"
+        "name": "Slovan Bratislava",
+        "logo": "https://img.thesports.com/football/team/8e220a74791be9e0eb13507f0ce444db.png",
+        "country": "Slovakia"
     },
     "away_team": {
-        "name": "Genoa",
-        "logo": "https://img.thesports.com/football/team/51474fb68c7da46b9c20ebddccec7766.png",
-        "country": "Italy"
+        "name": "Dinamo Zagreb",
+        "logo": "https://img.thesports.com/football/team/4dd6f52681647c9520fde902dba87e31.png",
+        "country": "Croatia"
     }
 }

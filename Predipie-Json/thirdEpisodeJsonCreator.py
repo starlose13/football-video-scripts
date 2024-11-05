@@ -17,11 +17,16 @@ def generate_match_description(host_team, guest_team, match_time):
     # Format the match time to extract date and time
     match_datetime = datetime.strptime(match_time, "%Y-%m-%dT%H:%M:%SZ")
     time_str = match_datetime.strftime("%I:%M %p")
+    time_str = time_str.lstrip("0")
     day_str = match_datetime.strftime("%A")
     date_str = match_datetime.strftime("%Y-%m-%d")
     
     # Create a prompt for OpenAI to generate the description
-    prompt = f"Generate a description for a football match: {host_team} and {guest_team} will kick off at {time_str} on {day_str}, {date_str}."
+    prompt = (
+    f"[Pause briefly before starting.] Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
+    f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience.")
+
+
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(

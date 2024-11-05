@@ -1,8 +1,8 @@
 {
-    "description": "Empoli vs. Como clash in a tight match! Odds: Empoli 2.75, Como 2.7, Draw 3.1. Who will triumph?",
+    "description": "Match Odds: PSV Eindhoven to win at 1.73. Girona FC to win at 4.2. Odds for a draw are 4.1.",
     "odds": {
-        "home": 2.75,
-        "away": 2.7,
-        "draw": 3.1
+        "home": 1.73,
+        "away": 4.2,
+        "draw": 4.1
     }
 }

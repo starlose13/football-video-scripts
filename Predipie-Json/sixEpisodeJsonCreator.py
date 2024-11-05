@@ -128,23 +128,37 @@ def fetch_odds_rank_and_last_5_games():
         # Generate the prediction result based on the data
         prediction_result, row_number = generate_result(a_team, b_team, a_recent_group, b_recent_group, rank_diff)
 
+        # Generate match result and card using OpenAI, and capture the prompt used
+        prompt_text, card_choice = generate_match_result_with_openai(
+            a_team_name, b_team_name, home_team_name, away_team_name, prediction_result
+        )
+
+        # Prepare game data for generating content
+        game_data_json = {
+            "description": prompt_text,  # Store the OpenAI-generated description here
+            "team_home": home_team_name,
+            "team_away": away_team_name,
+            "card": card_choice
+        }
+
+
         # Prepare game data for generating content
        
-        game_data = {
-            'match_id' : match_id,
-            'home_team': home_team_name,
-            'away_team': away_team_name,
-            'a_team_name': a_team_name, 'b_team_name': b_team_name,
-            'a_team_odds': a_odds,'b_team_odds': b_odds,
-            'team_a_last_5': team_a_last_5_games,'team_b_last_5': team_b_last_5_games,
-            'team_a_rank': team_a_rank,'team_b_rank': team_b_rank,
-            'a_wins': a_wins, 'a_draws': a_draws, 'a_losses': a_losses,
-            'b_wins': b_wins, 'b_draws': b_draws, 'b_losses': b_losses,
-            'league': league,
-            'stadium': stadium,
-            'day': day,
-            'time': time
-        }
+        # game_data = {
+        #     'match_id' : match_id,
+        #     'home_team': home_team_name,
+        #     'away_team': away_team_name,
+        #     'a_team_name': a_team_name, 'b_team_name': b_team_name,
+        #     'a_team_odds': a_odds,'b_team_odds': b_odds,
+        #     'team_a_last_5': team_a_last_5_games,'team_b_last_5': team_b_last_5_games,
+        #     'team_a_rank': team_a_rank,'team_b_rank': team_b_rank,
+        #     'a_wins': a_wins, 'a_draws': a_draws, 'a_losses': a_losses,
+        #     'b_wins': b_wins, 'b_draws': b_draws, 'b_losses': b_losses,
+        #     'league': league,
+        #     'stadium': stadium,
+        #     'day': day,
+        #     'time': time
+        # }
 
 
         match_data_list.append({
@@ -173,48 +187,72 @@ def fetch_odds_rank_and_last_5_games():
             'row_number': row_number
         })
 
-        # Define the result summary and card based on prediction_result
-        match_result = ""
-        card = ""
-
-        if prediction_result == "A win or draw":
-            match_result = f"{a_team_name} win or draw "
-            if({a_team_name} == {home_team_name}):
-                card = "Win or Draw Home Team"
-            elif({a_team_name} == {away_team_name}):
-                card = "Win or Draw Away Team"
-        elif prediction_result == "A or B win":
-            match_result = f"{a_team_name} or {b_team_name} win "
-            if({a_team_name} == {home_team_name}):
-                card = "Win Home or Away Team"
-        elif prediction_result == "A win":
-            match_result = f"{a_team_name} win "
-            if({a_team_name} == {home_team_name}):
-                card = "Win Home Team"
-            elif({a_team_name} == {away_team_name}):
-                card = "Win Away Team"
-        else:
-            match_result = f"No result found "
-            card = "none"
-        #Row {row_number}
-        # Define the structured JSON output
-        game_data = {
-            "description": f"{match_result}this incoming match.",
-            "team_home": home_team_name,
-            "team_away": away_team_name,
-            "card": card
-        }
 
         # Save the structured JSON data to a file
         output_path = os.path.join(output_folder, f"match_{i+1}.json")
         with open(output_path, 'w') as file:
-            json.dump(game_data, file, indent=4)
+            json.dump(game_data_json, file, indent=4)
 
         print(f"Saved results for match {match_id} in {output_path}")
         print("=" * 50)
 
     print("All games processed successfully.")
     return match_data_list
+
+
+def generate_match_result_with_openai(a_team_name, b_team_name, home_team_name, away_team_name, prediction_result):
+    """Generates a match result description, card, and returns the prompt text used based on the prediction."""
+
+    # Define condition text and card based on the prediction result condition
+    if prediction_result == "A win or draw":
+        if a_team_name == home_team_name:
+            condition_text = f"My AI analysis suggests {a_team_name} will win or draw, so the card should be 'Win or Draw Home Team'."
+            card = "Win or Draw Home Team"
+        elif a_team_name == away_team_name:
+            condition_text = f"My AI analysis suggests {a_team_name} will win or draw, so the card should be 'Win or Draw Away Team'."
+            card = "Win or Draw Away Team"
+        else:
+            condition_text = "My AI analysis suggests an uncertain outcome."
+            card = "none"
+    elif prediction_result == "A or B win":
+        condition_text = f"My AI analysis suggests either {a_team_name} or {b_team_name} will win, so the card should be 'Win Home or Away Team'."
+        card = "Win Home or Away Team"
+    elif prediction_result == "A win":
+        if a_team_name == home_team_name:
+            condition_text = f"My AI analysis suggests {a_team_name} will win, so the card should be 'Win Home Team'."
+            card = "Win Home Team"
+        elif a_team_name == away_team_name:
+            condition_text = f"My AI analysis suggests {a_team_name} will win, so the card should be 'Win Away Team'."
+            card = "Win Away Team"
+        else:
+            condition_text = "My AI analysis suggests an uncertain outcome."
+            card = "none"
+    else:
+        condition_text = "No specific result is found for this prediction."
+        card = "none"
+
+    # Build the complete prompt
+    prompt = (
+    f"{condition_text} Then, add a reminder along the lines of: 'But keep in mind, I'm just an AI, and this is not financial advice!'"
+)
+
+
+    # Use OpenAI API to generate the result summary and card
+    response = openai.ChatCompletion.create(
+        model="gpt-4-turbo",
+        messages=[
+            {"role": "system", "content": "You are an AI assistant generating football match result summaries."},
+            {"role": "user", "content": prompt}
+        ],
+        max_tokens=100
+    )
+
+    # Extract generated result description from the response
+    generated_script = response['choices'][0]['message']['content'].strip()
+
+    # Return the prompt text, generated description, and card
+    return generated_script, card
+
 
 
 # Helper function to calculate wins, draws, and losses

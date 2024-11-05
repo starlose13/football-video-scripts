@@ -15,10 +15,9 @@ url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 # Function to generate a match description with odds using the ChatGPT API
 def generate_match_description_with_odds(host_team, guest_team, home_odds, guest_odds, draw_odds):
     # Create a prompt for OpenAI to generate the description
-    prompt = (f"Generate a description for a football match with odds information: "
-              f"The home team, {host_team}, has odds of {home_odds}; "
-              f"the away team, {guest_team}, has odds of {guest_odds}; "
-              f"and the draw odds are {draw_odds}. less than 150 character ") 
+    prompt = (
+        f"[Generate a concise and complete description for football match odds without mentioning the match or teams' introduction. Only provide the odds information directly. State each type of odds clearly and avoid abbreviations or parentheses. Keep it under 500 characters.] "
+        f"The home team, {host_team}, has odds of winning at {home_odds}. The away team, {guest_team}, has odds of winning at {guest_odds}. The odds for a draw are {draw_odds}.")
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(
@@ -27,7 +26,7 @@ def generate_match_description_with_odds(host_team, guest_team, home_odds, guest
             {"role": "system", "content": "You are an AI assistant helping to create dynamic football match descriptions with odds information."},
             {"role": "user", "content": prompt}
         ],
-        max_tokens=50
+        max_tokens=100
     )
     generated_script = response['choices'][0]['message']['content'].strip()
     return generated_script

@@ -13,7 +13,7 @@ url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
 # Function to generate a match description with the ChatGPT API
 def generate_match_description(host_team, guest_team):
-    prompt = f"Our first match-up is between {host_team} and {guest_team}. Create a dynamic description for this match-up in less than 100 characters."
+    prompt = f" [Smile warmly as you begin speaking]. Let's jump into the action with our first match-up between {host_team} and {guest_team}!  Now, create an energetic, dynamic description of this match-up in less than 200 characters.Be sure you put pause and smile before you want to point to the game."
 
     # Call the ChatGPT API to generate the script
     response = openai.ChatCompletion.create(

@@ -1,8 +1,8 @@
 {
-    "description": "Lazio (1.53) hosts Cagliari (6.5) in a thrilling clash. A draw stands at 4.0 odds. Who will triumph?",
+    "description": "The odds for LOSC Lille to win are set at 3.0. Juventus has odds of 2.45 for a victory. A draw between the two teams carries odds of 3.2.",
     "odds": {
-        "home": 1.53,
-        "away": 6.5,
-        "draw": 4.0
+        "home": 3.0,
+        "away": 2.45,
+        "draw": 3.2
     }
 }
