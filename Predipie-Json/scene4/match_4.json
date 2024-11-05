@@ -1,8 +1,8 @@
 {
-    "description": "Al Nassr FC is favored to win with odds at 1.33. Al-Ain FC has odds of winning at 7.0. The odds for a draw between the two teams are set at 5.0.",
+    "description": "The odds of winning for the home team are 2.7; for the away team, they are 2.5. The odds for a draw stand at 3.5. Who will triumph?",
     "odds": {
-        "home": 1.33,
-        "away": 7.0,
-        "draw": 5.0
+        "home": 2.7,
+        "away": 2.5,
+        "draw": 3.5
     }
 }

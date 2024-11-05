@@ -1,8 +1,8 @@
 {
-    "description": "The odds for LOSC Lille to win are set at 3.0. Juventus has odds of 2.45 for a victory. A draw between the two teams carries odds of 3.2.",
+    "description": "Bologna has odds of winning at 2.75. AS Monaco is listed at 2.5 to win. A draw is set at odds of 3.3.",
     "odds": {
-        "home": 3.0,
-        "away": 2.45,
-        "draw": 3.2
+        "home": 2.75,
+        "away": 2.5,
+        "draw": 3.3
     }
 }

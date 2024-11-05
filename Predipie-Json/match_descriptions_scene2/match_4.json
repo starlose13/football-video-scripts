@@ -1,13 +1,13 @@
 {
-    "description": "[Pause and smile] Get ready for an electrifying clash as Al Nassr FC faces off against Al-Ain FC! Who will dominate this epic showdown? Stay tuned!",
+    "description": "Let's continue with the fourth match: Celtic FC against RB Leipzig. Intense play, stunning goals, and a nail-biting finish!",
     "home_team": {
-        "name": "Al Nassr FC",
-        "logo": "https://img.thesports.com/football/team/4f6fea88e1b872608f8f333c2de8b1d4.png",
-        "country": "Saudi Arabia"
+        "name": "Celtic FC",
+        "logo": "https://img.thesports.com/football/team/4952d00987ef86afeda3204d66ac3fd6.png",
+        "country": "Scotland"
     },
     "away_team": {
-        "name": "Al-Ain FC",
-        "logo": "https://img.thesports.com/football/team/f807a0188c0875c8dc9c79d9cfd4f8c3.png",
-        "country": "United Arab Emirates"
+        "name": "RB Leipzig",
+        "logo": "https://img.thesports.com/football/team/26a59fe5653a96ba72f4f1e4e08b6d4b.png",
+        "country": "Germany"
     }
 }

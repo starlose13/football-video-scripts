@@ -1,13 +1,13 @@
 {
-    "description": "[Pause and smile] Gear up for an exhilarating clash as LOSC Lille takes on Juventus! Expect fierce tackles, strategic plays, and non-stop action. Don't miss it!",
+    "description": "Let's start with the first match: Bologna against AS Monaco. Thrills, spills, Monaco triumphs!",
     "home_team": {
-        "name": "LOSC Lille",
-        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
-        "country": "France"
+        "name": "Bologna",
+        "logo": "https://img.thesports.com/football/team/8354706ee0d510dbb1cfe5cec7319227.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Juventus",
-        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
-        "country": "Italy"
+        "name": "AS Monaco",
+        "logo": "https://img.thesports.com/football/team/693af0d277fe3179594695614dce8666.png",
+        "country": "France"
     }
 }

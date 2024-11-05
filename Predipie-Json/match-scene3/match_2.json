@@ -1,21 +1,21 @@
 {
-    "description": "[Pause] Get ready, folks! The match kicks off at 5:45 PM on Tuesday, November 5th, 2024. Don't miss it!",
+    "description": "Get ready, everyone! The match kicks off at 8:00 PM on Tuesday, November 5th, 2024!",
     "match_date": "2024-11-05",
-    "match_time": "05:45 PM",
+    "match_time": "08:00 PM",
     "match_day": "Tuesday",
     "odds": {
-        "home": 1.73,
-        "draw": 4.1,
-        "away": 4.2
+        "home": 1.2,
+        "draw": 7.0,
+        "away": 12.0
     },
     "home_team": {
-        "name": "PSV Eindhoven",
-        "logo": "https://img.thesports.com/football/team/cad5af4d1ff0e6f3119af3d273d95d31.png",
-        "country": "Netherlands"
+        "name": "Borussia Dortmund",
+        "logo": "https://img.thesports.com/football/team/bbfacbdbe67705172c6414d7e9c21b58.png",
+        "country": "Germany"
     },
     "away_team": {
-        "name": "Girona FC",
-        "logo": "https://img.thesports.com/football/team/006ce259b33ef72dd5570cfa8dc39f38.png",
-        "country": "Spain"
+        "name": "Sturm Graz",
+        "logo": "https://img.thesports.com/football/team/4cc9044aed34f71c4e79bd260ea938fb.png",
+        "country": "Austria"
     }
 }

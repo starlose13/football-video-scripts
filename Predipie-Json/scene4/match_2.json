@@ -1,8 +1,8 @@
 {
-    "description": "Match Odds: PSV Eindhoven to win at 1.73. Girona FC to win at 4.2. Odds for a draw are 4.1.",
+    "description": "The odds stand at 1.2 for a home win; 12.0 for an away win; and 7.0 for a draw. These figures reflect the betting expectations directly, highlighting clear favorites and underdogs!",
     "odds": {
-        "home": 1.73,
-        "away": 4.2,
-        "draw": 4.1
+        "home": 1.2,
+        "away": 12.0,
+        "draw": 7.0
     }
 }

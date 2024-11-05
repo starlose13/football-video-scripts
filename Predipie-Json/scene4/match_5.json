@@ -1,8 +1,8 @@
 {
-    "description": "Celtic FC has odds of winning at 2.7. RB Leipzig holds odds of winning at 2.5. The odds for a draw between these teams are set at 3.5.",
+    "description": "The odds for winning are set at 1.42 for the home team and 6.5 for the away team. The possibility of a draw has been priced at 5.0.",
     "odds": {
-        "home": 2.7,
-        "away": 2.5,
-        "draw": 3.5
+        "home": 1.42,
+        "away": 6.5,
+        "draw": 5.0
     }
 }

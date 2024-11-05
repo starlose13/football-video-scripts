@@ -1,13 +1,13 @@
 {
-    "description": "[Pause and smile] Get ready for a thrilling clash as Celtic FC takes on RB Leipzig! Sparks will fly in this action-packed battle. Don't miss it!",
+    "description": "And the last match: Real Madrid against AC Milan. Thrills, spills, and a last-minute winner!",
     "home_team": {
-        "name": "Celtic FC",
-        "logo": "https://img.thesports.com/football/team/4952d00987ef86afeda3204d66ac3fd6.png",
-        "country": "Scotland"
+        "name": "Real Madrid",
+        "logo": "https://img.thesports.com/football/team/47ba2fe5caa3770cfa2e99dc4b7e72cd.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "RB Leipzig",
-        "logo": "https://img.thesports.com/football/team/26a59fe5653a96ba72f4f1e4e08b6d4b.png",
-        "country": "Germany"
+        "name": "AC Milan",
+        "logo": "https://img.thesports.com/football/team/643ef4101b017dc1495dbd9e9d5cce28.png",
+        "country": "Italy"
     }
 }

@@ -1,13 +1,13 @@
 {
-    "description": "The home team has won twice, drawn twice, and lost once recently. The away team, on the other hand, remains unbeaten with three wins and two draws.",
+    "description": "The home team has won twice, drawn twice, and lost once recently. The away team has a mixed form, with two wins, one draw, and two losses.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "w",
-                "d",
-                "d",
+                "w",
                 "l",
-                "w"
+                "d",
+                "d"
             ],
             "wins": 2,
             "draws": 2,
@@ -15,15 +15,15 @@
         },
         "away_team": {
             "last_5_matches": [
-                "d",
-                "w",
+                "l",
+                "l",
                 "w",
                 "d",
                 "w"
             ],
-            "wins": 3,
-            "draws": 2,
-            "losses": 0
+            "wins": 2,
+            "draws": 1,
+            "losses": 2
         }
     }
 }

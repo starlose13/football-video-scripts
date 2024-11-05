@@ -23,8 +23,8 @@ def generate_match_description(host_team, guest_team, match_time):
     
     # Create a prompt for OpenAI to generate the description
     prompt = (
-    f"[Pause briefly before starting.] Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
-    f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience.")
+    f"Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
+    f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience.using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon.")
 
 
 

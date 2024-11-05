@@ -1,13 +1,13 @@
 {
-    "description": "[Pause and smile] Dive into the thrill! Slovan Bratislvava clashes with Dinamo Zagreb in a heart-pounding face-off! Who will dominate the field today? [Point to the game]",
+    "description": "Let's continue with the third match: LOSC Lille against Juventus. Lille triumphs 2-1! Drama, goals, excitement!",
     "home_team": {
-        "name": "Slovan Bratislava",
-        "logo": "https://img.thesports.com/football/team/8e220a74791be9e0eb13507f0ce444db.png",
-        "country": "Slovakia"
+        "name": "LOSC Lille",
+        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Dinamo Zagreb",
-        "logo": "https://img.thesports.com/football/team/4dd6f52681647c9520fde902dba87e31.png",
-        "country": "Croatia"
+        "name": "Juventus",
+        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
+        "country": "Italy"
     }
 }

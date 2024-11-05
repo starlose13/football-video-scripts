@@ -11,9 +11,20 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 # Define the API endpoint
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
-# Function to generate a match description with the ChatGPT API
-def generate_match_description(host_team, guest_team):
-    prompt = f" [Smile warmly as you begin speaking]. Let's jump into the action with our first match-up between {host_team} and {guest_team}!  Now, create an energetic, dynamic description of this match-up in less than 200 characters.Be sure you put pause and smile before you want to point to the game."
+def generate_match_description(i, host_team, guest_team):
+    # Determine the introductory phrase and match ordinal based on `i`
+    if i == 1:
+        intro = f"Start the response with : 'Let's start with the first match: {host_team} versus {guest_team}.'"
+    elif i in [2, 3, 4]:
+        ordinal = {2: "second", 3: "third", 4: "fourth"}[i]
+        intro = f"Start the response with : 'Let's continue with the {ordinal} match: {host_team} against {guest_team}.'"
+    else:  # For the fifth match, no introductory phrase
+        intro = f"Start the response with : 'And the last match : {host_team} versus {guest_team}.'"
+
+    # Construct the prompt with the chosen introduction
+    prompt = (
+        f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+    )
 
     # Call the ChatGPT API to generate the script
     response = openai.ChatCompletion.create(
@@ -26,6 +37,10 @@ def generate_match_description(host_team, guest_team):
     )
     generated_script = response['choices'][0]['message']['content'].strip()
     return generated_script
+
+
+
+
 
 try:
     # Send a GET request to the API
@@ -50,8 +65,8 @@ try:
         host_team_country = item.get('home', {}).get('country', {}).get('name') if item.get('home', {}).get('country') else 'Unknown Country'
         guest_team_country = item.get('away', {}).get('country', {}).get('name') if item.get('away', {}).get('country') else 'Unknown Country'
         
-        # Generate the description using ChatGPT API
-        match_description = generate_match_description(host_team_name, guest_team_name)
+        # Generate the description using ChatGPT API, passing in the match index
+        match_description = generate_match_description(i, host_team_name, guest_team_name)
         
         # Format the data with host and guest team details and description
         match_info = {

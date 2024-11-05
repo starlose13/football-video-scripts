@@ -1,8 +1,8 @@
 {
-    "description": "Slovan Bratislava has victory odds set at 3.75. Dinamo Zagreb is favored with winning odds at 1.91. The odds that the match will conclude in a draw are also listed at 3.75.",
+    "description": "Full-time result odds are as follows: a home win at 3.0, an away win at 2.45, and a draw at 3.2.",
     "odds": {
-        "home": 3.75,
-        "away": 1.91,
-        "draw": 3.75
+        "home": 3.0,
+        "away": 2.45,
+        "draw": 3.2
     }
 }

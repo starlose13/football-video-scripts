@@ -12,7 +12,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 X_API_ID = os.getenv('CREATIFY_API_ID')
 X_API_KEY = os.getenv('CREATIFY_API_KEY')
 creator_id = "3f2a4ff3-3aa8-4522-b545-0814627a31b9"  # Replace with your actual creator ID from Creatify
-program_name = "PrediPie’s Match Forecast"
+program_name = "Predipie’s Match Forecast"
 
 # Folders where JSON files are stored
 folders = [
@@ -36,10 +36,10 @@ def read_description_from_json(file_path):
 def generate_intro_with_openai(program_number):
     """Generates an introduction for the narration using OpenAI."""
     prompt = (
-        f"Create a complete, engaging introduction for today’s episode of {program_name}. [Smile warmly as you begin speaking.] "
-        f"Announce that we’re covering 5 exciting soccer predictions for today’s matches. Mention this is Episode {program_number}. "
-        f"Keep it friendly, energetic, and commentator-like, and ensure it stays within 2–3 sentences for a full response."
-    )
+    f"Welcome to Episode {program_number} of {program_name}! Today, we have 5 thrilling soccer predictions lined up. "
+    f"Keep it friendly and energetic,keeping it very brief—under 20 words, complete sentences.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
+)
+
 
 
     # Use OpenAI API to generate a custom introduction
@@ -60,9 +60,9 @@ def generate_intro_with_openai(program_number):
 def generate_closing_with_openai(program_number):
     """Generates a closing statement for the narration using OpenAI."""
     prompt = (
-    f"[Smile for 2 seconds, then continue speaking.] Wrap up Episode {program_number} of our football prediction series. "
-    f"Remind viewers to tune in daily at 13 UTC for more insights, invite them to join the PrediPie community, and say, 'Goodbye!' "
-    f"Keep it very brief, to one sentence, and finish with a warm smile.")
+    f" Wrap up Episode {program_number} with: 'Remember, I'm just an AI; this isn't financial advice!' "
+    f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'Goodbye!' Keep it to one brief sentence.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon.")
+
 
 
 

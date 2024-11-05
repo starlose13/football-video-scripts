@@ -47,17 +47,6 @@ class RankDifference:
     mediumDifference = 1
     smallDifference = 2
 
-class EndMessageManager:
-    def __init__(self):
-        self.end_messages = end_messages
-
-    # Shuffle messages
-    def shuffle_messages(self):
-        random.shuffle(self.end_messages)
-    
-    # Retrieve a random message
-    def get_random_message(self):
-        return random.choice(self.end_messages)
 
 
 # Logging setup for debugging
@@ -233,8 +222,10 @@ def generate_match_result_with_openai(a_team_name, b_team_name, home_team_name, 
 
     # Build the complete prompt
     prompt = (
-    f"{condition_text} Then, add a reminder along the lines of: 'But keep in mind, I'm just an AI, and this is not financial advice!'"
+    f"{condition_text}. Write this dynamically for football fans, keeping it very brief—under 30 words!, also using these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
 )
+
+
 
 
     # Use OpenAI API to generate the result summary and card
