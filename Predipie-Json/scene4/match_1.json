@@ -1,8 +1,10 @@
 {
-    "description": "Bologna has odds of winning at 2.75. AS Monaco is listed at 2.5 to win. A draw is set at odds of 3.3.",
+    "description": "The odds are as follows: victory for the home team at 2.6; victory for the away team at 2.55; a draw at 3.6.",
     "odds": {
-        "home": 2.75,
-        "away": 2.5,
-        "draw": 3.3
-    }
+        "home": 2.6,
+        "away": 2.55,
+        "draw": 3.6
+    },
+    "word_count": 23,
+    "reading_time": 9.11
 }

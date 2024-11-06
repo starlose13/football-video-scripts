@@ -22,7 +22,21 @@ output_folder = "scene6"
 def ensure_output_folder():
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
+
+
+# Define punctuation pause times
+pause_times = {
+    ',': 0.25,
+    '.': 0.5,
+    '!': 0.5,
+    '?': 0.5,
+    ';': 0.25,
+}
+
+adjusted_reading_speed = 3.48
 # Enums for status and recent game groups
+
+
 
 class AStatus:
     A1 = 0
@@ -122,14 +136,22 @@ def fetch_odds_rank_and_last_5_games():
             a_team_name, b_team_name, home_team_name, away_team_name, prediction_result
         )
 
-        # Prepare game data for generating content
+        # Calculate word count and punctuation pause time
+        word_count = len(prompt_text.split())
+        pause_time = sum(prompt_text.count(p) * pause_times.get(p, 0) for p in pause_times)
+
+        # Calculate reading time
+        reading_time = round((word_count / adjusted_reading_speed) + pause_time, 2)
+
+        # Prepare game data for JSON output
         game_data_json = {
-            "description": prompt_text,  # Store the OpenAI-generated description here
+            "description": prompt_text,
+            "word_count": word_count,
+            "reading_time": reading_time,
             "team_home": home_team_name,
             "team_away": away_team_name,
             "card": card_choice
         }
-
 
         # Prepare game data for generating content
        
@@ -224,8 +246,6 @@ def generate_match_result_with_openai(a_team_name, b_team_name, home_team_name, 
     prompt = (
     f"{condition_text}. Write this dynamically for football fans, keeping it very brief—under 30 words!, also using these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
 )
-
-
 
 
     # Use OpenAI API to generate the result summary and card

@@ -1,8 +1,10 @@
 {
-    "description": "Full-time result odds are as follows: a home win at 3.0, an away win at 2.45, and a draw at 3.2.",
+    "description": "The home team has winning odds of 1.75. The away team's odds stand at 4.33. For a draw, the odds are 3.9.",
     "odds": {
-        "home": 3.0,
-        "away": 2.45,
-        "draw": 3.2
-    }
+        "home": 1.75,
+        "away": 4.33,
+        "draw": 3.9
+    },
+    "word_count": 22,
+    "reading_time": 9.57
 }

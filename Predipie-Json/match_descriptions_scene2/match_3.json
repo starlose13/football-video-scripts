@@ -1,13 +1,15 @@
 {
-    "description": "Let's continue with the third match: LOSC Lille against Juventus. Lille triumphs 2-1! Drama, goals, excitement!",
+    "description": "Let's continue with the third match: FC Shakhtar Donetsk against Young Boys. Shakhtar dazzles; Young Boys fight back! Who will clinch the win?",
+    "word_count": 23,
+    "reading_time": 8.36,
     "home_team": {
-        "name": "LOSC Lille",
-        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
-        "country": "France"
+        "name": "FC Shakhtar Donetsk",
+        "logo": "https://img.thesports.com/football/team/f9a0feee2bdb8c5146e5d9ca152fbd26.png",
+        "country": "Ukraine"
     },
     "away_team": {
-        "name": "Juventus",
-        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
-        "country": "Italy"
+        "name": "Young Boys",
+        "logo": "https://img.thesports.com/football/team/5ee7149b64dc654c7fa2e43c7a0cf12e.png",
+        "country": "Switzerland"
     }
 }

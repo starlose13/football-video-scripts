@@ -1,8 +1,10 @@
 {
-    "description": "The odds of winning for the home team are 2.7; for the away team, they are 2.5. The odds for a draw stand at 3.5. Who will triumph?",
+    "description": "Winning odds for the home team are 1.48. The away team has odds of 6.5. A draw comes in at 4.5.",
     "odds": {
-        "home": 2.7,
-        "away": 2.5,
-        "draw": 3.5
-    }
+        "home": 1.48,
+        "away": 6.5,
+        "draw": 4.5
+    },
+    "word_count": 21,
+    "reading_time": 9.03
 }

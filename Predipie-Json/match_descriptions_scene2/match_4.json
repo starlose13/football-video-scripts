@@ -1,13 +1,15 @@
 {
-    "description": "Let's continue with the fourth match: Celtic FC against RB Leipzig. Intense play, stunning goals, and a nail-biting finish!",
+    "description": "Let's continue with the fourth match: Paris Saint Germain against Atletico Madrid. Mbappe dazzles; Atletico fights back! Drama till the last whistle.",
+    "word_count": 22,
+    "reading_time": 8.07,
     "home_team": {
-        "name": "Celtic FC",
-        "logo": "https://img.thesports.com/football/team/4952d00987ef86afeda3204d66ac3fd6.png",
-        "country": "Scotland"
+        "name": "Paris Saint Germain",
+        "logo": "https://img.thesports.com/football/team/3b720f181ce9993f9422d276acf7b292.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "RB Leipzig",
-        "logo": "https://img.thesports.com/football/team/26a59fe5653a96ba72f4f1e4e08b6d4b.png",
-        "country": "Germany"
+        "name": "Atletico Madrid",
+        "logo": "https://img.thesports.com/football/team/390977b0421bce136c562057ea171ecf.png",
+        "country": "Spain"
     }
 }

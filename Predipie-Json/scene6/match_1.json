@@ -1,6 +1,8 @@
 {
-    "description": "No match result yet! Will the favorite team score? Remember, anything can happen in football; stay tuned for updates. Exciting times ahead!",
-    "team_home": "Bologna",
-    "team_away": "AS Monaco",
+    "description": "Searching for that exact match result? No luck yet! Keep checking back, or did you miss an epic game? Football's always full of surprises!",
+    "word_count": 24,
+    "reading_time": 9.15,
+    "team_home": "VfB Stuttgart",
+    "team_away": "Atalanta",
     "card": "none"
 }

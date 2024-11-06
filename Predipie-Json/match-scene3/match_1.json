@@ -1,21 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 8:00 PM on Tuesday, November 5th, 2024!",
-    "match_date": "2024-11-05",
+    "description": "Get ready for an exhilarating night of football as the match kicks off at 8:00 PM on Wednesday, November 6, 2024!",
+    "match_date": "2024-11-06",
     "match_time": "08:00 PM",
-    "match_day": "Tuesday",
+    "match_day": "Wednesday",
     "odds": {
-        "home": 2.75,
-        "draw": 3.3,
-        "away": 2.5
+        "home": 2.6,
+        "draw": 3.6,
+        "away": 2.55
     },
+    "word_count": 21,
+    "reading_time": 7.03,
     "home_team": {
-        "name": "Bologna",
-        "logo": "https://img.thesports.com/football/team/8354706ee0d510dbb1cfe5cec7319227.png",
-        "country": "Italy"
+        "name": "VfB Stuttgart",
+        "logo": "https://img.thesports.com/football/team/bfdd500484330d63a723cbc396df762c.png",
+        "country": "Germany"
     },
     "away_team": {
-        "name": "AS Monaco",
-        "logo": "https://img.thesports.com/football/team/693af0d277fe3179594695614dce8666.png",
-        "country": "France"
+        "name": "Atalanta",
+        "logo": "https://img.thesports.com/football/team/45c9647899b8bf2fb6f988c6c33b964c.png",
+        "country": "Italy"
     }
 }

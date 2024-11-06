@@ -12,21 +12,32 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 # Define the API endpoint
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
+# Adjusted reading speed (words per second) including pauses
+adjusted_reading_speed = 3.48
+
+# Define punctuation pause times
+pause_times = {
+    ',': 0.25,
+    '.': 0.5,
+    '!': 0.5,
+    '?': 0.5,
+    ';': 0.25,
+}
+
 # Function to generate a match description with the ChatGPT API
 def generate_match_description(host_team, guest_team, match_time):
     # Format the match time to extract date and time
     match_datetime = datetime.strptime(match_time, "%Y-%m-%dT%H:%M:%SZ")
-    time_str = match_datetime.strftime("%I:%M %p")
-    time_str = time_str.lstrip("0")
+    time_str = match_datetime.strftime("%I:%M %p").lstrip("0")
     day_str = match_datetime.strftime("%A")
     date_str = match_datetime.strftime("%Y-%m-%d")
     
     # Create a prompt for OpenAI to generate the description
     prompt = (
-    f"Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
-    f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience.using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon.")
-
-
+        f"Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
+        f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience. "
+        "Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+    )
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(
@@ -79,6 +90,15 @@ try:
         # Generate the description using ChatGPT API
         match_description = generate_match_description(host_team, guest_team, match_time)
         
+        # Calculate the word count of the generated description
+        word_count = len(match_description.split())
+        
+        # Calculate the total punctuation pause time
+        pause_time = sum(match_description.count(p) * pause_times.get(p, 0) for p in pause_times)
+        
+        # Calculate reading time based on word count, adjusted reading speed, and punctuation pauses
+        reading_time = round((word_count / adjusted_reading_speed) + pause_time, 2)
+        
         # Format the data with all details
         match_info = {
             "description": match_description,
@@ -90,6 +110,8 @@ try:
                 "draw": draw_odds,
                 "away": guest_odds
             },
+            "word_count": word_count,  # Include word count
+            "reading_time": reading_time,  # Include calculated reading time
             "home_team": {
                 "name": host_team,
                 "logo": host_team_logo,

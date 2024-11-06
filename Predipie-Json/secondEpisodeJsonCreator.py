@@ -11,6 +11,18 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 # Define the API endpoint
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
+# Adjusted reading speed (words per second) including pauses
+adjusted_reading_speed = 3.48
+
+# Define punctuation pause times
+pause_times = {
+    ',': 0.25,
+    '.': 0.5,
+    '!': 0.5,
+    '?': 0.5,
+    ';': 0.25,
+}
+
 def generate_match_description(i, host_team, guest_team):
     # Determine the introductory phrase and match ordinal based on `i`
     if i == 1:
@@ -38,10 +50,6 @@ def generate_match_description(i, host_team, guest_team):
     generated_script = response['choices'][0]['message']['content'].strip()
     return generated_script
 
-
-
-
-
 try:
     # Send a GET request to the API
     response = requests.get(url)
@@ -68,9 +76,20 @@ try:
         # Generate the description using ChatGPT API, passing in the match index
         match_description = generate_match_description(i, host_team_name, guest_team_name)
         
-        # Format the data with host and guest team details and description
+        # Calculate the word count of the generated description
+        word_count = len(match_description.split())
+        
+        # Calculate the total punctuation pause time
+        pause_time = sum(match_description.count(p) * pause_times.get(p, 0) for p in pause_times)
+        
+        # Calculate reading time based on word count, adjusted reading speed, and punctuation pauses
+        reading_time = round((word_count / adjusted_reading_speed) + pause_time, 2)
+        
+        # Format the data with host and guest team details, description, word count, and reading time
         match_info = {
             "description": match_description,
+            "word_count": word_count,
+            "reading_time": reading_time,  # Add the calculated reading time with pauses
             "home_team": {
                 "name": host_team_name,
                 "logo": host_team_logo,

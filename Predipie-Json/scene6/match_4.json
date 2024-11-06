@@ -1,6 +1,8 @@
 {
-    "description": "No match prediction found! What will happen next in the game? Thrilling uncertainties ahead; stay tuned, fans! Excitement builds... Who will dominate? Victory is up for grabs!",
-    "team_home": "Celtic FC",
-    "team_away": "RB Leipzig",
-    "card": "none"
+    "description": "Expect fireworks! PSG won't lose today; it\u2019s a home win or draw. Secure your bets\u2014exciting match ahead! Victory? Draw? Watch this space!",
+    "word_count": 22,
+    "reading_time": 9.57,
+    "team_home": "Paris Saint Germain",
+    "team_away": "Atletico Madrid",
+    "card": "Win or Draw Home Team"
 }

@@ -1,13 +1,15 @@
 {
-    "description": "And the last match: Real Madrid against AC Milan. Thrills, spills, and a last-minute winner!",
+    "description": "And the last match: Inter Milan versus Arsenal. A thrilling 3-2 fight; goals galore!",
+    "word_count": 14,
+    "reading_time": 5.27,
     "home_team": {
-        "name": "Real Madrid",
-        "logo": "https://img.thesports.com/football/team/47ba2fe5caa3770cfa2e99dc4b7e72cd.png",
-        "country": "Spain"
+        "name": "Inter Milan",
+        "logo": "https://img.thesports.com/football/team/aa2245702c40f77799a5ad4b119581a8.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "AC Milan",
-        "logo": "https://img.thesports.com/football/team/643ef4101b017dc1495dbd9e9d5cce28.png",
-        "country": "Italy"
+        "name": "Arsenal",
+        "logo": "https://img.thesports.com/football/team/2122445133f0eeeecbb61fe49fb69022.png",
+        "country": "England"
     }
 }

@@ -1,21 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 8:00 PM on Tuesday, November 5th, 2024!",
-    "match_date": "2024-11-05",
-    "match_time": "08:00 PM",
-    "match_day": "Tuesday",
+    "description": "The excitement begins at 5:45 PM on Wednesday, November 6, 2024; make sure you're ready for the kickoff!",
+    "match_date": "2024-11-06",
+    "match_time": "05:45 PM",
+    "match_day": "Wednesday",
     "odds": {
-        "home": 1.2,
-        "draw": 7.0,
-        "away": 12.0
+        "home": 3.25,
+        "draw": 3.6,
+        "away": 2.1
     },
+    "word_count": 18,
+    "reading_time": 6.42,
     "home_team": {
-        "name": "Borussia Dortmund",
-        "logo": "https://img.thesports.com/football/team/bbfacbdbe67705172c6414d7e9c21b58.png",
-        "country": "Germany"
+        "name": "Club Brugge",
+        "logo": "https://img.thesports.com/football/team/2e9f652d28ec91e0b66c0b714bff8d78.png",
+        "country": "Belgium"
     },
     "away_team": {
-        "name": "Sturm Graz",
-        "logo": "https://img.thesports.com/football/team/4cc9044aed34f71c4e79bd260ea938fb.png",
-        "country": "Austria"
+        "name": "Aston Villa",
+        "logo": "https://img.thesports.com/football/team/cf923a8b31d94745b3cbe4de42c670a9.png",
+        "country": "England"
     }
 }

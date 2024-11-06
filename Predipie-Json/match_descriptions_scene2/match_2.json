@@ -1,13 +1,15 @@
 {
-    "description": "Let's continue with the second match: Borussia Dortmund against Sturm Graz. Dortmund dazzles, Graz grasps; what a showdown!",
+    "description": "Let's continue with the second match: Club Brugge against Aston Villa. Fast-paced action, stunning goals, and relentless energy! Villa clinches it!",
+    "word_count": 21,
+    "reading_time": 8.03,
     "home_team": {
-        "name": "Borussia Dortmund",
-        "logo": "https://img.thesports.com/football/team/bbfacbdbe67705172c6414d7e9c21b58.png",
-        "country": "Germany"
+        "name": "Club Brugge",
+        "logo": "https://img.thesports.com/football/team/2e9f652d28ec91e0b66c0b714bff8d78.png",
+        "country": "Belgium"
     },
     "away_team": {
-        "name": "Sturm Graz",
-        "logo": "https://img.thesports.com/football/team/4cc9044aed34f71c4e79bd260ea938fb.png",
-        "country": "Austria"
+        "name": "Aston Villa",
+        "logo": "https://img.thesports.com/football/team/cf923a8b31d94745b3cbe4de42c670a9.png",
+        "country": "England"
     }
 }

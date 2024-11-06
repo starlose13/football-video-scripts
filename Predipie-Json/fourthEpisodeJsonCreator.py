@@ -2,15 +2,26 @@ import requests
 import json
 import os
 import openai
-from datetime import datetime
 from dotenv import load_dotenv
 
-# Define your OpenAI API key
+# Load environment variables
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Define the API endpoint
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
+
+# Adjusted reading speed (words per second) including pauses
+adjusted_reading_speed = 3.48
+
+# Define punctuation pause times
+pause_times = {
+    ',': 0.25,
+    '.': 0.5,
+    '!': 0.5,
+    '?': 0.5,
+    ';': 0.25,
+}
 
 # Function to generate a match description with odds using the ChatGPT API
 def generate_match_description_with_odds(host_team, guest_team, home_odds, guest_odds, draw_odds):
@@ -20,7 +31,6 @@ def generate_match_description_with_odds(host_team, guest_team, home_odds, guest
         f"Provide only the odds information directly, without introducing the teams or match. State each type of odds clearly and avoid abbreviations or parentheses. Keep it under 45 words.] "
         f"The home team, {host_team}, has odds of winning at {home_odds}. The away team, {guest_team}, has odds of winning at {guest_odds}. The odds for a draw are {draw_odds}."
     )
-
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(
@@ -57,14 +67,25 @@ try:
         # Generate the description with odds using ChatGPT API
         match_description = generate_match_description_with_odds(host_team, guest_team, home_odds, guest_odds, draw_odds)
         
-        # Format the data as required, including odds
+        # Calculate the word count of the generated description
+        word_count = len(match_description.split())
+        
+        # Calculate the total punctuation pause time
+        pause_time = sum(match_description.count(p) * pause_times.get(p, 0) for p in pause_times)
+        
+        # Calculate reading time based on word count, adjusted reading speed, and punctuation pauses
+        reading_time = round((word_count / adjusted_reading_speed) + pause_time, 2)
+        
+        # Format the data as required, including odds, word count, and reading time
         match_info = {
             "description": match_description,
             "odds": {
                 "home": home_odds,
                 "away": guest_odds,
                 "draw": draw_odds
-            }
+            },
+            "word_count": word_count,        # Include word count
+            "reading_time": reading_time     # Include calculated reading time
         }
 
         # Define the output file path for each match

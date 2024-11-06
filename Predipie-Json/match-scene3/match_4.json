@@ -1,21 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 8:00 PM on Tuesday, November 5, 2024!",
-    "match_date": "2024-11-05",
+    "description": "Get ready, folks! The match kicks off at 8:00 PM on Wednesday, November 6, 2024!",
+    "match_date": "2024-11-06",
     "match_time": "08:00 PM",
-    "match_day": "Tuesday",
+    "match_day": "Wednesday",
     "odds": {
-        "home": 2.7,
-        "draw": 3.5,
-        "away": 2.5
+        "home": 1.48,
+        "draw": 4.5,
+        "away": 6.5
     },
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Celtic FC",
-        "logo": "https://img.thesports.com/football/team/4952d00987ef86afeda3204d66ac3fd6.png",
-        "country": "Scotland"
+        "name": "Paris Saint Germain",
+        "logo": "https://img.thesports.com/football/team/3b720f181ce9993f9422d276acf7b292.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "RB Leipzig",
-        "logo": "https://img.thesports.com/football/team/26a59fe5653a96ba72f4f1e4e08b6d4b.png",
-        "country": "Germany"
+        "name": "Atletico Madrid",
+        "logo": "https://img.thesports.com/football/team/390977b0421bce136c562057ea171ecf.png",
+        "country": "Spain"
     }
 }

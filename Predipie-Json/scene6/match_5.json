@@ -1,6 +1,8 @@
 {
-    "description": "Betting alert: Favoring Real Madrid tonight? Opt for 'Win or Draw Home Team'! Odds are stacking up; will they secure a victory or clinch a draw? Stay tuned!",
-    "team_home": "Real Madrid",
-    "team_away": "AC Milan",
+    "description": "Expect excitement as Inter Milan clashes with their rivals! Prediction: a win or draw for the home side; high stakes, high drama! Will they triumph? Stay tuned!",
+    "word_count": 27,
+    "reading_time": 10.26,
+    "team_home": "Inter Milan",
+    "team_away": "Arsenal",
     "card": "Win or Draw Home Team"
 }
