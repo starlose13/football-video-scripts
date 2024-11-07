@@ -1,0 +1,15 @@
+{
+    "description": "Let's continue with the second match: Al-Orubah against Al-Ittihad Club. Thrilling shots, stunning saves, and a nail-biting finish!",
+    "word_count": 18,
+    "reading_time": 6.67,
+    "home_team": {
+        "name": "Al-Orubah",
+        "logo": "https://img.thesports.com/football/team/fbe799b0c2306a3ce62b2c453cc3b39e.png",
+        "country": "Saudi Arabia"
+    },
+    "away_team": {
+        "name": "Al-Ittihad Club",
+        "logo": "https://img.thesports.com/football/team/dea986d20115216c05d1a45ba9a6162e.png",
+        "country": "Saudi Arabia"
+    }
+}

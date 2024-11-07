@@ -1,0 +1,15 @@
+{
+    "description": "And the last match: Eintracht Frankfurt versus Slavia Praha. A thrilling clash, goals galore!",
+    "word_count": 14,
+    "reading_time": 5.27,
+    "home_team": {
+        "name": "Eintracht Frankfurt",
+        "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
+        "country": "Germany"
+    },
+    "away_team": {
+        "name": "Slavia Praha",
+        "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
+        "country": "Czech Republic"
+    }
+}

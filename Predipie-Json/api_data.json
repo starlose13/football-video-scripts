@@ -1,0 +1,302 @@
+[
+    {
+        "competition": {
+            "name": "Saudi Professional League",
+            "short_name": "KSA Professional League",
+            "logo": "https://img.thesports.com/football/competition/c48508454f43d926a553270b1b4ebcd7.png",
+            "tier": 1
+        },
+        "start_time": "2024-11-07T15:00:00Z",
+        "home": {
+            "id": "01916a66-c3a3-7890-b51f-b59691a31085",
+            "name": "Al Kholood",
+            "logo": "https://img.thesports.com/football/team/9d81ea228cac35f27ff7d79078a54e36.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "away": {
+            "id": "01916a5a-420c-7ee0-b731-c43732b9d3eb",
+            "name": "Al-Shabab FC",
+            "logo": "https://img.thesports.com/football/team/b16d1e3b04364c5cd64203d8b4ef76e2.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "venue": {
+            "name": "Al Hazem Club Stadium"
+        },
+        "team_related_match": [
+            {
+                "team": "01916a5a-420c-7ee0-b731-c43732b9d3eb",
+                "five_previous_matches": [
+                    "w",
+                    "w",
+                    "w",
+                    "l",
+                    "l"
+                ],
+                "rank": 4,
+                "point": 18
+            },
+            {
+                "team": "01916a66-c3a3-7890-b51f-b59691a31085",
+                "five_previous_matches": [
+                    "d",
+                    "d",
+                    "d",
+                    "l",
+                    "l"
+                ],
+                "rank": 15,
+                "point": 7
+            }
+        ],
+        "odds": {
+            "home": 3.6,
+            "draw": 3.3,
+            "away": 1.95,
+            "difficulty": "M"
+        }
+    },
+    {
+        "competition": {
+            "name": "Saudi Professional League",
+            "short_name": "KSA Professional League",
+            "logo": "https://img.thesports.com/football/competition/c48508454f43d926a553270b1b4ebcd7.png",
+            "tier": 1
+        },
+        "start_time": "2024-11-07T17:00:00Z",
+        "home": {
+            "id": "01916a56-b8c2-78a2-a518-b561b8d1a8da",
+            "name": "Al-Orubah",
+            "logo": "https://img.thesports.com/football/team/fbe799b0c2306a3ce62b2c453cc3b39e.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "away": {
+            "id": "01916a50-f9f0-7f63-8bd0-430e78f73e39",
+            "name": "Al-Ittihad Club",
+            "logo": "https://img.thesports.com/football/team/dea986d20115216c05d1a45ba9a6162e.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "venue": {
+            "name": "Al-Orobah Club Stadium"
+        },
+        "team_related_match": [
+            {
+                "team": "01916a56-b8c2-78a2-a518-b561b8d1a8da",
+                "five_previous_matches": [
+                    "l",
+                    "l",
+                    "w",
+                    "l",
+                    "w"
+                ],
+                "rank": 12,
+                "point": 10
+            },
+            {
+                "team": "01916a50-f9f0-7f63-8bd0-430e78f73e39",
+                "five_previous_matches": [
+                    "w",
+                    "w",
+                    "w",
+                    "w",
+                    "w"
+                ],
+                "rank": 2,
+                "point": 24
+            }
+        ],
+        "odds": {
+            "home": 6.5,
+            "draw": 4.75,
+            "away": 1.4,
+            "difficulty": "E"
+        }
+    },
+    {
+        "competition": {
+            "name": "UEFA Europa Conference League",
+            "short_name": "UEFA ECL",
+            "logo": "https://img.thesports.com/football/competition/88637a74a2cbd634b8b9504a60d711cd.png",
+            "tier": 1
+        },
+        "start_time": "2024-11-07T14:30:00Z",
+        "home": {
+            "id": "01916a52-cbb6-7ba2-a21b-b6e512b5edeb",
+            "name": "Vikingur Reykjavik",
+            "logo": "https://img.thesports.com/football/team/7d980021e4160be27df269c331beab96.png",
+            "country": {
+                "name": "Iceland"
+            }
+        },
+        "away": {
+            "id": "01916a53-9ff5-79e1-938d-e0ad9d854fab",
+            "name": "Borac Banja Luka",
+            "logo": "https://img.thesports.com/football/team/538d312c2512ebda3129f105db04e5e5.png",
+            "country": {
+                "name": "Bosnia and Herzegovina"
+            }
+        },
+        "venue": {
+            "name": "Víkingsvollur"
+        },
+        "team_related_match": [
+            {
+                "team": "01916a53-9ff5-79e1-938d-e0ad9d854fab",
+                "five_previous_matches": [
+                    "d",
+                    "w",
+                    "w",
+                    "w",
+                    "w"
+                ],
+                "rank": 11,
+                "point": 4
+            },
+            {
+                "team": "01916a52-cbb6-7ba2-a21b-b6e512b5edeb",
+                "five_previous_matches": [
+                    "l",
+                    "w",
+                    "w",
+                    "d",
+                    "l"
+                ],
+                "rank": 22,
+                "point": 3
+            }
+        ],
+        "odds": {
+            "home": 2.25,
+            "draw": 3.3,
+            "away": 3.2,
+            "difficulty": "H"
+        }
+    },
+    {
+        "competition": {
+            "name": "Saudi Professional League",
+            "short_name": "KSA Professional League",
+            "logo": "https://img.thesports.com/football/competition/c48508454f43d926a553270b1b4ebcd7.png",
+            "tier": 1
+        },
+        "start_time": "2024-11-07T14:30:00Z",
+        "home": {
+            "id": "01916a4f-f5d7-7563-b147-5a1a8ef250c1",
+            "name": "Al-Qadisiya",
+            "logo": "https://img.thesports.com/football/team/bc74439d19c8bbaa17c57406b120b86d.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "away": {
+            "id": "01916a55-1915-75e1-8f26-5b135dcbcdaa",
+            "name": "Al-Fayha",
+            "logo": "https://img.thesports.com/football/team/95f41dd3e8e9d2f6006feed0c024dd9e.png",
+            "country": {
+                "name": "Saudi Arabia"
+            }
+        },
+        "venue": {
+            "name": "Prince Saud bin Jalawi Stadium"
+        },
+        "team_related_match": [
+            {
+                "team": "01916a55-1915-75e1-8f26-5b135dcbcdaa",
+                "five_previous_matches": [
+                    "d",
+                    "w",
+                    "d",
+                    "l",
+                    "d"
+                ],
+                "rank": 16,
+                "point": 7
+            },
+            {
+                "team": "01916a4f-f5d7-7563-b147-5a1a8ef250c1",
+                "five_previous_matches": [
+                    "w",
+                    "w",
+                    "w",
+                    "l",
+                    "l"
+                ],
+                "rank": 5,
+                "point": 16
+            }
+        ],
+        "odds": {
+            "home": 1.42,
+            "draw": 4.5,
+            "away": 6.0,
+            "difficulty": "E"
+        }
+    },
+    {
+        "competition": {
+            "name": "UEFA Europa League",
+            "short_name": "UEFA Europa League",
+            "logo": "https://img.thesports.com/football/competition/1792ba5a12171fedc6d543bdf173f37c.png",
+            "tier": 1
+        },
+        "start_time": "2024-11-07T17:45:00Z",
+        "home": {
+            "id": "01916a4e-cc8d-7da1-9c7d-514304e36dd8",
+            "name": "Eintracht Frankfurt",
+            "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
+            "country": {
+                "name": "Germany"
+            }
+        },
+        "away": {
+            "id": "01916a4f-52dd-7011-b806-770edb307afe",
+            "name": "Slavia Praha",
+            "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
+            "country": {
+                "name": "Czech Republic"
+            }
+        },
+        "venue": {
+            "name": "Deutsche Bank Park"
+        },
+        "team_related_match": [
+            {
+                "team": "01916a4e-cc8d-7da1-9c7d-514304e36dd8",
+                "five_previous_matches": [
+                    "w",
+                    "w",
+                    "d",
+                    "w",
+                    "l"
+                ],
+                "rank": 6,
+                "point": 7
+            },
+            {
+                "team": "01916a4f-52dd-7011-b806-770edb307afe",
+                "five_previous_matches": [
+                    "d",
+                    "w",
+                    "w",
+                    "l",
+                    "w"
+                ],
+                "rank": 17,
+                "point": 4
+            }
+        ],
+        "odds": {
+            "home": 1.8,
+            "draw": 4.0,
+            "away": 3.9,
+            "difficulty": "M"
+        }
+    }
+]

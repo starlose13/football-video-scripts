@@ -59,7 +59,7 @@ try:
     data = response.json()
 
     # Create a folder to store the files if it doesn't already exist
-    folder_name = 'match_descriptions_scene2'
+    folder_name = 'scene2'
     os.makedirs(folder_name, exist_ok=True)
 
     # Extract and save each of the first 5 matches to separate JSON files

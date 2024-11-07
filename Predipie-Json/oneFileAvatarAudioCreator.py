@@ -64,9 +64,6 @@ def generate_closing_with_openai(program_number):
     f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'Goodbye!' Keep it to one brief sentence.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon.")
 
 
-
-
-
     # Use OpenAI API to generate a custom closing statement
     response = openai.ChatCompletion.create(
         model="gpt-4-turbo",

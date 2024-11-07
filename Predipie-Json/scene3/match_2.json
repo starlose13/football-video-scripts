@@ -1,0 +1,23 @@
+{
+    "description": "Get ready, folks! The match kicks off at 5:00 PM on Thursday, November 7th, 2024!",
+    "match_date": "2024-11-07",
+    "match_time": "05:00 PM",
+    "match_day": "Thursday",
+    "odds": {
+        "home": 6.5,
+        "draw": 4.75,
+        "away": 1.4
+    },
+    "word_count": 15,
+    "reading_time": 6.06,
+    "home_team": {
+        "name": "Al-Orubah",
+        "logo": "https://img.thesports.com/football/team/fbe799b0c2306a3ce62b2c453cc3b39e.png",
+        "country": "Saudi Arabia"
+    },
+    "away_team": {
+        "name": "Al-Ittihad Club",
+        "logo": "https://img.thesports.com/football/team/dea986d20115216c05d1a45ba9a6162e.png",
+        "country": "Saudi Arabia"
+    }
+}

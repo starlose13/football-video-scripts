@@ -60,7 +60,7 @@ try:
     data = response.json()
 
     # Create the folder `match-scene3` to store the files if it doesn't already exist
-    folder_name = 'match-scene3'
+    folder_name = 'scene3'
     os.makedirs(folder_name, exist_ok=True)
 
     # Extract and save each of the first 5 matches to separate JSON files

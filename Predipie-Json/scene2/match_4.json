@@ -1,0 +1,15 @@
+{
+    "description": "Let's continue with the fourth match: Al-Qadisiya against Al-Fayha. Goals fly as tensions flare! A nail-biter to the last whistle.",
+    "word_count": 20,
+    "reading_time": 7.25,
+    "home_team": {
+        "name": "Al-Qadisiya",
+        "logo": "https://img.thesports.com/football/team/bc74439d19c8bbaa17c57406b120b86d.png",
+        "country": "Saudi Arabia"
+    },
+    "away_team": {
+        "name": "Al-Fayha",
+        "logo": "https://img.thesports.com/football/team/95f41dd3e8e9d2f6006feed0c024dd9e.png",
+        "country": "Saudi Arabia"
+    }
+}

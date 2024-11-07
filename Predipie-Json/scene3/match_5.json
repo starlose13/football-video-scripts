@@ -1,0 +1,23 @@
+{
+    "description": "Get ready, fans! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
+    "match_date": "2024-11-07",
+    "match_time": "05:45 PM",
+    "match_day": "Thursday",
+    "odds": {
+        "home": 1.8,
+        "draw": 4.0,
+        "away": 3.9
+    },
+    "word_count": 15,
+    "reading_time": 6.06,
+    "home_team": {
+        "name": "Eintracht Frankfurt",
+        "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
+        "country": "Germany"
+    },
+    "away_team": {
+        "name": "Slavia Praha",
+        "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
+        "country": "Czech Republic"
+    }
+}
