@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
-    "match_date": "2024-11-07",
-    "match_time": "05:45 PM (UTC Time)",
-    "match_day": "Thursday",
+    "description": "Get ready, everyone! The match kicks off at 12:45 PM on Saturday, November 9, 2024!",
+    "match_date": "2024-11-09",
+    "match_time": "12:45 PM (UTC Time)",
+    "match_day": "Saturday",
     "odds": {
-        "home": 1.67,
-        "draw": 4.33,
-        "away": 4.5
+        "home": 4.15,
+        "draw": 2.66,
+        "away": 2.07
     },
-    "word_count": 16,
-    "reading_time": 6.35,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Bodo Glimt",
-        "logo": "https://img.thesports.com/football/team/98854ab97eadf3d2c7c6d657ad99df96.png",
-        "country": "Norway"
+        "name": "Gol Gohar FC",
+        "logo": "https://img.thesports.com/football/team/69625f17e031ad1fcb33823338b74d95.png",
+        "country": "Iran"
     },
     "away_team": {
-        "name": "Qarabag",
-        "logo": "https://img.thesports.com/football/team/7f7d00906d511bcf48f9a600580ff953.png",
-        "country": "Azerbaijan"
+        "name": "Persepolis",
+        "logo": "https://img.thesports.com/football/team/d0122ef4d5150b1b16e5274a97913894.png",
+        "country": "Iran"
     }
 }

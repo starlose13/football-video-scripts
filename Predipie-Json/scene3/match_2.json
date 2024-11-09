@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 5:00 PM on Thursday, November 7, 2024!",
-    "match_date": "2024-11-07",
-    "match_time": "05:00 PM (UTC Time)",
-    "match_day": "Thursday",
+    "description": "Get ready, folks! The match kicks off at 2:00 PM on Saturday, November 9th, 2024!",
+    "match_date": "2024-11-09",
+    "match_time": "02:00 PM (UTC Time)",
+    "match_day": "Saturday",
     "odds": {
-        "home": 7.5,
-        "draw": 4.75,
-        "away": 1.38
+        "home": 2.2,
+        "draw": 3.4,
+        "away": 3.2
     },
     "word_count": 15,
     "reading_time": 6.06,
     "home_team": {
-        "name": "Al-Orubah",
-        "logo": "https://img.thesports.com/football/team/fbe799b0c2306a3ce62b2c453cc3b39e.png",
-        "country": "Saudi Arabia"
+        "name": "Venezia",
+        "logo": "https://img.thesports.com/football/team/3e724dc0e6fffd01a630b65af348fab6.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Al-Ittihad Club",
-        "logo": "https://img.thesports.com/football/team/dea986d20115216c05d1a45ba9a6162e.png",
-        "country": "Saudi Arabia"
+        "name": "Parma",
+        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
+        "country": "Italy"
     }
 }

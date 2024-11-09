@@ -16,8 +16,8 @@ program_name = "Predipie’s Match Forecast"
 
 # Folders where JSON files are stored
 folders = [
-    "match_descriptions_scene2",  # secondEpisodeJsonCreator.py
-    "match-scene3",               # thirdEpisodeJsonCreator.py
+    "scene2",  # secondEpisodeJsonCreator.py
+    "scene3",               # thirdEpisodeJsonCreator.py
     "scene4",                     # fourthEpisodeJsonCreator.py
     "scene5",                     # fifthEpisodeJsonCreator.py
     "scene6"                      # sixEpisodeJsonCreator.py
@@ -125,8 +125,8 @@ def create_video_with_creatify(narration_text, program_number):
 
 # Main script to generate combined narration for five games in sequence
 program_number = get_program_number()
-increment_program_number()
-intro_text = generate_intro_with_openai(program_number)
+# increment_program_number()
+intro_text = generate_intro_with_openai(61)
 
 narration_parts = []
 narration_parts.append(intro_text)  # Add introduction
@@ -140,7 +140,7 @@ for match_number in range(1, 6):
             narration_parts.append(description)
 
 # Generate dynamic closing statement using OpenAI
-closing_text = generate_closing_with_openai(program_number)
+closing_text = generate_closing_with_openai(61)
 narration_parts.append(closing_text)
 
 # Combine narration parts into a single script
@@ -154,8 +154,8 @@ with open(output_file_path, 'w', encoding='utf-8') as output_file:
 print(f"Narration for episode {program_number} saved to {output_file_path}")
 
 # Generate video with Creatify API
-# video_url = create_video_with_creatify(full_narration, program_number)
-# if video_url:
-#     print(f"Video for episode {program_number} is ready: {video_url}")
-# else:
-#     print("Failed to generate the video.")
+video_url = create_video_with_creatify(full_narration, program_number)
+if video_url:
+    print(f"Video for episode {program_number} is ready: {video_url}")
+else:
+    print("Failed to generate the video.")

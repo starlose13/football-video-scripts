@@ -3,20 +3,23 @@ import json
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
-import subprocess
 from dotenv import load_dotenv
 
 load_dotenv()
 
-GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-REPO_NAME = os.getenv("REPO_NAME")
-REPO_URL = f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@github.com/{GITHUB_USERNAME}/{REPO_NAME}.git"
 
+
+# Generate images and save them to the output directory
+folder = "generated_images"  # GitHub repository folder to save images
+output_dir = "./output"
+os.makedirs(output_dir, exist_ok=True)
+shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
+
+if not shotstack_api_key:
+    raise ValueError("SHOTSTACK_API_KEY is missing. Please check your .env file.")
 
 # Automatically set the base directory for JSON files relative to the script's location
 base_json_dir = os.path.join(os.path.dirname(__file__), 'scene{scene_num}')
-
 # Define the image template paths
 templates = [
     './assets/match-introduction.jpg',
@@ -44,34 +47,11 @@ base_positions = {
 
 # Define unique positions for each image template, which will inherit base positions
 position_mappings = [
-    # Image 1: Match Introduction
-    {
-        **base_positions,  # Include base positions
-    },
-    # Image 2: Stats
-    {
-        **base_positions,  # Include base positions
-        "match_date": (1736 , 847),
-        "match_time": (2031, 847),
-        "match_day": (1590, 847)
-    },
-    # Image 3: Odds
-    {
-        **base_positions,  # Include base positions
-        "home_odds": (1298, 1086),
-        "draw_odds": (1870, 1086),
-        "away_odds": (2435, 1086)               
-    },
-    # Image 4: Recent Matches
-    {
-        **base_positions,  # Include base positions
-        "home_team_last_5": (1137, 1357),
-        "away_team_last_5": (2350, 1357)
-    },
-    # Image 5: AI Analysis Suggestion
-    {
-        **base_positions,  # Include base positions
-    }
+    {**base_positions},
+    {**base_positions, "match_date": (1736 , 847), "match_time": (2031, 847), "match_day": (1590, 847)},
+    {**base_positions, "home_odds": (1298, 1086), "draw_odds": (1870, 1086), "away_odds": (2435, 1086)},
+    {**base_positions, "home_team_last_5": (1137, 1357), "away_team_last_5": (2350, 1357)},
+    {**base_positions}
 ]
 
 
@@ -98,7 +78,6 @@ def add_program_number_to_starting_scene(json_path, image_path, output_path, pos
         print("Error: JSON file is not properly formatted.")
         return
     
-    # Load the image
     image = Image.open(image_path)
     draw = ImageDraw.Draw(image)
     
@@ -163,7 +142,7 @@ def get_data_for_image(json_data, image_index):
     return {}
 
 
-def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80):
+def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80, background_color="#0056d7"):    
     image = Image.open(template_path)
     draw = ImageDraw.Draw(image)
     
@@ -212,15 +191,15 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                         logo = logo.convert("RGBA")
                     logo = logo.resize((228, 228))
                     
-                    # Create a circular mask
-                    mask = Image.new("L", (228, 228), 0)
+                    # Create a circular mask with the specified background color
+                    mask = Image.new("RGBA", (228, 228), background_color)
                     draw_mask = ImageDraw.Draw(mask)
-                    draw_mask.ellipse((0, 0, 228, 228), fill=255)
-                    
-                    # Apply mask to create a circular logo
-                    logo.putalpha(mask)
-                    
-                    # Paste the circular logo on the template
+                    draw_mask.ellipse((0, 0, 228, 228), fill=(0, 0, 0, 0))  # Transparent fill for the circular area
+
+                    # Apply mask to the logo
+                    logo = Image.alpha_composite(mask, logo)
+
+                    # Paste the circular logo with background on the template
                     image.paste(logo, pos, logo)
                 except Exception as e:
                     print(f"Could not load logo from {logo_url}: {e}")
@@ -368,41 +347,71 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
     return images
 
 
-def push_to_github():
-    try:
-        # Set the Git remote URL with authentication
-        subprocess.run(["git", "remote", "set-url", "origin", REPO_URL], check=True)
-        
-        # Stage all changes
-        subprocess.run(["git", "add", "-A"], check=True)
-        
-        # Commit the changes
-        subprocess.run(["git", "commit", "-m", "Add generated images and starting scene"], check=True)
-        
-        # Push the changes to the repository
-        subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("Changes pushed to GitHub successfully.")
-    except subprocess.CalledProcessError as e:
-        print("An error occurred while pushing to GitHub:", e)
 
 
+def get_signed_url():
+    """Request a signed URL from Shotstack for direct upload."""
+    signed_url_request_url = "https://api.shotstack.io/ingest/stage/upload"
+    headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
+    response = requests.post(signed_url_request_url, headers=headers)
+    if response.status_code == 200:
+        data = response.json().get("data", {}).get("attributes", {})
+        return data.get("url"), data.get("id")
+    print("Failed to obtain signed URL:", response.status_code, response.text)
+    return None, None
 
-# Ensure the output directory exists
-output_dir = "./output"
-os.makedirs(output_dir, exist_ok=True)
-# Example usage for five games
+def upload_image_to_shotstack(image_path):
+    """Uploads an image to Shotstack using the signed URL."""
+    signed_url, source_id = get_signed_url()
+    if not signed_url:
+        print(f"Skipping upload for {image_path}")
+        return None
+
+    with open(image_path, "rb") as file:
+        upload_response = requests.put(signed_url, data=file)
+        if upload_response.status_code == 200:
+            print(f"Image uploaded successfully for {image_path}")
+            return source_id
+        print(f"Failed to upload {image_path}:", upload_response.status_code, upload_response.text)
+    return None
+
+def check_upload_status(source_id):
+    """Check the status of the uploaded image by source ID."""
+    status_url = f"https://api.shotstack.io/ingest/stage/sources/{source_id}"
+    headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
+    status_response = requests.get(status_url, headers=headers)
+    if status_response.status_code == 200:
+        attributes = status_response.json().get("data", {}).get("attributes", {})
+        return attributes.get("status"), attributes.get("source")
+    print("Failed to retrieve upload status:", status_response.status_code, status_response.text)
+    return None, None
+
+
+# Loop to generate images for each game and save them to `output` directory
 for game_index in range(5):  # Assuming 5 games
     game_images = generate_images_for_game(game_index, templates, json_paths, position_mappings)
     
-    # Save each generated image for this game
     for i, img in enumerate(game_images):
-        img_path = f"./output/game_{game_index+1}_image_{i+1}.jpg"
-        img.save(img_path)
+        image_path = os.path.join(output_dir, f"game_{game_index+1}_image_{i+1}.jpg")
+        img.save(image_path)
+        
+        # Upload each image to Shotstack
+        source_id = upload_image_to_shotstack(image_path)
+        if source_id:
+            status, url = check_upload_status(source_id)
+            print(f"Upload status for {image_path}: {status}")
+            if status == "ready":
+                print(f"Image URL: {url}")
 
+# Upload the starting scene with program number to Shotstack
 starting_scene_json_path = './program_number.json'
 starting_scene_image_path = './assets/starting-scene.jpg'
 starting_scene_output_path = './output/starting-scene-with-program-number.jpg'
 add_program_number_to_starting_scene(starting_scene_json_path, starting_scene_image_path, starting_scene_output_path)
+source_id = upload_image_to_shotstack(starting_scene_output_path)
 
-
-push_to_github()
+if source_id:
+    status, url = check_upload_status(source_id)
+    print(f"Starting scene upload status: {status}")
+    if status == "ready":
+        print(f"Starting scene URL: {url}")

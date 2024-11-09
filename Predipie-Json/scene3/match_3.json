@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
-    "match_date": "2024-11-07",
-    "match_time": "05:45 PM (UTC Time)",
-    "match_day": "Thursday",
+    "description": "Get ready, folks! The match kicks off at 12:25 PM on Saturday, November 9th, 2024!",
+    "match_date": "2024-11-09",
+    "match_time": "12:25 PM (UTC Time)",
+    "match_day": "Saturday",
     "odds": {
-        "home": 1.95,
-        "draw": 3.75,
-        "away": 3.7
+        "home": 2.25,
+        "draw": 2.8,
+        "away": 3.2
     },
-    "word_count": 16,
-    "reading_time": 6.35,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Eintracht Frankfurt",
-        "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
-        "country": "Germany"
+        "name": "Al-Jandal",
+        "logo": "https://img.thesports.com/football/team/fd5aee9ffe07250e37324ffc26a296a3.png",
+        "country": "Saudi Arabia"
     },
     "away_team": {
-        "name": "Slavia Praha",
-        "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
-        "country": "Czech Republic"
+        "name": "Al Zulfi",
+        "logo": "https://img.thesports.com/football/team/13b5359a749536d5adb6ef17cd675219.png",
+        "country": "Unknown Country"
     }
 }

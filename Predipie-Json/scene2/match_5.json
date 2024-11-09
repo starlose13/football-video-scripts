@@ -1,15 +1,15 @@
 {
-    "description": "And the last match: Fotbal Club FCSB versus Midtjylland. Drama, goals, what a clash!",
-    "word_count": 14,
-    "reading_time": 5.52,
+    "description": "And the last match: Sepahan versus Nassaji Mazandaran. A thrilling clash! Goals galore; excitement peaks.",
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Fotbal Club FCSB",
-        "logo": "https://img.thesports.com/football/team/a413daa882f96b18ddb1f0e8c9dbfda7.png",
-        "country": "Romania"
+        "name": "Sepahan",
+        "logo": "https://img.thesports.com/football/team/94bd035b8931736ca6736605492b461a.png",
+        "country": "Iran"
     },
     "away_team": {
-        "name": "Midtjylland",
-        "logo": "https://img.thesports.com/football/team/870815ca7c7545f7dc8c0716eecdb708.png",
-        "country": "Denmark"
+        "name": "Nassaji Mazandaran",
+        "logo": "https://img.thesports.com/football/team/35df363f47723cba8a8c0367dd187c1c.png",
+        "country": "Iran"
     }
 }

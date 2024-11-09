@@ -1,10 +1,10 @@
 {
-    "description": "The odds for a win are 3.5 for the home team and 2.0 for the away team. A draw is set at 3.7.",
+    "description": "Real Madrid boasts winning odds of 1.25. CA Osasuna trails with odds of 11.0 for a win. A draw stands at 6.0. These figures reflect the expected outcomes for the upcoming match!",
     "odds": {
-        "home": 3.5,
-        "draw": 3.7,
-        "away": 2.0
+        "home": 1.25,
+        "draw": 6.0,
+        "away": 11.0
     },
-    "word_count": 23,
-    "reading_time": 9.11
+    "word_count": 32,
+    "reading_time": 12.7
 }

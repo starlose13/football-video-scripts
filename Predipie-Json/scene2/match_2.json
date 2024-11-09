@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the second match: Al-Orubah against Al-Ittihad Club. Thrills galore as Al-Ittihad clinches a last-minute winner! What a game!",
-    "word_count": 21,
-    "reading_time": 7.53,
+    "description": "Let's continue with the second match: Venezia against Parma. Goals fly as tension mounts!",
+    "word_count": 14,
+    "reading_time": 5.02,
     "home_team": {
-        "name": "Al-Orubah",
-        "logo": "https://img.thesports.com/football/team/fbe799b0c2306a3ce62b2c453cc3b39e.png",
-        "country": "Saudi Arabia"
+        "name": "Venezia",
+        "logo": "https://img.thesports.com/football/team/3e724dc0e6fffd01a630b65af348fab6.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Al-Ittihad Club",
-        "logo": "https://img.thesports.com/football/team/dea986d20115216c05d1a45ba9a6162e.png",
-        "country": "Saudi Arabia"
+        "name": "Parma",
+        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
+        "country": "Italy"
     }
 }

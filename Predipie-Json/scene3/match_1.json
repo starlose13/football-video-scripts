@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
-    "match_date": "2024-11-07",
-    "match_time": "05:45 PM (UTC Time)",
-    "match_day": "Thursday",
+    "description": "Get ready, fans! The match kicks off at 1:00 PM on Saturday, November 9, 2024!",
+    "match_date": "2024-11-09",
+    "match_time": "01:00 PM (UTC Time)",
+    "match_day": "Saturday",
     "odds": {
-        "home": 3.5,
-        "draw": 3.7,
-        "away": 2.0
+        "home": 1.25,
+        "draw": 6.0,
+        "away": 11.0
     },
     "word_count": 15,
     "reading_time": 6.06,
     "home_team": {
-        "name": "Elfsborg",
-        "logo": "https://img.thesports.com/football/team/983e56ee1d89379148cbb1d28384b6af.png",
-        "country": "Sweden"
+        "name": "Real Madrid",
+        "logo": "https://img.thesports.com/football/team/47ba2fe5caa3770cfa2e99dc4b7e72cd.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Sporting Braga",
-        "logo": "https://img.thesports.com/football/team/1fe75f826dab40e6e89cbe961c7e9116.png",
-        "country": "Portugal"
+        "name": "CA Osasuna",
+        "logo": "https://img.thesports.com/football/team/c2050b940076df70b2ad0a6103c50df4.png",
+        "country": "Spain"
     }
 }

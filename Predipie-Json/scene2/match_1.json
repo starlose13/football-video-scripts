@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: Elfsborg versus Sporting Braga. Braga dominates with a 3-1 win!",
-    "word_count": 16,
-    "reading_time": 5.6,
+    "description": "Let's start with the first match: Real Madrid versus CA Osasuna. Benzema scores twice! Real clinches a 3-1 victory.",
+    "word_count": 19,
+    "reading_time": 6.96,
     "home_team": {
-        "name": "Elfsborg",
-        "logo": "https://img.thesports.com/football/team/983e56ee1d89379148cbb1d28384b6af.png",
-        "country": "Sweden"
+        "name": "Real Madrid",
+        "logo": "https://img.thesports.com/football/team/47ba2fe5caa3770cfa2e99dc4b7e72cd.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Sporting Braga",
-        "logo": "https://img.thesports.com/football/team/1fe75f826dab40e6e89cbe961c7e9116.png",
-        "country": "Portugal"
+        "name": "CA Osasuna",
+        "logo": "https://img.thesports.com/football/team/c2050b940076df70b2ad0a6103c50df4.png",
+        "country": "Spain"
     }
 }

@@ -1,31 +1,31 @@
 {
-    "description": "The home team has struggled recently, securing 2 wins and suffering 3 losses. In contrast, the away team is on a winning streak with 5 consecutive victories.",
+    "description": "The home team has struggled recently, recording one loss and four draws. In contrast, the away team secured one win, suffered three losses, and managed one draw.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "l",
-                "l",
-                "w",
-                "l",
-                "w"
+                "d",
+                "d",
+                "d",
+                "d"
             ],
-            "wins": 2,
-            "draws": 0,
-            "losses": 3
+            "wins": 0,
+            "draws": 4,
+            "losses": 1
         },
         "away_team": {
             "last_5_matches": [
+                "l",
                 "w",
-                "w",
-                "w",
-                "w",
-                "w"
+                "d",
+                "l",
+                "l"
             ],
-            "wins": 5,
-            "draws": 0,
-            "losses": 0
+            "wins": 1,
+            "draws": 1,
+            "losses": 3
         }
     },
     "word_count": 27,
-    "reading_time": 9.26
+    "reading_time": 9.76
 }

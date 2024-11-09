@@ -1,11 +1,11 @@
 {
-    "description": "The home team has been inconsistent recently with one win, three draws, and a loss. The away team has fared better, securing three wins, one draw, and one loss.",
+    "description": "The home team has won once, drawn three times, and lost once recently; the away team has two wins, one draw, and two losses.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
-                "d",
                 "l",
                 "w",
+                "d",
                 "d",
                 "d"
             ],
@@ -16,16 +16,16 @@
         "away_team": {
             "last_5_matches": [
                 "d",
-                "w",
                 "l",
                 "w",
+                "l",
                 "w"
             ],
-            "wins": 3,
+            "wins": 2,
             "draws": 1,
-            "losses": 1
+            "losses": 2
         }
     },
-    "word_count": 29,
-    "reading_time": 10.58
+    "word_count": 24,
+    "reading_time": 8.65
 }
