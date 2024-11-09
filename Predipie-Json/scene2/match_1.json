@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: Al Kholood versus Al-Shabab FC. Al Kholood stuns with a late goal; what a match!",
-    "word_count": 21,
-    "reading_time": 7.28,
+    "description": "Let's start with the first match: Elfsborg versus Sporting Braga. Braga dominates with a 3-1 win!",
+    "word_count": 16,
+    "reading_time": 5.6,
     "home_team": {
-        "name": "Al Kholood",
-        "logo": "https://img.thesports.com/football/team/9d81ea228cac35f27ff7d79078a54e36.png",
-        "country": "Saudi Arabia"
+        "name": "Elfsborg",
+        "logo": "https://img.thesports.com/football/team/983e56ee1d89379148cbb1d28384b6af.png",
+        "country": "Sweden"
     },
     "away_team": {
-        "name": "Al-Shabab FC",
-        "logo": "https://img.thesports.com/football/team/b16d1e3b04364c5cd64203d8b4ef76e2.png",
-        "country": "Saudi Arabia"
+        "name": "Sporting Braga",
+        "logo": "https://img.thesports.com/football/team/1fe75f826dab40e6e89cbe961c7e9116.png",
+        "country": "Portugal"
     }
 }

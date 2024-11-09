@@ -1,12 +1,12 @@
 {
-    "description": "Get ready, folks! The match kicks off at 5:00 PM on Thursday, November 7th, 2024!",
+    "description": "Get ready, everyone! The match kicks off at 5:00 PM on Thursday, November 7, 2024!",
     "match_date": "2024-11-07",
-    "match_time": "05:00 PM",
+    "match_time": "05:00 PM (UTC Time)",
     "match_day": "Thursday",
     "odds": {
-        "home": 6.5,
+        "home": 7.5,
         "draw": 4.75,
-        "away": 1.4
+        "away": 1.38
     },
     "word_count": 15,
     "reading_time": 6.06,

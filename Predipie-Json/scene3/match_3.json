@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 2:30 PM on Thursday, November 7th, 2024!",
+    "description": "Get ready, football fans! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
     "match_date": "2024-11-07",
-    "match_time": "02:30 PM",
+    "match_time": "05:45 PM (UTC Time)",
     "match_day": "Thursday",
     "odds": {
-        "home": 2.25,
-        "draw": 3.3,
-        "away": 3.2
+        "home": 1.95,
+        "draw": 3.75,
+        "away": 3.7
     },
     "word_count": 16,
     "reading_time": 6.35,
     "home_team": {
-        "name": "Vikingur Reykjavik",
-        "logo": "https://img.thesports.com/football/team/7d980021e4160be27df269c331beab96.png",
-        "country": "Iceland"
+        "name": "Eintracht Frankfurt",
+        "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
+        "country": "Germany"
     },
     "away_team": {
-        "name": "Borac Banja Luka",
-        "logo": "https://img.thesports.com/football/team/538d312c2512ebda3129f105db04e5e5.png",
-        "country": "Bosnia and Herzegovina"
+        "name": "Slavia Praha",
+        "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
+        "country": "Czech Republic"
     }
 }

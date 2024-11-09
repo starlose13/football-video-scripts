@@ -103,7 +103,7 @@ try:
         match_info = {
             "description": match_description,
             "match_date": match_date,
-            "match_time": match_time_str,
+            "match_time": match_time_str + " (UTC Time)",
             "match_day": match_day,
             "odds": {
                 "home": home_odds,

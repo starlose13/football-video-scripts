@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the fourth match: Al-Qadisiya against Al-Fayha. Goals fly as tensions flare! A nail-biter to the last whistle.",
-    "word_count": 20,
-    "reading_time": 7.25,
+    "description": "Let's continue with the fourth match: Bodo Glimt against Qarabag. Tense play, drama unfolds!",
+    "word_count": 14,
+    "reading_time": 5.27,
     "home_team": {
-        "name": "Al-Qadisiya",
-        "logo": "https://img.thesports.com/football/team/bc74439d19c8bbaa17c57406b120b86d.png",
-        "country": "Saudi Arabia"
+        "name": "Bodo Glimt",
+        "logo": "https://img.thesports.com/football/team/98854ab97eadf3d2c7c6d657ad99df96.png",
+        "country": "Norway"
     },
     "away_team": {
-        "name": "Al-Fayha",
-        "logo": "https://img.thesports.com/football/team/95f41dd3e8e9d2f6006feed0c024dd9e.png",
-        "country": "Saudi Arabia"
+        "name": "Qarabag",
+        "logo": "https://img.thesports.com/football/team/7f7d00906d511bcf48f9a600580ff953.png",
+        "country": "Azerbaijan"
     }
 }

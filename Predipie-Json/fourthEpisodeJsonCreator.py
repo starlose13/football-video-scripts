@@ -81,8 +81,8 @@ try:
             "description": match_description,
             "odds": {
                 "home": home_odds,
-                "away": guest_odds,
-                "draw": draw_odds
+                "draw": draw_odds,
+                "away": guest_odds
             },
             "word_count": word_count,        # Include word count
             "reading_time": reading_time     # Include calculated reading time

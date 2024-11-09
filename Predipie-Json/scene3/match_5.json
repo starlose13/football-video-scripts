@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, fans! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
+    "description": "Get ready, everyone! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
     "match_date": "2024-11-07",
-    "match_time": "05:45 PM",
+    "match_time": "05:45 PM (UTC Time)",
     "match_day": "Thursday",
     "odds": {
-        "home": 1.8,
-        "draw": 4.0,
-        "away": 3.9
+        "home": 3.1,
+        "draw": 3.3,
+        "away": 2.35
     },
     "word_count": 15,
     "reading_time": 6.06,
     "home_team": {
-        "name": "Eintracht Frankfurt",
-        "logo": "https://img.thesports.com/football/team/fe636189a2f3db78d0554c34f0bdaae6.png",
-        "country": "Germany"
+        "name": "Fotbal Club FCSB",
+        "logo": "https://img.thesports.com/football/team/a413daa882f96b18ddb1f0e8c9dbfda7.png",
+        "country": "Romania"
     },
     "away_team": {
-        "name": "Slavia Praha",
-        "logo": "https://img.thesports.com/football/team/2080ede2c5d09638a7188913c81075ef.png",
-        "country": "Czech Republic"
+        "name": "Midtjylland",
+        "logo": "https://img.thesports.com/football/team/870815ca7c7545f7dc8c0716eecdb708.png",
+        "country": "Denmark"
     }
 }

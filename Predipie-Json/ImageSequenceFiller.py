@@ -25,36 +25,45 @@ json_paths = [
     os.path.join(base_json_dir.format(scene_num=6), 'match_{i}.json')
 ]
 
+base_positions = {
+    "home_team_logo": (410, 845),
+    "home_team_name": (730, 900),
+    "away_team_logo": (3220, 845),
+    "away_team_name": (2480, 900)
+}
+
+# Define unique positions for each image template, which will inherit base positions
 position_mappings = [
-    # Positions for Match Introduction (scene2/match_{i}.json)
+    # Image 1: Match Introduction
     {
-        "home_team_logo": (410, 845),
-        "home_team_name": (730, 900),
-        "away_team_logo": (3220, 845),
-        "away_team_name": (2480, 900)
+        **base_positions,  # Include base positions
     },
-    # Positions for Stats (scene3/match_{i}.json)
+    # Image 2: Stats
     {
-        "match_date": (50, 50),
-        "match_time": (50, 100),
-        "match_day": (50, 150)
+        **base_positions,  # Include base positions
+        "match_date": (1736 , 847),
+        "match_time": (2031, 847),
+        "match_day": (1590, 847)
     },
-    # Positions for Odds (scene4/match_{i}.json)
+    # Image 3: Odds
     {
-        "home_odds": (50, 100),
-        "away_odds": (200, 100),
-        "draw_odds": (350, 100)
+        **base_positions,  # Include base positions
+        "home_odds": (1298, 1086),
+        "draw_odds": (1870, 1086),
+        "away_odds": (2435, 1086)               
     },
-    # Positions for Recent Matches (scene5/match_{i}.json)
+    # Image 4: Recent Matches
     {
-        "home_team_last_5": (50, 100),
-        "away_team_last_5": (400, 100)
+        **base_positions,  # Include base positions
+        "home_team_last_5": (1137, 1357),
+        "away_team_last_5": (2350, 1357)
     },
-    # Positions for AI Analysis Suggestion (scene6/match_{i}.json)
+    # Image 5: AI Analysis Suggestion
     {
-        "card": (50, 100)
+        **base_positions,  # Include base positions
     }
 ]
+
 
 def load_json_data(filepath):
     try:
@@ -82,8 +91,9 @@ def get_data_for_image(json_data, image_index):
     elif image_index == 2:
         return {
             "home_odds": json_data.get("odds", {}).get("home", ""),
-            "away_odds": json_data.get("odds", {}).get("away", ""),
-            "draw_odds": json_data.get("odds", {}).get("draw", "")
+            "draw_odds": json_data.get("odds", {}).get("draw", ""),
+            "away_odds": json_data.get("odds", {}).get("away", "")
+            
         }
     elif image_index == 3:
         return {
@@ -97,28 +107,46 @@ def get_data_for_image(json_data, image_index):
     return {}
 
 
-def fill_image_template(template_path, json_data, positions, previous_positions=None, font_size=80):
+def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80):
     image = Image.open(template_path)
     draw = ImageDraw.Draw(image)
     
-    # Load a bold, sans-serif font appropriate for sports reporting
+    # Load fonts for different sizes
     try:
-        font = ImageFont.truetype("Roboto-Bold.ttf", font_size)
+        default_font = ImageFont.truetype("Roboto-Bold.ttf", font_size)  # Default font size 80
+        small_font = ImageFont.truetype("Roboto-Bold.ttf", 30)  # Small font for match details
+        medium_font = ImageFont.truetype("Roboto-Bold.ttf", 55)  # Medium font for odds fields
     except IOError:
         print("Custom font not found, using default font.")
-        font = ImageFont.load_default()
+        default_font = ImageFont.load_default()
+        small_font = ImageFont.load_default()
+        medium_font = ImageFont.load_default()
 
-    # Combine previous and current positions
-    all_positions = {**previous_positions} if previous_positions else {}
+    # Load and slightly increase the size of icons for win, draw, and lose
+    icon_size = (60, 60)
+    win_icon = Image.open('./assets/win.png').resize(icon_size)
+    draw_icon = Image.open('./assets/draw.png').resize(icon_size)
+    lose_icon = Image.open('./assets/lose.png').resize(icon_size)
+
+    # Combine previous and current positions and data
+    all_positions = {**(previous_positions or {}), **positions}
+    all_data = {**(previous_data or {}), **json_data}  # Ensure previous_data is included in every image
     
     # Choose a color for high contrast with a blue background
     font_color = "white"
     
-    for key, pos in positions.items():
-        if key in json_data:
+    for key, pos in all_positions.items():
+        if key in all_data:
+            # Choose font size based on the specific key
+            if key in ["match_date", "match_time", "match_day"]:
+                font = small_font
+            elif key in ["home_odds", "draw_odds", "away_odds"]:
+                font = medium_font
+            else:
+                font = default_font
+            
             if "logo" in key:  # Handle logo image
-                logo_url = json_data[key]
-                
+                logo_url = all_data[key]
                 try:
                     response = requests.get(logo_url)
                     logo = Image.open(BytesIO(response.content))
@@ -126,49 +154,115 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                     # Convert to RGBA and resize to fit a 200x200 circle
                     if logo.mode != "RGBA":
                         logo = logo.convert("RGBA")
-                    logo = logo.resize((200, 200))  # Smaller diameter for further reduction
+                    logo = logo.resize((228, 228))
                     
                     # Create a circular mask
-                    mask = Image.new("L", (200, 200), 0)
+                    mask = Image.new("L", (228, 228), 0)
                     draw_mask = ImageDraw.Draw(mask)
-                    draw_mask.ellipse((0, 0, 200, 200), fill=255)
+                    draw_mask.ellipse((0, 0, 228, 228), fill=255)
                     
                     # Apply mask to create a circular logo
                     logo.putalpha(mask)
                     
                     # Paste the circular logo on the template
-                    image.paste(logo, pos, logo)  # Using logo as the mask to retain transparency
+                    image.paste(logo, pos, logo)
                 except Exception as e:
                     print(f"Could not load logo from {logo_url}: {e}")
             
-            elif "name" in key:  # Handle team name text with dynamic positioning
-                team_name = str(json_data[key])
+            elif key == "home_team_last_5":  # Handle recent matches for home team
+                recent_matches = all_data[key]
+                icon_spacing = 70  # Adjust spacing between icons
+                x_offset = pos[0]
                 
-                # Get the bounding box for the text to determine its width and height
-                text_bbox = font.getbbox(team_name)
+                for result in recent_matches:
+                    # Select the appropriate icon
+                    if result == 'w':
+                        icon = win_icon
+                    elif result == 'd':
+                        icon = draw_icon
+                    elif result == 'l':
+                        icon = lose_icon
+                    else:
+                        continue  # Skip if not 'w', 'd', or 'l'
+                    
+                    # Paste the icon and update x position
+                    image.paste(icon, (x_offset, pos[1]), icon)
+                    x_offset += icon_spacing
+
+            elif key == "away_team_last_5":  # Handle recent matches for away team
+                recent_matches = all_data[key]
+                icon_spacing = 70  # Adjust spacing between icons
+                x_offset = pos[0]
+                
+                for result in recent_matches:
+                    # Select the appropriate icon
+                    if result == 'w':
+                        icon = win_icon
+                    elif result == 'd':
+                        icon = draw_icon
+                    elif result == 'l':
+                        icon = lose_icon
+                    else:
+                        continue  # Skip if not 'w', 'd', or 'l'
+                    
+                    # Paste the icon and update x position
+                    image.paste(icon, (x_offset, pos[1]), icon)
+                    x_offset += icon_spacing
+
+            elif "name" in key:  # Handle team name text
+                team_name = str(all_data[key])
+                
+                # Measure text width to adjust the distance from the logo
+                text_bbox = draw.textbbox((0, 0), team_name, font=font)
                 text_width = text_bbox[2] - text_bbox[0]
-                text_height = text_bbox[3] - text_bbox[1]
                 
-                # Adjust name position based on text width relative to logo
+                # Determine position based on the logo position
                 if "home_team" in key:
-                    name_pos = (positions["home_team_logo"][0] + 200 + 80, pos[1])  # 10 pixels right of the logo
+                    # Position the name to the right of the home team logo, with some padding
+                    name_pos = (positions["home_team_logo"][0] + 200 + 80, positions["home_team_logo"][1] + (200 - font_size) // 2)
                 elif "away_team" in key:
-                    name_pos = (positions["away_team_logo"][0] - text_width - 80, pos[1])  # 10 pixels left of the logo
+                    # Position the name to the left of the away team logo, with some padding
+                    name_pos = (positions["away_team_logo"][0] - text_width - 80, positions["away_team_logo"][1] + (200 - font_size) // 2)
                 
-                # Draw team name with calculated position
+                # Draw team name with dynamically calculated position
                 draw.text(name_pos, team_name, fill=font_color, font=font)
                 all_positions[key] = name_pos  # Update position tracking
             else:  # Handle other text fields
-                text_value = str(json_data[key])
+                text_value = str(all_data[key])
                 draw.text(pos, text_value, fill=font_color, font=font)
                 all_positions[key] = pos
 
-    return image, all_positions
+    return image, all_positions, all_data
+
 
 
 def generate_images_for_game(game_index, templates, json_paths, position_mappings):
     images = []
     previous_positions = {}  # Keeps track of positions across images
+    previous_data = {}        # Keeps track of data across images
+    
+    # Define the adjusted positions for logos and names for all images except the fifth one
+    adjusted_y_positions = {
+        "home_team_logo": (position_mappings[0]["home_team_logo"][0], 375),
+        "home_team_name": (position_mappings[0]["home_team_name"][0], 435),
+        "away_team_logo": (position_mappings[0]["away_team_logo"][0], 375),
+        "away_team_name": (position_mappings[0]["away_team_name"][0], 435)
+    }
+
+    fifth_image_positions = {
+        "home_team_logo": (position_mappings[0]["home_team_logo"][0], 340),
+        "home_team_name": (position_mappings[0]["home_team_name"][0], 400),
+        "away_team_logo": (position_mappings[0]["away_team_logo"][0], 340),
+        "away_team_name": (position_mappings[0]["away_team_name"][0], 400),
+        "match_date": (1700, 1307),
+        "match_time": (1994, 1307),
+        "match_day": (1554, 1307),
+        "home_odds": (1275, 1546),
+        "draw_odds": (1847, 1546),
+        "away_odds": (2413, 1546),
+        "home_team_last_5": (1128, 1813),
+        "away_team_last_5": (2284, 1813),
+    }
     
     for i, template_path in enumerate(templates):
         json_data_path = json_paths[i].format(i=game_index + 1)
@@ -179,16 +273,46 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
         # Get specific data for the current image
         image_data = get_data_for_image(json_data, i)
         
-        # Fill image template with JSON data
-        image, previous_positions = fill_image_template(
+        # Apply adjusted positions for all images except the fifth one
+        if i == 4:  # Check if it’s the fifth image
+            card_result = image_data.get("card", "")
+            # Determine the template based on card result
+            if card_result == "Win or Draw Away Team":
+                template_path = './assets/draw-away.jpg'
+            elif card_result == "Win or Draw Home Team":
+                template_path = './assets/home-draw.jpg'
+            elif card_result == "Win Home or Away Team":
+                template_path = './assets/home-away.jpg'
+            elif card_result == "Win Home Team":
+                template_path = './assets/home.jpg'
+            elif card_result == "Win Away Team":
+                template_path = './assets/away.jpg'
+            else:
+                template_path = templates[i]  # Default to original fifth image if card result doesn't match
+            
+            adjusted_positions = {**position_mappings[i], **fifth_image_positions}
+            font_size = 60  # Reduced font size for home_team_name and away_team_name on the fifth image
+        elif i != 0:
+            adjusted_positions = {**position_mappings[i], **adjusted_y_positions}
+        else:
+            adjusted_positions = position_mappings[i]
+            font_size = 80  # Default font size for other images
+
+        # Fill image template with JSON data and inherited base data and positions
+        image, previous_positions, previous_data = fill_image_template(
             template_path,
             image_data,
-            position_mappings[i],
-            previous_positions
+            adjusted_positions,
+            previous_positions=previous_positions,
+            previous_data=previous_data,
+            font_size=font_size
         )
         images.append(image)
     
     return images
+
+
+
 
 # Ensure the output directory exists
 output_dir = "./output"

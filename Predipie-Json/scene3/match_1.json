@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 3:00 PM on Thursday, November 7, 2024!",
+    "description": "Get ready, everyone! The match kicks off at 5:45 PM on Thursday, November 7, 2024!",
     "match_date": "2024-11-07",
-    "match_time": "03:00 PM",
+    "match_time": "05:45 PM (UTC Time)",
     "match_day": "Thursday",
     "odds": {
-        "home": 3.6,
-        "draw": 3.3,
-        "away": 1.95
+        "home": 3.5,
+        "draw": 3.7,
+        "away": 2.0
     },
     "word_count": 15,
     "reading_time": 6.06,
     "home_team": {
-        "name": "Al Kholood",
-        "logo": "https://img.thesports.com/football/team/9d81ea228cac35f27ff7d79078a54e36.png",
-        "country": "Saudi Arabia"
+        "name": "Elfsborg",
+        "logo": "https://img.thesports.com/football/team/983e56ee1d89379148cbb1d28384b6af.png",
+        "country": "Sweden"
     },
     "away_team": {
-        "name": "Al-Shabab FC",
-        "logo": "https://img.thesports.com/football/team/b16d1e3b04364c5cd64203d8b4ef76e2.png",
-        "country": "Saudi Arabia"
+        "name": "Sporting Braga",
+        "logo": "https://img.thesports.com/football/team/1fe75f826dab40e6e89cbe961c7e9116.png",
+        "country": "Portugal"
     }
 }
