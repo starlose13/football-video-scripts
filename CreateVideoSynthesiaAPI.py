@@ -6,6 +6,7 @@ from datetime import datetime
 from github import Github
 import base64
 from dotenv import load_dotenv
+from io import BytesIO
 
 from AIAvatarAPI import calculate_points, calculate_points_summary, calculate_rank_difference, classify_a_points, classify_a_team, classify_b_points, classify_b_team, generate_result, generate_video_script
 
@@ -93,41 +94,79 @@ def fetch_odds_rank_and_last_5_games():
 
         return game_data
 
-# Function to generate match image
+
+
+def download_image(url):
+    """Download an image from a URL."""
+    response = requests.get(url)
+    if response.status_code == 200:
+        return Image.open(BytesIO(response.content))
+    else:
+        raise Exception(f"Failed to download image from URL: {url}")
+
 def generate_match_image(match_data, match_number):
-    img = Image.open("./assets/match-template.png")
+    # Load the template image
+    try:
+        img = Image.open("./assets/match-template.png")
+    except FileNotFoundError:
+        raise Exception("Template image not found at './assets/match-template.png'")
+
     draw = ImageDraw.Draw(img)
 
-    font_path = "arial.ttf"
-    font_team = ImageFont.truetype(font_path, 32)
-    font_league = ImageFont.truetype(font_path, 30)
-    font_details = ImageFont.truetype(font_path, 32)
+    # Load font, fallback if not found
+    try:
+        font_path = "arial.ttf"
+        font_team = ImageFont.truetype(font_path, 32)
+        font_league = ImageFont.truetype(font_path, 30)
+        font_details = ImageFont.truetype(font_path, 32)
+    except IOError:
+        raise Exception(f"Font file not found: {font_path}")
 
+    # Extract match data
     home_team_name = match_data['home_team']
     away_team_name = match_data['away_team']
-    home_team_logo = match_data['home_team_logo']
-    away_team_logo = match_data['away_team_logo']
+    home_team_logo_url = match_data['home_team_logo']
+    away_team_logo_url = match_data['away_team_logo']
     league = match_data['league']
     stadium = match_data['stadium']
     day = match_data['day']
     time = match_data['time']
 
+    # Download and paste logos
+    try:
+        home_logo_img = download_image(home_team_logo_url)
+        away_logo_img = download_image(away_team_logo_url)
+
+        # Resize logos if necessary (e.g., to 100x100) using Image.LANCZOS
+        home_logo_img = home_logo_img.resize((100, 100), Image.LANCZOS)
+        away_logo_img = away_logo_img.resize((100, 100), Image.LANCZOS)
+
+        # Paste logos onto the image (adjust positions as needed)
+        img.paste(home_logo_img, (150, 300))  # Adjust x, y coordinates
+        img.paste(away_logo_img, (img.width - 250, 300))  # Adjust x, y coordinates
+    except Exception as e:
+        raise Exception(f"Error processing team logos: {e}")
+
+    # Draw the text on the image
     draw.text((750, 472), home_team_name, fill="white", font=font_team)
     draw.text((img.width - 630, 472), away_team_name, fill="white", font=font_team)
-    draw.text((img.width - 460, 472), home_team_logo, fill="white", font=font_team)
-    draw.text((img.width - 3200, 472), away_team_logo, fill="white", font=font_team)
-    draw.text((img.width - 1140, 425), league, fill="white", font=font_league)
-    draw.text((img.width - 1140, 845), f"{day} {time}", fill="white", font=font_details)
-    draw.text((img.width - 1140, 950), stadium, fill="white", font=font_details)
+    draw.text((750, 400), league, fill="white", font=font_league)  # Adjust position as needed
+    draw.text((750, 550), f"{day} {time}", fill="white", font=font_details)  # Adjust position as needed
+    draw.text((750, 600), stadium, fill="white", font=font_details)  # Adjust position as needed
 
+    # Save the output image
     output_path = f"output_{home_team_name}_vs_{away_team_name}.png"
     img.save(output_path)
     print(f"Generated image for match {match_number} at {output_path}")
+
     return output_path  # Return the local image path
+
+
+
 
 # Function to upload image to GitHub and get the public URL
 def upload_image_to_github(image_path, folder, file_name):
-    token = os.getenv('GITHUB_TOKEN')  # Use your GitHub Personal Access Token
+    token = os.getenv('GITHUB_TOKEN')
     repo_name = os.getenv('GITHUB_REPO_NAME')
     username = os.getenv('GITHUB_USERNAME')
     
@@ -139,7 +178,7 @@ def upload_image_to_github(image_path, folder, file_name):
     except Exception as e:
         print(f"Error accessing repository {repo_name}: {e}")
         raise
-    
+
     # Construct the path where the image will be uploaded
     path = f"{folder}/{file_name}"
 
@@ -148,7 +187,7 @@ def upload_image_to_github(image_path, folder, file_name):
         contents = repo.get_contents(path)
         sha = contents.sha  # File exists, get the current SHA
         print(f"File {path} already exists, updating it.")
-    except Exception as e:
+    except Exception:
         # File doesn't exist, proceed with creating a new file
         sha = None
         print(f"File {path} does not exist, creating a new one.")
@@ -165,16 +204,22 @@ def upload_image_to_github(image_path, folder, file_name):
     
     print(f"Image uploaded to GitHub at {path}")
 
-    # Construct and return the raw URL of the uploaded image
+    # Construct the correct raw URL for the uploaded image
     image_url = f"https://raw.githubusercontent.com/{username}/{repo_name}/main/{path}"
     
     # Validate the image URL by checking its content type
     response = requests.get(image_url)
-    print(f"Image URL content type: {response.headers['Content-Type']}")
-    if "image" not in response.headers['Content-Type']:
-        raise Exception(f"Invalid content type for image: {response.headers['Content-Type']}")
+    expected_content_types = ["image/png", "image/jpeg", "image/jpg"]
+    
+    # Fallback MIME type validation
+    if response.headers['Content-Type'] not in expected_content_types:
+        # Check based on file extension as a backup method
+        valid_extensions = [".png", ".jpg", ".jpeg"]
+        if not any(file_name.lower().endswith(ext) for ext in valid_extensions):
+            raise Exception(f"Invalid content type for image or incorrect file extension: {response.headers['Content-Type']}")
 
     return image_url
+
 
 
 
@@ -235,7 +280,6 @@ def main():
     folder = "images"
     file_name = os.path.basename(image_path)
     github_image_url = upload_image_to_github(image_path, folder, file_name)
-
     video_script = generate_video_script(match_data, match_data['prediction_result'], match_data['row_number'])
 
     print(f"Generated Video Script for {home_team} vs {away_team}:\n{video_script}")

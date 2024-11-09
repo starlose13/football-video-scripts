@@ -3,6 +3,13 @@ import json
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
+import subprocess
+
+GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+REPO_NAME = os.getenv("REPO_NAME")
+REPO_URL = f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@github.com/{GITHUB_USERNAME}/{REPO_NAME}.git"
+
 
 # Automatically set the base directory for JSON files relative to the script's location
 base_json_dir = os.path.join(os.path.dirname(__file__), 'scene{scene_num}')
@@ -108,15 +115,6 @@ def add_program_number_to_starting_scene(json_path, image_path, output_path, pos
     # Save the modified image
     image.save(output_path)
     print(f"Image saved at {output_path}")
-
-
-# Usage
-json_path = './program_number.json'  # Path to your JSON file
-image_path = './assets/starting-scene.jpg'  # Path to the starting scene image
-output_path = './output/starting-scene-with-program-number.jpg'  # Output path for the modified image
-
-# Call the function
-add_program_number_to_starting_scene(json_path, image_path, output_path)
 
 
 
@@ -367,6 +365,19 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
     return images
 
 
+def push_to_github():
+    try:
+        # Stage all changes (modified, deleted, and new files)
+        subprocess.run(["git", "add", "-A"], check=True)
+        
+        # Commit the changes with a message
+        subprocess.run(["git", "commit", "-m", "Add generated images and starting scene"], check=True)
+        
+        # Push the changes to the repository
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print("Changes pushed to GitHub successfully.")
+    except subprocess.CalledProcessError as e:
+        print("An error occurred while pushing to GitHub:", e)
 
 
 # Ensure the output directory exists
@@ -378,4 +389,13 @@ for game_index in range(5):  # Assuming 5 games
     
     # Save each generated image for this game
     for i, img in enumerate(game_images):
-        img.save(f"./output/game_{game_index+1}_image_{i+1}.jpg")
+        img_path = f"./output/game_{game_index+1}_image_{i+1}.jpg"
+        img.save(img_path)
+
+starting_scene_json_path = './program_number.json'
+starting_scene_image_path = './assets/starting-scene.jpg'
+starting_scene_output_path = './output/starting-scene-with-program-number.jpg'
+add_program_number_to_starting_scene(starting_scene_json_path, starting_scene_image_path, starting_scene_output_path)
+
+
+push_to_github()
