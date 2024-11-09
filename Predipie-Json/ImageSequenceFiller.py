@@ -4,6 +4,9 @@ from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
 import subprocess
+from dotenv import load_dotenv
+
+load_dotenv()
 
 GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
