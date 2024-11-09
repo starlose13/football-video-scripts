@@ -154,8 +154,8 @@ with open(output_file_path, 'w', encoding='utf-8') as output_file:
 print(f"Narration for episode {program_number} saved to {output_file_path}")
 
 # Generate video with Creatify API
-video_url = create_video_with_creatify(full_narration, program_number)
-if video_url:
-    print(f"Video for episode {program_number} is ready: {video_url}")
-else:
-    print("Failed to generate the video.")
+# video_url = create_video_with_creatify(full_narration, program_number)
+# if video_url:
+#     print(f"Video for episode {program_number} is ready: {video_url}")
+# else:
+#     print("Failed to generate the video.")

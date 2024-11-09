@@ -1,12 +1,12 @@
 {
-    "description": "The home team has lost twice recently but bounced back with three straight wins. The away team arrives after three wins, one loss, and a draw in their last outings.",
+    "description": "The home team has won three and lost two of their last five games. Similarly, the away team also won three matches and lost two in their recent outings.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "l",
+                "w",
+                "w",
                 "l",
-                "w",
-                "w",
                 "w"
             ],
             "wins": 3,
@@ -15,17 +15,17 @@
         },
         "away_team": {
             "last_5_matches": [
-                "w",
+                "l",
                 "w",
                 "w",
                 "l",
-                "d"
+                "w"
             ],
             "wins": 3,
-            "draws": 1,
-            "losses": 1
+            "draws": 0,
+            "losses": 2
         }
     },
-    "word_count": 30,
-    "reading_time": 10.12
+    "word_count": 29,
+    "reading_time": 9.58
 }

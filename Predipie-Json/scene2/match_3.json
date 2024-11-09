@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the third match: Al-Jandal against Al Zulfi. Tense duel, last-minute win!",
-    "word_count": 14,
-    "reading_time": 5.27,
+    "description": "Let's continue with the third match: Juventus against Torino. Rivalry reignites! Goals, drama, and a last-minute winner!",
+    "word_count": 17,
+    "reading_time": 6.89,
     "home_team": {
-        "name": "Al-Jandal",
-        "logo": "https://img.thesports.com/football/team/fd5aee9ffe07250e37324ffc26a296a3.png",
-        "country": "Saudi Arabia"
+        "name": "Juventus",
+        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Al Zulfi",
-        "logo": "https://img.thesports.com/football/team/13b5359a749536d5adb6ef17cd675219.png",
-        "country": "Unknown Country"
+        "name": "Torino",
+        "logo": "https://img.thesports.com/football/team/f0856c1b16c32245a8d2c702ffe89ac5.png",
+        "country": "Italy"
     }
 }

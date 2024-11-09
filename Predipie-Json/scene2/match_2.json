@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the second match: Venezia against Parma. Goals fly as tension mounts!",
-    "word_count": 14,
-    "reading_time": 5.02,
+    "description": "Let's continue with the second match: Liverpool against Aston Villa. Thrilling 3-2 win! Reds triumph late; dramatic goals, intense fight.",
+    "word_count": 20,
+    "reading_time": 7.75,
     "home_team": {
-        "name": "Venezia",
-        "logo": "https://img.thesports.com/football/team/3e724dc0e6fffd01a630b65af348fab6.png",
-        "country": "Italy"
+        "name": "Liverpool",
+        "logo": "https://img.thesports.com/football/team/1cb3d08adac0e2dc1c4f10429d055bfe.png",
+        "country": "England"
     },
     "away_team": {
-        "name": "Parma",
-        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
-        "country": "Italy"
+        "name": "Aston Villa",
+        "logo": "https://img.thesports.com/football/team/cf923a8b31d94745b3cbe4de42c670a9.png",
+        "country": "England"
     }
 }

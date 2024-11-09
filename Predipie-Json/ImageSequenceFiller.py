@@ -349,8 +349,8 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
 
 
 
+
 def get_signed_url():
-    """Request a signed URL from Shotstack for direct upload."""
     signed_url_request_url = "https://api.shotstack.io/ingest/stage/upload"
     headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
     response = requests.post(signed_url_request_url, headers=headers)
@@ -360,8 +360,7 @@ def get_signed_url():
     print("Failed to obtain signed URL:", response.status_code, response.text)
     return None, None
 
-def upload_image_to_shotstack(image_path):
-    """Uploads an image to Shotstack using the signed URL."""
+def upload_image_to_shotstack(image_path, file_name):
     signed_url, source_id = get_signed_url()
     if not signed_url:
         print(f"Skipping upload for {image_path}")
@@ -371,9 +370,13 @@ def upload_image_to_shotstack(image_path):
         upload_response = requests.put(signed_url, data=file)
         if upload_response.status_code == 200:
             print(f"Image uploaded successfully for {image_path}")
+            # Save the source_id and original file name to track
+            uploaded_files[file_name] = source_id
             return source_id
         print(f"Failed to upload {image_path}:", upload_response.status_code, upload_response.text)
     return None
+
+uploaded_files = {}
 
 def check_upload_status(source_id):
     """Check the status of the uploaded image by source ID."""
@@ -387,28 +390,35 @@ def check_upload_status(source_id):
     return None, None
 
 
-# Loop to generate images for each game and save them to `output` directory
 for game_index in range(5):  # Assuming 5 games
     game_images = generate_images_for_game(game_index, templates, json_paths, position_mappings)
     
     for i, img in enumerate(game_images):
-        image_path = os.path.join(output_dir, f"game_{game_index+1}_image_{i+1}.jpg")
+        file_name = f"game_{game_index+1}_image_{i+1}.jpg"
+        image_path = os.path.join(output_dir, file_name)
         img.save(image_path)
         
         # Upload each image to Shotstack
-        source_id = upload_image_to_shotstack(image_path)
+        source_id = upload_image_to_shotstack(image_path, file_name)
         if source_id:
             status, url = check_upload_status(source_id)
             print(f"Upload status for {image_path}: {status}")
             if status == "ready":
                 print(f"Image URL: {url}")
 
+# Save all uploaded file names and source IDs
+with open("uploaded_files.json", "w") as f:
+    json.dump(uploaded_files, f, indent=4)
+print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
+
 # Upload the starting scene with program number to Shotstack
 starting_scene_json_path = './program_number.json'
 starting_scene_image_path = './assets/starting-scene.jpg'
 starting_scene_output_path = './output/starting-scene-with-program-number.jpg'
 add_program_number_to_starting_scene(starting_scene_json_path, starting_scene_image_path, starting_scene_output_path)
-source_id = upload_image_to_shotstack(starting_scene_output_path)
+
+# Track starting scene upload with file name
+source_id = upload_image_to_shotstack(starting_scene_output_path, "starting-scene-with-program-number.jpg")
 
 if source_id:
     status, url = check_upload_status(source_id)

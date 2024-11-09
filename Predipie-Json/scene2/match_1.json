@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: Real Madrid versus CA Osasuna. Benzema scores twice! Real clinches a 3-1 victory.",
-    "word_count": 19,
-    "reading_time": 6.96,
+    "description": "Let's start with the first match: CD Leganes versus Sevilla FC. Thrills galore! Sevilla clinches a dramatic 2-1 victory; hearts race, fans roar!",
+    "word_count": 23,
+    "reading_time": 8.61,
     "home_team": {
-        "name": "Real Madrid",
-        "logo": "https://img.thesports.com/football/team/47ba2fe5caa3770cfa2e99dc4b7e72cd.png",
+        "name": "CD Leganes",
+        "logo": "https://img.thesports.com/football/team/b6728832f1504989e57f8a43479429ec.png",
         "country": "Spain"
     },
     "away_team": {
-        "name": "CA Osasuna",
-        "logo": "https://img.thesports.com/football/team/c2050b940076df70b2ad0a6103c50df4.png",
+        "name": "Sevilla FC",
+        "logo": "https://img.thesports.com/football/team/d20ed1da4f299cc3ef0e1e9eb06eced1.png",
         "country": "Spain"
     }
 }

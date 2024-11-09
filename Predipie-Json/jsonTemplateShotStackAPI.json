@@ -397,119 +397,119 @@
         },
         {
             "find": "IMAGE_0",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j292r-90qmj-b34nb-p7qfw1/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_1",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-g53vt-772pb-g9bpd-9rq4cv/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_2",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-h5jj6-bq95q-rn5dx-v3mv00/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_3",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-h8622-bsw09-bd9fx-a5ayb1/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_4",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-hzah1-vj3md-sdbsm-b1peff/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_5",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j0jkt-r1c40-rmsq8-4bte55/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_6",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j4qwk-tt3za-yrvcc-6r2xvy/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_7",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j5zs3-4wz6s-xnft1-chsmx9/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_8",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j6z7h-878pg-wxveg-e9dndx/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_9",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j8jep-9tje7-gdnq3-ynqkw6/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_10",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-j9rpc-x3z6v-y5cjf-bpg250/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_11",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-japy8-35tab-2vhvt-dnccsg/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_12",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-jbncx-vr8sn-edbpb-fkcf5x/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_13",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-jdden-h0k28-fz6sv-x033hn/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_14",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-jeexa-dfg3q-6a83z-bb6m2g/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_15",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-jfjf5-hxmr5-b0989-fapxeg/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_16",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k55sa-cnhxc-eeake-nfx3f8/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_17",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k65h9-1eqv2-rbjsd-z314xg/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_18",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k76ky-e1gyq-zqg5w-2npt8e/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_19",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k88as-4c68k-cm0dk-fy2z0v/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_20",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k96nz-ktrnw-jbs0w-z1m019/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_21",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-k9z7g-7h8n2-yazpn-06m2bs/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_22",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kcn3b-x0ths-qrh1a-s2cxmg/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_23",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kaxda-582n4-kcpwk-7fgmyj/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_24",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-h8622-bsw09-bd9fx-a5ayb1/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_25",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kg79g-set1d-kt33p-jghnj4/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_26",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kh2yf-hvb7k-bh6ah-dxetqd/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_27",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kngdq-12qg8-2xyk7-4nv8h3/source.jpg"
+            "replace": ""
         },
         {
             "find": "IMAGE_28",
-            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kpwf1-nxm7v-2r4fn-a8wyf1/source.jpg"
+            "replace": ""
         }
     ]
 }

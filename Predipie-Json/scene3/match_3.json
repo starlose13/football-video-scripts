@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, folks! The match kicks off at 12:25 PM on Saturday, November 9th, 2024!",
+    "description": "Get ready, football fans! The match kicks off at 7:45 PM on Saturday, November 9, 2024!",
     "match_date": "2024-11-09",
-    "match_time": "12:25 PM (UTC Time)",
+    "match_time": "07:45 PM (UTC Time)",
     "match_day": "Saturday",
     "odds": {
-        "home": 2.25,
-        "draw": 2.8,
-        "away": 3.2
+        "home": 1.55,
+        "draw": 3.7,
+        "away": 7.5
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 16,
+    "reading_time": 6.35,
     "home_team": {
-        "name": "Al-Jandal",
-        "logo": "https://img.thesports.com/football/team/fd5aee9ffe07250e37324ffc26a296a3.png",
-        "country": "Saudi Arabia"
+        "name": "Juventus",
+        "logo": "https://img.thesports.com/football/team/314ca8463a6fd047b11d474287b24c50.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Al Zulfi",
-        "logo": "https://img.thesports.com/football/team/13b5359a749536d5adb6ef17cd675219.png",
-        "country": "Unknown Country"
+        "name": "Torino",
+        "logo": "https://img.thesports.com/football/team/f0856c1b16c32245a8d2c702ffe89ac5.png",
+        "country": "Italy"
     }
 }

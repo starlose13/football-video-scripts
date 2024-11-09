@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 12:45 PM on Saturday, November 9, 2024!",
+    "description": "Get ready for an electrifying night of football as the match kicks off at 8:00 PM on Saturday, November 9th, 2024!",
     "match_date": "2024-11-09",
-    "match_time": "12:45 PM (UTC Time)",
+    "match_time": "08:00 PM (UTC Time)",
     "match_day": "Saturday",
     "odds": {
-        "home": 4.15,
-        "draw": 2.66,
-        "away": 2.07
+        "home": 9.5,
+        "draw": 5.5,
+        "away": 1.29
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 21,
+    "reading_time": 7.03,
     "home_team": {
-        "name": "Gol Gohar FC",
-        "logo": "https://img.thesports.com/football/team/69625f17e031ad1fcb33823338b74d95.png",
-        "country": "Iran"
+        "name": "Angers SCO",
+        "logo": "https://img.thesports.com/football/team/526150064f4f983d670deb33fa6385b6.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Persepolis",
-        "logo": "https://img.thesports.com/football/team/d0122ef4d5150b1b16e5274a97913894.png",
-        "country": "Iran"
+        "name": "Paris Saint Germain",
+        "logo": "https://img.thesports.com/football/team/3b720f181ce9993f9422d276acf7b292.png",
+        "country": "France"
     }
 }

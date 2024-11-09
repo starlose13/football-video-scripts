@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, folks! The match kicks off at 2:00 PM on Saturday, November 9th, 2024!",
+    "description": "Get ready for some thrilling action as the match kicks off at 8:00 PM on Saturday, November 9th, 2024!",
     "match_date": "2024-11-09",
-    "match_time": "02:00 PM (UTC Time)",
+    "match_time": "08:00 PM (UTC Time)",
     "match_day": "Saturday",
     "odds": {
-        "home": 2.2,
-        "draw": 3.4,
-        "away": 3.2
+        "home": 1.45,
+        "draw": 4.75,
+        "away": 6.25
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 19,
+    "reading_time": 6.46,
     "home_team": {
-        "name": "Venezia",
-        "logo": "https://img.thesports.com/football/team/3e724dc0e6fffd01a630b65af348fab6.png",
-        "country": "Italy"
+        "name": "Liverpool",
+        "logo": "https://img.thesports.com/football/team/1cb3d08adac0e2dc1c4f10429d055bfe.png",
+        "country": "England"
     },
     "away_team": {
-        "name": "Parma",
-        "logo": "https://img.thesports.com/football/team/9fadd87d190982c8082dddf1567e0b9b.png",
-        "country": "Italy"
+        "name": "Aston Villa",
+        "logo": "https://img.thesports.com/football/team/cf923a8b31d94745b3cbe4de42c670a9.png",
+        "country": "England"
     }
 }

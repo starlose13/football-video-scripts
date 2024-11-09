@@ -1,10 +1,10 @@
 {
-    "description": "Odds for winning are 1.36 for the home team and 7.0 for the away team! Odds for a draw stand at 4.2.",
+    "description": "The odds for Boavista FC winning are 2.8; for Rio Ave winning, 2.7; and for a draw, 3.0.",
     "odds": {
-        "home": 1.36,
-        "draw": 4.2,
-        "away": 7.0
+        "home": 2.8,
+        "draw": 3.0,
+        "away": 2.7
     },
-    "word_count": 22,
-    "reading_time": 8.82
+    "word_count": 18,
+    "reading_time": 8.17
 }
