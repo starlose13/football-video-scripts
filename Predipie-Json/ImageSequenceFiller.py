@@ -13,7 +13,7 @@ templates = [
     './assets/stats.jpg',
     './assets/odds.jpg',
     './assets/recent-matches.jpg',
-    './assets/Ai-analysis-suggestion.jpg'
+    './assets/away.jpg'
 ]
 
 # Define JSON path templates for each image, replacing scene number dynamically
@@ -63,6 +63,61 @@ position_mappings = [
         **base_positions,  # Include base positions
     }
 ]
+
+
+def add_program_number_to_starting_scene(json_path, image_path, output_path, position=(2230, 125), font_size=110):
+    """
+    Adds the program number from JSON data to a specified position on an image.
+
+    Parameters:
+        json_path (str): Path to the JSON file containing the program number.
+        image_path (str): Path to the image file where the program number will be added.
+        output_path (str): Path where the modified image will be saved.
+        position (tuple): Position (x, y) to place the program number on the image.
+        font_size (int): Font size for the program number text.
+    """
+    # Load the program number from the JSON file
+    try:
+        with open(json_path, 'r') as file:
+            json_data = json.load(file)
+            program_number = str(json_data.get("program_number", ""))  # Read 'program_number' field
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {json_path}")
+        return
+    except json.JSONDecodeError:
+        print("Error: JSON file is not properly formatted.")
+        return
+    
+    # Load the image
+    image = Image.open(image_path)
+    draw = ImageDraw.Draw(image)
+    
+    # Load the font
+    try:
+        font = ImageFont.truetype("Roboto-Bold.ttf", font_size)
+    except IOError:
+        print("Custom font not found, using default font.")
+        font = ImageFont.load_default()
+
+    # Define font color
+    font_color = "white"
+    
+    # Draw the program number on the image
+    draw.text(position, program_number, fill=font_color, font=font)
+    
+    # Save the modified image
+    image.save(output_path)
+    print(f"Image saved at {output_path}")
+
+
+# Usage
+json_path = './program_number.json'  # Path to your JSON file
+image_path = './assets/starting-scene.jpg'  # Path to the starting scene image
+output_path = './output/starting-scene-with-program-number.jpg'  # Output path for the modified image
+
+# Call the function
+add_program_number_to_starting_scene(json_path, image_path, output_path)
+
 
 
 def load_json_data(filepath):
