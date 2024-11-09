@@ -367,6 +367,14 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
 
 def push_to_github():
     try:
+        # Check if there are any changes to commit
+        status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+        
+        # If the output of `git status --porcelain` is empty, there are no changes
+        if status.stdout.strip() == "":
+            print("No changes to commit. Working tree is clean.")
+            return
+
         # Stage all changes (modified, deleted, and new files)
         subprocess.run(["git", "add", "-A"], check=True)
         
@@ -376,6 +384,7 @@ def push_to_github():
         # Push the changes to the repository
         subprocess.run(["git", "push", "origin", "main"], check=True)
         print("Changes pushed to GitHub successfully.")
+        
     except subprocess.CalledProcessError as e:
         print("An error occurred while pushing to GitHub:", e)
 
