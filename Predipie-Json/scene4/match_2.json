@@ -1,10 +1,10 @@
 {
-    "description": "Real Betis to win has odds of 2.0. RC Celta to win holds odds of 3.6. The odds for a draw are set at 3.3.",
+    "description": "Winning odds are 2.0 for the home team; 3.6 for the away team. A draw has odds of 3.3. Make your picks now!",
     "odds": {
         "home": 2.0,
         "draw": 3.3,
         "away": 3.6
     },
-    "word_count": 25,
-    "reading_time": 10.18
+    "word_count": 23,
+    "reading_time": 9.86
 }

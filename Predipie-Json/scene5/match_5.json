@@ -1,5 +1,5 @@
 {
-    "description": "The home team has been strong recently, winning four of their last five matches and losing only once. The away team has struggled, with three losses and two wins in their last five games.",
+    "description": "The home team has shown strong form, winning four out of their last five matches despite a single loss. Meanwhile, the away team has struggled, losing three times and winning twice in their recent outings.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -26,6 +26,6 @@
             "losses": 3
         }
     },
-    "word_count": 34,
-    "reading_time": 11.27
+    "word_count": 35,
+    "reading_time": 11.81
 }

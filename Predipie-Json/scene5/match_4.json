@@ -1,5 +1,5 @@
 {
-    "description": "The home team recently recorded two wins, one draw, and two losses; their performance is mixed. The away team struggled more, with only one win, one draw, and three losses.",
+    "description": "The home team has won twice, drawn once, and lost twice recently; the away team, on the other hand, has one win, one draw, and three losses.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -26,6 +26,6 @@
             "losses": 3
         }
     },
-    "word_count": 30,
-    "reading_time": 11.12
+    "word_count": 27,
+    "reading_time": 10.01
 }

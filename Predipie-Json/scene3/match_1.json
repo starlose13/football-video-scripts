@@ -1,15 +1,15 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 12:35 PM on Sunday, November 10, 2024!",
+    "description": "Get ready, everyone! The match kicks off at 12:35 PM on Sunday, November 10th, 2024!",
     "match_date": "2024-11-10",
     "match_time": "12:35 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 3.1,
-        "draw": 3.1,
-        "away": 2.15
+        "home": 3.2,
+        "draw": 3.2,
+        "away": 2.1
     },
-    "word_count": 16,
-    "reading_time": 6.35,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
         "name": "Al-Ain SFC",
         "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",

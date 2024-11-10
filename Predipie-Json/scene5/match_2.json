@@ -1,5 +1,5 @@
 {
-    "description": "The home team has been strong recently, with three wins and two draws; they remain unbeaten. The away team, however, has three wins interspersed with two losses.",
+    "description": "The home team is unbeaten recently, securing three wins and two draws. Meanwhile, the away team has three wins and two losses in their last five matches.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -27,5 +27,5 @@
         }
     },
     "word_count": 27,
-    "reading_time": 9.76
+    "reading_time": 9.26
 }

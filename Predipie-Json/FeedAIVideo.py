@@ -54,8 +54,6 @@ def get_reading_time(scene_num: int, match_num: int) -> Optional[float]:
     except FileNotFoundError:
         logging.warning(f"Scene file not found for scene {scene_num}, match {match_num}.")
         return None
-import json
-import os
 
 def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     # Load AVATAR URL from shotstack_video_url.json
@@ -84,10 +82,10 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         "tracks": [{"clips": []}]
     }
     merge = [{"find": "AVATAR", "replace": avatar_url}]
-    previous_start = 0
+    previous_start = 0  # Initialize start time for the first clip
     image_index = 0
 
-    # Add AVATAR clip at the start
+    # Add AVATAR clip with the specified structure and resolve "{{ AVATAR }}" placeholder
     avatar_clip = {
         "asset": {
             "type": "video",
@@ -100,13 +98,13 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         },
         "fit": "none",
         "scale": 0.25,
-        "start": 0,
+        "start": previous_start,
         "length": "auto"
     }
     timeline["tracks"][0]["clips"].append(avatar_clip)
 
     # Handle IMAGE_0 with starting-scene-with-program-number.jpg
-    length_image_0 = intro_reading_time  # Replaces the old calculation with intro.json reading_time
+    length_image_0 = intro_reading_time
     file_link_image_0 = links.get("starting-scene-with-program-number.jpg")
 
     if file_link_image_0 and length_image_0 > 0:
@@ -120,7 +118,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         }
         timeline["tracks"][0]["clips"].append(clip)
         merge.append({"find": "IMAGE_0", "replace": file_link_image_0})
-        previous_start += length_image_0
+        previous_start += length_image_0  # Update start for the next image
         image_index += 1
 
     # Add clips dynamically from IMAGE_1 to IMAGE_25
@@ -137,12 +135,12 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
                     "transition": {"in": "carouselLeft"},
                     "position": "center",
                     "length": reading_time,
-                    "start": previous_start
+                    "start": previous_start  # Dynamically calculated
                 }
                 timeline["tracks"][0]["clips"].append(clip)
                 merge.append({"find": placeholder, "replace": file_link})
                 
-                previous_start += reading_time
+                previous_start += reading_time  # Update start time for the next clip
                 image_index += 1
 
     # Add IMAGE_26 with a fixed length of 4 seconds
@@ -154,11 +152,11 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "transition": {"in": "carouselLeft"},
             "position": "center",
             "length": 4,
-            "start": previous_start  # start(IMAGE_26) = start(IMAGE_25) + length(IMAGE_25)
+            "start": previous_start
         }
         timeline["tracks"][0]["clips"].append(clip)
         merge.append({"find": "IMAGE_26", "replace": file_link_image_26})
-        previous_start += 4  # Update start for IMAGE_27 after setting length of 4 for IMAGE_26
+        previous_start += 4  # Update start for IMAGE_27
 
     # Add IMAGE_27 with a dynamic or "auto" length
     file_link_image_27 = "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kpwf1-nxm7v-2r4fn-a8wyf1/source.jpg"
@@ -168,15 +166,20 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "effect": "zoomInSlow",
             "transition": {"in": "carouselLeft"},
             "position": "center",
-            "length": "auto",  # length for IMAGE_27 is set to auto
-            "start": previous_start  # start(IMAGE_27) = start(IMAGE_26) + length(IMAGE_26)
+            "length": "auto",
+            "start": previous_start
         }
         timeline["tracks"][0]["clips"].append(clip)
         merge.append({"find": "IMAGE_27", "replace": file_link_image_27})
 
-    return {"timeline": timeline, "merge": merge}
+    final_output = {"timeline": timeline, "merge": merge}
 
-
+    # Save the JSON to assemble-video-updated.json
+    with open("assemble-video-updated.json", "w") as f:
+        json.dump(final_output, f, indent=4)
+    print("AVATAR and timeline added to assemble-video-updated.json successfully.")
+    
+    return final_output
 
 
 

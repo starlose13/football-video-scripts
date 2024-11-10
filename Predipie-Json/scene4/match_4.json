@@ -1,10 +1,10 @@
 {
-    "description": "Full-time result odds are as follows: a home win at 2.15; an away win at 2.9; a draw at 3.25.",
+    "description": "Full-time result odds are as follows: Home win at 2.15; Away win at 2.9; Draw at 3.25.",
     "odds": {
         "home": 2.15,
         "draw": 3.25,
         "away": 2.9
     },
-    "word_count": 20,
-    "reading_time": 8.25
+    "word_count": 17,
+    "reading_time": 7.39
 }

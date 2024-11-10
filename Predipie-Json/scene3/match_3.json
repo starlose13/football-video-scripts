@@ -1,5 +1,5 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 11:30 AM on Sunday, November 10th, 2024!",
+    "description": "Get ready, football fans! The match kicks off at 11:30 AM on Sunday, November 10, 2024!",
     "match_date": "2024-11-10",
     "match_time": "11:30 AM (UTC Time)",
     "match_day": "Sunday",
@@ -8,8 +8,8 @@
         "draw": 4.75,
         "away": 8.0
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 16,
+    "reading_time": 6.35,
     "home_team": {
         "name": "Atalanta",
         "logo": "https://img.thesports.com/football/team/45c9647899b8bf2fb6f988c6c33b964c.png",
