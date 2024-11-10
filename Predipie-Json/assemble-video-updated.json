@@ -6,6 +6,21 @@
                 "clips": [
                     {
                         "asset": {
+                            "type": "video",
+                            "src": "{{ AVATAR }}",
+                            "volume": 1
+                        },
+                        "offset": {
+                            "x": 0.388,
+                            "y": -0.308
+                        },
+                        "fit": "none",
+                        "scale": 0.25,
+                        "start": 0,
+                        "length": "auto"
+                    },
+                    {
+                        "asset": {
                             "type": "image",
                             "src": "{{ IMAGE_0 }}"
                         },

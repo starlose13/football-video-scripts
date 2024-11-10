@@ -87,6 +87,24 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     previous_start = 0
     image_index = 0
 
+    # Add AVATAR clip at the start
+    avatar_clip = {
+        "asset": {
+            "type": "video",
+            "src": "{{ AVATAR }}",
+            "volume": 1
+        },
+        "offset": {
+            "x": 0.388,
+            "y": -0.308
+        },
+        "fit": "none",
+        "scale": 0.25,
+        "start": 0,
+        "length": "auto"
+    }
+    timeline["tracks"][0]["clips"].append(avatar_clip)
+
     # Handle IMAGE_0 with starting-scene-with-program-number.jpg
     length_image_0 = intro_reading_time  # Replaces the old calculation with intro.json reading_time
     file_link_image_0 = links.get("starting-scene-with-program-number.jpg")
@@ -157,6 +175,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         merge.append({"find": "IMAGE_27", "replace": file_link_image_27})
 
     return {"timeline": timeline, "merge": merge}
+
 
 
 
