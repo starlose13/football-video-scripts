@@ -19,22 +19,33 @@ scene_dir_template = './scene{scene_num}/match_{match_num}.json'
 MAX_GAMES = 5
 MAX_SCENES_PER_GAME = 5  # Each game has scenes from scene2 to scene6
 
-def retrieve_ingested_file_links() -> Dict[str, str]:
+def retrieve_ingested_file_links() -> (Dict[str, str], Optional[str]):
     headers = {"x-api-key": shotstack_api_key, "Accept": "application/json"}
     with open("uploaded_files.json", "r") as f:
         uploaded_files = json.load(f)
 
     links = {}
+    file_url = None  # Initialize file_url
+
     try:
         response = requests.get(BASE_URL, headers=headers)
         response.raise_for_status()
-        for item in sorted(response.json()['data'], key=lambda x: x['attributes']['created'], reverse=True):
+        data = response.json()
+        # Sort 'data' list by 'created' attribute in descending order
+        sorted_data = sorted(data['data'], key=lambda x: x['attributes']['created'], reverse=True)
+        for item in sorted_data:
             if item['id'] in uploaded_files.values():
                 file_name = [name for name, id in uploaded_files.items() if id == item['id']][0]
-                links[file_name] = item['attributes']['source']
+                file_url = item['attributes']['source']  # Set file_url for the last matched item
+                links[file_name] = file_url
+        with open("ingested_files_links.json", "w") as json_file:
+            json.dump(links, json_file, indent=4)
+            
+        print("Ingested file URLs with original names have been saved to ingested_files_links.json")
     except requests.RequestException as e:
         logging.error(f"Error retrieving file links: {e}")
-    return links
+    
+    return links, file_url  # Return both links and file_url
 
 def get_reading_time(scene_num: int, match_num: int) -> Optional[float]:
     try:
@@ -43,20 +54,28 @@ def get_reading_time(scene_num: int, match_num: int) -> Optional[float]:
     except FileNotFoundError:
         logging.warning(f"Scene file not found for scene {scene_num}, match {match_num}.")
         return None
-
 def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
+    # Load AVATAR URL from shotstack_video_url.json
+    avatar_url = ""
+    try:
+        with open("shotstack_video_url.json", "r") as file:
+            shotstack_data = json.load(file)
+            avatar_url = shotstack_data.get("shotstack_video_url", avatar_url)
+    except FileNotFoundError:
+        print("shotstack_video_url.json file not found. Using default avatar URL.")
+
     timeline = {
         "background": "#ffffff",
         "tracks": [{"clips": []}]
     }
-    merge = [{"find": "AVATAR", "replace": "https://your-avatar-url.com"}]
+    merge = [{"find": "AVATAR", "replace": avatar_url}]
     previous_start = 0
-    image_index = 0  # Start with IMAGE_0
+    image_index = 0
 
-    # Handle IMAGE_0 separately
-    reading_time_image_1 = get_reading_time(2, 1)  # match_1, scene2 for IMAGE_1
+    # Handle IMAGE_0 with starting-scene-with-program-number.jpg
+    reading_time_image_1 = get_reading_time(2, 1)
     length_image_0 = reading_time_image_1 - 0.01 if reading_time_image_1 else 0
-    file_link_image_0 = links.get("game_1_image_1.jpg")
+    file_link_image_0 = links.get("starting-scene-with-program-number.jpg")
 
     if file_link_image_0 and length_image_0 > 0:
         clip = {
@@ -69,12 +88,12 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         }
         timeline["tracks"][0]["clips"].append(clip)
         merge.append({"find": "IMAGE_0", "replace": file_link_image_0})
-        previous_start = length_image_0  # Update start for IMAGE_1
+        previous_start += length_image_0
         image_index += 1
 
-    # Start from IMAGE_1 and continue for IMAGE_1 to IMAGE_26
-    for match_num in range(1, MAX_GAMES + 1):  # match_1 to match_5
-        for scene_num in range(2, 7):  # scene2 to scene6
+    # Add clips dynamically from IMAGE_1 to IMAGE_25
+    for match_num in range(1, MAX_GAMES + 1):
+        for scene_num in range(2, 7):
             placeholder = f"IMAGE_{image_index}"
             file_link = links.get(f"game_{match_num}_image_{scene_num - 1}.jpg")
             reading_time = get_reading_time(scene_num, match_num)
@@ -91,11 +110,42 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
                 timeline["tracks"][0]["clips"].append(clip)
                 merge.append({"find": placeholder, "replace": file_link})
                 
-                # Update start time and move to the next IMAGE_X
                 previous_start += reading_time
                 image_index += 1
 
+    # Add IMAGE_26 with a fixed length of 4 seconds
+    file_link_image_26 = "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kngdq-12qg8-2xyk7-4nv8h3/source.jpg"
+    if file_link_image_26:
+        clip = {
+            "asset": {"type": "image", "src": "{{ IMAGE_26 }}"},
+            "effect": "zoomInSlow",
+            "transition": {"in": "carouselLeft"},
+            "position": "center",
+            "length": 4,
+            "start": previous_start  # start(IMAGE_26) = start(IMAGE_25) + length(IMAGE_25)
+        }
+        timeline["tracks"][0]["clips"].append(clip)
+        merge.append({"find": "IMAGE_26", "replace": file_link_image_26})
+        previous_start += 4  # Update start for IMAGE_27 after setting length of 4 for IMAGE_26
+
+    # Add IMAGE_27 with a dynamic or "auto" length
+    file_link_image_27 = "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kpwf1-nxm7v-2r4fn-a8wyf1/source.jpg"
+    if file_link_image_27:
+        clip = {
+            "asset": {"type": "image", "src": "{{ IMAGE_27 }}"},
+            "effect": "zoomInSlow",
+            "transition": {"in": "carouselLeft"},
+            "position": "center",
+            "length": "auto",  # length for IMAGE_27 is set to auto
+            "start": previous_start  # start(IMAGE_27) = start(IMAGE_26) + length(IMAGE_26)
+        }
+        timeline["tracks"][0]["clips"].append(clip)
+        merge.append({"find": "IMAGE_27", "replace": file_link_image_27})
+
     return {"timeline": timeline, "merge": merge}
+
+
+
 
 def main():
     # Set up the template
@@ -104,7 +154,7 @@ def main():
     }
 
     # Load data
-    links = retrieve_ingested_file_links()
+    links, file_url = retrieve_ingested_file_links()  # Unpack both links and file_url
     
     # Generate timeline and merge sections
     timeline_and_merge = build_timeline_and_merge(links)
@@ -116,6 +166,7 @@ def main():
     with open("assemble-video-updated.json", "w") as f:
         json.dump(final_output, f, indent=4)
     logging.info("JSON saved successfully.")
+
 
 if __name__ == "__main__":
     main()

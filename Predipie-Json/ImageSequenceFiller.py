@@ -4,6 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
 from dotenv import load_dotenv
+import time 
 
 load_dotenv()
 
@@ -14,6 +15,9 @@ folder = "generated_images"  # GitHub repository folder to save images
 output_dir = "./output"
 os.makedirs(output_dir, exist_ok=True)
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
+creatify_api_id = os.getenv("CREATIFY_API_ID")
+creatify_api_key = os.getenv("CREATIFY_API_KEY")
+shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "stage")
 
 if not shotstack_api_key:
     raise ValueError("SHOTSTACK_API_KEY is missing. Please check your .env file.")
@@ -347,9 +351,6 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
     return images
 
 
-
-
-
 def get_signed_url():
     signed_url_request_url = "https://api.shotstack.io/ingest/stage/upload"
     headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
@@ -425,3 +426,10 @@ if source_id:
     print(f"Starting scene upload status: {status}")
     if status == "ready":
         print(f"Starting scene URL: {url}")
+        # Add the starting scene's URL to uploaded_files
+        uploaded_files["starting-scene-with-program-number.jpg"] = source_id
+
+# Save all uploaded file names and source IDs to JSON
+with open("uploaded_files.json", "w") as f:
+    json.dump(uploaded_files, f, indent=4)
+print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
