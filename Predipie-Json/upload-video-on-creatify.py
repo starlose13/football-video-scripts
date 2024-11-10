@@ -9,7 +9,7 @@ load_dotenv()
 
 # Load environment variables
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "stage")
+shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 creatify_api_id = os.getenv("CREATIFY_API_ID")
 creatify_api_key = os.getenv("CREATIFY_API_KEY")
 

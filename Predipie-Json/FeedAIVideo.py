@@ -8,7 +8,7 @@ from typing import Dict, Optional
 # Load environment variables
 load_dotenv()
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "stage")
+shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

@@ -17,7 +17,7 @@ os.makedirs(output_dir, exist_ok=True)
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
 creatify_api_id = os.getenv("CREATIFY_API_ID")
 creatify_api_key = os.getenv("CREATIFY_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "stage")
+shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 
 if not shotstack_api_key:
     raise ValueError("SHOTSTACK_API_KEY is missing. Please check your .env file.")
@@ -160,7 +160,7 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
         default_font = ImageFont.load_default()
         small_font = ImageFont.load_default()
         medium_font = ImageFont.load_default()
-        
+
     icon_size = (60, 60)
     win_icon = Image.open('./assets/win.png').resize(icon_size)
     draw_icon = Image.open('./assets/draw.png').resize(icon_size)
