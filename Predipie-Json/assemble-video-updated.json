@@ -1,0 +1,516 @@
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "{{ AVATAR }}",
+                            "volume": 1
+                        },
+                        "offset": {
+                            "x": 0.388,
+                            "y": -0.308
+                        },
+                        "fit": "cover",
+                        "scale": 0.25,
+                        "start": 0,
+                        "length": "auto"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_0 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 8.78,
+                        "start": 0
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_1 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 5.27,
+                        "start": 8.78
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_2 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 6.06,
+                        "start": 14.049999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_3 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.97,
+                        "start": 20.11
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_4 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 11.52,
+                        "start": 30.08
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_5 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.4,
+                        "start": 41.599999999999994
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_6 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 7.25,
+                        "start": 50.99999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_7 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 6.39,
+                        "start": 58.24999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_8 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.86,
+                        "start": 64.63999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_9 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.26,
+                        "start": 74.49999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_10 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 8.65,
+                        "start": 83.75999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_11 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 5.31,
+                        "start": 92.41
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_12 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 6.35,
+                        "start": 97.72
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_13 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.4,
+                        "start": 104.07
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_14 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 11.84,
+                        "start": 113.47
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_15 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 10.26,
+                        "start": 125.31
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_16 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 7.21,
+                        "start": 135.57
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_17 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 6.1,
+                        "start": 142.78
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_18 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 7.39,
+                        "start": 148.88
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_19 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 10.01,
+                        "start": 156.26999999999998
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_20 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.68,
+                        "start": 166.27999999999997
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_21 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 5.49,
+                        "start": 175.95999999999998
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_22 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 6.06,
+                        "start": 181.45
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_23 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 9.61,
+                        "start": 187.51
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_24 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 11.81,
+                        "start": 197.12
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_25 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 8.96,
+                        "start": 208.93
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_26 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 4,
+                        "start": 217.89000000000001
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_27 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": "auto",
+                        "start": 221.89000000000001
+                    }
+                ]
+            }
+        ]
+    },
+    "merge": [
+        {
+            "find": "AVATAR",
+            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/0a9f0511-585e-4311-8204-b7ad026988d5.mp4"
+        },
+        {
+            "find": "IMAGE_0",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8x7w0-60tff-t20hk-1nmhmw/source.jpg"
+        },
+        {
+            "find": "IMAGE_1",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8rghx-ferax-bnbsw-pgnmvy/source.jpg"
+        },
+        {
+            "find": "IMAGE_2",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8rnvc-t6cm5-d6yqc-32v32q/source.jpg"
+        },
+        {
+            "find": "IMAGE_3",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8rv4p-pmf2r-56dfh-9sa0pn/source.jpg"
+        },
+        {
+            "find": "IMAGE_4",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8s0gr-06hrj-15q03-0k3qz8/source.jpg"
+        },
+        {
+            "find": "IMAGE_5",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8s5ty-sremj-y8zdg-dw17cm/source.jpg"
+        },
+        {
+            "find": "IMAGE_6",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8sf2n-9njhg-nxvj0-q0gz39/source.jpg"
+        },
+        {
+            "find": "IMAGE_7",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8smdz-0jz61-8xd6d-46m1vz/source.jpg"
+        },
+        {
+            "find": "IMAGE_8",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8ssqn-74thk-52114-nx5wey/source.jpg"
+        },
+        {
+            "find": "IMAGE_9",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8sz62-adveq-c8ma8-qhyvye/source.jpg"
+        },
+        {
+            "find": "IMAGE_10",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8t4hx-fvpvw-rdmg7-1rs6mq/source.jpg"
+        },
+        {
+            "find": "IMAGE_11",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8te7b-8wwdc-dtt2b-tb2g7a/source.jpg"
+        },
+        {
+            "find": "IMAGE_12",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8tkq3-cs9xj-fas36-daaa1k/source.jpg"
+        },
+        {
+            "find": "IMAGE_13",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8ts0y-6hxph-4j68s-pkjysh/source.jpg"
+        },
+        {
+            "find": "IMAGE_14",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8tydw-txd67-33v1v-77wwp4/source.jpg"
+        },
+        {
+            "find": "IMAGE_15",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8v3r7-3d23h-3a8vg-2q78mq/source.jpg"
+        },
+        {
+            "find": "IMAGE_16",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8vdf0-rwkpm-8d3qw-b82nsn/source.jpg"
+        },
+        {
+            "find": "IMAGE_17",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8vjsn-agpf6-n37sk-t2gcha/source.jpg"
+        },
+        {
+            "find": "IMAGE_18",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8vr54-txbmv-53c12-9fn4vv/source.jpg"
+        },
+        {
+            "find": "IMAGE_19",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8vxhp-bf0ne-63bzw-c56sc0/source.jpg"
+        },
+        {
+            "find": "IMAGE_20",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8w2x8-0j7av-e54an-0fwjwq/source.jpg"
+        },
+        {
+            "find": "IMAGE_21",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8wc8x-8gyyp-msxzs-4hr2nb/source.jpg"
+        },
+        {
+            "find": "IMAGE_22",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8whja-de3f0-rkjv6-31fwx9/source.jpg"
+        },
+        {
+            "find": "IMAGE_23",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8wpx0-fkgbe-9j132-crw5n9/source.jpg"
+        },
+        {
+            "find": "IMAGE_24",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8ww9m-1tqd7-448qh-39rfhp/source.jpg"
+        },
+        {
+            "find": "IMAGE_25",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcb-8x1re-j788s-q38j4-bqr5cn/source.jpg"
+        },
+        {
+            "find": "IMAGE_26",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kngdq-12qg8-2xyk7-4nv8h3/source.jpg"
+        },
+        {
+            "find": "IMAGE_27",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kpwf1-nxm7v-2r4fn-a8wyf1/source.jpg"
+        }
+    ],
+    "output": {
+        "format": "mp4",
+        "fps": 25,
+        "size": {
+            "width": 1920,
+            "height": 1080
+        }
+    }
+}

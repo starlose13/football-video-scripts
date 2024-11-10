@@ -9,7 +9,6 @@ load_dotenv()
 
 # Load environment variables
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 creatify_api_id = os.getenv("CREATIFY_API_ID")
 creatify_api_key = os.getenv("CREATIFY_API_KEY")
 
@@ -45,7 +44,7 @@ def save_to_json(data, filename):
 
 # Upload video URL to Shotstack and return the render ID
 def upload_video_to_shotstack(video_url):
-    render_url = f"https://api.shotstack.io/{shotstack_env}/render"
+    render_url = f"https://api.shotstack.io/v1/render"
     headers = {"x-api-key": shotstack_api_key, "Content-Type": "application/json"}
 
     # Define the video timeline for rendering
@@ -80,7 +79,7 @@ def upload_video_to_shotstack(video_url):
 
 # Check render status and retrieve the final video URL once the rendering is complete
 def check_render_status(render_id):
-    status_url = f"https://api.shotstack.io/{shotstack_env}/render/{render_id}"
+    status_url = f"https://api.shotstack.io/v1/render/{render_id}"
     headers = {"x-api-key": shotstack_api_key}
 
     response = requests.get(status_url, headers=headers)

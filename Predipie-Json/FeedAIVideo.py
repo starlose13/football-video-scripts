@@ -14,7 +14,7 @@ shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Constants
-BASE_URL = f"https://api.shotstack.io/ingest/{shotstack_env}/sources"
+BASE_URL = f"https://api.shotstack.io/ingest/v1/sources"
 scene_dir_template = './scene{scene_num}/match_{match_num}.json'
 MAX_GAMES = 5
 MAX_SCENES_PER_GAME = 5  # Each game has scenes from scene2 to scene6

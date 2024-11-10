@@ -17,7 +17,6 @@ os.makedirs(output_dir, exist_ok=True)
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
 creatify_api_id = os.getenv("CREATIFY_API_ID")
 creatify_api_key = os.getenv("CREATIFY_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "production")
 
 if not shotstack_api_key:
     raise ValueError("SHOTSTACK_API_KEY is missing. Please check your .env file.")
@@ -348,7 +347,7 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
 
 
 def get_signed_url():
-    signed_url_request_url = "https://api.shotstack.io/ingest/stage/upload"
+    signed_url_request_url = "https://api.shotstack.io/ingest/v1/upload"
     headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
     response = requests.post(signed_url_request_url, headers=headers)
     if response.status_code == 200:
@@ -377,7 +376,7 @@ uploaded_files = {}
 
 def check_upload_status(source_id):
     """Check the status of the uploaded image by source ID."""
-    status_url = f"https://api.shotstack.io/ingest/stage/sources/{source_id}"
+    status_url = f"https://api.shotstack.io/ingest/v1/sources/{source_id}"
     headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
     status_response = requests.get(status_url, headers=headers)
     if status_response.status_code == 200:
@@ -400,13 +399,16 @@ for game_index in range(5):  # Assuming 5 games
         if source_id:
             status, url = check_upload_status(source_id)
             print(f"Upload status for {image_path}: {status}")
-            if status == "ready":
+            if status == "ready" and url:
                 print(f"Image URL: {url}")
+                # Save the full URL in the uploaded_files dictionary
+                uploaded_files[file_name] = url
 
-# Save all uploaded file names and source IDs
+# Save all uploaded file names and URLs
 with open("uploaded_files.json", "w") as f:
     json.dump(uploaded_files, f, indent=4)
-print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
+print("Uploaded file names and URLs have been saved to uploaded_files.json.")
+
 
 # Upload the starting scene with program number to Shotstack
 starting_scene_json_path = './program_number.json'
