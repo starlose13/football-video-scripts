@@ -54,6 +54,9 @@ def get_reading_time(scene_num: int, match_num: int) -> Optional[float]:
     except FileNotFoundError:
         logging.warning(f"Scene file not found for scene {scene_num}, match {match_num}.")
         return None
+import json
+import os
+
 def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     # Load AVATAR URL from shotstack_video_url.json
     avatar_url = ""
@@ -64,6 +67,18 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     except FileNotFoundError:
         print("shotstack_video_url.json file not found. Using default avatar URL.")
 
+    # Load intro.json reading_time
+    intro_reading_time = 0
+    intro_file_path = os.path.join("intro", "intro.json")
+    if os.path.exists(intro_file_path):
+        try:
+            with open(intro_file_path, "r") as intro_file:
+                intro_data = json.load(intro_file)
+                intro_reading_time = intro_data.get("reading_time", 0)
+        except (FileNotFoundError, json.JSONDecodeError):
+            print(f"Error reading intro.json or missing reading_time in {intro_file_path}. Using default of 0.")
+
+    # Define timeline and merge structures
     timeline = {
         "background": "#ffffff",
         "tracks": [{"clips": []}]
@@ -73,8 +88,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     image_index = 0
 
     # Handle IMAGE_0 with starting-scene-with-program-number.jpg
-    reading_time_image_1 = get_reading_time(2, 1)
-    length_image_0 = reading_time_image_1 - 0.01 if reading_time_image_1 else 0
+    length_image_0 = intro_reading_time  # Replaces the old calculation with intro.json reading_time
     file_link_image_0 = links.get("starting-scene-with-program-number.jpg")
 
     if file_link_image_0 and length_image_0 > 0:

@@ -22,6 +22,14 @@ folders = [
     "scene5",                     # fifthEpisodeJsonCreator.py
     "scene6"                      # sixEpisodeJsonCreator.py
 ]
+adjusted_reading_speed = 3.48
+pause_times = {
+    ',': 0.25,
+    '.': 0.5,
+    '!': 0.5,
+    '?': 0.5,
+    ';': 0.25,
+}
 
 # Output folder for final combined narration
 output_folder = "combined-voiceAI"
@@ -34,13 +42,15 @@ def read_description_from_json(file_path):
     return data.get("description", "")
 
 def generate_intro_with_openai(program_number):
-    """Generates an introduction for the narration using OpenAI."""
+    """Generates an introduction for the narration using OpenAI and calculates reading time."""
+    # Define the program name
+    program_name = "Predipie"  # or set dynamically if needed
+
+    # Construct the prompt for OpenAI
     prompt = (
-    f"Welcome to Episode {program_number} of {program_name}! Today, we have 5 thrilling soccer predictions lined up. "
-    f"Keep it friendly and energetic,keeping it very brief—under 20 words, complete sentences.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
-)
-
-
+        f"Welcome to Episode {program_number} of {program_name}! Today, we have 5 thrilling soccer predictions lined up. "
+        f"Keep it friendly and energetic, keeping it very brief—under 20 words, complete sentences. Also use these punctuation marks in the output a lot: dot, comma, exclamation mark, question mark, and semicolon."
+    )
 
     # Use OpenAI API to generate a custom introduction
     response = openai.ChatCompletion.create(
@@ -51,11 +61,40 @@ def generate_intro_with_openai(program_number):
         ],
         max_tokens=60
     )
-    
+
     # Extract generated introduction
     intro_text = response['choices'][0]['message']['content'].strip()
-    return intro_text
 
+    # Calculate word count
+    word_count = len(intro_text.split())
+
+    # Calculate total punctuation pause time
+    pause_time = sum(intro_text.count(p) * pause_times.get(p, 0) for p in pause_times)
+
+    # Calculate reading time based on word count, adjusted reading speed, and punctuation pauses
+    reading_time = round((word_count / adjusted_reading_speed) + pause_time, 2)
+
+    # Format the data to save in JSON
+    intro_info = {
+        "prompt_output": intro_text,
+        "word_count": word_count,
+        "reading_time": reading_time
+    }
+
+    # Define the output folder and create it if it doesn't exist
+    folder_name = "intro"
+    os.makedirs(folder_name, exist_ok=True)
+
+    # Define the fixed output file path
+    output_file = os.path.join(folder_name, 'intro.json')
+
+    # Write the intro details to the JSON file, replacing any existing file
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(intro_info, f, ensure_ascii=False, indent=4)
+    
+    print(f"Introduction for Episode {program_number} saved to {output_file}")
+    
+    return intro_text
 
 def generate_closing_with_openai(program_number):
     """Generates a closing statement for the narration using OpenAI."""
@@ -125,8 +164,8 @@ def create_video_with_creatify(narration_text, program_number):
 
 # Main script to generate combined narration for five games in sequence
 program_number = get_program_number()
-# increment_program_number()
-intro_text = generate_intro_with_openai(61)
+increment_program_number()
+intro_text = generate_intro_with_openai(program_number)
 
 narration_parts = []
 narration_parts.append(intro_text)  # Add introduction
@@ -140,7 +179,7 @@ for match_number in range(1, 6):
             narration_parts.append(description)
 
 # Generate dynamic closing statement using OpenAI
-closing_text = generate_closing_with_openai(61)
+closing_text = generate_closing_with_openai(program_number)
 narration_parts.append(closing_text)
 
 # Combine narration parts into a single script

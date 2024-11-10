@@ -1,10 +1,10 @@
 {
-    "description": "Full-time result odds are as follows: victory for the home team at 1.45; victory for the away team at 6.25; a draw at 4.75.",
+    "description": "Real Betis to win has odds of 2.0. RC Celta to win holds odds of 3.6. The odds for a draw are set at 3.3.",
     "odds": {
-        "home": 1.45,
-        "draw": 4.75,
-        "away": 6.25
+        "home": 2.0,
+        "draw": 3.3,
+        "away": 3.6
     },
-    "word_count": 24,
-    "reading_time": 9.4
+    "word_count": 25,
+    "reading_time": 10.18
 }

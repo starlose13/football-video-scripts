@@ -1,10 +1,10 @@
 {
-    "description": "Match Odds! Juventus to win: 1.55; Torino to win: 7.5; Draw: 3.7. Who will triumph? Place your bets now!",
+    "description": "The odds for winning are set at 1.42 for the home team and 8.0 for the away team. A draw has odds of 4.75.",
     "odds": {
-        "home": 1.55,
-        "draw": 3.7,
-        "away": 7.5
+        "home": 1.42,
+        "draw": 4.75,
+        "away": 8.0
     },
-    "word_count": 19,
-    "reading_time": 9.46
+    "word_count": 24,
+    "reading_time": 9.4
 }

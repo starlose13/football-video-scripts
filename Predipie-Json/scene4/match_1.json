@@ -1,10 +1,10 @@
 {
-    "description": "The odds for a win stand at 2.8 for the home team and 2.75 for the away team; a draw is pegged at 2.9. These odds indicate a closely contested match, with no clear favorite!",
+    "description": "Odds for winning are 3.1 for the home team; the away team has better odds at 2.15. A draw also stands at 3.1.",
     "odds": {
-        "home": 2.8,
-        "draw": 2.9,
-        "away": 2.75
+        "home": 3.1,
+        "draw": 3.1,
+        "away": 2.15
     },
-    "word_count": 35,
-    "reading_time": 13.06
+    "word_count": 23,
+    "reading_time": 9.36
 }

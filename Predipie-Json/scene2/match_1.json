@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: CD Leganes versus Sevilla FC. Thrills galore! Sevilla clinches a dramatic 2-1 victory; hearts race, fans roar!",
-    "word_count": 23,
-    "reading_time": 8.61,
+    "description": "Let's start with the first match: Al-Ain SFC versus Al-Jabalain. Goals, drama, intense rivalry!",
+    "word_count": 14,
+    "reading_time": 5.52,
     "home_team": {
-        "name": "CD Leganes",
-        "logo": "https://img.thesports.com/football/team/b6728832f1504989e57f8a43479429ec.png",
-        "country": "Spain"
+        "name": "Al-Ain SFC",
+        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
+        "country": "Saudi Arabia"
     },
     "away_team": {
-        "name": "Sevilla FC",
-        "logo": "https://img.thesports.com/football/team/d20ed1da4f299cc3ef0e1e9eb06eced1.png",
-        "country": "Spain"
+        "name": "Al-Jabalain",
+        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
+        "country": "Saudi Arabia"
     }
 }

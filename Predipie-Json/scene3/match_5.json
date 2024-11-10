@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 8:30 PM on Saturday, November 9, 2024!",
-    "match_date": "2024-11-09",
-    "match_time": "08:30 PM (UTC Time)",
-    "match_day": "Saturday",
+    "description": "Get ready, football fans, because the excitement kicks off at 2:00 PM on Sunday, November 10, 2024!",
+    "match_date": "2024-11-10",
+    "match_time": "02:00 PM (UTC Time)",
+    "match_day": "Sunday",
     "odds": {
-        "home": 2.8,
-        "draw": 3.0,
-        "away": 2.7
+        "home": 1.45,
+        "draw": 4.5,
+        "away": 6.5
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 17,
+    "reading_time": 6.39,
     "home_team": {
-        "name": "Boavista FC",
-        "logo": "https://img.thesports.com/football/team/a9db6b871d6e5c0da370f4e63a68d57d.png",
-        "country": "Portugal"
+        "name": "Fiorentina",
+        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Rio Ave",
-        "logo": "https://img.thesports.com/football/team/e83b163c8501f897012bcc29adfae2b9.png",
-        "country": "Portugal"
+        "name": "Hellas Verona",
+        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
+        "country": "Italy"
     }
 }

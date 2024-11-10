@@ -14,7 +14,7 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.6,
+                        "length": 7.96,
                         "start": 0
                     },
                     {
@@ -27,8 +27,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.61,
-                        "start": 8.6
+                        "length": 5.52,
+                        "start": 7.96
                     },
                     {
                         "asset": {
@@ -40,8 +40,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 7.0,
-                        "start": 17.21
+                        "length": 6.35,
+                        "start": 13.48
                     },
                     {
                         "asset": {
@@ -53,8 +53,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 13.06,
-                        "start": 24.21
+                        "length": 9.36,
+                        "start": 19.83
                     },
                     {
                         "asset": {
@@ -66,8 +66,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 9.58,
-                        "start": 37.27
+                        "length": 11.52,
+                        "start": 29.189999999999998
                     },
                     {
                         "asset": {
@@ -79,8 +79,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 10.22,
-                        "start": 46.85
+                        "length": 9.65,
+                        "start": 40.709999999999994
                     },
                     {
                         "asset": {
@@ -92,8 +92,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 7.75,
-                        "start": 57.07
+                        "length": 6.39,
+                        "start": 50.35999999999999
                     },
                     {
                         "asset": {
@@ -105,8 +105,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 6.46,
-                        "start": 64.82
+                        "length": 6.06,
+                        "start": 56.74999999999999
                     },
                     {
                         "asset": {
@@ -118,8 +118,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 9.4,
-                        "start": 71.27999999999999
+                        "length": 10.18,
+                        "start": 62.809999999999995
                     },
                     {
                         "asset": {
@@ -131,8 +131,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 12.27,
-                        "start": 80.67999999999999
+                        "length": 9.76,
+                        "start": 72.99
                     },
                     {
                         "asset": {
@@ -144,8 +144,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.82,
-                        "start": 92.94999999999999
+                        "length": 10.4,
+                        "start": 82.75
                     },
                     {
                         "asset": {
@@ -157,8 +157,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 6.89,
-                        "start": 101.76999999999998
+                        "length": 5.6,
+                        "start": 93.15
                     },
                     {
                         "asset": {
@@ -170,8 +170,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 6.35,
-                        "start": 108.65999999999998
+                        "length": 6.06,
+                        "start": 98.75
                     },
                     {
                         "asset": {
@@ -183,8 +183,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 9.46,
-                        "start": 115.00999999999998
+                        "length": 9.4,
+                        "start": 104.81
                     },
                     {
                         "asset": {
@@ -196,8 +196,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 11.73,
-                        "start": 124.46999999999997
+                        "length": 11.2,
+                        "start": 114.21000000000001
                     },
                     {
                         "asset": {
@@ -209,8 +209,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 10.51,
-                        "start": 136.19999999999996
+                        "length": 9.97,
+                        "start": 125.41000000000001
                     },
                     {
                         "asset": {
@@ -223,7 +223,7 @@
                         },
                         "position": "center",
                         "length": 7.21,
-                        "start": 146.70999999999995
+                        "start": 135.38000000000002
                     },
                     {
                         "asset": {
@@ -235,8 +235,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 7.03,
-                        "start": 153.91999999999996
+                        "length": 6.39,
+                        "start": 142.59000000000003
                     },
                     {
                         "asset": {
@@ -248,8 +248,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 9.03,
-                        "start": 160.94999999999996
+                        "length": 8.25,
+                        "start": 148.98000000000002
                     },
                     {
                         "asset": {
@@ -261,8 +261,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.65,
-                        "start": 169.97999999999996
+                        "length": 11.12,
+                        "start": 157.23000000000002
                     },
                     {
                         "asset": {
@@ -274,8 +274,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 9.36,
-                        "start": 178.62999999999997
+                        "length": 8.9,
+                        "start": 168.35000000000002
                     },
                     {
                         "asset": {
@@ -287,8 +287,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 6.1,
-                        "start": 187.98999999999995
+                        "length": 5.52,
+                        "start": 177.25000000000003
                     },
                     {
                         "asset": {
@@ -300,8 +300,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 6.06,
-                        "start": 194.08999999999995
+                        "length": 6.39,
+                        "start": 182.77000000000004
                     },
                     {
                         "asset": {
@@ -313,8 +313,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.17,
-                        "start": 200.14999999999995
+                        "length": 9.21,
+                        "start": 189.16000000000003
                     },
                     {
                         "asset": {
@@ -326,8 +326,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.43,
-                        "start": 208.31999999999994
+                        "length": 11.27,
+                        "start": 198.37000000000003
                     },
                     {
                         "asset": {
@@ -339,8 +339,8 @@
                             "in": "carouselLeft"
                         },
                         "position": "center",
-                        "length": 8.53,
-                        "start": 216.74999999999994
+                        "length": 7.39,
+                        "start": 209.64000000000004
                     },
                     {
                         "asset": {
@@ -353,7 +353,7 @@
                         },
                         "position": "center",
                         "length": 4,
-                        "start": 225.27999999999994
+                        "start": 217.03000000000003
                     },
                     {
                         "asset": {
@@ -366,7 +366,7 @@
                         },
                         "position": "center",
                         "length": "auto",
-                        "start": 229.27999999999994
+                        "start": 221.03000000000003
                     }
                 ]
             }
@@ -375,111 +375,111 @@
     "merge": [
         {
             "find": "AVATAR",
-            "replace": "https://shotstack-api-stage-output.s3-ap-southeast-2.amazonaws.com/p01fbzhhpl/e754b7bd-bd3c-45d8-99c7-ea0615c8ef4c.mp4"
+            "replace": "https://shotstack-api-stage-output.s3-ap-southeast-2.amazonaws.com/p01fbzhhpl/6b14c4eb-8517-4888-a19c-9a6143b67ba3.mp4"
         },
         {
             "find": "IMAGE_0",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kbrpc-f9e08-2dxvg-scy94n/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nderz-rr9d0-kd43z-wgc2tw/source.jpg"
         },
         {
             "find": "IMAGE_1",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k6jag-vcyas-n8pf8-5wwyd8/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n8930-4fhwh-5cs42-hsd9hm/source.jpg"
         },
         {
             "find": "IMAGE_2",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k6r5e-fhftp-y36ge-vbwh3n/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n8eq4-v621p-w5sw2-50strs/source.jpg"
         },
         {
             "find": "IMAGE_3",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k6xzn-deajz-ye2vp-9eeh96/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n8mpy-ay61d-efnzg-r87jas/source.jpg"
         },
         {
             "find": "IMAGE_4",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k74h1-aswj0-6mt37-agyqjn/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n8tf1-y4p4f-am4en-s9c5t2/source.jpg"
         },
         {
             "find": "IMAGE_5",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k7aa1-xhkht-jjrd1-yzdhry/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n911a-qesdb-xh7gb-9s7dj8/source.jpg"
         },
         {
             "find": "IMAGE_6",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k7mpy-cdg0s-amakh-crtc8j/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n9ayk-02zht-yt9py-j09qq0/source.jpg"
         },
         {
             "find": "IMAGE_7",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k7tf9-mwsjt-ha1gb-z8bbdy/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n9gcy-s4rg5-fnqed-986jzx/source.jpg"
         },
         {
             "find": "IMAGE_8",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k8010-dw7kt-zgx8t-5v1ch8/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n9psa-rxygj-r1h55-h7k3a6/source.jpg"
         },
         {
             "find": "IMAGE_9",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k8673-6ncfk-dacsy-ah8mfk/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-n9wm6-ym2cn-zr8p4-653qf5/source.jpg"
         },
         {
             "find": "IMAGE_10",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k8c2d-cf7bs-yb3h0-0mtys8/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-na2k3-m9kdn-7dv99-ye6qcz/source.jpg"
         },
         {
             "find": "IMAGE_11",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k8p34-sdyh3-tqah2-k3vqxp/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nadmw-ta3vt-3p450-gqc5y8/source.jpg"
         },
         {
             "find": "IMAGE_12",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k8vrh-230pd-yyp88-q2ws9q/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nakcd-vx9fp-3pe7w-22wcmv/source.jpg"
         },
         {
             "find": "IMAGE_13",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k91mn-tjttz-xqnwn-4xwew4/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nas2t-ddbkf-nm25z-h9y8q5/source.jpg"
         },
         {
             "find": "IMAGE_14",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k986r-2268j-fvnd6-ma2sw9/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-naz7s-cagse-d7frc-pjabak/source.jpg"
         },
         {
             "find": "IMAGE_15",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k9dwj-nym9b-a1b14-zkw5kz/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nb5jr-fzvh7-ppmds-8feecz/source.jpg"
         },
         {
             "find": "IMAGE_16",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k9qjf-172b4-btaz2-tm1twm/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nbfj8-d87ym-vv4rr-04ec5v/source.jpg"
         },
         {
             "find": "IMAGE_17",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-k9y56-8dbsx-be5yw-ggv89z/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nbmza-ata88-e7qgf-jpdqkx/source.jpg"
         },
         {
             "find": "IMAGE_18",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-ka435-wvkt7-hgqt7-dfzjg6/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nbtsp-0md5d-azb03-mscbpq/source.jpg"
         },
         {
             "find": "IMAGE_19",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kaa6v-dvc9f-nxrb2-c2wk0k/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nc0ag-1qqqy-tgtm5-ysj00d/source.jpg"
         },
         {
             "find": "IMAGE_20",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kag2v-hd729-ng50e-2yy0kv/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nc5yh-p6gqm-cpz1q-k9fpqp/source.jpg"
         },
         {
             "find": "IMAGE_21",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kat2b-51pqs-gn7y1-9qxnz0/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-ncgab-sbn3z-0dn67-te4jde/source.jpg"
         },
         {
             "find": "IMAGE_22",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kazv8-64rz0-yak3p-8wmqjc/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-ncnsa-5xwqk-gm1af-pdmveb/source.jpg"
         },
         {
             "find": "IMAGE_23",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kb7az-yen3c-1psx1-b6kgzf/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-ncvhk-4js1f-gm6pv-a63cje/source.jpg"
         },
         {
             "find": "IMAGE_24",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kbd5y-wcbhm-fgt9r-2amvye/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nd1c4-j4wyn-0x480-hwv0xv/source.jpg"
         },
         {
             "find": "IMAGE_25",
-            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-kbjrq-cwnmm-6cgvm-j8g0qr/source.jpg"
+            "replace": "https://shotstack-ingest-api-stage-sources.s3.ap-southeast-2.amazonaws.com/p01fbzhhpl/zzz01jca-nd8nt-pwztw-fd620-hntwx2/source.jpg"
         },
         {
             "find": "IMAGE_26",

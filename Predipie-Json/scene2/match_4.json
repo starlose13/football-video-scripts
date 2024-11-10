@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the fourth match: Angers SCO against Paris Saint Germain. PSG dominates! Neymar scores twice; Mbappé dazzles.",
+    "description": "Let's continue with the fourth match: Abha against Al-Adalah. Abha strikes first, Al-Adalah rallies! Who will clinch the win?",
     "word_count": 19,
     "reading_time": 7.21,
     "home_team": {
-        "name": "Angers SCO",
-        "logo": "https://img.thesports.com/football/team/526150064f4f983d670deb33fa6385b6.png",
-        "country": "France"
+        "name": "Abha",
+        "logo": "https://img.thesports.com/football/team/c3b8d20e9dfa2c4e81773a78b673413d.png",
+        "country": "Saudi Arabia"
     },
     "away_team": {
-        "name": "Paris Saint Germain",
-        "logo": "https://img.thesports.com/football/team/3b720f181ce9993f9422d276acf7b292.png",
-        "country": "France"
+        "name": "Al-Adalah",
+        "logo": "https://img.thesports.com/football/team/56eaace9b1e134a8a019029f1fbaa0c5.png",
+        "country": "Saudi Arabia"
     }
 }

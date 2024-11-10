@@ -1,15 +1,15 @@
 {
-    "description": "And the last match: Boavista FC versus Rio Ave. Goals galore, drama peaks, what a clash!",
-    "word_count": 16,
-    "reading_time": 6.1,
+    "description": "And the last match: Fiorentina versus Hellas Verona. Fiery clash; goals galore; 3-2 thriller!",
+    "word_count": 14,
+    "reading_time": 5.52,
     "home_team": {
-        "name": "Boavista FC",
-        "logo": "https://img.thesports.com/football/team/a9db6b871d6e5c0da370f4e63a68d57d.png",
-        "country": "Portugal"
+        "name": "Fiorentina",
+        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "Rio Ave",
-        "logo": "https://img.thesports.com/football/team/e83b163c8501f897012bcc29adfae2b9.png",
-        "country": "Portugal"
+        "name": "Hellas Verona",
+        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
+        "country": "Italy"
     }
 }

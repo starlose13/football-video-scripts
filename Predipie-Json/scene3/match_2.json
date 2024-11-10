@@ -1,23 +1,23 @@
 {
-    "description": "Get ready for some thrilling action as the match kicks off at 8:00 PM on Saturday, November 9th, 2024!",
-    "match_date": "2024-11-09",
-    "match_time": "08:00 PM (UTC Time)",
-    "match_day": "Saturday",
+    "description": "Get ready, folks! The match kicks off at 1:00 PM on Sunday, November 10, 2024!",
+    "match_date": "2024-11-10",
+    "match_time": "01:00 PM (UTC Time)",
+    "match_day": "Sunday",
     "odds": {
-        "home": 1.45,
-        "draw": 4.75,
-        "away": 6.25
+        "home": 2.0,
+        "draw": 3.3,
+        "away": 3.6
     },
-    "word_count": 19,
-    "reading_time": 6.46,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Liverpool",
-        "logo": "https://img.thesports.com/football/team/1cb3d08adac0e2dc1c4f10429d055bfe.png",
-        "country": "England"
+        "name": "Real Betis",
+        "logo": "https://img.thesports.com/football/team/018e260ad68bdad741c61e3171c4c608.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Aston Villa",
-        "logo": "https://img.thesports.com/football/team/cf923a8b31d94745b3cbe4de42c670a9.png",
-        "country": "England"
+        "name": "RC Celta",
+        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
+        "country": "Spain"
     }
 }

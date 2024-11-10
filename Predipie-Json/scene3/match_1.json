@@ -1,23 +1,23 @@
 {
-    "description": "Mark your calendars and set your alarms, because the match kicks off at 8:00 PM on Saturday, November 9, 2024!",
-    "match_date": "2024-11-09",
-    "match_time": "08:00 PM (UTC Time)",
-    "match_day": "Saturday",
+    "description": "Get ready, football fans! The match kicks off at 12:35 PM on Sunday, November 10, 2024!",
+    "match_date": "2024-11-10",
+    "match_time": "12:35 PM (UTC Time)",
+    "match_day": "Sunday",
     "odds": {
-        "home": 2.8,
-        "draw": 2.9,
-        "away": 2.75
+        "home": 3.1,
+        "draw": 3.1,
+        "away": 2.15
     },
-    "word_count": 20,
-    "reading_time": 7.0,
+    "word_count": 16,
+    "reading_time": 6.35,
     "home_team": {
-        "name": "CD Leganes",
-        "logo": "https://img.thesports.com/football/team/b6728832f1504989e57f8a43479429ec.png",
-        "country": "Spain"
+        "name": "Al-Ain SFC",
+        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
+        "country": "Saudi Arabia"
     },
     "away_team": {
-        "name": "Sevilla FC",
-        "logo": "https://img.thesports.com/football/team/d20ed1da4f299cc3ef0e1e9eb06eced1.png",
-        "country": "Spain"
+        "name": "Al-Jabalain",
+        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
+        "country": "Saudi Arabia"
     }
 }
