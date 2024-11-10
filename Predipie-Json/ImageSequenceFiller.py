@@ -1,6 +1,6 @@
 import os
 import json
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 from io import BytesIO
 import requests
 from dotenv import load_dotenv
@@ -146,27 +146,25 @@ def get_data_for_image(json_data, image_index):
     return {}
 
 
-def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80, background_color="#0056d7"):    
+def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80):
     image = Image.open(template_path)
     draw = ImageDraw.Draw(image)
     
     # Load fonts for different sizes
     try:
-        default_font = ImageFont.truetype("Roboto-Bold.ttf", font_size)  # Default font size 80
-        small_font = ImageFont.truetype("Roboto-Bold.ttf", 30)  # Small font for match details
-        medium_font = ImageFont.truetype("Roboto-Bold.ttf", 55)  # Medium font for odds fields
+        default_font = ImageFont.truetype("Roboto-Bold.ttf", font_size)
+        small_font = ImageFont.truetype("Roboto-Bold.ttf", 30)
+        medium_font = ImageFont.truetype("Roboto-Bold.ttf", 55)
     except IOError:
         print("Custom font not found, using default font.")
         default_font = ImageFont.load_default()
         small_font = ImageFont.load_default()
         medium_font = ImageFont.load_default()
-
-    # Load and slightly increase the size of icons for win, draw, and lose
+        
     icon_size = (60, 60)
     win_icon = Image.open('./assets/win.png').resize(icon_size)
     draw_icon = Image.open('./assets/draw.png').resize(icon_size)
     lose_icon = Image.open('./assets/lose.png').resize(icon_size)
-
     # Combine previous and current positions and data
     all_positions = {**(previous_positions or {}), **positions}
     all_data = {**(previous_data or {}), **json_data}  # Ensure previous_data is included in every image
@@ -190,20 +188,23 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                     response = requests.get(logo_url)
                     logo = Image.open(BytesIO(response.content))
                     
-                    # Convert to RGBA and resize to fit a 200x200 circle
+                    # Convert to RGBA if not already and resize to fit within 200x200 pixels
                     if logo.mode != "RGBA":
                         logo = logo.convert("RGBA")
-                    logo = logo.resize((228, 228))
+                    logo = logo.resize((200, 200))
                     
-                    # Create a circular mask with the specified background color
-                    mask = Image.new("RGBA", (228, 228), background_color)
-                    draw_mask = ImageDraw.Draw(mask)
-                    draw_mask.ellipse((0, 0, 228, 228), fill=(0, 0, 0, 0))  # Transparent fill for the circular area
+                    # Create a mask to make black or near-black areas transparent
+                    datas = logo.getdata()
+                    new_data = []
+                    for item in datas:
+                        # Change all black (or close to black) pixels to transparent
+                        if item[0] < 50 and item[1] < 50 and item[2] < 50:
+                            new_data.append((255, 255, 255, 0))  # Transparent
+                        else:
+                            new_data.append(item)
+                    logo.putdata(new_data)
 
-                    # Apply mask to the logo
-                    logo = Image.alpha_composite(mask, logo)
-
-                    # Paste the circular logo with background on the template
+                    # Paste the transparent logo onto the main image
                     image.paste(logo, pos, logo)
                 except Exception as e:
                     print(f"Could not load logo from {logo_url}: {e}")
@@ -214,7 +215,6 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                 x_offset = pos[0]
                 
                 for result in recent_matches:
-                    # Select the appropriate icon
                     if result == 'w':
                         icon = win_icon
                     elif result == 'd':
@@ -234,7 +234,6 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                 x_offset = pos[0]
                 
                 for result in recent_matches:
-                    # Select the appropriate icon
                     if result == 'w':
                         icon = win_icon
                     elif result == 'd':
@@ -242,7 +241,7 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                     elif result == 'l':
                         icon = lose_icon
                     else:
-                        continue  # Skip if not 'w', 'd', or 'l'
+                        continue
                     
                     # Paste the icon and update x position
                     image.paste(icon, (x_offset, pos[1]), icon)
@@ -257,15 +256,12 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
                 
                 # Determine position based on the logo position
                 if "home_team" in key:
-                    # Position the name to the right of the home team logo, with some padding
                     name_pos = (positions["home_team_logo"][0] + 200 + 80, positions["home_team_logo"][1] + (200 - font_size) // 2)
                 elif "away_team" in key:
-                    # Position the name to the left of the away team logo, with some padding
                     name_pos = (positions["away_team_logo"][0] - text_width - 80, positions["away_team_logo"][1] + (200 - font_size) // 2)
                 
-                # Draw team name with dynamically calculated position
                 draw.text(name_pos, team_name, fill=font_color, font=font)
-                all_positions[key] = name_pos  # Update position tracking
+                all_positions[key] = name_pos
             else:  # Handle other text fields
                 text_value = str(all_data[key])
                 draw.text(pos, text_value, fill=font_color, font=font)

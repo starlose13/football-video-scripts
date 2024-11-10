@@ -96,7 +96,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "x": 0.388,
             "y": -0.308
         },
-        "fit": "none",
+        "fit": "cover",
         "scale": 0.25,
         "start": previous_start,
         "length": "auto"
