@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans, because the excitement kicks off at 1:00 PM on Sunday, November 10, 2024!",
+    "description": "Get ready, football fans! The match kicks off at 2:00 PM on Sunday, November 10, 2024!",
     "match_date": "2024-11-10",
-    "match_time": "01:00 PM (UTC Time)",
+    "match_time": "02:00 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 2.0,
-        "draw": 3.3,
-        "away": 3.6
+        "home": 1.45,
+        "draw": 4.5,
+        "away": 6.5
     },
-    "word_count": 17,
-    "reading_time": 6.39,
+    "word_count": 16,
+    "reading_time": 6.35,
     "home_team": {
-        "name": "Real Betis",
-        "logo": "https://img.thesports.com/football/team/018e260ad68bdad741c61e3171c4c608.png",
-        "country": "Spain"
+        "name": "Fiorentina",
+        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
+        "country": "Italy"
     },
     "away_team": {
-        "name": "RC Celta",
-        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
-        "country": "Spain"
+        "name": "Hellas Verona",
+        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
+        "country": "Italy"
     }
 }

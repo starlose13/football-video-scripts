@@ -1,15 +1,15 @@
 {
-    "description": "And the last match: Fiorentina versus Hellas Verona. Fiery clash; drama, goals, excitement!",
-    "word_count": 13,
-    "reading_time": 5.49,
+    "description": "And the last match: OGC Nice versus LOSC Lille. What a thriller! Goals, drama, tension!",
+    "word_count": 15,
+    "reading_time": 6.31,
     "home_team": {
-        "name": "Fiorentina",
-        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
-        "country": "Italy"
+        "name": "OGC Nice",
+        "logo": "https://img.thesports.com/football/team/ff8991853f7aabce7cb66f09cda0c58e.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Hellas Verona",
-        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
-        "country": "Italy"
+        "name": "LOSC Lille",
+        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
+        "country": "France"
     }
 }

@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans; the excitement kicks off at 12:35 PM on Sunday, November 10, 2024!",
+    "description": "Get ready, football fans, because the excitement kicks off at 12:35 PM on Sunday, November 10, 2024!",
     "match_date": "2024-11-10",
     "match_time": "12:35 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 2.15,
-        "draw": 3.25,
-        "away": 2.9
+        "home": 3.2,
+        "draw": 3.2,
+        "away": 2.1
     },
-    "word_count": 16,
-    "reading_time": 6.1,
+    "word_count": 17,
+    "reading_time": 6.39,
     "home_team": {
-        "name": "Abha",
-        "logo": "https://img.thesports.com/football/team/c3b8d20e9dfa2c4e81773a78b673413d.png",
+        "name": "Al-Ain SFC",
+        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
         "country": "Saudi Arabia"
     },
     "away_team": {
-        "name": "Al-Adalah",
-        "logo": "https://img.thesports.com/football/team/56eaace9b1e134a8a019029f1fbaa0c5.png",
+        "name": "Al-Jabalain",
+        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
         "country": "Saudi Arabia"
     }
 }

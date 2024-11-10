@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: Al-Ain SFC versus Al-Jabalain. Al-Ain dazzles, wins 3-1!",
-    "word_count": 14,
-    "reading_time": 5.27,
+    "description": "Let's start with the first match: Real Betis versus RC Celta. Goals galore! Betis triumphs 3-1; excitement peaks!",
+    "word_count": 18,
+    "reading_time": 6.92,
     "home_team": {
-        "name": "Al-Ain SFC",
-        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
-        "country": "Saudi Arabia"
+        "name": "Real Betis",
+        "logo": "https://img.thesports.com/football/team/018e260ad68bdad741c61e3171c4c608.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Al-Jabalain",
-        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
-        "country": "Saudi Arabia"
+        "name": "RC Celta",
+        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
+        "country": "Spain"
     }
 }

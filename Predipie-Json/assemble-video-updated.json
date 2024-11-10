@@ -1,0 +1,74 @@
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "{{ AVATAR }}",
+                            "volume": 1
+                        },
+                        "offset": {
+                            "x": 0.388,
+                            "y": -0.308
+                        },
+                        "fit": "cover",
+                        "scale": 0.25,
+                        "start": 0,
+                        "length": "auto"
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_26 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 4,
+                        "start": 0
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_27 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": "auto",
+                        "start": 4
+                    }
+                ]
+            }
+        ]
+    },
+    "merge": [
+        {
+            "find": "AVATAR",
+            "replace": "https://shotstack-api-stage-output.s3-ap-southeast-2.amazonaws.com/p01fbzhhpl/1de8373d-fcf1-4559-977c-be10a494a06a.mp4"
+        },
+        {
+            "find": "IMAGE_26",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kngdq-12qg8-2xyk7-4nv8h3/source.jpg"
+        },
+        {
+            "find": "IMAGE_27",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kpwf1-nxm7v-2r4fn-a8wyf1/source.jpg"
+        }
+    ],
+    "output": {
+        "format": "mp4",
+        "fps": 25,
+        "size": {
+            "width": 1920,
+            "height": 1080
+        }
+    }
+}
