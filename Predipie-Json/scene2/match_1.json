@@ -1,15 +1,15 @@
 {
-    "description": "Let's start with the first match: Al-Ain SFC versus Al-Jabalain. Al-Ain dazzles, wins 3-1!",
-    "word_count": 14,
-    "reading_time": 5.27,
+    "description": "Let's start with the first match: CF Estrela Amadora SAD versus Nacional da Madeira. Amadora clinches victory with a late goal, what a finish!",
+    "word_count": 24,
+    "reading_time": 8.15,
     "home_team": {
-        "name": "Al-Ain SFC",
-        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
-        "country": "Saudi Arabia"
+        "name": "CF Estrela Amadora SAD",
+        "logo": "https://img.thesports.com/football/team/606eca9e363f1c1e62542f8b23fdc71a.png",
+        "country": "Portugal"
     },
     "away_team": {
-        "name": "Al-Jabalain",
-        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
-        "country": "Saudi Arabia"
+        "name": "Nacional da Madeira",
+        "logo": "https://img.thesports.com/football/team/c3bd0b0f9691d5253833d97effc109d3.gif",
+        "country": "Portugal"
     }
 }

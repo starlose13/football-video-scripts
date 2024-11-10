@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the fourth match: Abha against Al-Adalah. Abha strikes first, Al-Adalah rebounds! Who will clinch the win?",
-    "word_count": 19,
-    "reading_time": 7.21,
+    "description": "Let's continue with the fourth match: RCD Mallorca against Atletico Madrid. Drama unfolds! Atletico clinches a thrilling 2-1 victory; cheers, sighs!",
+    "word_count": 21,
+    "reading_time": 8.03,
     "home_team": {
-        "name": "Abha",
-        "logo": "https://img.thesports.com/football/team/c3b8d20e9dfa2c4e81773a78b673413d.png",
-        "country": "Saudi Arabia"
+        "name": "RCD Mallorca",
+        "logo": "https://img.thesports.com/football/team/fdef90456d2a2eee09976c558457aec7.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Al-Adalah",
-        "logo": "https://img.thesports.com/football/team/56eaace9b1e134a8a019029f1fbaa0c5.png",
-        "country": "Saudi Arabia"
+        "name": "Atletico Madrid",
+        "logo": "https://img.thesports.com/football/team/390977b0421bce136c562057ea171ecf.png",
+        "country": "Spain"
     }
 }

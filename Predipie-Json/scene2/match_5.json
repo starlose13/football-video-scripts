@@ -1,15 +1,15 @@
 {
-    "description": "And the last match: Fiorentina versus Hellas Verona. Fiery clash; drama, goals, excitement!",
-    "word_count": 13,
-    "reading_time": 5.49,
+    "description": "And the last match: Montpellier Hérault SC versus Stade Brestois 29. Thrills, goals, drama! What a game!",
+    "word_count": 17,
+    "reading_time": 6.89,
     "home_team": {
-        "name": "Fiorentina",
-        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
-        "country": "Italy"
+        "name": "Montpellier Hérault SC",
+        "logo": "https://img.thesports.com/football/team/5b43b21e28899e3de823ed749d5790fd.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Hellas Verona",
-        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
-        "country": "Italy"
+        "name": "Stade Brestois 29",
+        "logo": "https://img.thesports.com/football/team/bb7e6346a3860008e4ff266ba3b655e8.png",
+        "country": "France"
     }
 }

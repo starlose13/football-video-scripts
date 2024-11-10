@@ -53,7 +53,13 @@ def upload_video_to_shotstack(video_url):
         "tracks": [
             {
                 "clips": [
-                    {"asset": {"type": "video", "src": video_url}, "start": 0, "length": "auto", "transition": {"in": "fade", "out": "fade"}}
+                    {
+                        "asset": {"type": "video", "src": video_url},
+                        "start": 0,
+                        "length": "auto",
+                        "fit": "contain",  # Ensures the video is scaled to fit without cropping
+                        "transition": {"in": "fade", "out": "fade"}
+                    }
                 ]
             }
         ]

@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans; the excitement kicks off at 12:35 PM on Sunday, November 10, 2024!",
+    "description": "Get ready, everyone! The match kicks off at 3:15 PM on Sunday, November 10th, 2024!",
     "match_date": "2024-11-10",
-    "match_time": "12:35 PM (UTC Time)",
+    "match_time": "03:15 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 2.15,
-        "draw": 3.25,
-        "away": 2.9
+        "home": 3.4,
+        "draw": 2.9,
+        "away": 2.3
     },
-    "word_count": 16,
-    "reading_time": 6.1,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Abha",
-        "logo": "https://img.thesports.com/football/team/c3b8d20e9dfa2c4e81773a78b673413d.png",
-        "country": "Saudi Arabia"
+        "name": "RCD Mallorca",
+        "logo": "https://img.thesports.com/football/team/fdef90456d2a2eee09976c558457aec7.png",
+        "country": "Spain"
     },
     "away_team": {
-        "name": "Al-Adalah",
-        "logo": "https://img.thesports.com/football/team/56eaace9b1e134a8a019029f1fbaa0c5.png",
-        "country": "Saudi Arabia"
+        "name": "Atletico Madrid",
+        "logo": "https://img.thesports.com/football/team/390977b0421bce136c562057ea171ecf.png",
+        "country": "Spain"
     }
 }

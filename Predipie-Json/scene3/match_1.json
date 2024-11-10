@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 12:35 PM on Sunday, November 10th, 2024!",
+    "description": "Get ready, football fans! The match kicks off at 3:30 PM on Sunday, 2024-11-10!",
     "match_date": "2024-11-10",
-    "match_time": "12:35 PM (UTC Time)",
+    "match_time": "03:30 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 3.2,
-        "draw": 3.2,
-        "away": 2.1
+        "home": 2.2,
+        "draw": 3.4,
+        "away": 3.2
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 14,
+    "reading_time": 5.52,
     "home_team": {
-        "name": "Al-Ain SFC",
-        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
-        "country": "Saudi Arabia"
+        "name": "CF Estrela Amadora SAD",
+        "logo": "https://img.thesports.com/football/team/606eca9e363f1c1e62542f8b23fdc71a.png",
+        "country": "Portugal"
     },
     "away_team": {
-        "name": "Al-Jabalain",
-        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
-        "country": "Saudi Arabia"
+        "name": "Nacional da Madeira",
+        "logo": "https://img.thesports.com/football/team/c3bd0b0f9691d5253833d97effc109d3.gif",
+        "country": "Portugal"
     }
 }

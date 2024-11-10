@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, fans! The match kicks off at 2:00 PM on Sunday, November 10, 2024!",
+    "description": "Get ready for an exhilarating match as the kickoff is at 4:00 PM on Sunday, November 10, 2024!",
     "match_date": "2024-11-10",
-    "match_time": "02:00 PM (UTC Time)",
+    "match_time": "04:00 PM (UTC Time)",
     "match_day": "Sunday",
     "odds": {
-        "home": 1.45,
-        "draw": 4.5,
-        "away": 6.5
+        "home": 3.25,
+        "draw": 3.5,
+        "away": 2.2
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 18,
+    "reading_time": 6.17,
     "home_team": {
-        "name": "Fiorentina",
-        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
-        "country": "Italy"
+        "name": "Montpellier Hérault SC",
+        "logo": "https://img.thesports.com/football/team/5b43b21e28899e3de823ed749d5790fd.png",
+        "country": "France"
     },
     "away_team": {
-        "name": "Hellas Verona",
-        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
-        "country": "Italy"
+        "name": "Stade Brestois 29",
+        "logo": "https://img.thesports.com/football/team/bb7e6346a3860008e4ff266ba3b655e8.png",
+        "country": "France"
     }
 }

@@ -79,13 +79,16 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     # Define timeline and merge structures
     timeline = {
         "background": "#ffffff",
-        "tracks": [{"clips": []}]
+        "tracks": [
+            {"clips": []},  # Track 1 for IMAGE_X clips
+            {"clips": []}   # Separate Track 2 for the AVATAR clip
+        ]
     }
     merge = [{"find": "AVATAR", "replace": avatar_url}]
     previous_start = 0  # Initialize start time for the first clip
     image_index = 0
 
-    # Add AVATAR clip with the specified structure and resolve "{{ AVATAR }}" placeholder
+    # Add AVATAR clip on a separate track with the specified structure
     avatar_clip = {
         "asset": {
             "type": "video",
@@ -93,15 +96,15 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "volume": 1
         },
         "offset": {
-            "x": 0.388,
-            "y": -0.308
+            "x": 0.365,
+            "y": -0.353
         },
-        "fit": "cover",
-        "scale": 0.25,
-        "start": previous_start,
+        "fit": "none",
+        "scale": 0.4,
+        "start": 0,
         "length": "auto"
     }
-    timeline["tracks"][0]["clips"].append(avatar_clip)
+    timeline["tracks"][0]["clips"].append(avatar_clip)  # Add to Track 2
 
     # Handle IMAGE_0 with starting-scene-with-program-number.jpg
     length_image_0 = intro_reading_time
@@ -116,7 +119,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "length": length_image_0,
             "start": previous_start
         }
-        timeline["tracks"][0]["clips"].append(clip)
+        timeline["tracks"][1]["clips"].append(clip)
         merge.append({"find": "IMAGE_0", "replace": file_link_image_0})
         previous_start += length_image_0  # Update start for the next image
         image_index += 1
@@ -137,7 +140,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
                     "length": reading_time,
                     "start": previous_start  # Dynamically calculated
                 }
-                timeline["tracks"][0]["clips"].append(clip)
+                timeline["tracks"][1]["clips"].append(clip)  # Add to Track 1
                 merge.append({"find": placeholder, "replace": file_link})
                 
                 previous_start += reading_time  # Update start time for the next clip
@@ -154,7 +157,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "length": 4,
             "start": previous_start
         }
-        timeline["tracks"][0]["clips"].append(clip)
+        timeline["tracks"][1]["clips"].append(clip)  # Add to Track 1
         merge.append({"find": "IMAGE_26", "replace": file_link_image_26})
         previous_start += 4  # Update start for IMAGE_27
 
@@ -169,7 +172,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             "length": "auto",
             "start": previous_start
         }
-        timeline["tracks"][0]["clips"].append(clip)
+        timeline["tracks"][1]["clips"].append(clip)  # Add to Track 1
         merge.append({"find": "IMAGE_27", "replace": file_link_image_27})
 
     final_output = {"timeline": timeline, "merge": merge}
@@ -180,6 +183,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     print("AVATAR and timeline added to assemble-video-updated.json successfully.")
     
     return final_output
+
 
 
 

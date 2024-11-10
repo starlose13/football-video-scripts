@@ -14,7 +14,7 @@
                             "x": 0.365,
                             "y": -0.353
                         },
-                        "fit": "none",
+                        "fit": "contain",
                         "scale": 0.4,
                         "start": 0,
                         "length": "auto"
@@ -381,7 +381,7 @@
     "merge": [
         {
             "find": "AVATAR",
-            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/5adc7fa0-bf73-415a-a5cc-ca54aa640f0f.mp4"
+            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/cb294290-5ddf-464b-8181-4a8f401448b0.mp4"
         },
         {
             "find": "IMAGE_0",
