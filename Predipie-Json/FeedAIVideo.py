@@ -4,6 +4,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from typing import Dict, Optional
+import random
 
 # Load environment variables
 load_dotenv()
@@ -87,8 +88,14 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     merge = [{"find": "AVATAR", "replace": avatar_url}]
     previous_start = 0  # Initialize start time for the first clip
     image_index = 0
-
-    # Add AVATAR clip on a separate track with the specified structure
+    transitions = [
+    "carouselLeft", "carouselRight", "fade", "zoomIn", "zoomOut",
+    "slideLeft", "slideRight", "slideUp", "slideDown",  
+    "crossFade", "wipeLeft", "wipeRight", "wipeUp", "wipeDown",  
+    "fadeIn", "fadeOut", "blurIn", "blurOut",            
+    "scaleUp", "scaleDown",                              
+    "rotateIn", "rotateOut",                             
+    "flipHorizontal", "flipVertical"]              
     avatar_clip = {
         "asset": {
             "type": "video",
@@ -114,7 +121,7 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         clip = {
             "asset": {"type": "image", "src": "{{ IMAGE_0 }}"},
             "effect": "zoomInSlow",
-            "transition": {"in": "carouselLeft"},
+            "transition": {"in":random.choice(transitions)},
             "position": "center",
             "length": length_image_0,
             "start": previous_start
@@ -135,7 +142,9 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
                 clip = {
                     "asset": {"type": "image", "src": f"{{{{ {placeholder} }}}}"},
                     "effect": "zoomInSlow",
-                    "transition": {"in": "carouselLeft"},
+                    "transition": {
+                        "in": random.choice(transitions),
+                        "out": random.choice(transitions)},
                     "position": "center",
                     "length": reading_time,
                     "start": previous_start  # Dynamically calculated
@@ -152,7 +161,9 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         clip = {
             "asset": {"type": "image", "src": "{{ IMAGE_26 }}"},
             "effect": "zoomInSlow",
-            "transition": {"in": "carouselLeft"},
+            "transition": {
+                "in": random.choice(transitions),
+                "out": random.choice(transitions)},
             "position": "center",
             "length": 4,
             "start": previous_start

@@ -30,7 +30,7 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "zoomOut"
                         },
                         "position": "center",
                         "length": 8.46,
@@ -43,7 +43,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "wipeUp",
+                            "out": "flipHorizontal"
                         },
                         "position": "center",
                         "length": 8.15,
@@ -56,7 +57,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "wipeUp",
+                            "out": "zoomOut"
                         },
                         "position": "center",
                         "length": 5.52,
@@ -69,7 +71,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "slideLeft",
+                            "out": "slideUp"
                         },
                         "position": "center",
                         "length": 11.55,
@@ -82,7 +85,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "flipVertical",
+                            "out": "fadeOut"
                         },
                         "position": "center",
                         "length": 10.58,
@@ -95,7 +99,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "crossFade",
+                            "out": "wipeUp"
                         },
                         "position": "center",
                         "length": 9.51,
@@ -108,7 +113,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "rotateOut",
+                            "out": "slideUp"
                         },
                         "position": "center",
                         "length": 8.9,
@@ -121,7 +127,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "wipeLeft",
+                            "out": "wipeDown"
                         },
                         "position": "center",
                         "length": 6.35,
@@ -134,7 +141,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "slideRight",
+                            "out": "rotateIn"
                         },
                         "position": "center",
                         "length": 11.73,
@@ -147,7 +155,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurIn",
+                            "out": "fadeIn"
                         },
                         "position": "center",
                         "length": 9.47,
@@ -160,7 +169,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "fadeOut",
+                            "out": "wipeUp"
                         },
                         "position": "center",
                         "length": 7.78,
@@ -173,7 +183,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurOut",
+                            "out": "fadeOut"
                         },
                         "position": "center",
                         "length": 6.1,
@@ -186,7 +197,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "fadeIn",
+                            "out": "carouselRight"
                         },
                         "position": "center",
                         "length": 8.67,
@@ -199,7 +211,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurIn",
+                            "out": "flipHorizontal"
                         },
                         "position": "center",
                         "length": 9.55,
@@ -212,7 +225,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurOut",
+                            "out": "slideRight"
                         },
                         "position": "center",
                         "length": 8.82,
@@ -225,7 +239,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "crossFade",
+                            "out": "slideRight"
                         },
                         "position": "center",
                         "length": 8.03,
@@ -238,7 +253,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "fade",
+                            "out": "wipeUp"
                         },
                         "position": "center",
                         "length": 6.06,
@@ -251,7 +267,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "zoomIn",
+                            "out": "wipeLeft"
                         },
                         "position": "center",
                         "length": 9.97,
@@ -264,7 +281,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "fadeOut",
+                            "out": "flipHorizontal"
                         },
                         "position": "center",
                         "length": 10.08,
@@ -277,7 +295,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "wipeLeft",
+                            "out": "slideRight"
                         },
                         "position": "center",
                         "length": 9.93,
@@ -290,7 +309,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurOut",
+                            "out": "carouselLeft"
                         },
                         "position": "center",
                         "length": 6.89,
@@ -303,7 +323,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "flipVertical",
+                            "out": "slideLeft"
                         },
                         "position": "center",
                         "length": 6.17,
@@ -316,7 +337,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "blurIn",
+                            "out": "carouselRight"
                         },
                         "position": "center",
                         "length": 11.01,
@@ -329,7 +351,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "slideLeft",
+                            "out": "carouselLeft"
                         },
                         "position": "center",
                         "length": 11.2,
@@ -342,7 +365,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "slideDown",
+                            "out": "zoomOut"
                         },
                         "position": "center",
                         "length": 9.4,
@@ -355,7 +379,8 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
-                            "in": "carouselLeft"
+                            "in": "zoomOut",
+                            "out": "zoomIn"
                         },
                         "position": "center",
                         "length": 4,
@@ -381,7 +406,7 @@
     "merge": [
         {
             "find": "AVATAR",
-            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/5adc7fa0-bf73-415a-a5cc-ca54aa640f0f.mp4"
+            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/d61b2141-a1d0-43bb-9b04-9427d1238ad9.mp4"
         },
         {
             "find": "IMAGE_0",

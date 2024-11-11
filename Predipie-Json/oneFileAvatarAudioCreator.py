@@ -13,7 +13,8 @@ X_API_ID = os.getenv('CREATIFY_API_ID')
 X_API_KEY = os.getenv('CREATIFY_API_KEY')
 creator_id = "3f2a4ff3-3aa8-4522-b545-0814627a31b9"  # Replace with your actual creator ID from Creatify
 program_name = "Predipie’s Match Forecast"
-
+increment_program_number()
+program_number = get_program_number()
 # Folders where JSON files are stored
 folders = [
     "scene2",  # secondEpisodeJsonCreator.py
@@ -31,6 +32,7 @@ pause_times = {
     ';': 0.25,
 }
 
+
 # Output folder for final combined narration
 output_folder = "combined-voiceAI"
 os.makedirs(output_folder, exist_ok=True)
@@ -43,8 +45,6 @@ def read_description_from_json(file_path):
 
 def generate_intro_with_openai(program_number):
     """Generates an introduction for the narration using OpenAI and calculates reading time."""
-    # Define the program name
-    program_name = "Predipie"  # or set dynamically if needed
 
     # Construct the prompt for OpenAI
     prompt = (
@@ -163,8 +163,7 @@ def create_video_with_creatify(narration_text, program_number):
     return None
 
 # Main script to generate combined narration for five games in sequence
-program_number = get_program_number()
-increment_program_number()
+
 intro_text = generate_intro_with_openai(program_number)
 
 narration_parts = []
