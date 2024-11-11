@@ -13,15 +13,15 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
 # Adjusted reading speed (words per second) including pauses
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
 
 # Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
 
 # Function to generate a match description with the ChatGPT API

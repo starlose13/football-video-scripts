@@ -25,16 +25,16 @@ def ensure_output_folder():
 
 
 # Define punctuation pause times
-pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
-}
+adjusted_reading_speed = 3.10
 
-adjusted_reading_speed = 3.48
-# Enums for status and recent game groups
+# Define punctuation pause times
+pause_times = {
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
+}
 
 
 

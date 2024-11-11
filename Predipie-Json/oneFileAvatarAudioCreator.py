@@ -23,13 +23,15 @@ folders = [
     "scene5",                     # fifthEpisodeJsonCreator.py
     "scene6"                      # sixEpisodeJsonCreator.py
 ]
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
+
+# Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
 
 
