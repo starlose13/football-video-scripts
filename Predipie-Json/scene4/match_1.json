@@ -1,10 +1,10 @@
 {
-    "description": "Match Odds! CF Estrela Amadora SAD to win: 2.2; Nacional da Madeira to win: 3.2; Odds for a draw: 3.4. Check the possibilities and place your bets wisely.",
+    "description": "The odds of winning are 1.65 for the home team; for the away team, they stand at 4.75. A draw is set at 3.4.",
     "odds": {
-        "home": 2.2,
+        "home": 1.65,
         "draw": 3.4,
-        "away": 3.2
+        "away": 4.75
     },
-    "word_count": 28,
-    "reading_time": 11.55
+    "word_count": 24,
+    "reading_time": 9.9
 }

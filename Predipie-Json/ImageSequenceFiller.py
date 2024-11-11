@@ -397,17 +397,14 @@ for game_index in range(5):  # Assuming 5 games
         # Upload each image to Shotstack
         source_id = upload_image_to_shotstack(image_path, file_name)
         if source_id:
-            status, url = check_upload_status(source_id)
-            print(f"Upload status for {image_path}: {status}")
-            if status == "ready" and url:
-                print(f"Image URL: {url}")
-                # Save the full URL in the uploaded_files dictionary
-                uploaded_files[file_name] = url
+            print(f"Upload completed for {image_path} with source ID: {source_id}")
+            # Save only the source ID in the uploaded_files dictionary
+            uploaded_files[file_name] = source_id
 
-# Save all uploaded file names and URLs
+# Save all uploaded file names and source IDs
 with open("uploaded_files.json", "w") as f:
     json.dump(uploaded_files, f, indent=4)
-print("Uploaded file names and URLs have been saved to uploaded_files.json.")
+print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
 
 
 # Upload the starting scene with program number to Shotstack

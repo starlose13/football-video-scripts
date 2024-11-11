@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 4:00 PM on Sunday, November 10, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "04:00 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Get ready, football fans! The match kicks off at 2:00 PM on Thursday, November 14th, 2024!",
+    "match_date": "2024-11-14",
+    "match_time": "02:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 2.25,
-        "draw": 3.4,
-        "away": 3.2
+        "home": 12.0,
+        "draw": 5.75,
+        "away": 1.2
     },
     "word_count": 16,
     "reading_time": 6.35,
     "home_team": {
-        "name": "Stade Rennais FC",
-        "logo": "https://img.thesports.com/football/team/eab8f0e847742fd328bb581299bd99ca.png",
-        "country": "France"
+        "name": "Kuwait",
+        "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
+        "country": "Kuwait"
     },
     "away_team": {
-        "name": "Toulouse FC",
-        "logo": "https://img.thesports.com/football/team/2947fe2f42551a5b7eccca7fc948f879.png",
-        "country": "France"
+        "name": "South Korea",
+        "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
+        "country": "South Korea"
     }
 }

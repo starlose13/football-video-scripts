@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, everyone, because the excitement kicks off at 3:05 PM on Sunday, November 10th, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "03:05 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Get ready for action as the match kicks off at 9:10 AM on Thursday, November 14, 2024! Join us!",
+    "match_date": "2024-11-14",
+    "match_time": "09:10 AM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 4.2,
-        "draw": 3.75,
-        "away": 1.65
+        "home": 1.8,
+        "draw": 3.4,
+        "away": 3.8
     },
-    "word_count": 16,
-    "reading_time": 6.1,
+    "word_count": 19,
+    "reading_time": 6.96,
     "home_team": {
-        "name": "Al-Tai",
-        "logo": "https://img.thesports.com/football/team/fdf42dd465f17ab274ec8a74cb4ef4e2.png",
-        "country": "Saudi Arabia"
+        "name": "Australia",
+        "logo": "https://img.thesports.com/football/team/6f289bdffe03a2480ad521dc2c114d56.png",
+        "country": "Australia"
     },
     "away_team": {
-        "name": "Neom SC",
-        "logo": "https://img.thesports.com/football/team/e5516d35314acec9169f33834a199842.png",
-        "country": "Unknown Country"
+        "name": "Saudi Arabia",
+        "logo": "https://img.thesports.com/football/team/3874dcd109e646cbe7c5e8fb2bd41548.png",
+        "country": "Saudi Arabia"
     }
 }

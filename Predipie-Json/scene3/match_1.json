@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 3:30 PM on Sunday, 2024-11-10!",
-    "match_date": "2024-11-10",
-    "match_time": "03:30 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Get ready, everyone! The match kicks off at 2:00 PM on Thursday, November 14th, 2024!",
+    "match_date": "2024-11-14",
+    "match_time": "02:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 2.2,
+        "home": 1.65,
         "draw": 3.4,
-        "away": 3.2
+        "away": 4.75
     },
-    "word_count": 14,
-    "reading_time": 5.52,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "CF Estrela Amadora SAD",
-        "logo": "https://img.thesports.com/football/team/606eca9e363f1c1e62542f8b23fdc71a.png",
-        "country": "Portugal"
+        "name": "Bahrain",
+        "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",
+        "country": "Bahrain"
     },
     "away_team": {
-        "name": "Nacional da Madeira",
-        "logo": "https://img.thesports.com/football/team/c3bd0b0f9691d5253833d97effc109d3.gif",
-        "country": "Portugal"
+        "name": "China",
+        "logo": "https://img.thesports.com/football/team/cf82ff425ec97af2c4c0c2f517f2a631.png",
+        "country": "China"
     }
 }

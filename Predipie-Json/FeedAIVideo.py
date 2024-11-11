@@ -22,6 +22,8 @@ MAX_SCENES_PER_GAME = 5  # Each game has scenes from scene2 to scene6
 
 def retrieve_ingested_file_links() -> (Dict[str, str], Optional[str]):
     headers = {"x-api-key": shotstack_api_key, "Accept": "application/json"}
+    
+    # Load uploaded files
     with open("uploaded_files.json", "r") as f:
         uploaded_files = json.load(f)
 
@@ -32,21 +34,41 @@ def retrieve_ingested_file_links() -> (Dict[str, str], Optional[str]):
         response = requests.get(BASE_URL, headers=headers)
         response.raise_for_status()
         data = response.json()
+        
         # Sort 'data' list by 'created' attribute in descending order
         sorted_data = sorted(data['data'], key=lambda x: x['attributes']['created'], reverse=True)
+        
+        # Map files in uploaded_files to URLs in sorted_data
         for item in sorted_data:
-            if item['id'] in uploaded_files.values():
-                file_name = [name for name, id in uploaded_files.items() if id == item['id']][0]
-                file_url = item['attributes']['source']  # Set file_url for the last matched item
-                links[file_name] = file_url
+            file_id = item['id']
+            file_name = next((name for name, id in uploaded_files.items() if id == file_id), None)
+            if file_name:
+                file_url = item['attributes']['source']
+                links[file_name] = file_url  # Map file name to URL
+                print(f"Mapped {file_name} to {file_url}")
+            else:
+                print(f"Warning: File ID {file_id} not found in uploaded_files.json")
+
+        # Check if any uploaded files are missing in the ingested links
+        missing_files = [name for name in uploaded_files if name not in links]
+        if missing_files:
+            print(f"Warning: Missing links for files {missing_files}")
+            # Assign placeholder URL for missing files
+            placeholder_url = "https://example.com/placeholder.jpg"  # Replace with actual placeholder URL
+            for missing_file in missing_files:
+                links[missing_file] = placeholder_url
+                print(f"Assigned placeholder URL for missing file: {missing_file}")
+
+        # Save links to ingested_files_links.json
         with open("ingested_files_links.json", "w") as json_file:
             json.dump(links, json_file, indent=4)
-            
         print("Ingested file URLs with original names have been saved to ingested_files_links.json")
+
     except requests.RequestException as e:
         logging.error(f"Error retrieving file links: {e}")
     
     return links, file_url  # Return both links and file_url
+
 
 def get_reading_time(scene_num: int, match_num: int) -> Optional[float]:
     try:
@@ -81,21 +103,37 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     timeline = {
         "background": "#ffffff",
         "tracks": [
-            {"clips": []},  # Track 1 for IMAGE_X clips
-            {"clips": []}   # Separate Track 2 for the AVATAR clip
+            {"clips": []},  
+            {"clips": []}  
         ]
     }
+    transitions = [
+    "none", "fade", "fadeSlow", "fadeFast",
+    "reveal", "revealSlow", "revealFast",
+    "wipeLeft", "wipeLeftSlow", "wipeLeftFast", 
+    "wipeRight", "wipeRightSlow", "wipeRightFast",
+    "slideLeft", "slideLeftSlow", "slideLeftFast",
+    "slideRight", "slideRightSlow", "slideRightFast",
+    "slideUp", "slideUpSlow", "slideUpFast",
+    "slideDown", "slideDownSlow", "slideDownFast",
+    "carouselLeft", "carouselLeftSlow", "carouselLeftFast",
+    "carouselRight", "carouselRightSlow", "carouselRightFast",
+    "carouselUp", "carouselUpSlow", "carouselUpFast",
+    "carouselDown", "carouselDownSlow", "carouselDownFast",
+    "shuffleTopRight", "shuffleTopRightSlow", "shuffleTopRightFast",
+    "shuffleRightTop", "shuffleRightTopSlow", "shuffleRightTopFast",
+    "shuffleRightBottom", "shuffleRightBottomSlow", "shuffleRightBottomFast",
+    "shuffleBottomRight", "shuffleBottomRightSlow", "shuffleBottomRightFast",
+    "shuffleBottomLeft", "shuffleBottomLeftSlow", "shuffleBottomLeftFast",
+    "shuffleLeftBottom", "shuffleLeftBottomSlow", "shuffleLeftBottomFast",
+    "shuffleLeftTop", "shuffleLeftTopSlow", "shuffleLeftTopFast",
+    "shuffleTopLeft", "shuffleTopLeftSlow", "shuffleTopLeftFast",
+    "zoom"
+]   
     merge = [{"find": "AVATAR", "replace": avatar_url}]
     previous_start = 0  # Initialize start time for the first clip
     image_index = 0
-    transitions = [
-    "carouselLeft", "carouselRight", "fade", "zoomIn", "zoomOut",
-    "slideLeft", "slideRight", "slideUp", "slideDown",  
-    "crossFade", "wipeLeft", "wipeRight", "wipeUp", "wipeDown",  
-    "fadeIn", "fadeOut", "blurIn", "blurOut",            
-    "scaleUp", "scaleDown",                              
-    "rotateIn", "rotateOut",                             
-    "flipHorizontal", "flipVertical"]              
+          
     avatar_clip = {
         "asset": {
             "type": "video",
@@ -116,7 +154,6 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
     # Handle IMAGE_0 with starting-scene-with-program-number.jpg
     length_image_0 = intro_reading_time
     file_link_image_0 = links.get("starting-scene-with-program-number.jpg")
-
     if file_link_image_0 and length_image_0 > 0:
         clip = {
             "asset": {"type": "image", "src": "{{ IMAGE_0 }}"},
@@ -147,13 +184,14 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
                         "out": random.choice(transitions)},
                     "position": "center",
                     "length": reading_time,
-                    "start": previous_start  # Dynamically calculated
+                    "start": previous_start
                 }
-                timeline["tracks"][1]["clips"].append(clip)  # Add to Track 1
+                timeline["tracks"][1]["clips"].append(clip)
                 merge.append({"find": placeholder, "replace": file_link})
-                
-                previous_start += reading_time  # Update start time for the next clip
+                previous_start += reading_time
                 image_index += 1
+            else:
+                print(f"Warning: Missing link or reading time for match {match_num}, scene {scene_num}")
 
     # Add IMAGE_26 with a fixed length of 4 seconds
     file_link_image_26 = "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jc8-kngdq-12qg8-2xyk7-4nv8h3/source.jpg"
@@ -187,14 +225,12 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
         merge.append({"find": "IMAGE_27", "replace": file_link_image_27})
 
     final_output = {"timeline": timeline, "merge": merge}
-
-    # Save the JSON to assemble-video-updated.json
+    
     with open("assemble-video-updated.json", "w") as f:
         json.dump(final_output, f, indent=4)
     print("AVATAR and timeline added to assemble-video-updated.json successfully.")
     
     return final_output
-
 
 
 

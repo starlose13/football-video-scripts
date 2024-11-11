@@ -1,23 +1,23 @@
 {
-    "description": "Get ready for an exhilarating match as the kickoff is at 4:00 PM on Sunday, November 10, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "04:00 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Get ready, everyone! The match kicks off at 3:00 PM on Thursday, November 14th, 2024!",
+    "match_date": "2024-11-14",
+    "match_time": "03:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 3.25,
-        "draw": 3.5,
-        "away": 2.2
+        "home": 10.0,
+        "draw": 5.75,
+        "away": 1.27
     },
-    "word_count": 18,
-    "reading_time": 6.17,
+    "word_count": 15,
+    "reading_time": 6.06,
     "home_team": {
-        "name": "Montpellier Hérault SC",
-        "logo": "https://img.thesports.com/football/team/5b43b21e28899e3de823ed749d5790fd.png",
-        "country": "France"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "Stade Brestois 29",
-        "logo": "https://img.thesports.com/football/team/bb7e6346a3860008e4ff266ba3b655e8.png",
-        "country": "France"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     }
 }

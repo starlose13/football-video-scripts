@@ -1,15 +1,15 @@
 {
-    "description": "And the last match: Montpellier Hérault SC versus Stade Brestois 29. Thrills, goals, drama! What a game!",
-    "word_count": 17,
-    "reading_time": 6.89,
+    "description": "And the last match: Kazakhstan versus Austria. Thrills galore as Austria clinches a 2-1 victory!",
+    "word_count": 15,
+    "reading_time": 5.31,
     "home_team": {
-        "name": "Montpellier Hérault SC",
-        "logo": "https://img.thesports.com/football/team/5b43b21e28899e3de823ed749d5790fd.png",
-        "country": "France"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "Stade Brestois 29",
-        "logo": "https://img.thesports.com/football/team/bb7e6346a3860008e4ff266ba3b655e8.png",
-        "country": "France"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     }
 }
