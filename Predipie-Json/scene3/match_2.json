@@ -1,5 +1,5 @@
 {
-    "description": "Tune in this Thursday at 2:00 PM for an electrifying football showdown you won't want to miss!",
+    "description": "Tune in Thursday, 2:00 PM, for thrilling football action! Who will triumph? Don't miss the excitement, only on your screen!",
     "match_date": "2024-11-14",
     "match_time": "02:00 PM (UTC Time)",
     "match_day": "Thursday",
@@ -8,8 +8,8 @@
         "draw": 6.0,
         "away": 1.18
     },
-    "word_count": 17,
-    "reading_time": 5.66,
+    "word_count": 20,
+    "reading_time": 7.62,
     "home_team": {
         "name": "Kuwait",
         "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",

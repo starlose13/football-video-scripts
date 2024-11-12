@@ -1,15 +1,15 @@
 {
-    "description": "Get ready for thrilling football action! Kickoff at 2:00 PM, Thursday, November 14, 2024. Don’t miss it! Tune in!",
+    "description": "Tune in this Thursday at 2:00 PM for an electrifying football showdown! Don't miss the excitement!",
     "match_date": "2024-11-14",
     "match_time": "02:00 PM (UTC Time)",
     "match_day": "Thursday",
     "odds": {
-        "home": 1.65,
+        "home": 1.62,
         "draw": 3.4,
-        "away": 4.75
+        "away": 5.0
     },
-    "word_count": 19,
-    "reading_time": 7.51,
+    "word_count": 16,
+    "reading_time": 5.52,
     "home_team": {
         "name": "Bahrain",
         "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",

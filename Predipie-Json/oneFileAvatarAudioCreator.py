@@ -106,11 +106,11 @@ def generate_intro_with_openai(program_number):
 def generate_closing_with_openai(program_number):
     """Generates a closing statement for the narration using OpenAI."""
     prompt = (
-    f" Wrap up Episode {program_number} with: 'Remember, I'm just an AI; this isn't financial advice!' "
-    f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'dont trade your life for an entertainment ,Goodbye!'"
-    f"it should be complete and under 25 words"
-    f"use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"Wrap up Episode {program_number} with a friendly closing: 'Just a reminder, I'm only an AI, this isn’t financial advice!' "
+    f"Encourage viewers to tune in daily, join the PrediPie community, and get ready for Episode {program_number + 1} tomorrow. End with: 'dont trade your life for entertainment! Goodbye!' "
+    f"Keep it complete and under 40 words. Use these punctuation marks frequently: dot, comma, exclamation mark, question mark, and semicolon. dont use dash or underscore"
+)
+
 
 
     # Use OpenAI API to generate a custom closing statement

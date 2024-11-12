@@ -29,8 +29,8 @@ def generate_match_description_with_recent_form(host_team, guest_team, host_resu
     prompt = (
         f"[Generate a concise description of each team’s recent form, using full words for clarity and avoiding abbreviations like 'W', 'D', or 'L'. "
         f"Focus on readability. Limit to 200 characters. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon.] "
-        f"The home team’s recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
-        f"while the away team has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses})."
+        f"The {host_team} recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
+        f"while the {guest_team} has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses})."
     )
 
     # Call the ChatGPT API to generate the description

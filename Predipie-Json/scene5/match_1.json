@@ -1,5 +1,5 @@
 {
-    "description": "The home team has struggled recently with one win and four losses. The away team has been more consistent, securing one win, three draws, and one loss.",
+    "description": "Bahrain has struggled recently, with one win and four losses in their last five games. China's form is mixed, securing one win, three draws, and one loss.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -27,5 +27,5 @@
         }
     },
     "word_count": 27,
-    "reading_time": 9.76
+    "reading_time": 9.97
 }
