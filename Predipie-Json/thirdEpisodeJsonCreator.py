@@ -34,10 +34,11 @@ def generate_match_description(host_team, guest_team, match_time):
     
     # Create a prompt for OpenAI to generate the description
     prompt = (
-        f"Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
-        f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience. "
-        "Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"As if you're a live TV host, build excitement announcemen for the game of football.this match starts at : {time_str} on {day_str}, {date_str}' "
+    f"Keep it upbeat, clear, and full of energy to captivate the audience.also it should be complete and under 22 words"
+    "Remember: only use these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+)
+
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(

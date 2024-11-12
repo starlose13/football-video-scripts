@@ -12,7 +12,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 X_API_ID = os.getenv('CREATIFY_API_ID')
 X_API_KEY = os.getenv('CREATIFY_API_KEY')
 creator_id = "3f2a4ff3-3aa8-4522-b545-0814627a31b9"  # Replace with your actual creator ID from Creatify
-program_name = "Predipie’s Match Forecast"
+program_name = "Predi Pie Fans"
 increment_program_number()
 program_number = get_program_number()
 # Folders where JSON files are stored
@@ -50,9 +50,14 @@ def generate_intro_with_openai(program_number):
 
     # Construct the prompt for OpenAI
     prompt = (
-        f"Welcome to Episode {program_number} of {program_name}! Today, we have 5 thrilling soccer predictions lined up. "
-        f"Keep it friendly and energetic, keeping it very brief—under 20 words, complete sentences. Also use these punctuation marks in the output a lot: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"Start with: 'Hi {program_name}!' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
+    f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
+    f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+    f"Important: Do not mention any game statistics, player names, or game history information in the output."
+)
+
+
+
 
     # Use OpenAI API to generate a custom introduction
     response = openai.ChatCompletion.create(
@@ -102,7 +107,10 @@ def generate_closing_with_openai(program_number):
     """Generates a closing statement for the narration using OpenAI."""
     prompt = (
     f" Wrap up Episode {program_number} with: 'Remember, I'm just an AI; this isn't financial advice!' "
-    f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'Goodbye!' Keep it to one brief sentence.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon.")
+    f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'dont trade your life for an entertainment ,Goodbye!'"
+    f"it should be complete and under 25 words"
+    f"use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
+    )
 
 
     # Use OpenAI API to generate a custom closing statement
@@ -194,8 +202,8 @@ with open(output_file_path, 'w', encoding='utf-8') as output_file:
 print(f"Narration for episode {program_number} saved to {output_file_path}")
 
 # Generate video with Creatify API
-video_url = create_video_with_creatify(full_narration, program_number)
-if video_url:
-    print(f"Video for episode {program_number} is ready: {video_url}")
-else:
-    print("Failed to generate the video.")
+# video_url = create_video_with_creatify(full_narration, program_number)
+# if video_url:
+#     print(f"Video for episode {program_number} is ready: {video_url}")
+# else:
+#     print("Failed to generate the video.")

@@ -1,5 +1,5 @@
 {
-    "description": "The home team has struggled recently, with one win followed by four losses. Meanwhile, the away team has been more consistent, securing one win, three draws, and suffering only one loss.",
+    "description": "The home team has struggled recently with one win and four losses. The away team has been more consistent, securing one win, three draws, and one loss.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -26,6 +26,6 @@
             "losses": 1
         }
     },
-    "word_count": 31,
-    "reading_time": 11.16
+    "word_count": 27,
+    "reading_time": 9.76
 }

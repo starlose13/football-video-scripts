@@ -35,8 +35,10 @@ def generate_match_description(i, host_team, guest_team):
 
     # Construct the prompt with the chosen introduction
     prompt = (
-        f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+    f"Important: Do not mention any game statistics, player names, or game history information."
+)
+
 
     # Call the ChatGPT API to generate the script
     response = openai.ChatCompletion.create(

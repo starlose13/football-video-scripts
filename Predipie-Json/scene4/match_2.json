@@ -1,10 +1,10 @@
 {
-    "description": "The odds for the home team winning are 12.0; for the away team, the odds are 1.2. A draw has odds of 5.75.",
+    "description": "Winning odds are as follows: 13.0 for Kuwait; 1.18 for South Korea. A draw stands at 6.0.",
     "odds": {
-        "home": 12.0,
-        "draw": 5.75,
-        "away": 1.2
+        "home": 13.0,
+        "draw": 6.0,
+        "away": 1.18
     },
-    "word_count": 23,
-    "reading_time": 9.61
+    "word_count": 17,
+    "reading_time": 6.7
 }

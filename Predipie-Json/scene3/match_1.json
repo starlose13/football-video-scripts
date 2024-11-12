@@ -1,5 +1,5 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 2:00 PM on Thursday, November 14th, 2024!",
+    "description": "Get ready for thrilling football action! Kickoff at 2:00 PM, Thursday, November 14, 2024. Don’t miss it! Tune in!",
     "match_date": "2024-11-14",
     "match_time": "02:00 PM (UTC Time)",
     "match_day": "Thursday",
@@ -8,8 +8,8 @@
         "draw": 3.4,
         "away": 4.75
     },
-    "word_count": 15,
-    "reading_time": 6.06,
+    "word_count": 19,
+    "reading_time": 7.51,
     "home_team": {
         "name": "Bahrain",
         "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",

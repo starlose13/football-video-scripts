@@ -8,10 +8,10 @@ scripts = [
     "fourthEpisodeJsonCreator.py",
     "fifthEpisodeJsonCreator.py",
     "sixEpisodeJsonCreator.py",
-    "oneFileAvatarAudioCreator.py",
-    "ImageSequenceFiller.py",
-    "upload-video-on-creatify.py",
-    "FeedAIVideo.py"
+    "oneFileAvatarAudioCreator.py"
+    #"ImageSequenceFiller.py",
+    #"upload-video-on-creatify.py",
+    #"FeedAIVideo.py"
 ]
 
 # Function to run a script and retry if it fails

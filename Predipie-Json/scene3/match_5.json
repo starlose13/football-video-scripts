@@ -1,5 +1,5 @@
 {
-    "description": "Get ready, everyone! The match kicks off at 3:00 PM on Thursday, November 14th, 2024!",
+    "description": "Tune in Thursday, November 14th at 3:00 PM for thrilling football action! Don't miss it!",
     "match_date": "2024-11-14",
     "match_time": "03:00 PM (UTC Time)",
     "match_day": "Thursday",
@@ -9,7 +9,7 @@
         "away": 1.27
     },
     "word_count": 15,
-    "reading_time": 6.06,
+    "reading_time": 5.41,
     "home_team": {
         "name": "Kazakhstan",
         "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
