@@ -1,5 +1,5 @@
 {
-    "description": "Tune in for thrilling football action this Thursday at 3:00 PM! Don't miss the excitement; mark your calendars for 2024-11-14!",
+    "description": "Get ready for thrilling football action this Thursday, 3 PM! Don't miss the excitement, mark your calendars for 2024-11-14!",
     "match_date": "2024-11-14",
     "match_time": "03:00 PM (UTC Time)",
     "match_day": "Thursday",
@@ -8,8 +8,8 @@
         "draw": 6.0,
         "away": 1.25
     },
-    "word_count": 20,
-    "reading_time": 6.98,
+    "word_count": 19,
+    "reading_time": 6.91,
     "home_team": {
         "name": "Kazakhstan",
         "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
