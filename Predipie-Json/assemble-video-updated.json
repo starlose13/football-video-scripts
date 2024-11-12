@@ -11,6 +11,7 @@
                             "volume": 1
                         },
                         "offset": {
+<<<<<<< HEAD
                             "x": 0.365,
                             "y": -0.353
                         },
@@ -385,6 +386,15 @@
                         "position": "center",
                         "length": 7.64,
                         "start": 211.19
+=======
+                            "x": 0.388,
+                            "y": -0.308
+                        },
+                        "fit": "cover",
+                        "scale": 0.25,
+                        "start": 0,
+                        "length": "auto"
+>>>>>>> origin/main
                     },
                     {
                         "asset": {
@@ -393,12 +403,20 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
+<<<<<<< HEAD
                             "in": "shuffleLeftBottomFast",
                             "out": "carouselRightFast"
                         },
                         "position": "center",
                         "length": 4,
                         "start": 218.82999999999998
+=======
+                            "in": "carouselLeft"
+                        },
+                        "position": "center",
+                        "length": 4,
+                        "start": 0
+>>>>>>> origin/main
                     },
                     {
                         "asset": {
@@ -411,7 +429,11 @@
                         },
                         "position": "center",
                         "length": "auto",
+<<<<<<< HEAD
                         "start": 222.82999999999998
+=======
+                        "start": 4
+>>>>>>> origin/main
                     }
                 ]
             }
@@ -420,6 +442,7 @@
     "merge": [
         {
             "find": "AVATAR",
+<<<<<<< HEAD
             "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/1dc24284-47da-435f-ab8c-ffe359d73070.mp4"
         },
         {
@@ -525,6 +548,9 @@
         {
             "find": "IMAGE_25",
             "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-by137-401sh-xx40s-vdhat1/source.jpg"
+=======
+            "replace": "https://shotstack-api-stage-output.s3-ap-southeast-2.amazonaws.com/p01fbzhhpl/1de8373d-fcf1-4559-977c-be10a494a06a.mp4"
+>>>>>>> origin/main
         },
         {
             "find": "IMAGE_26",

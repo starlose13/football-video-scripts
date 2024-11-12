@@ -26,3 +26,4 @@ def reset_program_number(value=1):
         json.dump({"program_number": value}, file)
     print(f"Program number reset to {value}.")
 
+reset_program_number()

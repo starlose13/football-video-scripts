@@ -1,8 +1,17 @@
 {
+<<<<<<< HEAD
     "description": "Prediction alert: South Korea to clinch victory! Expect an exciting game; thrilling plays, standout moments? Win away team!",
     "word_count": 18,
     "reading_time": 6.73,
     "team_home": "Kuwait",
     "team_away": "South Korea",
     "card": "Win Away Team"
+=======
+    "description": "Fiorentina triumphs! The home team secures a win; excitement fills the air! Fans, can you believe it? What a match!",
+    "word_count": 20,
+    "reading_time": 8.25,
+    "team_home": "Fiorentina",
+    "team_away": "Hellas Verona",
+    "card": "Win Home Team"
+>>>>>>> origin/main
 }

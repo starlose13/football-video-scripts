@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "description": "Kuwait has struggled recently, securing only one win, three draws, and one loss. South Korea is on a strong run, boasting four wins and a single draw.",
     "recent_form": {
         "home_team": {
@@ -11,11 +12,26 @@
             ],
             "wins": 1,
             "draws": 3,
+=======
+    "description": "The home team has been strong recently, winning four of their last five matches and losing only once. The away team, however, has struggled with three losses and only two wins in their recent outings.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "l",
+                "w",
+                "w",
+                "w",
+                "w"
+            ],
+            "wins": 4,
+            "draws": 0,
+>>>>>>> origin/main
             "losses": 1
         },
         "away_team": {
             "last_5_matches": [
                 "w",
+<<<<<<< HEAD
                 "w",
                 "w",
                 "d",
@@ -28,4 +44,18 @@
     },
     "word_count": 27,
     "reading_time": 9.97
+=======
+                "l",
+                "l",
+                "l",
+                "w"
+            ],
+            "wins": 2,
+            "draws": 0,
+            "losses": 3
+        }
+    },
+    "word_count": 35,
+    "reading_time": 11.81
+>>>>>>> origin/main
 }
