@@ -1,8 +1,16 @@
 {
+<<<<<<< HEAD
+    "description": "Expect excitement as Bahrain likely clinches a win or draw! Will the home team triumph? Watch closely; the odds favor them...",
+    "word_count": 21,
+    "reading_time": 7.93,
+    "team_home": "Bahrain",
+    "team_away": "China",
+=======
     "description": "Expect excitement! Real Betis is tipped: Win or Draw Home Team! Confidence high; odds set? Dive in, fans\u2014action awaits!",
     "word_count": 19,
     "reading_time": 7.96,
     "team_home": "Real Betis",
     "team_away": "RC Celta",
+>>>>>>> origin/main
     "card": "Win or Draw Home Team"
 }

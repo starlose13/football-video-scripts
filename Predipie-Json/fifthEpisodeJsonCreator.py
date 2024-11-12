@@ -12,15 +12,15 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
 # Adjusted reading speed (words per second) including pauses
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
 
 # Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
 
 # Function to generate a match description with recent form using the ChatGPT API
@@ -29,8 +29,8 @@ def generate_match_description_with_recent_form(host_team, guest_team, host_resu
     prompt = (
         f"[Generate a concise description of each team’s recent form, using full words for clarity and avoiding abbreviations like 'W', 'D', or 'L'. "
         f"Focus on readability. Limit to 200 characters. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon.] "
-        f"The home team’s recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
-        f"while the away team has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses})."
+        f"The {host_team} recent form shows {host_results} (Wins: {host_wins}, Draws: {host_draws}, Losses: {host_losses}), "
+        f"while the {guest_team} has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses})."
     )
 
     # Call the ChatGPT API to generate the description

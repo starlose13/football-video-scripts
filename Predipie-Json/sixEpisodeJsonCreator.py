@@ -25,16 +25,16 @@ def ensure_output_folder():
 
 
 # Define punctuation pause times
-pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
-}
+adjusted_reading_speed = 3.10
 
-adjusted_reading_speed = 3.48
-# Enums for status and recent game groups
+# Define punctuation pause times
+pause_times = {
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
+}
 
 
 
@@ -244,8 +244,11 @@ def generate_match_result_with_openai(a_team_name, b_team_name, home_team_name, 
 
     # Build the complete prompt
     prompt = (
-    f"{condition_text}. Write this dynamically for football fans, keeping it very brief—under 30 words!, also using these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon."
+    f"{condition_text}. Write this dynamically for football fans, keeping it very brief—under 25 words! "
+    f"Use these punctuation marks frequently in the output: dot, comma, exclamation mark, question mark, and semicolon. "
+    f"Important: Avoid words like 'bet,' 'betting,' or 'place bet,' do not use apostrophes, em dashes, or similar punctuation marks."
 )
+
 
 
     # Use OpenAI API to generate the result summary and card

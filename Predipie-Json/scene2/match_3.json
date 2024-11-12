@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the third match: Abha against Al-Adalah. Abha dominates, Al-Adalah struggles!",
-    "word_count": 13,
-    "reading_time": 4.99,
+<<<<<<< HEAD
+    "description": "Let's continue with the third match: Australia against Saudi Arabia. Thrills, drama, and unyielding tension mark every moment! What a match!",
+    "word_count": 21,
+    "reading_time": 7.76,
     "home_team": {
-        "name": "Abha",
-        "logo": "https://img.thesports.com/football/team/c3b8d20e9dfa2c4e81773a78b673413d.png",
-        "country": "Saudi Arabia"
+        "name": "Australia",
+        "logo": "https://img.thesports.com/football/team/6f289bdffe03a2480ad521dc2c114d56.png",
+        "country": "Australia"
     },
     "away_team": {
-        "name": "Al-Adalah",
-        "logo": "https://img.thesports.com/football/team/56eaace9b1e134a8a019029f1fbaa0c5.png",
-        "country": "Saudi Arabia"
+        "name": "Saudi Arabia",
+        "logo": "https://img.thesports.com/football/team/3874dcd109e646cbe7c5e8fb2bd41548.png",
     }
 }

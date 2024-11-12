@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans, because the excitement kicks off at 12:35 PM on Sunday, November 10, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "12:35 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Tune in Thursday, 12 PM, for thrilling football action! Who will dominate? Don't miss it!",
+    "match_date": "2024-11-14",
+    "match_time": "12:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 3.2,
-        "draw": 3.2,
-        "away": 2.1
+        "home": 10.0,
+        "draw": 4.5,
+        "away": 1.3
     },
-    "word_count": 17,
-    "reading_time": 6.39,
+    "word_count": 15,
+    "reading_time": 5.8,
     "home_team": {
-        "name": "Al-Ain SFC",
-        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
-        "country": "Saudi Arabia"
+        "name": "Korea DPR",
+        "logo": "https://img.thesports.com/football/team/b31a466bccaefaca53b4de1a843965f2.png",
+        "country": "North Korea"
     },
     "away_team": {
-        "name": "Al-Jabalain",
-        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
-        "country": "Saudi Arabia"
+        "name": "Iran",
+        "logo": "https://img.thesports.com/football/team/58b5d5f352fafb845b4f6755c2d5b724.png",
+        "country": "Iran"
     }
 }

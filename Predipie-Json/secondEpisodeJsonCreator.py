@@ -12,15 +12,15 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
 # Adjusted reading speed (words per second) including pauses
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
 
 # Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
 
 def generate_match_description(i, host_team, guest_team):
@@ -35,8 +35,10 @@ def generate_match_description(i, host_team, guest_team):
 
     # Construct the prompt with the chosen introduction
     prompt = (
-        f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+    f"Important: Do not mention any game statistics, player names, or game history information."
+)
+
 
     # Call the ChatGPT API to generate the script
     response = openai.ChatCompletion.create(

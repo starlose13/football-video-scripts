@@ -1,8 +1,17 @@
 {
+<<<<<<< HEAD
+    "description": "Austria triumphs on the road! Expect a stunning victory; will the home team bounce back? Stay tuned!",
+    "word_count": 17,
+    "reading_time": 6.19,
+    "team_home": "Kazakhstan",
+    "team_away": "Austria",
+    "card": "Win Away Team"
+=======
     "description": "Expect fireworks in this clash! OGC Nice or LOSC Lille to triumph; will it be home or away joy? Place your bets: Win Home or Away Team!",
     "word_count": 27,
     "reading_time": 9.51,
     "team_home": "OGC Nice",
     "team_away": "LOSC Lille",
     "card": "Win Home or Away Team"
+>>>>>>> origin/main
 }

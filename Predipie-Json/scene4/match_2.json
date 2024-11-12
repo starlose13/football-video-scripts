@@ -1,10 +1,10 @@
 {
-    "description": "Winning odds for the home team are set at 1.45; the away team's odds stand at 6.5. A draw is priced at 4.5.",
+    "description": "Winning odds are 13.0 for the home team; 1.18 for the away team. Odds for a draw stand at 6.0. Each reflects potential outcomes for impacting betting choices.",
     "odds": {
-        "home": 1.45,
-        "draw": 4.5,
-        "away": 6.5
+        "home": 13.0,
+        "draw": 6.0,
+        "away": 1.18
     },
-    "word_count": 23,
-    "reading_time": 9.36
+    "word_count": 28,
+    "reading_time": 10.46
 }

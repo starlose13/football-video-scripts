@@ -8,10 +8,10 @@ scripts = [
     "fourthEpisodeJsonCreator.py",
     "fifthEpisodeJsonCreator.py",
     "sixEpisodeJsonCreator.py",
-    "oneFileAvatarAudioCreator.py",
-    "ImageSequenceFiller.py",
-    "upload-video-on-creatify.py",
-    "FeedAIVideo.py"
+    "oneFileAvatarAudioCreator.py"
+    #"ImageSequenceFiller.py",
+    #"upload-video-on-creatify.py",
+    #"FeedAIVideo.py"
 ]
 
 # Function to run a script and retry if it fails
@@ -32,7 +32,7 @@ for i, script in enumerate(scripts):
     
     # Special 15-minute wait between the seventh and eighth script
     if i == 6:  # After ImageSequenceFiller.py
-        print("Waiting 45 minutes before running the next script...")
-        time.sleep(45 * 60)
+        print("Waiting 55 minutes before running the next script...")
+        time.sleep(55 * 60)
 
 print("All scripts completed successfully.")

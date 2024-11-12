@@ -11,6 +11,382 @@
                             "volume": 1
                         },
                         "offset": {
+<<<<<<< HEAD
+                            "x": 0.365,
+                            "y": -0.353
+                        },
+                        "fit": "none",
+                        "scale": 0.4,
+                        "start": 0,
+                        "length": "auto"
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_0 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleRightBottomSlow"
+                        },
+                        "position": "center",
+                        "length": 6.89,
+                        "start": 0
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_1 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleRightTop",
+                            "out": "shuffleLeftTopSlow"
+                        },
+                        "position": "center",
+                        "length": 5.56,
+                        "start": 6.89
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_2 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "revealSlow",
+                            "out": "wipeLeftFast"
+                        },
+                        "position": "center",
+                        "length": 6.06,
+                        "start": 12.45
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_3 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleLeftTop",
+                            "out": "carouselDown"
+                        },
+                        "position": "center",
+                        "length": 9.9,
+                        "start": 18.509999999999998
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_4 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "slideUpFast",
+                            "out": "slideLeft"
+                        },
+                        "position": "center",
+                        "length": 11.16,
+                        "start": 28.409999999999997
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_5 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "slideDown",
+                            "out": "shuffleTopRightFast"
+                        },
+                        "position": "center",
+                        "length": 8.25,
+                        "start": 39.56999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_6 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        },
+                        "position": "center",
+                        "length": 10.01,
+                        "start": 47.81999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_7 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleTopLeft",
+                            "out": "shuffleTopRight"
+                        },
+                        "position": "center",
+                        "length": 6.35,
+                        "start": 57.82999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_8 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselUpFast",
+                            "out": "shuffleLeftBottomFast"
+                        },
+                        "position": "center",
+                        "length": 9.61,
+                        "start": 64.17999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_9 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "slideUp",
+                            "out": "slideRightFast"
+                        },
+                        "position": "center",
+                        "length": 10.58,
+                        "start": 73.78999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_10 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "fade",
+                            "out": "none"
+                        },
+                        "position": "center",
+                        "length": 8.28,
+                        "start": 84.36999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_11 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselUpSlow",
+                            "out": "shuffleTopLeft"
+                        },
+                        "position": "center",
+                        "length": 8.03,
+                        "start": 92.64999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_12 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleBottomLeftSlow",
+                            "out": "wipeLeftFast"
+                        },
+                        "position": "center",
+                        "length": 6.96,
+                        "start": 100.67999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_13 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselLeftSlow",
+                            "out": "shuffleLeftTop"
+                        },
+                        "position": "center",
+                        "length": 10.47,
+                        "start": 107.63999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_14 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "zoom",
+                            "out": "shuffleTopLeftSlow"
+                        },
+                        "position": "center",
+                        "length": 11.41,
+                        "start": 118.10999999999999
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_15 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleTopRight",
+                            "out": "shuffleTopLeftSlow"
+                        },
+                        "position": "center",
+                        "length": 9.93,
+                        "start": 129.51999999999998
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_16 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleTopLeftFast",
+                            "out": "shuffleTopRightFast"
+                        },
+                        "position": "center",
+                        "length": 5.27,
+                        "start": 139.45
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_17 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleBottomRightFast",
+                            "out": "slideDownSlow"
+                        },
+                        "position": "center",
+                        "length": 6.06,
+                        "start": 144.72
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_18 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "fade",
+                            "out": "carouselRightSlow"
+                        },
+                        "position": "center",
+                        "length": 12.2,
+                        "start": 150.78
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_19 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "revealSlow",
+                            "out": "shuffleRightTop"
+                        },
+                        "position": "center",
+                        "length": 8.65,
+                        "start": 162.98
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_20 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "none",
+                            "out": "shuffleRightBottomSlow"
+                        },
+                        "position": "center",
+                        "length": 8.82,
+                        "start": 171.63
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_21 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselUpSlow",
+                            "out": "reveal"
+                        },
+                        "position": "center",
+                        "length": 5.31,
+                        "start": 180.45
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_22 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "revealFast",
+                            "out": "slideUpFast"
+                        },
+                        "position": "center",
+                        "length": 6.06,
+                        "start": 185.76
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_23 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "carouselDownSlow",
+                            "out": "shuffleRightTop"
+                        },
+                        "position": "center",
+                        "length": 9.61,
+                        "start": 191.82
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_24 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleRightTopFast",
+                            "out": "shuffleRightTop"
+                        },
+                        "position": "center",
+                        "length": 9.76,
+                        "start": 201.43
+                    },
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ IMAGE_25 }}"
+                        },
+                        "effect": "zoomInSlow",
+                        "transition": {
+                            "in": "shuffleLeftBottomFast",
+                            "out": "slideRight"
+                        },
+                        "position": "center",
+                        "length": 7.64,
+                        "start": 211.19
+=======
                             "x": 0.388,
                             "y": -0.308
                         },
@@ -18,6 +394,7 @@
                         "scale": 0.25,
                         "start": 0,
                         "length": "auto"
+>>>>>>> origin/main
                     },
                     {
                         "asset": {
@@ -26,11 +403,20 @@
                         },
                         "effect": "zoomInSlow",
                         "transition": {
+<<<<<<< HEAD
+                            "in": "shuffleLeftBottomFast",
+                            "out": "carouselRightFast"
+                        },
+                        "position": "center",
+                        "length": 4,
+                        "start": 218.82999999999998
+=======
                             "in": "carouselLeft"
                         },
                         "position": "center",
                         "length": 4,
                         "start": 0
+>>>>>>> origin/main
                     },
                     {
                         "asset": {
@@ -43,7 +429,11 @@
                         },
                         "position": "center",
                         "length": "auto",
+<<<<<<< HEAD
+                        "start": 222.82999999999998
+=======
                         "start": 4
+>>>>>>> origin/main
                     }
                 ]
             }
@@ -52,7 +442,115 @@
     "merge": [
         {
             "find": "AVATAR",
+<<<<<<< HEAD
+            "replace": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/1dc24284-47da-435f-ab8c-ffe359d73070.mp4"
+        },
+        {
+            "find": "IMAGE_0",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-by67h-dpkbm-edc88-vhapj0/source.jpg"
+        },
+        {
+            "find": "IMAGE_1",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-brvby-n0vpr-54t06-rtym4m/source.jpg"
+        },
+        {
+            "find": "IMAGE_2",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bs16d-w68nx-qm3f2-mkbwr0/source.jpg"
+        },
+        {
+            "find": "IMAGE_3",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bs5t4-7ktqg-rr755-v0jyfk/source.jpg"
+        },
+        {
+            "find": "IMAGE_4",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bsat6-88jpn-gtef9-na4y2z/source.jpg"
+        },
+        {
+            "find": "IMAGE_5",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bsmef-1w0r4-75b7d-gtk5ff/source.jpg"
+        },
+        {
+            "find": "IMAGE_6",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bt3d2-gxyd4-bdpka-76q17n/source.jpg"
+        },
+        {
+            "find": "IMAGE_7",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bt8gr-djajt-78zhk-p6tdcv/source.jpg"
+        },
+        {
+            "find": "IMAGE_8",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-btd1d-gn0bv-y2dj5-bvbyyv/source.jpg"
+        },
+        {
+            "find": "IMAGE_9",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-btjya-xsrns-8fy2g-d9acxt/source.jpg"
+        },
+        {
+            "find": "IMAGE_10",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-btqj9-0ds73-tsnsm-1xvvbc/source.jpg"
+        },
+        {
+            "find": "IMAGE_11",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bv9cc-mrwzp-fr8fy-cywjtp/source.jpg"
+        },
+        {
+            "find": "IMAGE_12",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bvepa-dwq1a-4nvz4-x9heht/source.jpg"
+        },
+        {
+            "find": "IMAGE_13",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bvk7x-dw3zw-tcncw-7x6vc1/source.jpg"
+        },
+        {
+            "find": "IMAGE_14",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bvqtf-58d58-eavnn-5c23xw/source.jpg"
+        },
+        {
+            "find": "IMAGE_15",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bvwk9-j4der-62gex-75x6rn/source.jpg"
+        },
+        {
+            "find": "IMAGE_16",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bwanb-638ge-9hhp3-28m0ww/source.jpg"
+        },
+        {
+            "find": "IMAGE_17",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bwf53-8601j-pjee1-b6jayb/source.jpg"
+        },
+        {
+            "find": "IMAGE_18",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bwkp1-c8v98-hfdnt-hbwdzm/source.jpg"
+        },
+        {
+            "find": "IMAGE_19",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bwr8j-4zq7s-qp7mk-jt2mdb/source.jpg"
+        },
+        {
+            "find": "IMAGE_20",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bwwtp-8p3nc-f6p66-tc81et/source.jpg"
+        },
+        {
+            "find": "IMAGE_21",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bxd20-rcrr1-6n9cg-74h224/source.jpg"
+        },
+        {
+            "find": "IMAGE_22",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bxhp6-3ws0z-tbjcp-0at1b0/source.jpg"
+        },
+        {
+            "find": "IMAGE_23",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bxqxd-b0404-rpb51-r1pn20/source.jpg"
+        },
+        {
+            "find": "IMAGE_24",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-bxwfx-b0kya-f4r3b-b5qn65/source.jpg"
+        },
+        {
+            "find": "IMAGE_25",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcd-by137-401sh-xx40s-vdhat1/source.jpg"
+=======
             "replace": "https://shotstack-api-stage-output.s3-ap-southeast-2.amazonaws.com/p01fbzhhpl/1de8373d-fcf1-4559-977c-be10a494a06a.mp4"
+>>>>>>> origin/main
         },
         {
             "find": "IMAGE_26",

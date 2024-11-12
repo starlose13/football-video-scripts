@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 2:00 PM on Sunday, November 10th, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "02:00 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Get ready for thrilling football action this Thursday, 3 PM! Don't miss the excitement, mark your calendars for 2024-11-14!",
+    "match_date": "2024-11-14",
+    "match_time": "03:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 2.45,
-        "draw": 3.25,
-        "away": 3.0
+        "home": 10.0,
+        "draw": 6.0,
+        "away": 1.25
     },
-    "word_count": 16,
-    "reading_time": 6.35,
+    "word_count": 19,
+    "reading_time": 6.91,
     "home_team": {
-        "name": "OGC Nice",
-        "logo": "https://img.thesports.com/football/team/ff8991853f7aabce7cb66f09cda0c58e.png",
-        "country": "France"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "LOSC Lille",
-        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
-        "country": "France"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     }
 }

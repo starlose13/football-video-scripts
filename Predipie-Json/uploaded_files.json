@@ -1,4 +1,32 @@
 {
+<<<<<<< HEAD
+    "game_1_image_1.jpg": "zzz01jcd-brvby-n0vpr-54t06-rtym4m",
+    "game_1_image_2.jpg": "zzz01jcd-bs16d-w68nx-qm3f2-mkbwr0",
+    "game_1_image_3.jpg": "zzz01jcd-bs5t4-7ktqg-rr755-v0jyfk",
+    "game_1_image_4.jpg": "zzz01jcd-bsat6-88jpn-gtef9-na4y2z",
+    "game_1_image_5.jpg": "zzz01jcd-bsmef-1w0r4-75b7d-gtk5ff",
+    "game_2_image_1.jpg": "zzz01jcd-bt3d2-gxyd4-bdpka-76q17n",
+    "game_2_image_2.jpg": "zzz01jcd-bt8gr-djajt-78zhk-p6tdcv",
+    "game_2_image_3.jpg": "zzz01jcd-btd1d-gn0bv-y2dj5-bvbyyv",
+    "game_2_image_4.jpg": "zzz01jcd-btjya-xsrns-8fy2g-d9acxt",
+    "game_2_image_5.jpg": "zzz01jcd-btqj9-0ds73-tsnsm-1xvvbc",
+    "game_3_image_1.jpg": "zzz01jcd-bv9cc-mrwzp-fr8fy-cywjtp",
+    "game_3_image_2.jpg": "zzz01jcd-bvepa-dwq1a-4nvz4-x9heht",
+    "game_3_image_3.jpg": "zzz01jcd-bvk7x-dw3zw-tcncw-7x6vc1",
+    "game_3_image_4.jpg": "zzz01jcd-bvqtf-58d58-eavnn-5c23xw",
+    "game_3_image_5.jpg": "zzz01jcd-bvwk9-j4der-62gex-75x6rn",
+    "game_4_image_1.jpg": "zzz01jcd-bwanb-638ge-9hhp3-28m0ww",
+    "game_4_image_2.jpg": "zzz01jcd-bwf53-8601j-pjee1-b6jayb",
+    "game_4_image_3.jpg": "zzz01jcd-bwkp1-c8v98-hfdnt-hbwdzm",
+    "game_4_image_4.jpg": "zzz01jcd-bwr8j-4zq7s-qp7mk-jt2mdb",
+    "game_4_image_5.jpg": "zzz01jcd-bwwtp-8p3nc-f6p66-tc81et",
+    "game_5_image_1.jpg": "zzz01jcd-bxd20-rcrr1-6n9cg-74h224",
+    "game_5_image_2.jpg": "zzz01jcd-bxhp6-3ws0z-tbjcp-0at1b0",
+    "game_5_image_3.jpg": "zzz01jcd-bxqxd-b0404-rpb51-r1pn20",
+    "game_5_image_4.jpg": "zzz01jcd-bxwfx-b0kya-f4r3b-b5qn65",
+    "game_5_image_5.jpg": "zzz01jcd-by137-401sh-xx40s-vdhat1",
+    "starting-scene-with-program-number.jpg": "zzz01jcd-by67h-dpkbm-edc88-vhapj0"
+=======
     "game_1_image_1.jpg": "zzz01jcb-0k5mp-69dkh-3jb7z-nbz9qg",
     "game_1_image_2.jpg": "zzz01jcb-0kbkx-eqmm1-j6wg6-nghgx4",
     "game_1_image_3.jpg": "zzz01jcb-0kh3f-stftm-4nemf-2nhv5t",
@@ -25,4 +53,5 @@
     "game_5_image_4.jpg": "zzz01jcb-0r30s-0wy11-8w0ry-hd6243",
     "game_5_image_5.jpg": "zzz01jcb-0r8df-3ktw1-gyezw-9fn4hs",
     "starting-scene-with-program-number.jpg": "zzz01jcb-0re7p-5qbab-mv75s-trczwz"
+>>>>>>> origin/main
 }

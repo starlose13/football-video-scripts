@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans! The match kicks off at 2:00 PM on Sunday, November 10, 2024!",
-    "match_date": "2024-11-10",
+    "description": "Tune in this Thursday at 2 PM for an electrifying football showdown! Don't miss the excitement!",
+    "match_date": "2024-11-14",
     "match_time": "02:00 PM (UTC Time)",
-    "match_day": "Sunday",
+    "match_day": "Thursday",
     "odds": {
-        "home": 1.45,
-        "draw": 4.5,
-        "away": 6.5
+        "home": 13.0,
+        "draw": 6.0,
+        "away": 1.18
     },
     "word_count": 16,
-    "reading_time": 6.35,
+    "reading_time": 5.52,
     "home_team": {
-        "name": "Fiorentina",
-        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
-        "country": "Italy"
+        "name": "Kuwait",
+        "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
+        "country": "Kuwait"
     },
     "away_team": {
-        "name": "Hellas Verona",
-        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
-        "country": "Italy"
+        "name": "South Korea",
+        "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
+        "country": "South Korea"
     }
 }

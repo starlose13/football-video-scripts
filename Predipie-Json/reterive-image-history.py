@@ -2,18 +2,27 @@ import os
 import json
 import requests
 from dotenv import load_dotenv
+import logging
 
+# Load environment variables
 load_dotenv()
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
-shotstack_env = os.getenv("SHOTSTACK_ENVIRONMENT", "stage")  # Default to 'stage'
 
-BASE_URL = f"https://api.shotstack.io/ingest/{shotstack_env}/sources"
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+BASE_URL = "https://api.shotstack.io/ingest/v1/sources"
 
 def retrieve_ingested_file_links():
     headers = {
         "x-api-key": shotstack_api_key,
         "Accept": "application/json"
     }
+    
+    # Check if uploaded_files.json exists
+    if not os.path.exists("uploaded_files.json"):
+        logging.error("uploaded_files.json not found. Make sure the file exists with valid content.")
+        return
     
     # Load uploaded files with their source IDs
     with open("uploaded_files.json", "r") as f:
@@ -41,10 +50,10 @@ def retrieve_ingested_file_links():
         with open("ingested_files_links.json", "w") as json_file:
             json.dump(links, json_file, indent=4)
         
-        print("Ingested file URLs with original names have been saved to ingested_files_links.json")
+        logging.info("Ingested file URLs with original names have been saved to ingested_files_links.json")
 
     except requests.exceptions.RequestException as e:
-        print(f"Error retrieving ingested file links: {e}")
+        logging.error(f"Error retrieving ingested file links: {e}")
 
 # Run the function
 retrieve_ingested_file_links()

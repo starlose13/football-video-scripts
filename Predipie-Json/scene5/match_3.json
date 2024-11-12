@@ -1,4 +1,13 @@
 {
+<<<<<<< HEAD
+    "description": "Australia has won twice, drawn twice, and lost once recently; Saudi Arabia, on the other hand, has one win, two draws, and two losses.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "d",
+                "w",
+                "d",
+=======
     "description": "The home team has mixed results recently, winning two, drawing one, and losing two. The away team struggles more, with just one win, one draw, and three losses.",
     "recent_form": {
         "home_team": {
@@ -6,10 +15,31 @@
                 "w",
                 "d",
                 "l",
+>>>>>>> origin/main
                 "l",
                 "w"
             ],
             "wins": 2,
+<<<<<<< HEAD
+            "draws": 2,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "d",
+                "l",
+                "w",
+                "d",
+                "l"
+            ],
+            "wins": 1,
+            "draws": 2,
+            "losses": 2
+        }
+    },
+    "word_count": 24,
+    "reading_time": 9.38
+=======
             "draws": 1,
             "losses": 2
         },
@@ -28,4 +58,5 @@
     },
     "word_count": 28,
     "reading_time": 10.55
+>>>>>>> origin/main
 }

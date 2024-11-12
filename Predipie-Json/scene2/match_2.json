@@ -1,15 +1,15 @@
 {
-    "description": "Let's continue with the second match: Fiorentina against Hellas Verona. Goals, drama, a breathtaking win!",
-    "word_count": 15,
-    "reading_time": 5.81,
+    "description": "Let's continue with the second match: Kuwait against South Korea. A thrilling face-off! Who will dominate this game? Excitement peaks.",
+    "word_count": 20,
+    "reading_time": 7.23,
     "home_team": {
-        "name": "Fiorentina",
-        "logo": "https://img.thesports.com/football/team/858d87ded0cce014bae0c9681af48524.png",
-        "country": "Italy"
+        "name": "Kuwait",
+        "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
+        "country": "Kuwait"
     },
     "away_team": {
-        "name": "Hellas Verona",
-        "logo": "https://img.thesports.com/football/team/b8e39abb18bb1c69396c59ff73ecf124.png",
-        "country": "Italy"
+        "name": "South Korea",
+        "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
+        "country": "South Korea"
     }
 }

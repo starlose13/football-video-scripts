@@ -1,10 +1,10 @@
 {
-    "description": "Winning odds for the home team are set at 2.15. The away team carries odds of 3.0. A draw between the teams holds odds of 3.25.",
+    "description": "Australia to win: 1.8; Saudi Arabia to win: 3.9; Draw: 3.3. Make your bets wisely!",
     "odds": {
-        "home": 2.15,
-        "draw": 3.25,
-        "away": 3.0
+        "home": 1.8,
+        "draw": 3.3,
+        "away": 3.9
     },
-    "word_count": 26,
-    "reading_time": 10.47
+    "word_count": 15,
+    "reading_time": 6.2
 }

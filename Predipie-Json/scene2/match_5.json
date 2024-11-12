@@ -1,15 +1,16 @@
 {
-    "description": "And the last match: OGC Nice versus LOSC Lille. What a thriller! Goals, drama, tension!",
-    "word_count": 15,
-    "reading_time": 6.31,
+<<<<<<< HEAD
+    "description": "And the last match: Kazakhstan versus Austria. A thrilling face-off, each attack electric!",
+    "word_count": 13,
+    "reading_time": 4.79,
     "home_team": {
-        "name": "OGC Nice",
-        "logo": "https://img.thesports.com/football/team/ff8991853f7aabce7cb66f09cda0c58e.png",
-        "country": "France"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "LOSC Lille",
-        "logo": "https://img.thesports.com/football/team/28e94925fdcc848f86a544a1cedcceed.png",
-        "country": "France"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     }
 }

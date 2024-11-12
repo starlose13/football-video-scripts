@@ -1,15 +1,16 @@
 {
-    "description": "Let's continue with the fourth match: Al-Ain SFC against Al-Jabalain. Al-Ain thrills with a 3-1 win! Precision passes, stunning goals; what a match!",
-    "word_count": 23,
-    "reading_time": 8.61,
+<<<<<<< HEAD
+    "description": "Let's continue with the fourth match: Korea DPR against Iran. Tensions rise, cheers roar; what a game!",
+    "word_count": 17,
+    "reading_time": 6.25,
     "home_team": {
-        "name": "Al-Ain SFC",
-        "logo": "https://img.thesports.com/football/team/f5459da9ab7a174441d653c951d99f27.png",
-        "country": "Saudi Arabia"
+        "name": "Korea DPR",
+        "logo": "https://img.thesports.com/football/team/b31a466bccaefaca53b4de1a843965f2.png",
+        "country": "North Korea"
     },
     "away_team": {
-        "name": "Al-Jabalain",
-        "logo": "https://img.thesports.com/football/team/ff21a5b966039a14fa4cd721d29b40ee.png",
-        "country": "Saudi Arabia"
+        "name": "Iran",
+        "logo": "https://img.thesports.com/football/team/58b5d5f352fafb845b4f6755c2d5b724.png",
+        "country": "Iran"
     }
 }

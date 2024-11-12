@@ -13,15 +13,15 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 url = 'https://dataprovider.predipie.com/api/v1/ai/test/'
 
 # Adjusted reading speed (words per second) including pauses
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
 
 # Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
 
 # Function to generate a match description with the ChatGPT API
@@ -34,10 +34,11 @@ def generate_match_description(host_team, guest_team, match_time):
     
     # Create a prompt for OpenAI to generate the description
     prompt = (
-        f"Announce the kickoff time with excitement and clarity: 'The match kicks off at {time_str} on {day_str}, {date_str}.' "
-        f"Keep the announcement to a single, complete sentence, with a friendly and engaging tone as if speaking to a live audience. "
-        "Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"As if you're a live TV host, build excitement announcemen for the game of football.this match starts at : {time_str} on {day_str}, {date_str}' "
+    f"Keep it upbeat, clear, and full of energy to captivate the audience.also it should be complete and under 22 words"
+    "Remember: only use these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+)
+
 
     # Call the ChatGPT API to generate the description
     response = openai.ChatCompletion.create(

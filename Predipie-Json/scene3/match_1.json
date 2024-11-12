@@ -1,23 +1,23 @@
 {
-    "description": "Get ready, football fans, because the match kicks off at 1:00 PM on Sunday, November 10, 2024!",
-    "match_date": "2024-11-10",
-    "match_time": "01:00 PM (UTC Time)",
-    "match_day": "Sunday",
+    "description": "Tune in Thursday, 2 PM, for an electrifying football clash! Who will triumph? Don't miss out on the action!",
+    "match_date": "2024-11-14",
+    "match_time": "02:00 PM (UTC Time)",
+    "match_day": "Thursday",
     "odds": {
-        "home": 2.1,
-        "draw": 3.3,
-        "away": 3.4
+        "home": 1.62,
+        "draw": 3.4,
+        "away": 5.0
     },
-    "word_count": 17,
-    "reading_time": 6.39,
+    "word_count": 19,
+    "reading_time": 7.09,
     "home_team": {
-        "name": "Real Betis",
-        "logo": "https://img.thesports.com/football/team/018e260ad68bdad741c61e3171c4c608.png",
-        "country": "Spain"
+        "name": "Bahrain",
+        "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",
+        "country": "Bahrain"
     },
     "away_team": {
-        "name": "RC Celta",
-        "logo": "https://img.thesports.com/football/team/fd954d083ee85a6f1a3f2471dc756242.png",
-        "country": "Spain"
+        "name": "China",
+        "logo": "https://img.thesports.com/football/team/cf82ff425ec97af2c4c0c2f517f2a631.png",
+        "country": "China"
     }
 }

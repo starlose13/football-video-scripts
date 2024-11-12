@@ -12,8 +12,9 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 X_API_ID = os.getenv('CREATIFY_API_ID')
 X_API_KEY = os.getenv('CREATIFY_API_KEY')
 creator_id = "3f2a4ff3-3aa8-4522-b545-0814627a31b9"  # Replace with your actual creator ID from Creatify
-program_name = "Predipie’s Match Forecast"
-
+program_name = "Predi Pie Fans"
+increment_program_number()
+program_number = get_program_number()
 # Folders where JSON files are stored
 folders = [
     "scene2",  # secondEpisodeJsonCreator.py
@@ -22,14 +23,17 @@ folders = [
     "scene5",                     # fifthEpisodeJsonCreator.py
     "scene6"                      # sixEpisodeJsonCreator.py
 ]
-adjusted_reading_speed = 3.48
+adjusted_reading_speed = 3.10
+
+# Define punctuation pause times
 pause_times = {
-    ',': 0.25,
-    '.': 0.5,
-    '!': 0.5,
-    '?': 0.5,
-    ';': 0.25,
+    ',': 0.21,
+    '.': 0.21,
+    '!': 0.18,
+    '?': 0.18,
+    ';': 0.17,
 }
+
 
 # Output folder for final combined narration
 output_folder = "combined-voiceAI"
@@ -43,14 +47,17 @@ def read_description_from_json(file_path):
 
 def generate_intro_with_openai(program_number):
     """Generates an introduction for the narration using OpenAI and calculates reading time."""
-    # Define the program name
-    program_name = "Predipie"  # or set dynamically if needed
 
     # Construct the prompt for OpenAI
     prompt = (
-        f"Welcome to Episode {program_number} of {program_name}! Today, we have 5 thrilling soccer predictions lined up. "
-        f"Keep it friendly and energetic, keeping it very brief—under 20 words, complete sentences. Also use these punctuation marks in the output a lot: dot, comma, exclamation mark, question mark, and semicolon."
-    )
+    f"Start with: 'Hi {program_name}!' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
+    f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
+    f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+    f"Important: Do not mention any game statistics, player names, or game history information in the output."
+)
+
+
+
 
     # Use OpenAI API to generate a custom introduction
     response = openai.ChatCompletion.create(
@@ -99,8 +106,11 @@ def generate_intro_with_openai(program_number):
 def generate_closing_with_openai(program_number):
     """Generates a closing statement for the narration using OpenAI."""
     prompt = (
-    f" Wrap up Episode {program_number} with: 'Remember, I'm just an AI; this isn't financial advice!' "
-    f"Encourage viewers to tune in daily at 13 UTC, join the PrediPie community, and end with 'Goodbye!' Keep it to one brief sentence.also use these punctuation marks in the output alot : dot, comma, exclamation mark, question mark, and semicolon.")
+    f"Wrap up Episode {program_number} with a friendly closing: 'Just a reminder, I'm only an AI, this isn’t financial advice!' "
+    f"Encourage viewers to tune in daily, join the PrediPie community, and get ready for Episode {program_number + 1} tomorrow. End with: 'dont trade your life for entertainment! Goodbye!' "
+    f"Keep it complete and under 40 words. Use these punctuation marks frequently: dot, comma, exclamation mark, question mark, and semicolon. dont use dash or underscore"
+)
+
 
 
     # Use OpenAI API to generate a custom closing statement
@@ -163,8 +173,7 @@ def create_video_with_creatify(narration_text, program_number):
     return None
 
 # Main script to generate combined narration for five games in sequence
-program_number = get_program_number()
-increment_program_number()
+
 intro_text = generate_intro_with_openai(program_number)
 
 narration_parts = []
@@ -193,8 +202,8 @@ with open(output_file_path, 'w', encoding='utf-8') as output_file:
 print(f"Narration for episode {program_number} saved to {output_file_path}")
 
 # Generate video with Creatify API
-video_url = create_video_with_creatify(full_narration, program_number)
-if video_url:
-    print(f"Video for episode {program_number} is ready: {video_url}")
-else:
-    print("Failed to generate the video.")
+# video_url = create_video_with_creatify(full_narration, program_number)
+# if video_url:
+#     print(f"Video for episode {program_number} is ready: {video_url}")
+# else:
+#     print("Failed to generate the video.")
