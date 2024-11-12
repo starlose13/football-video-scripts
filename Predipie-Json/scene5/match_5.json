@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
     "description": "Kazakhstan has struggled recently, losing four times and drawing once. Meanwhile, Austria has been more balanced with two wins, one draw, and two losses.",
-=======
-    "description": "The home team has been inconsistent, with two wins, two draws, and a loss. The away team remains unbeaten recently, securing two wins and three draws.",
->>>>>>> origin/main
     "recent_form": {
         "home_team": {
             "last_5_matches": [
@@ -11,7 +7,6 @@
                 "w",
                 "w",
                 "l",
-<<<<<<< HEAD
                 "l",
                 "l",
                 "d",
@@ -20,13 +15,6 @@
             "wins": 0,
             "draws": 1,
             "losses": 4
-=======
-                "d"
-            ],
-            "wins": 2,
-            "draws": 2,
-            "losses": 1
->>>>>>> origin/main
         },
         "away_team": {
             "last_5_matches": [
@@ -48,13 +36,13 @@
     "reading_time": 9.0
 =======
                 "d"
-            ],
-            "wins": 2,
-            "draws": 3,
-            "losses": 0
-        }
-    },
-    "word_count": 26,
-    "reading_time": 9.47
+],
+"wins": 2,
+"draws": 3,
+"losses": 0
+}
+},
+"word_count": 26,
+"reading_time": 9.47
 >>>>>>> origin/main
 }

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "description": "Korea DPR has been struggling recently, securing no wins, two draws, and three losses. In contrast, Iran has shown strong form with three wins and two draws, remaining unbeaten.",
     "recent_form": {
         "home_team": {
@@ -7,32 +6,12 @@
                 "l",
                 "d",
                 "d",
-=======
-    "description": "The home team is undefeated recently, securing two wins and three draws. In contrast, the away team has struggled with four losses and one draw.",
-    "recent_form": {
-        "home_team": {
-            "last_5_matches": [
-                "w",
-                "w",
-                "d",
-                "d",
-                "d"
-            ],
-            "wins": 2,
-            "draws": 3,
-            "losses": 0
-        },
-        "away_team": {
-            "last_5_matches": [
-                "l",
->>>>>>> origin/main
                 "l",
                 "l",
                 "l",
                 "d"
             ],
             "wins": 0,
-<<<<<<< HEAD
             "draws": 2,
             "losses": 3
         },
@@ -51,12 +30,4 @@
     },
     "word_count": 29,
     "reading_time": 10.82
-=======
-            "draws": 1,
-            "losses": 4
-        }
-    },
-    "word_count": 25,
-    "reading_time": 8.68
->>>>>>> origin/main
 }
