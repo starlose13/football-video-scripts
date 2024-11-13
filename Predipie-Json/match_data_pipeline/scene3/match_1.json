@@ -1,7 +1,7 @@
 {
-    "description": "Let's start with the first match: Australia versus Saudi Arabia. Heat, cheers, drama unfolds!",
-    "word_count": 14,
-    "reading_time": 5.33,
+    "description": "Heat, sweat, and cheers! Australia clashes with Saudi Arabia in a thrilling showdown.",
+    "word_count": 13,
+    "reading_time": 5.0,
     "home_team": {
         "name": "Australia",
         "logo": "https://img.thesports.com/football/team/6f289bdffe03a2480ad521dc2c114d56.png",
@@ -11,5 +11,8 @@
         "name": "Saudi Arabia",
         "logo": "https://img.thesports.com/football/team/3874dcd109e646cbe7c5e8fb2bd41548.png",
         "country": "Saudi Arabia"
-    }
+    },
+    "match_date": "2024-11-14",
+    "match_time": "09:10 AM UTC",
+    "match_day": "Thursday"
 }

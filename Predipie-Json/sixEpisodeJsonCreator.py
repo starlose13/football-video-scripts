@@ -301,7 +301,6 @@ def calculate_points(last_5_games):
         return 0  # Return 0 points if the input is invalid
 
     points = 0
-    valid_results = {'w', 'd', 'l'}
 
     for game in last_5_games:
         if game == 'w':  # Win

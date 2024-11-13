@@ -1,0 +1,31 @@
+{
+    "description": "The Solomon Islands have struggled, losing their last five matches. New Caledonia is on a roll, securing four wins and one draw in their recent outings.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "l",
+                "l",
+                "l",
+                "l",
+                "l"
+            ],
+            "wins": 0,
+            "draws": 0,
+            "losses": 5
+        },
+        "away_team": {
+            "last_5_matches": [
+                "w",
+                "d",
+                "w",
+                "w",
+                "w"
+            ],
+            "wins": 4,
+            "draws": 1,
+            "losses": 0
+        }
+    },
+    "word_count": 26,
+    "reading_time": 9.23
+}

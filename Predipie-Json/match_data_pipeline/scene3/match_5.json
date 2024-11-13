@@ -1,7 +1,7 @@
 {
-    "description": "And the last match: Kuwait versus South Korea. Thrilling plays, stunning goals, and intense drama!",
-    "word_count": 15,
-    "reading_time": 5.65,
+    "description": "Kuwait clashes with South Korea! Tension mounts, drama unfolds. Who will triumph?",
+    "word_count": 12,
+    "reading_time": 4.65,
     "home_team": {
         "name": "Kuwait",
         "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
@@ -11,5 +11,8 @@
         "name": "South Korea",
         "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
         "country": "South Korea"
-    }
+    },
+    "match_date": "2024-11-14",
+    "match_time": "02:00 PM UTC",
+    "match_day": "Thursday"
 }

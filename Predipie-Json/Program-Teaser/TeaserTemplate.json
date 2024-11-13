@@ -1,0 +1,88 @@
+{
+    "timeline": {
+        "background": null,
+        "soundtrack": {
+            "src": null,
+            "effect": null
+        },
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ PRIMARY_IMAGE }}"
+                        },
+                        "start": 0.28,
+                        "offset": {
+                            "x": -0.183,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "length": 8.07,
+                        "effect": "zoomIn",
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        },
+                        "scale": 0.84
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": null,
+                            "font": {
+                                "family": "Montserrat ExtraBold",
+                                "color": null,
+                                "size": null
+                            },
+                            "alignment": {
+                                "horizontal": "left"
+                            },
+                            "width": 855,
+                            "height": 208
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.05,
+                            "y": -0.203
+                        },
+                        "position": "center",
+                        "start": null,
+                        "transition": {
+                            "in": null
+                        },
+                        "length": null,
+                        "effect": null
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "size": {
+            "width": 1920,
+            "height": 1080
+        },
+        "format": "mp4"
+    },
+    "merge": [
+        {
+            "find": "VERTICAL_IMAGE",
+            "replace": null
+        },
+        {
+            "find": "HORIZONTAL_IMAGE",
+            "replace": null
+        },
+        {
+            "find": "PRIMARY_IMAGE",
+            "replace": null
+        }
+    ]
+}

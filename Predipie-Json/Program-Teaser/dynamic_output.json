@@ -1,0 +1,89 @@
+{
+    "timeline": {
+        "background": "#ffffff",
+        "soundtrack": {
+            "src": "https://templates.shotstack.io/basic/asset/audio/music/unminus/please-wait.mp3",
+            "effect": "fadeOut"
+        },
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/zfe0a140fc/zzy9g4kl-4cs6-z73f-ljmn-3xwjbt3mwa2b/source.mov"
+                        },
+                        "start": 0,
+                        "offset": {
+                            "x": -0.183,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "length": 16,
+                        "effect": "zoomIn",
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        },
+                        "scale": 0.84,
+                        "opacity": 0.6
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "PrediPie",
+                            "font": {
+                                "family": "Montserrat ExtraBold",
+                                "color": "#e31116",
+                                "size": 200
+                            },
+                            "alignment": {
+                                "horizontal": "left"
+                            },
+                            "width": 855,
+                            "height": 208
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.05,
+                            "y": -0.203
+                        },
+                        "position": "center",
+                        "start": 8.11,
+                        "transition": {
+                            "in": null
+                        },
+                        "length": 7.89,
+                        "effect": "zoomIn"
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "size": {
+            "width": 1920,
+            "height": 1080
+        },
+        "format": "mp4"
+    },
+    "merge": [
+        {
+            "find": "VERTICAL_IMAGE",
+            "replace": null
+        },
+        {
+            "find": "HORIZONTAL_IMAGE",
+            "replace": null
+        },
+        {
+            "find": "PRIMARY_IMAGE",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcg-hb84j-h4c5z-k6cnd-zw6mbq/source.png"
+        }
+    ]
+}

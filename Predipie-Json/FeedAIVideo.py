@@ -107,29 +107,17 @@ def build_timeline_and_merge(links: Dict[str, str]) -> Dict:
             {"clips": []}  
         ]
     }
+
     transitions = [
     "none", "fade", "fadeSlow", "fadeFast",
     "reveal", "revealSlow", "revealFast",
-    "wipeLeft", "wipeLeftSlow", "wipeLeftFast", 
-    "wipeRight", "wipeRightSlow", "wipeRightFast",
     "slideLeft", "slideLeftSlow", "slideLeftFast",
     "slideRight", "slideRightSlow", "slideRightFast",
     "slideUp", "slideUpSlow", "slideUpFast",
     "slideDown", "slideDownSlow", "slideDownFast",
-    "carouselLeft", "carouselLeftSlow", "carouselLeftFast",
-    "carouselRight", "carouselRightSlow", "carouselRightFast",
-    "carouselUp", "carouselUpSlow", "carouselUpFast",
-    "carouselDown", "carouselDownSlow", "carouselDownFast",
-    "shuffleTopRight", "shuffleTopRightSlow", "shuffleTopRightFast",
-    "shuffleRightTop", "shuffleRightTopSlow", "shuffleRightTopFast",
-    "shuffleRightBottom", "shuffleRightBottomSlow", "shuffleRightBottomFast",
-    "shuffleBottomRight", "shuffleBottomRightSlow", "shuffleBottomRightFast",
-    "shuffleBottomLeft", "shuffleBottomLeftSlow", "shuffleBottomLeftFast",
-    "shuffleLeftBottom", "shuffleLeftBottomSlow", "shuffleLeftBottomFast",
-    "shuffleLeftTop", "shuffleLeftTopSlow", "shuffleLeftTopFast",
-    "shuffleTopLeft", "shuffleTopLeftSlow", "shuffleTopLeftFast",
     "zoom"
 ]   
+
     merge = [{"find": "AVATAR", "replace": avatar_url}]
     previous_start = 0  # Initialize start time for the first clip
     image_index = 0
