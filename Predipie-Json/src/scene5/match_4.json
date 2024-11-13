@@ -1,0 +1,31 @@
+{
+    "description": "Australia has won two, drawn two, and lost one in their last five matches. Saudi Arabia has one win, two draws, and two losses in their recent outings.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "d",
+                "w",
+                "d",
+                "l",
+                "w"
+            ],
+            "wins": 2,
+            "draws": 2,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "d",
+                "l",
+                "w",
+                "d",
+                "l"
+            ],
+            "wins": 1,
+            "draws": 2,
+            "losses": 2
+        }
+    },
+    "word_count": 28,
+    "reading_time": 10.29
+}

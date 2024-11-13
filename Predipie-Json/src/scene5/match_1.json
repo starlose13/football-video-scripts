@@ -1,0 +1,31 @@
+{
+    "description": "Korea DPR has struggled recently with no wins, two draws, and three losses. Iran, on the other hand, is undefeated with three wins and two draws.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "l",
+                "d",
+                "d",
+                "l",
+                "l"
+            ],
+            "wins": 0,
+            "draws": 2,
+            "losses": 3
+        },
+        "away_team": {
+            "last_5_matches": [
+                "w",
+                "d",
+                "w",
+                "w",
+                "d"
+            ],
+            "wins": 3,
+            "draws": 2,
+            "losses": 0
+        }
+    },
+    "word_count": 26,
+    "reading_time": 9.65
+}

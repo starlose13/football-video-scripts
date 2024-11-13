@@ -1,0 +1,31 @@
+{
+    "description": "Kuwait has struggled recently, recording one win, three draws, and one loss. South Korea, meanwhile, is on a strong run with four wins and one draw.",
+    "recent_form": {
+        "home_team": {
+            "last_5_matches": [
+                "d",
+                "l",
+                "d",
+                "d",
+                "w"
+            ],
+            "wins": 1,
+            "draws": 3,
+            "losses": 1
+        },
+        "away_team": {
+            "last_5_matches": [
+                "w",
+                "w",
+                "w",
+                "d",
+                "w"
+            ],
+            "wins": 4,
+            "draws": 1,
+            "losses": 0
+        }
+    },
+    "word_count": 26,
+    "reading_time": 9.86
+}

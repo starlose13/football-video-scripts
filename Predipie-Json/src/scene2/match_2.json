@@ -1,0 +1,15 @@
+{
+    "description": "Solomon Islands clash with New Caledonia! Drama unfolds under tropical skies.",
+    "word_count": 11,
+    "reading_time": 3.94,
+    "home_team": {
+        "name": "Solomon Islands",
+        "logo": "https://img.thesports.com/football/team/fe7a0e897d5cc10b81a7f3ee2b7dd46c.png",
+        "country": "Solomon Islands"
+    },
+    "away_team": {
+        "name": "New Caledonia",
+        "logo": "https://img.thesports.com/football/team/0e2db0cb2c4645904a054261104b7a14.gif",
+        "country": "New Caledonia"
+    }
+}

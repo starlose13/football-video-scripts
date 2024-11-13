@@ -1,0 +1,15 @@
+{
+    "description": "Australia clashes with Saudi Arabia! Expect fierce plays, thrilling runs, intense tackles.",
+    "word_count": 12,
+    "reading_time": 4.68,
+    "home_team": {
+        "name": "Australia",
+        "logo": "https://img.thesports.com/football/team/6f289bdffe03a2480ad521dc2c114d56.png",
+        "country": "Australia"
+    },
+    "away_team": {
+        "name": "Saudi Arabia",
+        "logo": "https://img.thesports.com/football/team/3874dcd109e646cbe7c5e8fb2bd41548.png",
+        "country": "Saudi Arabia"
+    }
+}

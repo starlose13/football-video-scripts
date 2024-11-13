@@ -1,0 +1,10 @@
+{
+    "description": "The odds for a win are 1.9 for the home team and 4.5 for the away team. A draw has odds of 3.3.",
+    "odds": {
+        "home": 1.9,
+        "draw": 3.3,
+        "away": 4.5
+    },
+    "word_count": 23,
+    "reading_time": 8.47
+}
