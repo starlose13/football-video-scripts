@@ -1,31 +1,31 @@
 {
-    "description": "Korea DPR has struggled recently with no wins, two draws, and three losses. Iran, on the other hand, is undefeated with three wins and two draws.",
+    "description": "Bahrain has struggled recently, securing just one win and facing four losses. China, in contrast, shows more balance with one win, three draws, and one loss.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
+                "w",
                 "l",
-                "d",
-                "d",
+                "l",
                 "l",
                 "l"
             ],
-            "wins": 0,
-            "draws": 2,
-            "losses": 3
+            "wins": 1,
+            "draws": 0,
+            "losses": 4
         },
         "away_team": {
             "last_5_matches": [
-                "w",
                 "d",
-                "w",
+                "d",
+                "l",
                 "w",
                 "d"
             ],
-            "wins": 3,
-            "draws": 2,
-            "losses": 0
+            "wins": 1,
+            "draws": 3,
+            "losses": 1
         }
     },
     "word_count": 26,
-    "reading_time": 9.65
+    "reading_time": 9.86
 }

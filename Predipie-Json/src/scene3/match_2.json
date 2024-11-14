@@ -1,18 +1,18 @@
 {
-    "description": "Tropical showdown ignites fury! Solomon Islands clash with New Caledonia. Who reigns?",
-    "word_count": 12,
-    "reading_time": 4.44,
+    "description": "Tune in this Thursday, 3 PM, for an electrifying football clash! Who will triumph? Don't miss the action-packed excitement!",
+    "word_count": 19,
+    "reading_time": 7.09,
     "home_team": {
-        "name": "Solomon Islands",
-        "logo": "https://img.thesports.com/football/team/fe7a0e897d5cc10b81a7f3ee2b7dd46c.png",
-        "country": "Solomon Islands"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "New Caledonia",
-        "logo": "https://img.thesports.com/football/team/0e2db0cb2c4645904a054261104b7a14.gif",
-        "country": "New Caledonia"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     },
     "match_date": "2024-11-14",
-    "match_time": "03:00 AM UTC",
+    "match_time": "03:00 PM UTC",
     "match_day": "Thursday"
 }

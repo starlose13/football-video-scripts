@@ -1,18 +1,18 @@
 {
-    "description": "Tensions rise as Korea DPR clashes with Iran! Who will dominate? Watch now.",
-    "word_count": 13,
-    "reading_time": 4.76,
+    "description": "Get ready for thrilling football action this Thursday at 2:00 PM! Don’t miss it—excitement, drama, and epic plays await!",
+    "word_count": 19,
+    "reading_time": 6.91,
     "home_team": {
-        "name": "Korea DPR",
-        "logo": "https://img.thesports.com/football/team/b31a466bccaefaca53b4de1a843965f2.png",
-        "country": "North Korea"
+        "name": "Bahrain",
+        "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",
+        "country": "Bahrain"
     },
     "away_team": {
-        "name": "Iran",
-        "logo": "https://img.thesports.com/football/team/58b5d5f352fafb845b4f6755c2d5b724.png",
-        "country": "Iran"
+        "name": "China",
+        "logo": "https://img.thesports.com/football/team/cf82ff425ec97af2c4c0c2f517f2a631.png",
+        "country": "China"
     },
     "match_date": "2024-11-14",
-    "match_time": "12:00 PM UTC",
+    "match_time": "02:00 PM UTC",
     "match_day": "Thursday"
 }

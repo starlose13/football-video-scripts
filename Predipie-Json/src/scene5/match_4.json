@@ -1,31 +1,31 @@
 {
-    "description": "Australia has won two, drawn two, and lost one in their last five matches. Saudi Arabia has one win, two draws, and two losses in their recent outings.",
+    "description": "Kuwait has won once, drawn three times, and lost once recently. South Korea boasts four wins and one draw, remaining unbeaten.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "d",
-                "w",
-                "d",
                 "l",
+                "d",
+                "d",
                 "w"
             ],
-            "wins": 2,
-            "draws": 2,
+            "wins": 1,
+            "draws": 3,
             "losses": 1
         },
         "away_team": {
             "last_5_matches": [
-                "d",
-                "l",
+                "w",
+                "w",
                 "w",
                 "d",
-                "l"
+                "w"
             ],
-            "wins": 1,
-            "draws": 2,
-            "losses": 2
+            "wins": 4,
+            "draws": 1,
+            "losses": 0
         }
     },
-    "word_count": 28,
-    "reading_time": 10.29
+    "word_count": 21,
+    "reading_time": 7.82
 }

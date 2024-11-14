@@ -1,4 +1,5 @@
 from base_match_pipeline import BaseMatchPipeline
+from api_url_provider import ApiUrlProvider  
 
 class MatchDataPipeline(BaseMatchPipeline):
     """Pipeline for processing basic match data without additional customization."""

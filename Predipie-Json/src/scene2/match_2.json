@@ -1,15 +1,15 @@
 {
-    "description": "Solomon Islands clash with New Caledonia! Drama unfolds under tropical skies.",
-    "word_count": 11,
-    "reading_time": 3.94,
+    "description": "Austria clashes with Kazakhstan! Surprises, skill, and non-stop action await.",
+    "word_count": 10,
+    "reading_time": 4.04,
     "home_team": {
-        "name": "Solomon Islands",
-        "logo": "https://img.thesports.com/football/team/fe7a0e897d5cc10b81a7f3ee2b7dd46c.png",
-        "country": "Solomon Islands"
+        "name": "Kazakhstan",
+        "logo": "https://img.thesports.com/football/team/ab65328f376fce7ea2b798a04a96a0cc.png",
+        "country": "Kazakhstan"
     },
     "away_team": {
-        "name": "New Caledonia",
-        "logo": "https://img.thesports.com/football/team/0e2db0cb2c4645904a054261104b7a14.gif",
-        "country": "New Caledonia"
+        "name": "Austria",
+        "logo": "https://img.thesports.com/football/team/be70130b180875a576e98a5a33c8238a.png",
+        "country": "Austria"
     }
 }

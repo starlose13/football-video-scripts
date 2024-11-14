@@ -1,8 +1,16 @@
 {
-    "description": "Australia's poised for success; will they win or secure a draw? Watch their power play, fans! Excitement guaranteed.",
-    "word_count": 18,
-    "reading_time": 6.76,
-    "team_home": "Australia",
-    "team_away": "Saudi Arabia",
-    "card": "Win or Draw Home Team"
+    "description": "Expect excitement; South Korea triumphs! Victory for the away team - who saw that coming? Stay tuned!",
+    "word_count": 17,
+    "reading_time": 6.19,
+    "team_home": "Kuwait",
+    "team_away": "South Korea",
+    "card": "Win Away Team",
+    "row_number": 1,
+    "rank_diff": 2,
+    "a_team": "A1",
+    "b_team": "B7",
+    "a_points": 6,
+    "b_points": 13,
+    "a_recent_group": "ARecentG5",
+    "b_recent_group": "BRecentG1"
 }

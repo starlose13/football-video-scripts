@@ -1,31 +1,31 @@
 {
-    "description": "The Solomon Islands are struggling with five consecutive losses. New Caledonia, in contrast, is unbeaten in their last five matches, with four wins and a draw.",
+    "description": "Kazakhstan has struggled recently, securing only one draw and losing four matches. In contrast, Austria has managed two wins, one draw, and two losses.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "l",
                 "l",
                 "l",
-                "l",
+                "d",
                 "l"
             ],
             "wins": 0,
-            "draws": 0,
-            "losses": 5
+            "draws": 1,
+            "losses": 4
         },
         "away_team": {
             "last_5_matches": [
                 "w",
+                "w",
+                "l",
                 "d",
-                "w",
-                "w",
-                "w"
+                "l"
             ],
-            "wins": 4,
+            "wins": 2,
             "draws": 1,
-            "losses": 0
+            "losses": 2
         }
     },
-    "word_count": 26,
-    "reading_time": 9.44
+    "word_count": 24,
+    "reading_time": 9.0
 }

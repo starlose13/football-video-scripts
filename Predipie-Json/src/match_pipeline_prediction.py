@@ -113,7 +113,7 @@ class MatchPredictionPipeline:
             # Classify teams based on odds
             a_team = self.classify_a_team(a_odds)
             b_team = self.classify_b_team(b_odds)
-
+            
             # Generate the prediction result based on the data
             prediction_result, row_number = self.generate_result(a_team, b_team, a_recent_group, b_recent_group, rank_diff)
 
@@ -134,7 +134,15 @@ class MatchPredictionPipeline:
                 "reading_time": reading_time,
                 "team_home": home_team_name,
                 "team_away": away_team_name,
-                "card": card_choice
+                "card": card_choice,
+                "row_number" : row_number,
+                "rank_diff" : rank_diff,
+                "a_team" : a_team,
+                "b_team" : b_team,
+                "a_points" : a_points,
+                "b_points" : b_points,
+                "a_recent_group" : a_recent_group,
+                "b_recent_group" : b_recent_group
             }
 
 
@@ -273,9 +281,10 @@ class MatchPredictionPipeline:
                 points += 3
             elif game == 'd':  # Draw
                 points += 1
-            elif game != 'l':  # Loss doesn't add points, but handle unexpected values
+            elif game == 'l':
+                points +=0 
+            else :
                 logging.warning(f"Unexpected game result: {game}, ignoring it.")
-
         logging.info(f"Total points calculated: {points}")
         return points
 
@@ -411,6 +420,7 @@ class MatchPredictionPipeline:
         # Rows 1-17 (A2 as A team)
         if a_team == "A1":
             return "A win", 1
+        # Rows for A2
         elif a_team == "A2" and a_recent_g == "ARecentG1":
             return "A win", 2
         elif a_team == "A2" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG7":
@@ -443,15 +453,13 @@ class MatchPredictionPipeline:
             return "A win or draw", 16
         elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG7":
             return "A win", 17
-
-        # Rows 18-26 (Rank differences)
         elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "bigDifference":
             return "A win", 18
         elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "mediumDifference":
             return "A win", 19
         elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "smallDifference":
             return "A win or draw", 20
-        elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG5":
+        elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG5" :
             return "A win or draw", 21
         elif a_team == "A2" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG4" and rank_diff == "smallDifference":
             return "A win or draw", 22
@@ -462,12 +470,10 @@ class MatchPredictionPipeline:
         elif a_team == "A2" and a_recent_g == "ARecentG7":
             return "A win or draw", 25
         elif a_team == "A3":
-            return "A win or draw", 26  # Corrected to "A win or draw"
+            return "A win or draw", 26  
         elif a_team == "A4":
             return "A win or draw", 27
-
-        # Rows 28-36 (A5 as A team)
-        elif a_team == "A5" and b_team == "B7":
+        elif a_team == "A5" and b_team == "B7" and a_recent_g == "ARecentG1":
             return "A win or draw", 28
         elif a_team == "A5" and b_team == "B6" and a_recent_g == "ARecentG1":
             return "A win or draw", 29
@@ -505,7 +511,7 @@ class MatchPredictionPipeline:
             return "A win or draw", 44
 
         # Rows 45-57 (Rank differences and A7 as A team)
-        elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "bigDifference":
+        elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "bigDifference":
             return "A win or draw", 45
         elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "mediumDifference":
             return "A or B win", 46
@@ -518,46 +524,173 @@ class MatchPredictionPipeline:
         elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG4":
             return "A or B win", 50
         elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG5":
-            return "A win or draw", 51  # Corrected to "A win or B win"
+            return "A or B win", 51
         elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG6":
             return "A win or draw", 52
         elif a_team == "A6" and b_team == "B7" and a_recent_g == "ARecentG7":
-            return "A win or draw", 53
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG7":
+            return "A or B win", 53
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG7":
             return "A win or draw", 54
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG6":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG6":
             return "A win or draw", 55
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG5":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG5":
             return "A win or draw", 56
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4":
             return "A win or draw", 57
-
-        # Rows 58-66 (Remaining A7 conditions)
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "mediumDifference":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "bigDifference":
             return "A win or draw", 58
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "smallDifference":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "mediumDifference":
             return "A or B win", 59
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "bigDifference":
-            return "A win or draw", 60
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "mediumDifference":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "smallDifference":
+            return "A or B win", 60
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG2" and rank_diff == "bigDifference":
             return "A win or draw", 61
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "smallDifference":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG2" and rank_diff == "mediumDifference":
             return "A or B win", 62
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG2":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG2" and rank_diff == "smallDifference":
             return "A or B win", 63
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG1":
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG1" :
             return "A or B win", 64
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG1":
-            return "A or B win", 65
-        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG2":
-            return "A or B win", 66
-
-        # Row 67 (Special case)
-        elif a_team == "A7" and b_team == "B7":
-            return "Special Case", 67
-        logging.warning(f"No result found for the combination: {a_team}, {b_team}, {a_recent_g}, {b_recent_g}, {rank_diff}")
-        # Default condition if no match is found
-        return "No result found", None
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG7" :
+            return "A win or draw", 65
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG6" :
+            return "A win or draw", 66
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG5" :
+            return "A win or draw", 67
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG4" and rank_diff == "bigDifference":
+            return "A win or draw", 68
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG4" and rank_diff == "mediumDifference":
+            return "A or B win", 69
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG4" and rank_diff == "smallDifference":
+            return "A or B win", 70
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG3":
+            return "A or B win", 71
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG2":
+            return "A or B win", 72
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG1":
+            return "A or B win", 73
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG7" :
+            return "A win or draw", 74
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG6" :
+            return "A win or draw", 75
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG5" and rank_diff == "bigDifference":
+            return "A win or draw", 76
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG5" and rank_diff == "mediumDifference":
+            return "A or B win", 77
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG5" and rank_diff == "smallDifference":
+            return "A or B win", 78
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG4":
+            return "A or B win", 79
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG3":
+            return "A or B win", 80
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG2" :
+            return "A or B win", 81
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG3" and b_recent_g == "BRecentG1" :
+            return "A or B win", 82
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG7" :
+            return "A win or draw", 83
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "bigDifference":
+            return "A win or draw", 84
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "mediumDifference":
+            return "A or B win", 85
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG6" and rank_diff == "smallDifference":
+            return "A or B win", 86
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG5":
+            return "A or B win", 87
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG4" :
+            return "A or B win", 88
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG3" :
+            return "A or B win", 89
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG2":
+            return "A or B win", 90
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG4" and b_recent_g == "BRecentG1":
+            return "A or B win", 91
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG7":
+            return "A or B win", 92
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG6":
+            return "A or B win", 93
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG5":
+            return "A or B win", 94
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG4":
+            return "A or B win", 95
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG3":
+            return "A or B win", 96
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG2" and rank_diff == "bigDifference":
+            return "A or B win", 97
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG2" and rank_diff == "mediumDifference":
+            return "A or B win", 98
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG2" and rank_diff == "smallDifference":
+            return "B win or Draw", 99
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG1":
+            return "B win or Draw", 100
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG7" :
+            return "A or B win", 101
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG6":
+            return "A or B win", 102
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG5":
+            return "A or B win", 103
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG4":
+            return "A or B win", 104
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG3":
+            return "A or B win", 105
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG2" and rank_diff == "bigDifference":
+            return "A or B win", 106
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG2" and rank_diff == "mediumDifference":
+            return "B win or draw", 107
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG2" and rank_diff == "smallDifference":
+            return "B win or draw", 108
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG1" :
+            return "B win or draw", 109
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG7" :
+            return "B win or draw", 110
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG6":
+            return "A or B win", 111
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG5":
+            return "A or B win", 112
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG4" and rank_diff == "bigDifference":
+            return "A or B win", 113
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG4" and rank_diff == "mediumDifference":
+            return "B win or draw", 114
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG4" and rank_diff == "smallDifference":
+            return "B win or draw", 115
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG3" :
+            return "B win or draw", 116
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG2" :
+            return "B win or draw", 117
+        elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG7" and b_recent_g == "BRecentG1" :
+            return "B win or draw", 118
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG7":
+            return "A win or draw", 119
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG6":
+            return "A win or draw", 120
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG5":
+            return "A win or draw", 121
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "bigDifference":
+            return "A win or draw", 122
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "mediumDifference":
+            return "A win or draw", 123
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG4" and rank_diff == "smallDifference":
+            return "A or B win", 124
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "bigDifference" :
+            return "A win or draw", 125
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "mediumDifference":
+            return "A or B win", 126
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG3" and rank_diff == "smallDifference":
+            return "A or B win", 127
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG2" :
+            return "A or B win", 128
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG1" and b_recent_g == "BRecentG1" :
+            return "A or B win", 129
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG1" :
+            return "A or B win", 130
+        elif a_team == "A7" and b_team == "B7" and a_recent_g == "ARecentG2" and b_recent_g == "BRecentG2" :
+            return "A or B win", 131
+        elif a_team == "A7" and b_team == "B7"  :
+            return "A win or draw", 132
+        else :
+            logging.warning(f"No result found for the combination: {a_team}, {b_team}, {a_recent_g}, {b_recent_g}, {rank_diff}")
+            # Default condition if no match is found
+            return "No result found", None
 
     def process(self):
         self.ensure_output_folder()

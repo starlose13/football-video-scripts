@@ -1,10 +1,10 @@
 {
-    "description": "The odds for a win are as follows: 13.0 for the home team and 1.2 for the away team. The odds for a draw stand at 6.5.",
+    "description": "Oman has odds of winning at 1.85. Palestine has odds of winning at 4.5. The odds for a draw are 3.25.",
     "odds": {
-        "home": 13.0,
-        "draw": 6.5,
-        "away": 1.2
+        "home": 1.85,
+        "draw": 3.25,
+        "away": 4.5
     },
-    "word_count": 27,
-    "reading_time": 9.76
+    "word_count": 21,
+    "reading_time": 8.03
 }

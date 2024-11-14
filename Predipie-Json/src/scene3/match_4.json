@@ -1,18 +1,18 @@
 {
-    "description": "Australia clashes with Saudi Arabia! Goals, drama, and intense plays unfold.",
-    "word_count": 11,
-    "reading_time": 4.36,
+    "description": "Get ready for thrilling football action! Kickoff at 2:00 PM, Thursday, Nov 14th! Who will triumph? Don’t miss it! Tune in!",
+    "word_count": 21,
+    "reading_time": 8.09,
     "home_team": {
-        "name": "Australia",
-        "logo": "https://img.thesports.com/football/team/6f289bdffe03a2480ad521dc2c114d56.png",
-        "country": "Australia"
+        "name": "Kuwait",
+        "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
+        "country": "Kuwait"
     },
     "away_team": {
-        "name": "Saudi Arabia",
-        "logo": "https://img.thesports.com/football/team/3874dcd109e646cbe7c5e8fb2bd41548.png",
-        "country": "Saudi Arabia"
+        "name": "South Korea",
+        "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
+        "country": "South Korea"
     },
     "match_date": "2024-11-14",
-    "match_time": "09:10 AM UTC",
+    "match_time": "02:00 PM UTC",
     "match_day": "Thursday"
 }

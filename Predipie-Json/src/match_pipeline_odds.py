@@ -45,7 +45,7 @@ class MatchDataPipelineWithOdds(BaseMatchPipeline):
             match_description = self.generate_description_with_odds(host_team, guest_team, home_odds, guest_odds, draw_odds)
             
             # Process reading time and word count
-            processor = MatchDataProcessor(match_description)  # استفاده مستقیم از MatchDataProcessor
+            processor = MatchDataProcessor(match_description) 
             word_count = processor.calculate_word_count()
             reading_time = processor.calculate_reading_time()
 

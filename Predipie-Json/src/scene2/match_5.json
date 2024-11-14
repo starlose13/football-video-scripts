@@ -1,15 +1,15 @@
 {
-    "description": "Kuwait clashes with South Korea! Tension rises, fans roar; who will triumph?",
-    "word_count": 12,
-    "reading_time": 4.61,
+    "description": "Oman clashes with Palestine! Anticipation high, drama unfolds, who will triumph?",
+    "word_count": 11,
+    "reading_time": 4.33,
     "home_team": {
-        "name": "Kuwait",
-        "logo": "https://img.thesports.com/football/team/501402ebbaa8555329c25b52fe79ecb2.png",
-        "country": "Kuwait"
+        "name": "Oman",
+        "logo": "https://img.thesports.com/football/team/11fc5be6bedfbccc563c5054ad544320.png",
+        "country": "Oman"
     },
     "away_team": {
-        "name": "South Korea",
-        "logo": "https://img.thesports.com/football/team/a25c2f76ecf9aa566d943aa4b073627e.png",
-        "country": "South Korea"
+        "name": "Palestine",
+        "logo": "https://img.thesports.com/football/team/ac96e83ce1fae4a1251863bea34248db.png",
+        "country": "Palestine"
     }
 }

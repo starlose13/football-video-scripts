@@ -1,15 +1,15 @@
 {
-    "description": "Tropical showdown ignites passion! Papua New Guinea clashes with Fiji. Who will triumph?",
-    "word_count": 13,
-    "reading_time": 4.76,
+    "description": "Korea DPR clashes with Iran! Intense moves, stunning plays, who will triumph?",
+    "word_count": 12,
+    "reading_time": 4.65,
     "home_team": {
-        "name": "Papua New Guinea",
-        "logo": "https://img.thesports.com/football/team/67038aaa05ffac51830cffb04441f8c3.gif",
-        "country": "Papua New Guinea"
+        "name": "Korea DPR",
+        "logo": "https://img.thesports.com/football/team/b31a466bccaefaca53b4de1a843965f2.png",
+        "country": "North Korea"
     },
     "away_team": {
-        "name": "Fiji",
-        "logo": "https://img.thesports.com/football/team/81bff08bd846db23755fe4639e3c6839.png",
-        "country": "Fiji"
+        "name": "Iran",
+        "logo": "https://img.thesports.com/football/team/58b5d5f352fafb845b4f6755c2d5b724.png",
+        "country": "Iran"
     }
 }

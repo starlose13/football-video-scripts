@@ -1,8 +1,16 @@
 {
-    "description": "Iran triumphs on foreign soil! Victory for the away team; excitement mounts. Can anyone stop them now? Watch out, competitors!",
-    "word_count": 20,
-    "reading_time": 7.58,
-    "team_home": "Korea DPR",
-    "team_away": "Iran",
-    "card": "Win Away Team"
+    "description": "Opt for a sure pick: Bahrain clinches victory or secures a draw! Will the home team triumph? Lock it in: Win or Draw Home Team.",
+    "word_count": 25,
+    "reading_time": 8.63,
+    "team_home": "Bahrain",
+    "team_away": "China",
+    "card": "Win or Draw Home Team",
+    "row_number": 26,
+    "rank_diff": 2,
+    "a_team": "A3",
+    "b_team": "B7",
+    "a_points": 3,
+    "b_points": 6,
+    "a_recent_group": "ARecentG6",
+    "b_recent_group": "BRecentG5"
 }

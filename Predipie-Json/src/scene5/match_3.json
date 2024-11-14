@@ -1,16 +1,16 @@
 {
-    "description": "Papua New Guinea has struggled recently, winning once, drawing once, and losing three times. Fiji shows mixed results with two wins, one draw, and two losses.",
+    "description": "Korea DPR has struggled recently, managing just two draws and suffering three losses! Iran, on the other hand, remains unbeaten with three wins and two draws.",
     "recent_form": {
         "home_team": {
             "last_5_matches": [
                 "l",
-                "w",
+                "d",
                 "d",
                 "l",
                 "l"
             ],
-            "wins": 1,
-            "draws": 1,
+            "wins": 0,
+            "draws": 2,
             "losses": 3
         },
         "away_team": {
@@ -18,14 +18,14 @@
                 "w",
                 "d",
                 "w",
-                "l",
-                "l"
+                "w",
+                "d"
             ],
-            "wins": 2,
-            "draws": 1,
-            "losses": 2
+            "wins": 3,
+            "draws": 2,
+            "losses": 0
         }
     },
     "word_count": 26,
-    "reading_time": 9.86
+    "reading_time": 9.41
 }

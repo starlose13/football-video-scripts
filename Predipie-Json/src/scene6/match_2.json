@@ -1,8 +1,16 @@
 {
-    "description": "Gear up, fans! Our data points to New Caledonia securing a win or draw. Lock in on 'Win or Draw Away Team'! Exciting, right?",
-    "word_count": 24,
-    "reading_time": 8.91,
-    "team_home": "Solomon Islands",
-    "team_away": "New Caledonia",
-    "card": "Win or Draw Away Team"
+    "description": "Victory for Austria! Expect an exhilarating match; will the home team rally? Stay tuned. Win Away Team!",
+    "word_count": 17,
+    "reading_time": 6.4,
+    "team_home": "Kazakhstan",
+    "team_away": "Austria",
+    "card": "Win Away Team",
+    "row_number": 1,
+    "rank_diff": 2,
+    "a_team": "A1",
+    "b_team": "B7",
+    "a_points": 1,
+    "b_points": 7,
+    "a_recent_group": "ARecentG7",
+    "b_recent_group": "BRecentG4"
 }

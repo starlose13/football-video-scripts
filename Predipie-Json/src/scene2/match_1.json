@@ -1,15 +1,15 @@
 {
-    "description": "Fierce showdown in Tehran! Korea DPR clashes with Iran; emotions run high.",
-    "word_count": 12,
-    "reading_time": 4.43,
+    "description": "Bahrain takes on China! Thrills, close calls, and heart-stopping moments abound.",
+    "word_count": 11,
+    "reading_time": 4.36,
     "home_team": {
-        "name": "Korea DPR",
-        "logo": "https://img.thesports.com/football/team/b31a466bccaefaca53b4de1a843965f2.png",
-        "country": "North Korea"
+        "name": "Bahrain",
+        "logo": "https://img.thesports.com/football/team/26bdd013ee743c1725d7b6b4daa1a4ac.png",
+        "country": "Bahrain"
     },
     "away_team": {
-        "name": "Iran",
-        "logo": "https://img.thesports.com/football/team/58b5d5f352fafb845b4f6755c2d5b724.png",
-        "country": "Iran"
+        "name": "China",
+        "logo": "https://img.thesports.com/football/team/cf82ff425ec97af2c4c0c2f517f2a631.png",
+        "country": "China"
     }
 }

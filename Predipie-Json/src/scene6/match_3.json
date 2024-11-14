@@ -1,8 +1,16 @@
 {
-    "description": "Opt for 'Win or Draw Away Team' as Fiji gears up! Will they clinch victory, or secure a draw? Excitement builds; game on!",
-    "word_count": 23,
-    "reading_time": 8.34,
-    "team_home": "Papua New Guinea",
-    "team_away": "Fiji",
-    "card": "Win or Draw Away Team"
+    "description": "Exciting prediction: Iran won't lose today, fans! Opt for 'Win or Draw Away Team'; thrilling action guaranteed. Who's ready?",
+    "word_count": 19,
+    "reading_time": 7.08,
+    "team_home": "Korea DPR",
+    "team_away": "Iran",
+    "card": "Win or Draw Away Team",
+    "row_number": 25,
+    "rank_diff": 2,
+    "a_team": "A2",
+    "b_team": "B7",
+    "a_points": 2,
+    "b_points": 11,
+    "a_recent_group": "ARecentG7",
+    "b_recent_group": "BRecentG2"
 }
