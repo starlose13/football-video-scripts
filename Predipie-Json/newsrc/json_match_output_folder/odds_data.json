@@ -1,0 +1,19 @@
+[
+    {
+        "id": 2732,
+        "home_team": "Neman Grodno",
+        "away_team": "Dinamo Minsk",
+        "odds": [
+            {
+                "draw": 1.11,
+                "score": "0-0",
+                "awayWin": 10.13,
+                "homeWin": 9.69,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1731347284,
+                "matchStatus": 4
+            }
+        ]
+    }
+]

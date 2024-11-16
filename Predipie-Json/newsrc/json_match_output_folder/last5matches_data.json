@@ -1,0 +1,35 @@
+[
+    {
+        "id": 2732,
+        "home_team": {
+            "team_name": "Neman Grodno",
+            "last_5_matches": [
+                "W",
+                "D",
+                "L",
+                "W",
+                "L"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Dinamo Minsk",
+            "last_5_matches": [
+                "L",
+                "L",
+                "L",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 5,
+                "draws": 0
+            }
+        }
+    }
+]
