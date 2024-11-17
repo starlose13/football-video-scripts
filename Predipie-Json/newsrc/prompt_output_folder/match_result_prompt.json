@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "prompt": "El Salvador triumphs! Incredible gameplay seals the victory; fans rejoice as their team dominates. Who saw that coming? Pure exhilaration!",
+        "card": "Win Home Team",
+        "reading_time": 7.37
+    },
+    {
+        "prompt": "CA Penarol fans, brace yourselves for excitement\u2014my analysis predicts a win or draw today! Can they keep the streak alive? Don't miss it!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.17
+    },
+    {
+        "prompt": "Who will triumph: Deportivo Saprissa or Municipal Liberia? Excitement peaks as fans await the clash; victory hangs in the balance!",
+        "card": "Win Home or Away Team",
+        "reading_time": 6.98
+    },
+    {
+        "prompt": "Prediction alert: Expect San Martin San Juan to shine tonight; a win or draw seems on the cards! Who's ready for the action?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.95
+    },
+    {
+        "prompt": "Fans, watch out! St. Vincent & Grenadines are set to either triumph or hold steady; victory or draw, but no defeat! Who's ready?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.76
+    }
+]

@@ -1,7 +1,7 @@
-from base_match_pipeline import BaseMatchPipeline
+from .base_match_pipeline import BaseMatchPipeline
 from typing import List, Dict, Any
-from config import BASE_URL , START_AFTER
-from json_saver import JsonSaver
+from config.config import BASE_URL , START_AFTER
+from utils.json_saver import JsonSaver
 
 class FetchLast5Matches(BaseMatchPipeline):
     def __init__(self, base_url: str):

@@ -1,6 +1,6 @@
-from base_match_pipeline import BaseMatchPipeline
-from config import BASE_URL, START_AFTER
-from json_saver import JsonSaver
+from .base_match_pipeline import BaseMatchPipeline
+from config.config import BASE_URL, START_AFTER
+from utils.json_saver import JsonSaver
 
 from typing import List, Dict, Any
 
@@ -14,7 +14,6 @@ class FetchOddsRanks(BaseMatchPipeline):
         """
         matches = self.get_matches(start_after)
         
-        # استخراج فیلدهای odds و rank برای هر مسابقه
         odds_ranks_data = []
         for match in matches:
             odds_ranks_info = {
@@ -31,7 +30,6 @@ class FetchOddsRanks(BaseMatchPipeline):
         saver.save_to_json(odds_ranks_data, "odds_ranks_data.json")
         return odds_ranks_data
 
-# مثال استفاده
 if __name__ == "__main__":
     fetch_odds_ranks = FetchOddsRanks(base_url=BASE_URL)
     odds_ranks_info = fetch_odds_ranks.get_odds_ranks(start_after=START_AFTER)

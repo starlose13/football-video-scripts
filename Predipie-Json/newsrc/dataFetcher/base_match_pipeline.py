@@ -1,6 +1,6 @@
 import requests
 from typing import List, Dict, Any
-from config import BASE_URL , START_AFTER
+from config.config import BASE_URL , START_AFTER
 
 class BaseMatchPipeline:
     def __init__(self, base_url: str):

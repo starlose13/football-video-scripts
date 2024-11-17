@@ -1,7 +1,7 @@
-from fetch_odds_ranks import FetchOddsRanks
-from fetch_last_five_matches import FetchLast5Matches
-from config import BASE_URL, START_AFTER
-from team_status import RankingDifference
+from dataFetcher.fetch_odds_ranks import FetchOddsRanks
+from dataFetcher.fetch_last_five_matches import FetchLast5Matches
+from config.config import BASE_URL, START_AFTER
+from .team_status import RankingDifference
 
 class TeamComparison:
     """

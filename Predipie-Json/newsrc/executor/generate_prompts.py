@@ -4,14 +4,14 @@ import openai
 from typing import Dict, Any, List
 import json
 import os
-from fetch_last_five_matches import FetchLast5Matches
-from fetch_match_stats import FetchMatchTime
-from fetch_odds_ranks import FetchOddsRanks
-from fetch_team_info import FetchTeamInfo
-from reading_time_consumer import MatchDataProcessor
-from config import BASE_URL, START_AFTER, START_BEFORE, PROGRAM_NAME
-from game_result_predictor import GameResultPredictor
-from program_counter import increment_program_number, get_program_number
+from dataFetcher.fetch_last_five_matches import FetchLast5Matches
+from dataFetcher.fetch_match_stats import FetchMatchTime
+from dataFetcher.fetch_odds_ranks import FetchOddsRanks
+from dataFetcher.fetch_team_info import FetchTeamInfo
+from utils.reading_time_consumer import MatchDataProcessor
+from config.config import BASE_URL, START_AFTER, START_BEFORE, PROGRAM_NAME
+from dataClassifier.game_result_predictor import GameResultPredictor
+from utils.program_counter import increment_program_number, get_program_number
 from openai.error import RateLimitError
 
 load_dotenv()

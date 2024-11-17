@@ -1,9 +1,8 @@
-from datetime import time
 import logging
-from team_comparison import TeamComparison
-from team_classification_points_based import classify_a_points, classify_b_points
-from team_classification_odds_based import classify_a_team, classify_b_team
-from json_saver import JsonSaver
+from .team_comparison import TeamComparison
+from .team_classification_points_based import classify_a_points, classify_b_points
+from .team_classification_odds_based import classify_a_team, classify_b_team
+from utils.json_saver import JsonSaver
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 class GameResultPredictor:
