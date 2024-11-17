@@ -3,7 +3,7 @@ class TeamAStatus:
     Represents the status of Team A with levels from 0 to 6.
     """
     def __init__(self, status: int):
-        if 0 <= status <= 6:
+        if 1 <= status <= 7:
             self.status = status
         else:
             raise ValueError("Status must be between 0 and 6 for Team A.")
@@ -17,7 +17,7 @@ class TeamBStatus:
     Represents the status of Team B with levels from 0 to 6.
     """
     def __init__(self, status: int):
-        if 0 <= status <= 6:
+        if 1 <= status <= 7:
             self.status = status
         else:
             raise ValueError("Status must be between 0 and 6 for Team B.")

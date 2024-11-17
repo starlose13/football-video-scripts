@@ -49,7 +49,7 @@ class BaseMatchPipeline:
                 "last5matches": match_data["homeInfo"].get("last5matches"),
                 "totalPlayers": match_data["homeInfo"].get("totalPlayers"),
                 "foreignPlayers": match_data["homeInfo"].get("foreignPlayers"),
-                "foundationTime": match_data["homeInfo"].get("foundationTime"),
+                "foundationTime": match_data["homeInfo"].get("foundationTime"), 
                 "nationalPlayers": match_data["homeInfo"].get("nationalPlayers"),
             },
             

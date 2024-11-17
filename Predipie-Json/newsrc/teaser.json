@@ -1,0 +1,160 @@
+{
+    "timeline": {
+        "soundtrack": {
+            "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jct-qazyc-zsg1j-j8fpw-gwqe5c/source.mp3",
+            "effect": "fadeOut"
+        },
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/zfe0a140fc/zzy9g4kl-4cs6-z73f-ljmn-3xwjbt3mwa2b/source.mov"
+                        },
+                        "start": 0,
+                        "position": "center",
+                        "length": 9.3,
+                        "scale": 1,
+                        "opacity": 0.2
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Forecast Program",
+                            "font": {
+                                "family": "Roboto ",
+                                "color": "#1f1f1f",
+                                "size": 44
+                            },
+                            "alignment": {
+                                "horizontal": "left"
+                            },
+                            "width": 626,
+                            "height": 135
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": 0.294,
+                            "y": -0.06
+                        },
+                        "position": "center",
+                        "start": 2.3,
+                        "transition": {
+                            "in": "slideLeft",
+                            "out": "slideRight"
+                        },
+                        "length": 2.94
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "PREDIPIE",
+                            "font": {
+                                "family": "Roboto",
+                                "color": "#eeeeee",
+                                "size": 124
+                            },
+                            "alignment": {
+                                "horizontal": "center"
+                            },
+                            "width": 760,
+                            "height": 125
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": 0.211,
+                            "y": 0.099
+                        },
+                        "position": "center",
+                        "transition": {
+                            "in": "slideLeft",
+                            "out": "slideRight"
+                        },
+                        "start": 1.83,
+                        "length": 3.08
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/zfe0a140fc/zzy9g5jy-1c2s-7f2q-ctn5-0tvfx14fbgl2/source.mov"
+                        },
+                        "offset": {
+                            "x": 0.35,
+                            "y": 0.028
+                        },
+                        "position": "center",
+                        "scale": 0.386,
+                        "start": 1.09,
+                        "length": 4.11
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/zfe0a140fc/zzy9g4nb-1vl5-rg0l-mqxv-2abipj3wncqy/source.mov"
+                        },
+                        "start": 0,
+                        "length": 9.57,
+                        "position": "center"
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "{{ PRIMARY_IMAGE }}"
+                        },
+                        "start": 0.58,
+                        "offset": {
+                            "x": -0.183,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "length": 7.38,
+                        "effect": "zoomIn",
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        },
+                        "scale": 0.45
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "fps": 25,
+        "size": {
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "merge": [
+        {
+            "find": "PRIMARY_IMAGE",
+            "replace": "https://shotstack-ingest-api-v1-sources.s3.ap-southeast-2.amazonaws.com/4c7kem3rad/zzz01jcg-hb84j-h4c5z-k6cnd-zw6mbq/source.png"
+        }
+    ]
+}

@@ -15,19 +15,19 @@ def classify_a_team(a_odds):
 
     # Determine status level based on odds
     if a_odds <= 1.30:
-        a_status = TeamAStatus(0)
-    elif 1.31 <= a_odds <= 1.50:
         a_status = TeamAStatus(1)
-    elif 1.51 <= a_odds <= 1.80:
+    elif 1.31 <= a_odds <= 1.50:
         a_status = TeamAStatus(2)
-    elif 1.81 <= a_odds <= 2.00:
+    elif 1.51 <= a_odds <= 1.80:
         a_status = TeamAStatus(3)
-    elif 2.01 <= a_odds <= 2.30:
+    elif 1.81 <= a_odds <= 2.00:
         a_status = TeamAStatus(4)
-    elif 2.31 <= a_odds <= 2.80:
+    elif 2.01 <= a_odds <= 2.30:
         a_status = TeamAStatus(5)
-    else:
+    elif 2.31 <= a_odds <= 2.80:
         a_status = TeamAStatus(6)
+    else:
+        a_status = TeamAStatus(7)
 
     # Log the classification result
     classification = f"A{a_status.status}"
@@ -46,19 +46,19 @@ def classify_b_team(b_odds):
 
     # Determine status level based on odds
     if b_odds <= 1.30:
-        b_status = TeamBStatus(0)
-    elif 1.31 <= b_odds <= 1.50:
         b_status = TeamBStatus(1)
-    elif 1.51 <= b_odds <= 1.80:
+    elif 1.31 <= b_odds <= 1.50:
         b_status = TeamBStatus(2)
-    elif 1.81 <= b_odds <= 2.00:
+    elif 1.51 <= b_odds <= 1.80:
         b_status = TeamBStatus(3)
-    elif 2.01 <= b_odds <= 2.30:
+    elif 1.81 <= b_odds <= 2.00:
         b_status = TeamBStatus(4)
-    elif 2.31 <= b_odds <= 2.80:
+    elif 2.01 <= b_odds <= 2.30:
         b_status = TeamBStatus(5)
-    else:
+    elif 2.31 <= b_odds <= 2.80:
         b_status = TeamBStatus(6)
+    else:
+        b_status = TeamBStatus(7)
 
     # Log the classification result
     classification = f"B{b_status.status}"

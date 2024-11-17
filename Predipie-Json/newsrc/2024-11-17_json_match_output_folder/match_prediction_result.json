@@ -1,0 +1,32 @@
+[
+    {
+        "Team A": "Deportivo Saprissa",
+        "Team B": "Municipal Liberia",
+        "Result": "A or B win",
+        "Rule Applied": 40
+    },
+    {
+        "Team A": "CA Penarol",
+        "Team B": "Defensor Sporting Montevideo",
+        "Result": "A win or draw",
+        "Rule Applied": 23
+    },
+    {
+        "Team A": "San Martin San Juan",
+        "Team B": "All Boys",
+        "Result": "A win or draw",
+        "Rule Applied": 27
+    },
+    {
+        "Team A": "El Salvador",
+        "Team B": "Montserrat",
+        "Result": "A win",
+        "Rule Applied": 1
+    },
+    {
+        "Team A": "St. Vincent   Grenadines",
+        "Team B": "Bonaire",
+        "Result": "A win or draw",
+        "Rule Applied": 14
+    }
+]

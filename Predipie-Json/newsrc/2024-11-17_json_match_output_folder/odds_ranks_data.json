@@ -1,0 +1,97 @@
+[
+    {
+        "id": 9511,
+        "home_team": "Municipal Liberia",
+        "away_team": "Deportivo Saprissa",
+        "home_rank": "8",
+        "away_rank": "3",
+        "odds": [
+            {
+                "draw": 3.4,
+                "score": "0-0",
+                "awayWin": 2.3,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731549293,
+                "matchStatus": 9
+            }
+        ]
+    },
+    {
+        "id": 9442,
+        "home_team": "CA Penarol",
+        "away_team": "Defensor Sporting Montevideo",
+        "home_rank": "2",
+        "away_rank": "6",
+        "odds": [
+            {
+                "draw": 4.75,
+                "score": "0-0",
+                "awayWin": 8,
+                "homeWin": 1.38,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731830261,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9510,
+        "home_team": "San Martin San Juan",
+        "away_team": "All Boys",
+        "home_rank": "2",
+        "away_rank": "4",
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 5.75,
+                "homeWin": 1.83,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731820610,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9513,
+        "home_team": "El Salvador",
+        "away_team": "Montserrat",
+        "home_rank": "83",
+        "away_rank": "180",
+        "odds": [
+            {
+                "draw": 6.5,
+                "score": "0-0",
+                "awayWin": 9.5,
+                "homeWin": 1.22,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731829452,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9515,
+        "home_team": "St. Vincent   Grenadines",
+        "away_team": "Bonaire",
+        "home_rank": "174",
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 5.25,
+                "score": "0-0",
+                "awayWin": 5,
+                "homeWin": 1.38,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731823530,
+                "matchStatus": 1
+            }
+        ]
+    }
+]
