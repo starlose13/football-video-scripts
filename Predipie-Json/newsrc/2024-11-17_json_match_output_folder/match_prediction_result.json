@@ -12,16 +12,16 @@
         "Rule Applied": 23
     },
     {
-        "Team A": "Deportivo Saprissa",
-        "Team B": "Municipal Liberia",
-        "Result": "A or B win",
-        "Rule Applied": 40
-    },
-    {
         "Team A": "San Martin San Juan",
         "Team B": "All Boys",
         "Result": "A win or draw",
         "Rule Applied": 27
+    },
+    {
+        "Team A": "Deportivo Saprissa",
+        "Team B": "Municipal Liberia",
+        "Result": "A or B win",
+        "Rule Applied": 40
     },
     {
         "Team A": "St. Vincent   Grenadines",

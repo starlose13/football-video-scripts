@@ -1,9 +1,11 @@
+from datetime import datetime
 import time
 from dotenv import load_dotenv
 import openai
 from typing import Dict, Any, List
 import json
 import os
+from utils.json_saver import JsonSaver
 from dataFetcher.fetch_last_five_matches import FetchLast5Matches
 from dataFetcher.fetch_match_stats import FetchMatchTime
 from dataFetcher.fetch_odds_ranks import FetchOddsRanks
@@ -249,8 +251,7 @@ class GeneratePrompts:
             return {"prompt": "No final score available", "reading_time": 0}
         
 
-
-    def generate_first_video_narration(
+    def generate_second_video_narration(
         self,
         intro_result: Dict[str, Any],
         team_info_result: List[Dict[str, Any]],
@@ -259,53 +260,26 @@ class GeneratePrompts:
         last5matches_result: List[Dict[str, Any]],
         match_result_prompts: List[Dict[str, Any]],
         closing_result: Dict[str, Any]
-    ) -> List[Dict[str, Any]]:
-        """Generates combined narrations for the first video for each game using individual prompt results."""
+    ) -> Dict[str, str]:
+        """Generates a combined narration for the second video in a single field."""
 
-        narrations = []
-        
-        # Combine all parts of the narration for each game
-        for i in range(len(team_info_result)):
-            narration_text = (
-                intro_result["prompt"] + "\n" +
+        narration_text = intro_result["prompt"] + "\n\n"
+
+        # Append data for each game
+        for i in range(5):
+            narration_text += (
                 team_info_result[i]["prompt"] + "\n" +
                 match_stats_result[i]["prompt"] + "\n" +
                 odds_result[i]["prompt"] + "\n" +
                 last5matches_result[i]["prompt"] + "\n" +
-                match_result_prompts[i]["prompt"] + "\n" +
-                closing_result["prompt"]
+                match_result_prompts[i]["prompt"] + "\n\n"
             )
 
-            # Prepare the final output with all individual prompts and combined narration for each game
-            narration_dict = {
-                "intro": intro_result["prompt"],
-                "team_info": team_info_result[i]["prompt"],
-                "match_stats": match_stats_result[i]["prompt"],
-                "odds": odds_result[i]["prompt"],
-                "last5matches": last5matches_result[i]["prompt"],
-                "match_result": match_result_prompts[i]["prompt"],
-                "closing": closing_result["prompt"],
-                "narration": narration_text
-            }
-            
-            narrations.append(narration_dict)
-        
-        return narrations
+        # Append the closing section
+        narration_text += closing_result["prompt"]
 
-
-    
-    def save_prompt_to_json(self, data, filename, folder="prompt_output_folder"):
-        """Saves the given data to a JSON file inside a specified folder."""
-        
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-        
-        filepath = os.path.join(folder, filename)
-        
-        with open(filepath, 'w') as file:
-            json.dump(data, file, indent=4)
-        
-        print(f"Data successfully saved to {filepath}")
+        # Return a single dictionary with the combined narration
+        return {"narration": narration_text}
 
 if __name__ == "__main__":
     openai.api_key = os.getenv('OPENAI_API_KEY')
@@ -330,34 +304,38 @@ if __name__ == "__main__":
     game_result_predictor = GameResultPredictor()
     game_results = game_result_predictor.predict_game_results()
 
+    json_saver = JsonSaver()
+    today_date = datetime.now().strftime("%Y-%m-%d")
+
+    narration_folder = os.path.join(today_date + "_json_match_output_folder", "narrations")
+    prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
+
     # Generate prompts
     intro_result = prompt_generator.generate_intro_with_openai()
-    prompt_generator.save_prompt_to_json(intro_result, "intro_prompt.json")
+    json_saver.save_to_json(intro_result, "intro_prompt.json",custom_folder=prompt_folder)
 
     closing_result = prompt_generator.generate_closing_with_openai(program_number=program_number)
-    prompt_generator.save_prompt_to_json(closing_result, "closing_prompt.json")
+    json_saver.save_to_json(closing_result, "closing_prompt.json",custom_folder=prompt_folder)
 
     final_score_prompt = prompt_generator.generate_final_score_prompt()
-    prompt_generator.save_prompt_to_json(final_score_prompt, "final_score_prompt.json")
+    json_saver.save_to_json(final_score_prompt, "final_score_prompt.json",custom_folder=prompt_folder)
 
     last5matches_result = prompt_generator.prompt_for_last5matches(last5matches_data)
-    prompt_generator.save_prompt_to_json(last5matches_result, "last5matches_prompt.json")
+    json_saver.save_to_json(last5matches_result, "last5matches_prompt.json",custom_folder=prompt_folder)
 
     match_stats_result = prompt_generator.prompt_for_match_stats(match_stats_data)
-    prompt_generator.save_prompt_to_json(match_stats_result, "match_stats_prompt.json")
+    json_saver.save_to_json(match_stats_result, "match_stats_prompt.json",custom_folder=prompt_folder)
 
     odds_result = prompt_generator.prompt_for_odds(odds_data)
-    prompt_generator.save_prompt_to_json(odds_result, "odds_prompt.json")
+    json_saver.save_to_json(odds_result, "odds_prompt.json",custom_folder=prompt_folder)
 
     team_info_result = prompt_generator.prompt_for_team_info(team_info_data)
-    prompt_generator.save_prompt_to_json(team_info_result, "team_info_prompt.json")
+    json_saver.save_to_json(team_info_result, "team_info_prompt.json",custom_folder=prompt_folder)
 
-    # Check if there are game results before generating the match result prompt
     match_result_prompt = prompt_generator.prompt_for_match_result(game_results)
-    prompt_generator.save_prompt_to_json(match_result_prompt, "match_result_prompt.json")
+    json_saver.save_to_json(match_result_prompt, "match_result_prompt.json",custom_folder=prompt_folder)
 
-    # Generate the first video narration by passing the previously generated results
-    first_video_result = prompt_generator.generate_first_video_narration(
+    second_video_result = prompt_generator.generate_second_video_narration(
         intro_result=intro_result,
         team_info_result=team_info_result,
         match_stats_result=match_stats_result,
@@ -366,4 +344,4 @@ if __name__ == "__main__":
         match_result_prompts =match_result_prompt,
         closing_result=closing_result
     )
-    prompt_generator.save_prompt_to_json(first_video_result, "first_video_prompt.json")
+    json_saver.save_to_json(second_video_result, "second_video_narration.json", custom_folder=narration_folder)

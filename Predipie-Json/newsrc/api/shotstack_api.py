@@ -1,6 +1,6 @@
 import requests
-from config import SHOTSTACK_API_KEY
-from json_saver import JsonSaver
+from config.config import SHOTSTACK_API_KEY
+from utils.json_saver import JsonSaver
 
 class ShotstackAPI:
     @staticmethod

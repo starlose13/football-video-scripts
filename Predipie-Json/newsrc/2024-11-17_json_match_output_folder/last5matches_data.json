@@ -66,39 +66,6 @@
         }
     },
     {
-        "id": 9511,
-        "home_team": {
-            "team_name": "Municipal Liberia",
-            "last_5_matches": [
-                "L",
-                "D",
-                "L",
-                "L",
-                "D"
-            ],
-            "results_count": {
-                "wins": 0,
-                "losses": 3,
-                "draws": 2
-            }
-        },
-        "away_team": {
-            "team_name": "Deportivo Saprissa",
-            "last_5_matches": [
-                "D",
-                "W",
-                "L",
-                "L",
-                "L"
-            ],
-            "results_count": {
-                "wins": 1,
-                "losses": 3,
-                "draws": 1
-            }
-        }
-    },
-    {
         "id": 9510,
         "home_team": {
             "team_name": "San Martin San Juan",
@@ -128,6 +95,39 @@
                 "wins": 2,
                 "losses": 1,
                 "draws": 2
+            }
+        }
+    },
+    {
+        "id": 9511,
+        "home_team": {
+            "team_name": "Municipal Liberia",
+            "last_5_matches": [
+                "L",
+                "D",
+                "L",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 3,
+                "draws": 2
+            }
+        },
+        "away_team": {
+            "team_name": "Deportivo Saprissa",
+            "last_5_matches": [
+                "D",
+                "W",
+                "L",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 3,
+                "draws": 1
             }
         }
     },

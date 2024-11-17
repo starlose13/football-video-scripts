@@ -48,7 +48,6 @@ class FetchMatchTime(BaseMatchPipeline):
         saver.save_to_json(match_times, "match_times.json")
         return match_times
 
-# Example usage
 if __name__ == "__main__":
     fetch_match_time = FetchMatchTime(base_url=BASE_URL)
     match_times = fetch_match_time.get_match_times(start_after=START_AFTER)

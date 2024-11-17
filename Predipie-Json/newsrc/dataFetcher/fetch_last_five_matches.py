@@ -52,7 +52,6 @@ class FetchLast5Matches(BaseMatchPipeline):
         saver.save_to_json(last5matches_data, "last5matches_data.json")
         return last5matches_data
 
-# Example usage
 if __name__ == "__main__":
     fetch_last5matches = FetchLast5Matches(base_url=BASE_URL)
     last5matches_info = fetch_last5matches.get_last5matches(start_after=START_AFTER)

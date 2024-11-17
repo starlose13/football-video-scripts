@@ -29,7 +29,6 @@ class FetchTeamInfo(BaseMatchPipeline):
         saver.save_to_json(team_info_list, "team_info.json")
         return team_info_list
 
-# Example usage
 if __name__ == "__main__":
     fetch_team_info = FetchTeamInfo(base_url=BASE_URL)
     team_info = fetch_team_info.get_team_info(start_after=START_AFTER)

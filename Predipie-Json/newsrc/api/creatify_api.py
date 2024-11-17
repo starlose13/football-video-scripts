@@ -1,6 +1,6 @@
 import requests
 from datetime import datetime
-from config import CREATIFY_API_ID, CREATIFY_API_KEY
+from config.config import CREATIFY_API_ID, CREATIFY_API_KEY
 
 class CreatifyAPI:
     @staticmethod

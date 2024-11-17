@@ -1,27 +1,27 @@
 [
     {
-        "prompt": "El Salvador triumphs! Incredible gameplay seals the victory; fans rejoice as their team dominates. Who saw that coming? Pure exhilaration!",
-        "card": "Win Home Team",
-        "reading_time": 7.37
-    },
-    {
-        "prompt": "CA Penarol fans, brace yourselves for excitement\u2014my analysis predicts a win or draw today! Can they keep the streak alive? Don't miss it!",
-        "card": "Win or Draw Home Team",
-        "reading_time": 8.17
-    },
-    {
-        "prompt": "Who will triumph: Deportivo Saprissa or Municipal Liberia? Excitement peaks as fans await the clash; victory hangs in the balance!",
+        "prompt": "It's a toss-up! Will Deportivo Saprissa dominate, or can Municipal Liberia pull off a surprise? Exciting clash ahead; who\u2019s your pick?",
         "card": "Win Home or Away Team",
-        "reading_time": 6.98
+        "reading_time": 7.69
     },
     {
-        "prompt": "Prediction alert: Expect San Martin San Juan to shine tonight; a win or draw seems on the cards! Who's ready for the action?",
+        "prompt": "Expect excitement as CA Penarol likely secures a win or draw! Will they dominate or hold steady? Stay tuned!",
         "card": "Win or Draw Home Team",
-        "reading_time": 7.95
+        "reading_time": 6.67
     },
     {
-        "prompt": "Fans, watch out! St. Vincent & Grenadines are set to either triumph or hold steady; victory or draw, but no defeat! Who's ready?",
+        "prompt": "El Salvador triumphs! Fans, get ready for celebration; predicted victory confirmed. What a match!",
+        "card": "Win Home Team",
+        "reading_time": 5.47
+    },
+    {
+        "prompt": "San Martin San Juan on the brink! Fans, expect a win or a solid draw; don't count them out! Who's ready for kickoff?",
         "card": "Win or Draw Home Team",
-        "reading_time": 8.76
+        "reading_time": 8.34
+    },
+    {
+        "prompt": "St. Vincent & Grenadines fans, get ready! My analysis predicts a win or draw; don\u2019t miss out on the action! Who\u2019s excited?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.23
     }
 ]
