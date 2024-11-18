@@ -148,6 +148,7 @@ class BaseMatchPipeline:
                 return match.get("scores", {}).get("finalScore", "N/A")
         return "N/A"
 
+    
 if __name__ == "__main__":
     base_pipeline = BaseMatchPipeline(base_url=BASE_URL)
     matches = base_pipeline.get_matches(start_after=START_AFTER)
