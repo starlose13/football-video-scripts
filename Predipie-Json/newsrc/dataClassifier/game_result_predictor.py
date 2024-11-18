@@ -3,9 +3,19 @@ from .team_comparison import TeamComparison
 from .team_classification_points_based import classify_a_points, classify_b_points
 from .team_classification_odds_based import classify_a_team, classify_b_team
 from utils.json_saver import JsonSaver
+from dataFetcher.base_match_pipeline import BaseMatchPipeline  
+from config.config import START_AFTER,BASE_URL,START_BEFORE
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 class GameResultPredictor:
+
+    def __init__(self, start_date=START_AFTER, end_date=START_BEFORE, output_folder=None):
+        self.start_date = start_date
+        self.end_date = end_date
+        self.output_folder = output_folder if output_folder else f"{self.start_date}_json_match_output_folder"
+        self.team_comparator = TeamComparison(start_date=start_date)
+        self.base_pipeline = BaseMatchPipeline(base_url=BASE_URL)
+
     def generate_result(self,a_team, b_team, a_recent_g, b_recent_g, rank_diff):
 
             # Rows 1-17 (A2 as A team)
@@ -290,7 +300,7 @@ class GameResultPredictor:
         """
         # Create an instance of TeamComparison to get team information
         team_comparator = TeamComparison()
-        team_comparison_results = team_comparator.determine_teams()
+        team_comparison_results = team_comparator.determine_teams(self.start_date)
 
         results = []
         for team_info in team_comparison_results:
@@ -302,7 +312,8 @@ class GameResultPredictor:
             rank_diff_status = team_info["Ranking Difference"]
             home_team_name = team_info["Home Team Name"]
             match_id = team_info["id"]
-            # Generate the game result based on the classifications
+            
+            score = self.base_pipeline.get_final_score(match_id=match_id, start_after=self.end_date)
             result, rule_number = self.generate_result(a_team_class, b_team_class, a_recent_group, b_recent_group, rank_diff_status)
             card = ""
             if result == "A win or draw":
@@ -315,31 +326,25 @@ class GameResultPredictor:
                 card = "Win or Draw Home Team" if team_info["Team B"]["name"] == home_team_name else "Win or Draw Away Team"
             else:
                 card = "none"
-            if home_team_name == team_info["Team A"]["name"]:
-            # Append the result with details for each team
-                results.append({
-                    "id": match_id,
-                    "Home Team":team_info["Team A"]["name"],
-                    "Away Team":team_info["Team B"]["name"],
-                    "Team A": team_info["Team A"]["name"],
-                    "Team B": team_info["Team B"]["name"],
-                    "Card": card,
-                    "Rule Applied": rule_number
-                })
-            elif home_team_name == team_info["Team B"]["name"]:
-                results.append({
-                    "id": match_id,
-                    "Home Team":team_info["Team B"]["name"],
-                    "Away Team":team_info["Team A"]["name"],
-                    "Team A": team_info["Team A"]["name"],
-                    "Team B": team_info["Team B"]["name"],
-                    "Card": card,
-                    "Rule Applied": rule_number
-                })
-            saver = JsonSaver()
-            saver.save_to_json(results, "match_prediction_result.json")
+            
+            result_data = {
+                "id": match_id,
+                "Home Team": team_info["Team A"]["name"] if home_team_name == team_info["Team A"]["name"] else team_info["Team B"]["name"],
+                "Away Team": team_info["Team B"]["name"] if home_team_name == team_info["Team A"]["name"] else team_info["Team A"]["name"],
+                "Team A": team_info["Team A"]["name"],
+                "Team B": team_info["Team B"]["name"],
+                "Card": card,
+                "Rule Applied": rule_number,
+                "Score": score  
+            }
+
+            results.append(result_data)
+
+        saver = JsonSaver()
+        saver.save_to_json(results, "match_prediction_result.json", custom_folder=self.output_folder)
 
         return results
+
 
 if __name__ == "__main__":
     predictor = GameResultPredictor()

@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
 
@@ -26,9 +26,7 @@ class ImageRenderer:
     def render_image(self, image, data, positions, image_index, font_path="Roboto-Bold.ttf"):
         draw = ImageDraw.Draw(image)
         
-        # تنظیم اندازه فونت‌ها بر اساس تصویر مورد نظر
         if image_index == 4:
-            # کوچک‌تر کردن اندازه فونت برای نام تیم‌ها در عکس پنجم
             team_name_font = self.load_font(font_path, 60)
         else:
             team_name_font = self.load_font(font_path, 80)
@@ -41,7 +39,6 @@ class ImageRenderer:
                 print(f"Drawing {key} at {pos} with data: {data[key]}")
                 
                 if "logo" in key:
-                    # Fetch and paste team logos with RGBA conversion to avoid transparency mask issues
                     response = requests.get(data[key])
                     logo = Image.open(BytesIO(response.content))
 
@@ -59,7 +56,6 @@ class ImageRenderer:
                     x_offset = pos[0]
                     
                     for result in recent_matches:
-                        # Match W, L, D regardless of case
                         result = result.upper()
                         if result == 'W':
                             icon = self.win_icon
@@ -68,14 +64,12 @@ class ImageRenderer:
                         elif result == 'L':
                             icon = self.lose_icon
                         else:
-                            continue  # Skip if not 'W', 'L', or 'D'
+                            continue  
                         
-                        # Paste the icon and update x position
                         image.paste(icon, (x_offset, pos[1]), icon)
                         x_offset += icon_spacing
                 
                 else:
-                    # انتخاب فونت بر اساس نوع داده
                     if key in ["match_date", "match_time", "match_day"]:
                         font = stats_font
                     elif key in ["home_odds", "draw_odds", "away_odds"]:
@@ -83,9 +77,8 @@ class ImageRenderer:
                     elif "team_name" in key:
                         font = team_name_font
                     else:
-                        font = self.load_font(font_path, 80)  # فونت پیش‌فرض
+                        font = self.load_font(font_path, 80)  
 
-                    # رسم متن روی تصویر
                     text_value = str(data[key])
                     self.draw_text(draw, pos, text_value, font)
         

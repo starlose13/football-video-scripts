@@ -1,30 +1,13 @@
 [
     {
-        "id": 9513,
-        "Home Team": "El Salvador",
-        "Away Team": "Montserrat",
-        "Team A": "El Salvador",
-        "Team B": "Montserrat",
-        "Card": "Win Home Team",
-        "Rule Applied": 1
-    },
-    {
-        "id": 9458,
-        "Home Team": "Spain",
-        "Away Team": "Switzerland",
-        "Team A": "Spain",
-        "Team B": "Switzerland",
-        "Card": "Win or Draw Home Team",
-        "Rule Applied": 21
-    },
-    {
         "id": 9541,
         "Home Team": "Bulgaria",
         "Away Team": "Belarus",
         "Team A": "Bulgaria",
         "Team B": "Belarus",
         "Card": "Win or Draw Home Team",
-        "Rule Applied": 26
+        "Rule Applied": 26,
+        "Score": "N/A"
     },
     {
         "id": 10404,
@@ -33,7 +16,28 @@
         "Team A": "Aruba",
         "Team B": "Sint Maarten",
         "Card": "Win Home or Away Team",
-        "Rule Applied": 38
+        "Rule Applied": 93,
+        "Score": "N/A"
+    },
+    {
+        "id": 9513,
+        "Home Team": "El Salvador",
+        "Away Team": "Montserrat",
+        "Team A": "El Salvador",
+        "Team B": "Montserrat",
+        "Card": "Win Home Team",
+        "Rule Applied": 1,
+        "Score": "N/A"
+    },
+    {
+        "id": 9458,
+        "Home Team": "Spain",
+        "Away Team": "Switzerland",
+        "Team A": "Spain",
+        "Team B": "Switzerland",
+        "Card": "Win or Draw Home Team",
+        "Rule Applied": 21,
+        "Score": "N/A"
     },
     {
         "id": 9463,
@@ -42,7 +46,8 @@
         "Team A": "Boston River",
         "Team B": "Cerro Montevideo",
         "Card": "none",
-        "Rule Applied": null
+        "Rule Applied": null,
+        "Score": "N/A"
     },
     {
         "id": 10402,
@@ -51,6 +56,7 @@
         "Team A": "Grenada",
         "Team B": "French Saint-Martin",
         "Card": "Win or Draw Home Team",
-        "Rule Applied": 15
+        "Rule Applied": 15,
+        "Score": "N/A"
     }
 ]

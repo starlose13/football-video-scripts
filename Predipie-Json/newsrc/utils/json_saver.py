@@ -10,7 +10,7 @@ class JsonSaver:
         today_date = datetime.now().strftime("%Y-%m-%d")
         
         # Set the default output folder path with today's date as prefix
-        self.default_output_folder = os.path.join(today_date + "_" + base_folder)
+        self.default_output_folder = os.path.join(f"{today_date}_{base_folder}")
         
         # Create the default output folder if it does not exist
         if not os.path.exists(self.default_output_folder):
@@ -25,17 +25,14 @@ class JsonSaver:
             filename (str): The name of the JSON file.
             custom_folder (str, optional): A custom folder path for saving the file.
         """
-        # Use the custom folder if provided; otherwise, use the default folder
         output_folder = custom_folder if custom_folder else self.default_output_folder
         
-        # Create the custom folder if it does not exist
+        # Create the output folder if it does not exist
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
         
-        # Create the full file path
         filepath = os.path.join(output_folder, filename)
         
-        # Save the data to JSON
         with open(filepath, 'w') as file:
             json.dump(data, file, indent=4)
         

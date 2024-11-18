@@ -1,32 +1,42 @@
 [
     {
-        "Team A": "El Salvador",
-        "Team B": "Montserrat",
-        "Result": "A win",
-        "Rule Applied": 1
+        "id": 9510,
+        "Home Team": "San Martin San Juan",
+        "Away Team": "All Boys",
+        "Team A": "All Boys",
+        "Team B": "San Martin San Juan",
+        "Card": "Win Away Team",
+        "Rule Applied": 1,
+        "Score": "2-2"
     },
     {
+        "id": 9442,
+        "Home Team": "CA Penarol",
+        "Away Team": "Defensor Sporting Montevideo",
         "Team A": "CA Penarol",
         "Team B": "Defensor Sporting Montevideo",
-        "Result": "A win or draw",
-        "Rule Applied": 23
+        "Card": "Win Home Team",
+        "Rule Applied": 1,
+        "Score": "2-0"
     },
     {
-        "Team A": "San Martin San Juan",
-        "Team B": "All Boys",
-        "Result": "A win or draw",
-        "Rule Applied": 27
-    },
-    {
+        "id": 9511,
+        "Home Team": "Municipal Liberia",
+        "Away Team": "Deportivo Saprissa",
         "Team A": "Deportivo Saprissa",
         "Team B": "Municipal Liberia",
-        "Result": "A or B win",
-        "Rule Applied": 40
+        "Card": "Win Home or Away Team",
+        "Rule Applied": 40,
+        "Score": "0-0"
     },
     {
+        "id": 9515,
+        "Home Team": "St. Vincent   Grenadines",
+        "Away Team": "Bonaire",
         "Team A": "St. Vincent   Grenadines",
         "Team B": "Bonaire",
-        "Result": "A win or draw",
-        "Rule Applied": 14
+        "Card": "Win Home Team",
+        "Rule Applied": 1,
+        "Score": "3-1"
     }
 ]

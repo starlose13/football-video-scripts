@@ -1,7 +1,6 @@
 import logging
 from .team_status import TeamAStatus, TeamBStatus
 
-# تنظیمات اولیه برای لاگ
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def classify_a_team(a_odds):

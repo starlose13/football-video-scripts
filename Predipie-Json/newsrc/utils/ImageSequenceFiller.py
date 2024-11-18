@@ -29,7 +29,6 @@ templates = [
     '../assets/away.jpg'
 ]
 
-#GPT correct this part
 json_paths = {
     "match_introduction": os.path.join(base_json_dir, "team_info.json"),
     "stats": os.path.join(base_json_dir, "match_times.json"),
@@ -41,27 +40,22 @@ json_paths = {
 def get_game_data(index):
     data = {}
 
-    # خواندن اطلاعات برای عکس match-introduction.jpg
     team_info_data = load_json_data(json_paths["match_introduction"])
     if isinstance(team_info_data, list) and index < len(team_info_data):
         data['match_introduction'] = team_info_data[index]  # ایندکس مسابقه
 
-    # خواندن اطلاعات برای عکس stats.jpg
     match_times_data = load_json_data(json_paths["stats"])
     if isinstance(match_times_data, list) and index < len(match_times_data):
         data['stats'] = match_times_data[index]
 
-    # خواندن اطلاعات برای عکس odds.jpg
     odds_data = load_json_data(json_paths["odds"])
     if isinstance(odds_data, list) and index < len(odds_data):
         data['odds'] = odds_data[index]
 
-    # خواندن اطلاعات برای عکس recent-matches.jpg
     recent_matches_data = load_json_data(json_paths["recent_matches"])
     if isinstance(recent_matches_data, list) and index < len(recent_matches_data):
         data['recent_matches'] = recent_matches_data[index]
 
-    # خواندن اطلاعات کارد برای فیلد Result
     card_results_data = load_json_data(json_paths["card_results"])
     if isinstance(card_results_data, list) and index < len(card_results_data):
         data['card'] = card_results_data[index].get('Result', "")

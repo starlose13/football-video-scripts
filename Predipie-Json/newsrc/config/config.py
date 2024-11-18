@@ -10,8 +10,8 @@ load_dotenv()
 SHOTSTACK_API_KEY = os.getenv("SHOTSTACK_API_KEY")
 CREATIFY_API_ID = os.getenv("CREATIFY_API_ID")
 CREATIFY_API_KEY = os.getenv("CREATIFY_API_KEY")
-BASE_URL = "https://data-provider.ledoso.com"
-PROGRAM_NAME = "PrediPie TV Series"
+BASE_URL = os.getenv("BASE_DATA_PROVIDER_URL") 
+PROGRAM_NAME = os.getenv("PROGRAM_NAME")
 today = datetime.now()
 yesterday = today - timedelta(days=1)
 START_AFTER = today.strftime("%Y-%m-%d")

@@ -11,10 +11,7 @@ class FetchTeamInfo(BaseMatchPipeline):
         """
         Fetches the team names and logos for recent matches.
         """
-        # Retrieve match data
         matches = self.get_matches(start_after)
-        
-        # Extract team information (names and logos)
         team_info_list = []
         for match in matches:
             team_info = {

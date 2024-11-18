@@ -1,115 +1,77 @@
 [
     {
-        "id": 9513,
-        "home_team": "El Salvador",
-        "away_team": "Montserrat",
-        "home_rank": "83",
-        "away_rank": "180",
+        "id": 9510,
+        "home_team": "San Martin San Juan",
+        "away_team": "All Boys",
+        "home_rank": "2",
+        "away_rank": "4",
         "odds": [
             {
-                "draw": 41,
-                "score": "1-0",
-                "awayWin": 501,
-                "homeWin": 1,
+                "draw": 19,
+                "score": "1-2",
+                "awayWin": 1.02,
+                "homeWin": 501,
                 "isSealed": 0,
-                "matchTime": "94",
-                "changeTime": 1731898166,
+                "matchTime": "99",
+                "changeTime": 1731887618,
                 "matchStatus": 4
             }
         ]
     },
     {
-        "id": 9458,
-        "home_team": "Spain",
-        "away_team": "Switzerland",
-        "home_rank": "3",
-        "away_rank": "17",
+        "id": 9442,
+        "home_team": "CA Penarol",
+        "away_team": "Defensor Sporting Montevideo",
+        "home_rank": "2",
+        "away_rank": "6",
         "odds": [
             {
-                "draw": 4.75,
-                "score": "0-0",
-                "awayWin": 6.5,
-                "homeWin": 1.44,
-                "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1731930166,
-                "matchStatus": 1
+                "draw": 26,
+                "score": "1-0",
+                "awayWin": 501,
+                "homeWin": 1.01,
+                "isSealed": 1,
+                "matchTime": "92",
+                "changeTime": 1731885951,
+                "matchStatus": 4
             }
         ]
     },
     {
-        "id": 9541,
-        "home_team": "Bulgaria",
-        "away_team": "Belarus",
-        "home_rank": "84",
-        "away_rank": "97",
+        "id": 9511,
+        "home_team": "Municipal Liberia",
+        "away_team": "Deportivo Saprissa",
+        "home_rank": "8",
+        "away_rank": "3",
         "odds": [
             {
                 "draw": 3.4,
                 "score": "0-0",
-                "awayWin": 5,
-                "homeWin": 1.75,
+                "awayWin": 2.3,
+                "homeWin": 2.7,
                 "isSealed": 0,
                 "matchTime": "",
-                "changeTime": 1731928593,
-                "matchStatus": 1
+                "changeTime": 1731549293,
+                "matchStatus": 9
             }
         ]
     },
     {
-        "id": 10404,
-        "home_team": "Aruba",
-        "away_team": "Sint Maarten",
-        "home_rank": "195",
+        "id": 9515,
+        "home_team": "St. Vincent   Grenadines",
+        "away_team": "Bonaire",
+        "home_rank": "174",
         "away_rank": 0,
         "odds": [
             {
-                "draw": 3.75,
-                "score": "0-0",
-                "awayWin": 2.75,
-                "homeWin": 2.3,
+                "draw": 51,
+                "score": "3-1",
+                "awayWin": 451,
+                "homeWin": 1,
                 "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1731921260,
-                "matchStatus": 1
-            }
-        ]
-    },
-    {
-        "id": 9463,
-        "home_team": "Cerro Montevideo",
-        "away_team": "Boston River",
-        "home_rank": "14",
-        "away_rank": "3",
-        "odds": [
-            {
-                "draw": 3.25,
-                "score": "0-0",
-                "awayWin": 2.25,
-                "homeWin": 3.25,
-                "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1731914917,
-                "matchStatus": 1
-            }
-        ]
-    },
-    {
-        "id": 10402,
-        "home_team": "Grenada",
-        "away_team": "French Saint-Martin",
-        "home_rank": "175",
-        "away_rank": 0,
-        "odds": [
-            {
-                "draw": 5.5,
-                "score": "0-0",
-                "awayWin": 7,
-                "homeWin": 1.36,
-                "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1731921260,
-                "matchStatus": 1
+                "matchTime": "85",
+                "changeTime": 1731879653,
+                "matchStatus": 4
             }
         ]
     }

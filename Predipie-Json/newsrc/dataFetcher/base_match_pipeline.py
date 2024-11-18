@@ -22,7 +22,7 @@ class BaseMatchPipeline:
         """
         Get recent matches from the API.
         """
-        return self.fetch_data("predipie/well-known", params={"startAfter": start_after}).get("results", [])
+        return self.fetch_data("predipie/well-known", params={"startAfter": start_after}).get("results", [])    
 
     def classify_match_data(self, match_data: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -137,6 +137,16 @@ class BaseMatchPipeline:
         """
         raw_matches = self.get_recent_matches(start_after)
         return [self.classify_match_data(match) for match in raw_matches]
+    
+    def get_final_score(self, match_id: str, start_after: str) -> str:
+        """
+        Retrieve the final score for a specific match by match_id.
+        """
+        matches = self.get_matches(start_after=start_after)
+        for match in matches:
+            if match.get("id") == match_id:
+                return match.get("scores", {}).get("finalScore", "N/A")
+        return "N/A"
 
 if __name__ == "__main__":
     base_pipeline = BaseMatchPipeline(base_url=BASE_URL)
