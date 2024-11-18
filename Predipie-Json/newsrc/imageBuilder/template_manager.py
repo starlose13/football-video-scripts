@@ -29,7 +29,7 @@ class TemplateManager:
         "home_team_logo": (410, 340),
         "home_team_name": (730, 400),
         "away_team_logo": (3220, 340),
-        "away_team_name": (2480, 400),
+        "away_team_name": (2660, 400),
         "match_date": (1700, 1307),
         "match_time": (1994, 1307),
         "match_day": (1554, 1307),

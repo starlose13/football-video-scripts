@@ -59,8 +59,9 @@ class ImageGenerator:
 
             # رندر تصویر با استفاده از ImageRenderer
             rendered_image = self.renderer.render_image(
-            template_image, combined_data, combined_positions
-            )
+    template_image, combined_data, combined_positions, i  # اضافه کردن image_index
+)
+
             images.append(rendered_image)
 
             # به‌روزرسانی accumulated_data و accumulated_positions برای استفاده در تصویر بعدی
