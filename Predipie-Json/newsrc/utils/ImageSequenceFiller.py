@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 #GPT optimize and call from existing folders(modules)
-output_dir = "./output" 
+output_dir = "./output_second_video_images" 
 os.makedirs(output_dir, exist_ok=True)
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
 creatify_api_id = os.getenv("CREATIFY_API_ID")
