@@ -3,15 +3,17 @@ from .data_loader import DataLoader
 from .template_manager import TemplateManager
 from .image_renderer import ImageRenderer
 from PIL import Image
+import os
 
 class ImageGenerator:
     def __init__(self):
+        # استفاده از مسیرهای موجود در Config
         self.data_loader = DataLoader(Config.json_paths)
         self.renderer = ImageRenderer()
-            
+
     def generate_images_for_game(self, game_id):
         images = []
-        
+
         # دریافت داده‌های مربوط به بازی برای هر JSON
         game_data = self.data_loader.get_game_data(game_id)
         
@@ -19,7 +21,7 @@ class ImageGenerator:
         json_data_stats = game_data.get("stats", {})
         json_data_odds = game_data.get("odds", {})
         json_data_recent_matches = game_data.get("recent_matches", {})
-        json_data_card = game_data.get("card", "")
+        json_data_card = game_data.get("card", {})
 
         # داده‌ها برای هر تصویر
         image_specific_data = [
@@ -36,24 +38,14 @@ class ImageGenerator:
 
         # تولید هر تصویر به ترتیب و با اطلاعات قبلی
         for i, template_path in enumerate(Config.templates):
+            # برای تصویر پنجم، قالب بر اساس مقدار `Card` انتخاب می‌شود
             if i == 4:
-                # بررسی مقدار فیلد Card و انتخاب تصویر مناسب برای عکس پنجم
-                card_result = image_specific_data[i].strip() if isinstance(image_specific_data[i], str) else "none"
-                print(f"Card result for game ID {game_id}: {card_result}")  # چاپ مقدار Card برای بررسی
-                
-                # استفاده از .strip() برای حذف فضاهای اضافی و مقایسه حساس به حروف کوچک و بزرگ
-                if card_result == "Win Home Team":
-                    template_path = '../assets/home.jpg'
-                elif card_result == "Win or Draw Home Team":
-                    template_path = '../assets/home-draw.jpg'
-                elif card_result == "Win or Draw Away Team":
-                    template_path = '../assets/away-draw.jpg'
-                elif card_result == "Win Away Team":
-                    template_path = '../assets/away.jpg'
-                elif card_result == "Win Home or Away Team":
-                    template_path = '../assets/home-away.jpg'
-                else:
-                    print(f"No matching card result for game ID {game_id}. Using default template.")
+                card_result = json_data_card if isinstance(json_data_card, str) else json_data_card.get("Card", "none")
+                print(f"Card result for game ID {game_id}: {card_result}")
+
+                # انتخاب قالب مناسب بر اساس مقدار Card
+                template_path = self._get_template_path_by_card(card_result)
+                print(f"Template selected for Card '{card_result}': {template_path}")
 
             try:
                 template_image = Image.open(template_path)
@@ -101,7 +93,7 @@ class ImageGenerator:
             match_time = json_data.get("time", "")
             return {
                 "match_date": json_data.get("date", ""),
-                "match_time": f"{match_time} (UTC Time)",
+                "match_time": f"{match_time} (UTC)",
                 "match_day": json_data.get("day", "")
             }
         elif image_index == 2:  # برای odds.jpg
@@ -119,3 +111,16 @@ class ImageGenerator:
         elif image_index == 4:  # برای نتیجه کارت (match_prediction_result)
             return {"Card": json_data} if isinstance(json_data, str) else {}
         return {}
+
+    def _get_template_path_by_card(self, card_result):
+        """
+        انتخاب مسیر قالب بر اساس مقدار Card.
+        """
+        card_templates = {
+            "Win Home Team": os.path.join(Config.assets_dir, 'home.jpg'),
+            "Win or Draw Home Team": os.path.join(Config.assets_dir, 'home-draw.jpg'),
+            "Win or Draw Away Team": os.path.join(Config.assets_dir, 'away-draw.jpg'),
+            "Win Away Team": os.path.join(Config.assets_dir, 'away.jpg'),
+            "Win Home or Away Team": os.path.join(Config.assets_dir, 'home-away.jpg')
+        }
+        return card_templates.get(card_result.strip(), Config.templates[4])  # strip برای حذف فضاهای اضافی
