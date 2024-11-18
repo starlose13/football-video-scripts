@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 import json
 from PIL import Image, ImageDraw, ImageFont, ImageOps
@@ -6,9 +7,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-
-# Generate images and save them to the output directory
-folder = "generated_images"  # GitHub repository folder to save images
+#GPT optimize and call from existing folders(modules)
 output_dir = "./output" 
 os.makedirs(output_dir, exist_ok=True)
 shotstack_api_key = os.getenv("SHOTSTACK_API_KEY")
@@ -18,25 +17,57 @@ creatify_api_key = os.getenv("CREATIFY_API_KEY")
 if not shotstack_api_key:
     raise ValueError("SHOTSTACK_API_KEY is missing. Please check your .env file.")
 
-# Automatically set the base directory for JSON files relative to the script's location
-base_json_dir = os.path.join(os.path.dirname(__file__), 'scene{scene_num}')
+#GPT correct this part
+today_date = datetime.today().strftime('%Y-%m-%d')
+base_json_dir = os.path.join("..", today_date + "_json_match_output_folder")
 # Define the image template paths
 templates = [
-    './assets/match-introduction.jpg',
-    './assets/stats.jpg',
-    './assets/odds.jpg',
-    './assets/recent-matches.jpg',
-    './assets/away.jpg'
+    '../assets/match-introduction.jpg',
+    '../assets/stats.jpg',
+    '../assets/odds.jpg',
+    '../assets/recent-matches.jpg',
+    '../assets/away.jpg'
 ]
 
-# Define JSON path templates for each image, replacing scene number dynamically
-json_paths = [
-    os.path.join(base_json_dir.format(scene_num=2), 'match_{i}.json'),
-    os.path.join(base_json_dir.format(scene_num=3), 'match_{i}.json'),
-    os.path.join(base_json_dir.format(scene_num=4), 'match_{i}.json'),
-    os.path.join(base_json_dir.format(scene_num=5), 'match_{i}.json'),
-    os.path.join(base_json_dir.format(scene_num=6), 'match_{i}.json')
-]
+#GPT correct this part
+json_paths = {
+    "match_introduction": os.path.join(base_json_dir, "team_info.json"),
+    "stats": os.path.join(base_json_dir, "match_times.json"),
+    "odds": os.path.join(base_json_dir, "odds_ranks_data.json"),
+    "recent_matches": os.path.join(base_json_dir, "last5matches_data.json"),
+    "card_results": os.path.join(base_json_dir, "match_prediction_result.json")
+}
+
+def get_game_data(index):
+    data = {}
+
+    # خواندن اطلاعات برای عکس match-introduction.jpg
+    team_info_data = load_json_data(json_paths["match_introduction"])
+    if isinstance(team_info_data, list) and index < len(team_info_data):
+        data['match_introduction'] = team_info_data[index]  # ایندکس مسابقه
+
+    # خواندن اطلاعات برای عکس stats.jpg
+    match_times_data = load_json_data(json_paths["stats"])
+    if isinstance(match_times_data, list) and index < len(match_times_data):
+        data['stats'] = match_times_data[index]
+
+    # خواندن اطلاعات برای عکس odds.jpg
+    odds_data = load_json_data(json_paths["odds"])
+    if isinstance(odds_data, list) and index < len(odds_data):
+        data['odds'] = odds_data[index]
+
+    # خواندن اطلاعات برای عکس recent-matches.jpg
+    recent_matches_data = load_json_data(json_paths["recent_matches"])
+    if isinstance(recent_matches_data, list) and index < len(recent_matches_data):
+        data['recent_matches'] = recent_matches_data[index]
+
+    # خواندن اطلاعات کارد برای فیلد Result
+    card_results_data = load_json_data(json_paths["card_results"])
+    if isinstance(card_results_data, list) and index < len(card_results_data):
+        data['card'] = card_results_data[index].get('Result', "")
+
+    return data
+
 
 base_positions = {
     "home_team_logo": (410, 845),
@@ -66,7 +97,7 @@ def add_program_number_to_starting_scene(json_path, image_path, output_path, pos
         position (tuple): Position (x, y) to place the program number on the image.
         font_size (int): Font size for the program number text.
     """
-    # Load the program number from the JSON file
+    # optimize and call from existing folders(modules)
     try:
         with open(json_path, 'r') as file:
             json_data = json.load(file)
@@ -81,7 +112,7 @@ def add_program_number_to_starting_scene(json_path, image_path, output_path, pos
     image = Image.open(image_path)
     draw = ImageDraw.Draw(image)
     
-    # Load the font
+    #GPT optimize and call from existing folders(modules) or add module
     try:
         font = ImageFont.truetype("Roboto-Bold.ttf", font_size)
     except IOError:
@@ -99,7 +130,7 @@ def add_program_number_to_starting_scene(json_path, image_path, output_path, pos
     print(f"Image saved at {output_path}")
 
 
-
+#GPT optimize or call from other modules
 def load_json_data(filepath):
     try:
         with open(filepath, 'r') as file:
@@ -107,39 +138,48 @@ def load_json_data(filepath):
     except FileNotFoundError:
         print(f"Warning: JSON file not found at {filepath}")
         return {}  # Return an empty dictionary if the file is missing
+#GPT optimize or call from other modules
 
 def get_data_for_image(json_data, image_index):
-    # Same data extraction logic based on image index
+    # اگر json_data یک لیست باشد، از ایندکس مناسب استفاده کنید
+    if isinstance(json_data, list) and image_index < len(json_data):
+        json_data = json_data[image_index]
+
+    # اکنون json_data باید یک دیکشنری باشد و می‌توانیم از .get() استفاده کنیم
     if image_index == 0:
         return {
-            "home_team_name": json_data.get("home_team", {}).get("name", ""),
-            "home_team_logo": json_data.get("home_team", {}).get("logo", ""),
-            "away_team_name": json_data.get("away_team", {}).get("name", ""),
-            "away_team_logo": json_data.get("away_team", {}).get("logo", "")
+            "home_team_name": json_data.get("home_team_name", ""),
+            "home_team_logo": json_data.get("home_team_logo", ""),
+            "away_team_name": json_data.get("away_team_name", ""),
+            "away_team_logo": json_data.get("away_team_logo", "")
         }
     elif image_index == 1:
         return {
-            "match_date": json_data.get("match_date", ""),
-            "match_time": json_data.get("match_time", ""),
-            "match_day": json_data.get("match_day", "")
+            "match_date": json_data.get("date", ""),
+            "match_time": json_data.get("time", ""),
+            "match_day": json_data.get("day", "")
         }
     elif image_index == 2:
+        # دسترسی به اولین عنصر در لیست odds برای استخراج homeWin، draw و awayWin
+        odds_data = json_data.get("odds", [{}])[0]
         return {
-            "home_odds": json_data.get("odds", {}).get("home", ""),
-            "draw_odds": json_data.get("odds", {}).get("draw", ""),
-            "away_odds": json_data.get("odds", {}).get("away", "")
-            
+            "home_odds": odds_data.get("homeWin", ""),
+            "draw_odds": odds_data.get("draw", ""),
+            "away_odds": odds_data.get("awayWin", "")
         }
     elif image_index == 3:
         return {
-            "home_team_last_5": json_data.get("recent_form", {}).get("home_team", {}).get("last_5_matches", ""),
-            "away_team_last_5": json_data.get("recent_form", {}).get("away_team", {}).get("last_5_matches", "")
+            "home_team_last_5": json_data.get("home_team", {}).get("last_5_matches", {}),
+            "away_team_last_5": json_data.get("away_team", {}).get("last_5_matches", {})
         }
     elif image_index == 4:
+        # دسترسی به نتیجه کارت برای بازی با ایندکس game_index
         return {
-            "card": json_data.get("card", "")
+            "card": json_data.get("Result", "")
         }
     return {}
+
+
 
 
 def fill_image_template(template_path, json_data, positions, previous_positions=None, previous_data=None, font_size=80):
@@ -158,9 +198,9 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
         medium_font = ImageFont.load_default()
 
     icon_size = (60, 60)
-    win_icon = Image.open('./assets/win.png').resize(icon_size)
-    draw_icon = Image.open('./assets/draw.png').resize(icon_size)
-    lose_icon = Image.open('./assets/lose.png').resize(icon_size)
+    win_icon = Image.open('../assets/win.png').resize(icon_size)
+    draw_icon = Image.open('../assets/draw.png').resize(icon_size)
+    lose_icon = Image.open('../assets/lose.png').resize(icon_size)
     # Combine previous and current positions and data
     all_positions = {**(previous_positions or {}), **positions}
     all_data = {**(previous_data or {}), **json_data}  # Ensure previous_data is included in every image
@@ -266,6 +306,7 @@ def fill_image_template(template_path, json_data, positions, previous_positions=
     return image, all_positions, all_data
 
 
+#GPT optimize or call from other modules
 
 def generate_images_for_game(game_index, templates, json_paths, position_mappings):
     images = []
@@ -296,10 +337,24 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
     }
     
     for i, template_path in enumerate(templates):
-        json_data_path = json_paths[i].format(i=game_index + 1)
+        # Select the correct JSON data file for each template type
+        if i == 0:
+            json_data_path = json_paths["match_introduction"]
+        elif i == 1:
+            json_data_path = json_paths["stats"]
+        elif i == 2:
+            json_data_path = json_paths["odds"]
+        elif i == 3:
+            json_data_path = json_paths["recent_matches"]
+        elif i == 4:
+            json_data_path = json_paths["card_results"]
         
         # Load JSON data with error handling
         json_data = load_json_data(json_data_path)
+        
+        # Ensure json_data is a list and access the specific game data using game_index
+        if isinstance(json_data, list):
+            json_data = json_data[game_index] if game_index < len(json_data) else {}
         
         # Get specific data for the current image
         image_data = get_data_for_image(json_data, i)
@@ -309,15 +364,15 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
             card_result = image_data.get("card", "")
             # Determine the template based on card result
             if card_result == "Win or Draw Away Team":
-                template_path = './assets/draw-away.jpg'
+                template_path = '../assets/draw-away.jpg'
             elif card_result == "Win or Draw Home Team":
-                template_path = './assets/home-draw.jpg'
+                template_path = '../assets/home-draw.jpg'
             elif card_result == "Win Home or Away Team":
-                template_path = './assets/home-away.jpg'
+                template_path = '../assets/home-away.jpg'
             elif card_result == "Win Home Team":
-                template_path = './assets/home.jpg'
+                template_path = '../assets/home.jpg'
             elif card_result == "Win Away Team":
-                template_path = './assets/away.jpg'
+                template_path = '../assets/away.jpg'
             else:
                 template_path = templates[i]  # Default to original fifth image if card result doesn't match
             
@@ -343,6 +398,9 @@ def generate_images_for_game(game_index, templates, json_paths, position_mapping
     return images
 
 
+
+#GPT generate a separated filee or module for this part
+
 def get_signed_url():
     signed_url_request_url = "https://api.shotstack.io/ingest/v1/upload"
     headers = {"Accept": "application/json", "x-api-key": shotstack_api_key}
@@ -352,7 +410,7 @@ def get_signed_url():
         return data.get("url"), data.get("id")
     print("Failed to obtain signed URL:", response.status_code, response.text)
     return None, None
-
+#GPT generate a separated filee or module for this part
 def upload_image_to_shotstack(image_path, file_name):
     signed_url, source_id = get_signed_url()
     if not signed_url:
@@ -370,7 +428,7 @@ def upload_image_to_shotstack(image_path, file_name):
     return None
 
 uploaded_files = {}
-
+#GPT generate a separated filee or module for this part
 def check_upload_status(source_id):
     """Check the status of the uploaded image by source ID."""
     status_url = f"https://api.shotstack.io/ingest/v1/sources/{source_id}"
@@ -382,6 +440,7 @@ def check_upload_status(source_id):
     print("Failed to retrieve upload status:", status_response.status_code, status_response.text)
     return None, None
 
+#GPT correct this part
 
 for game_index in range(5):  # Assuming 5 games
     game_images = generate_images_for_game(game_index, templates, json_paths, position_mappings)
@@ -392,11 +451,11 @@ for game_index in range(5):  # Assuming 5 games
         img.save(image_path)
         
         # Upload each image to Shotstack
-        source_id = upload_image_to_shotstack(image_path, file_name)
-        if source_id:
-            print(f"Upload completed for {image_path} with source ID: {source_id}")
-            # Save only the source ID in the uploaded_files dictionary
-            uploaded_files[file_name] = source_id
+        # source_id = upload_image_to_shotstack(image_path, file_name)
+        # if source_id:
+        #     print(f"Upload completed for {image_path} with source ID: {source_id}")
+        #     # Save only the source ID in the uploaded_files dictionary
+        #     uploaded_files[file_name] = source_id
 
 # Save all uploaded file names and source IDs
 with open("uploaded_files.json", "w") as f:
@@ -404,24 +463,24 @@ with open("uploaded_files.json", "w") as f:
 print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
 
 
-# Upload the starting scene with program number to Shotstack
-starting_scene_json_path = './program_number.json'
-starting_scene_image_path = './assets/starting-scene.jpg'
-starting_scene_output_path = './output/starting-scene-with-program-number.jpg'
-add_program_number_to_starting_scene(starting_scene_json_path, starting_scene_image_path, starting_scene_output_path)
+# # Upload the starting scene with program number to Shotstack
+# starting_scene_json_path = './program_number.json'
+# starting_scene_image_path = './assets/starting-scene.jpg'
+# starting_scene_output_path = './output/starting-scene-with-program-number.jpg'
+# add_program_number_to_starting_scene(starting_scene_json_path, starting_scene_image_path, starting_scene_output_path)
 
-# Track starting scene upload with file name
-source_id = upload_image_to_shotstack(starting_scene_output_path, "starting-scene-with-program-number.jpg")
+# # Track starting scene upload with file name
+# source_id = upload_image_to_shotstack(starting_scene_output_path, "starting-scene-with-program-number.jpg")
 
-if source_id:
-    status, url = check_upload_status(source_id)
-    print(f"Starting scene upload status: {status}")
-    if status == "ready":
-        print(f"Starting scene URL: {url}")
-        # Add the starting scene's URL to uploaded_files
-        uploaded_files["starting-scene-with-program-number.jpg"] = source_id
+# if source_id:
+#     status, url = check_upload_status(source_id)
+#     print(f"Starting scene upload status: {status}")
+#     if status == "ready":
+#         print(f"Starting scene URL: {url}")
+#         # Add the starting scene's URL to uploaded_files
+#         uploaded_files["starting-scene-with-program-number.jpg"] = source_id
 
-# Save all uploaded file names and source IDs to JSON
-with open("uploaded_files.json", "w") as f:
-    json.dump(uploaded_files, f, indent=4)
-print("Uploaded file names and source IDs have been saved to uploaded_files.json.")
+# # Save all uploaded file names and source IDs to JSON
+# with open("uploaded_files.json", "w") as f:
+#     json.dump(uploaded_files, f, indent=4)
+# print("Uploaded file names and source IDs have been saved to uploaded_files.json.")

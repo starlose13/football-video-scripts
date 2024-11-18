@@ -1,0 +1,42 @@
+[
+    {
+        "id": 9463,
+        "home_team": "Cerro Montevideo",
+        "away_team": "Boston River",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "10 pm"
+    },
+    {
+        "id": 9541,
+        "home_team": "Bulgaria",
+        "away_team": "Belarus",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "7:45 pm"
+    },
+    {
+        "id": 9458,
+        "home_team": "Spain",
+        "away_team": "Switzerland",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "7:45 pm"
+    },
+    {
+        "id": 10404,
+        "home_team": "Aruba",
+        "away_team": "Sint Maarten",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "9 pm"
+    },
+    {
+        "id": 10402,
+        "home_team": "Grenada",
+        "away_team": "French Saint-Martin",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "9 pm"
+    }
+]

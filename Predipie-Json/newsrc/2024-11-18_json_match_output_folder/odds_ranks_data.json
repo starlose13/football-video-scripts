@@ -1,0 +1,116 @@
+[
+    {
+        "id": 9541,
+        "home_team": "Bulgaria",
+        "away_team": "Belarus",
+        "home_rank": "84",
+        "away_rank": "97",
+        "odds": [
+            {
+                "draw": 3.8,
+                "score": "0-0",
+                "awayWin": 4.75,
+                "homeWin": 1.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731863837,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9463,
+        "home_team": "Cerro Montevideo",
+        "away_team": "Boston River",
+        "home_rank": "14",
+        "away_rank": "3",
+        "odds": [
+            {
+                "draw": 3.2,
+                "score": "0-0",
+                "awayWin": 2.25,
+                "homeWin": 3.3,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731876602,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9513,
+        "home_team": "El Salvador",
+        "away_team": "Montserrat",
+        "home_rank": "83",
+        "away_rank": "180",
+        "odds": [
+            {
+                "draw": 6.25,
+                "score": "0-0",
+                "awayWin": 8.5,
+                "homeWin": 1.25,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731881614,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 9458,
+        "home_team": "Spain",
+        "away_team": "Switzerland",
+        "home_rank": "3",
+        "away_rank": "17",
+        "odds": [
+            {
+                "draw": 4.75,
+                "score": "0-0",
+                "awayWin": 6.5,
+                "homeWin": 1.45,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731880027,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10404,
+        "home_team": "Aruba",
+        "away_team": "Sint Maarten",
+        "home_rank": "195",
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.5,
+                "score": "0-0",
+                "awayWin": 2.7,
+                "homeWin": 2.2,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731863921,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10402,
+        "home_team": "Grenada",
+        "away_team": "French Saint-Martin",
+        "home_rank": "175",
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 5.25,
+                "score": "0-0",
+                "awayWin": 7.5,
+                "homeWin": 1.27,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1731867496,
+                "matchStatus": 1
+            }
+        ]
+    }
+]

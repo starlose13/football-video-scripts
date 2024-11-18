@@ -1,0 +1,38 @@
+[
+    {
+        "Team A": "El Salvador",
+        "Team B": "Montserrat",
+        "Result": "A win",
+        "Rule Applied": 1
+    },
+    {
+        "Team A": "Boston River",
+        "Team B": "Cerro Montevideo",
+        "Result": "No result found",
+        "Rule Applied": null
+    },
+    {
+        "Team A": "Spain",
+        "Team B": "Switzerland",
+        "Result": "A win or draw",
+        "Rule Applied": 21
+    },
+    {
+        "Team A": "Bulgaria",
+        "Team B": "Belarus",
+        "Result": "A win or draw",
+        "Rule Applied": 26
+    },
+    {
+        "Team A": "Aruba",
+        "Team B": "Sint Maarten",
+        "Result": "A or B win",
+        "Rule Applied": 38
+    },
+    {
+        "Team A": "Grenada",
+        "Team B": "French Saint-Martin",
+        "Result": "A win",
+        "Rule Applied": 1
+    }
+]

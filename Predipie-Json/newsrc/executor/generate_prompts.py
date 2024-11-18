@@ -268,11 +268,11 @@ class GeneratePrompts:
         # Append data for each game
         for i in range(5):
             narration_text += (
-                team_info_result[i]["prompt"] + "\n" +
-                match_stats_result[i]["prompt"] + "\n" +
-                odds_result[i]["prompt"] + "\n" +
-                last5matches_result[i]["prompt"] + "\n" +
-                match_result_prompts[i]["prompt"] + "\n\n"
+                team_info_result[i]["prompt"] +
+                match_stats_result[i]["prompt"] +
+                odds_result[i]["prompt"] +
+                last5matches_result[i]["prompt"] + 
+                match_result_prompts[i]["prompt"]
             )
 
         # Append the closing section

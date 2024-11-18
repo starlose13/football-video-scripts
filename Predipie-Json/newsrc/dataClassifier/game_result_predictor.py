@@ -283,7 +283,6 @@ class GameResultPredictor:
                 # Default condition if no match is found
                 return "No result found", None
 
-
     def predict_game_results(self):
         """
         Predicts game results based on team odds, recent performance, 
