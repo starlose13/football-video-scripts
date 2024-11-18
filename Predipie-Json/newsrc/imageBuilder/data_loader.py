@@ -18,6 +18,7 @@ class DataLoader:
         self.odds_data = self.load_json_data(json_paths["odds"])
         self.recent_matches_data = self.load_json_data(json_paths["recent_matches"])
         self.card_results_data = self.load_json_data(json_paths["card_results"])
+
     @staticmethod
     def load_json_data(filepath):
         try:
@@ -64,10 +65,10 @@ class DataLoader:
         else:
             print(f"Warning: No recent matches found for game_id {game_id}")
 
-        # جستجو در card_results_data
+        # جستجو در card_results_data با استفاده از id
         card_result = next((item for item in self.card_results_data if item.get("id") == game_id), None)
         if card_result:
-            data['card'] = card_result.get('Result', "")
+            data['card'] = card_result.get('Card', "")
         else:
             print(f"Warning: No card result found for game_id {game_id}")
 

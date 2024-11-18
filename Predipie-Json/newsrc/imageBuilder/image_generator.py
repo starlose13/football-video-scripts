@@ -8,18 +8,20 @@ class ImageGenerator:
     def __init__(self):
         self.data_loader = DataLoader(Config.json_paths)
         self.renderer = ImageRenderer()
-        
+            
     def generate_images_for_game(self, game_id):
         images = []
         
         # دریافت داده‌های مربوط به بازی برای هر JSON
-        json_data_match_introduction = self.data_loader.get_game_data(game_id).get("match_introduction", {})
-        json_data_stats = self.data_loader.get_game_data(game_id).get("stats", {})
-        json_data_odds = self.data_loader.get_game_data(game_id).get("odds", {})
-        json_data_recent_matches = self.data_loader.get_game_data(game_id).get("recent_matches", {})
-        json_data_card = self.data_loader.get_game_data(game_id).get("card", "")
+        game_data = self.data_loader.get_game_data(game_id)
+        
+        json_data_match_introduction = game_data.get("match_introduction", {})
+        json_data_stats = game_data.get("stats", {})
+        json_data_odds = game_data.get("odds", {})
+        json_data_recent_matches = game_data.get("recent_matches", {})
+        json_data_card = game_data.get("card", "")
 
-        # داده‌ها برای هر تصویر به ترتیب
+        # داده‌ها برای هر تصویر
         image_specific_data = [
             json_data_match_introduction,
             json_data_stats,
@@ -28,12 +30,31 @@ class ImageGenerator:
             json_data_card
         ]
 
-        # تعریف متغیرهای انباشته برای نگهداری داده‌ها و موقعیت‌های قبلی
-        accumulated_data = {}
-        accumulated_positions = {}
+        # تعریف لیست برای ذخیره موقعیت‌ها و داده‌های قبلی
+        previous_positions = {}
+        previous_data = {}
 
-        # تولید هر تصویر به ترتیب و با داده‌های انباشته
+        # تولید هر تصویر به ترتیب و با اطلاعات قبلی
         for i, template_path in enumerate(Config.templates):
+            if i == 4:
+                # بررسی مقدار فیلد Card و انتخاب تصویر مناسب برای عکس پنجم
+                card_result = image_specific_data[i].strip() if isinstance(image_specific_data[i], str) else "none"
+                print(f"Card result for game ID {game_id}: {card_result}")  # چاپ مقدار Card برای بررسی
+                
+                # استفاده از .strip() برای حذف فضاهای اضافی و مقایسه حساس به حروف کوچک و بزرگ
+                if card_result == "Win Home Team":
+                    template_path = '../assets/home.jpg'
+                elif card_result == "Win or Draw Home Team":
+                    template_path = '../assets/home-draw.jpg'
+                elif card_result == "Win or Draw Away Team":
+                    template_path = '../assets/away-draw.jpg'
+                elif card_result == "Win Away Team":
+                    template_path = '../assets/away.jpg'
+                elif card_result == "Win Home or Away Team":
+                    template_path = '../assets/home-away.jpg'
+                else:
+                    print(f"No matching card result for game ID {game_id}. Using default template.")
+
             try:
                 template_image = Image.open(template_path)
                 print(f"Opened template: {template_path} for image index {i}")
@@ -41,32 +62,27 @@ class ImageGenerator:
                 print(f"Error: Template file not found at {template_path}")
                 continue
 
-            # دریافت موقعیت‌های مخصوص برای هر تصویر با استفاده از TemplateManager
+            # دریافت موقعیت‌ها برای هر تصویر با استفاده از TemplateManager
             positions = TemplateManager.get_adjusted_positions(i)
             print(f"Positions for image index {i}: {positions}")
 
-            # دریافت داده‌های مربوط به هر تصویر و ترکیب آن‌ها با داده‌های انباشته
-            current_image_data = self._get_data_for_image(image_specific_data[i], i)
-            print(f"Image Data for template index {i}: {current_image_data}")
+            # دریافت داده‌های مربوط به هر تصویر و ترکیب آن‌ها با داده‌های قبلی
+            image_data = self._get_data_for_image(image_specific_data[i], i)
+            print(f"Image Data for template index {i}: {image_data}")
 
-            # ادغام داده‌های فعلی با داده‌های انباشته‌شده
-            combined_data = {**accumulated_data, **current_image_data}
-            combined_positions = {**accumulated_positions, **positions}
-
-            # چاپ داده‌ها و موقعیت‌های ترکیبی برای بررسی
-            print(f"Combined Data for image index {i}: {combined_data}")
-            print(f"Combined Positions for image index {i}: {combined_positions}")
+            # ادغام داده‌های فعلی با داده‌های قبلی
+            combined_data = {**previous_data, **image_data}
+            combined_positions = {**previous_positions, **positions}
 
             # رندر تصویر با استفاده از ImageRenderer
             rendered_image = self.renderer.render_image(
-    template_image, combined_data, combined_positions, i  # اضافه کردن image_index
-)
-
+                template_image, combined_data, combined_positions, i
+            )
             images.append(rendered_image)
 
-            # به‌روزرسانی accumulated_data و accumulated_positions برای استفاده در تصویر بعدی
-            accumulated_data = combined_data
-            accumulated_positions = combined_positions
+            # به‌روزرسانی previous_data و previous_positions برای تصویر بعدی
+            previous_data = combined_data
+            previous_positions = combined_positions
 
         return images
 
@@ -82,9 +98,10 @@ class ImageGenerator:
                 "away_team_logo": json_data.get("away_team_logo", "")
             }
         elif image_index == 1:  # برای stats.jpg
+            match_time = json_data.get("time", "")
             return {
                 "match_date": json_data.get("date", ""),
-                "match_time": json_data.get("time", ""),
+                "match_time": f"{match_time} (UTC Time)",
                 "match_day": json_data.get("day", "")
             }
         elif image_index == 2:  # برای odds.jpg
@@ -100,7 +117,5 @@ class ImageGenerator:
                 "away_team_last_5": json_data.get("away_team", {}).get("last_5_matches", [])
             }
         elif image_index == 4:  # برای نتیجه کارت (match_prediction_result)
-            return {
-                "card": json_data  # به طور مستقیم نتیجه را برای تصویر آخر دریافت می‌کنیم
-            }
+            return {"Card": json_data} if isinstance(json_data, str) else {}
         return {}

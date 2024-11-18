@@ -180,13 +180,16 @@ class GeneratePrompts:
 
             if prediction_result == "A win or draw":
                 condition_text = f"My AI analysis suggests {a_team_name} will win or draw."
-                card = "Win or Draw Home Team" if a_team_name == prediction["Team A"] else "Win or Draw Away Team"
+                card = f"Win or Draw {a_team_name} Team" 
             elif prediction_result == "A or B win":
                 condition_text = f"My AI analysis suggests either {a_team_name} or {b_team_name} will win."
                 card = "Win Home or Away Team"
             elif prediction_result == "A win":
                 condition_text = f"My AI analysis suggests {a_team_name} will win."
-                card = "Win Home Team" if a_team_name == prediction["Team A"] else "Win Away Team"
+                card = f"Win {a_team_name} Team"
+            elif prediction_result == "B win or Draw":
+                condition_text = f"My AI analysis suggests {b_team_name} will win or draw."
+                card = f"Win or Draw {b_team_name} Team"
             else:
                 condition_text = "No specific result is found for this prediction."
                 card = "none"

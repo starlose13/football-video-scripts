@@ -25,6 +25,7 @@ class TeamComparison:
         
         teams_info = []
         for match in odds_data:
+            match_id = match.get("id")
             home_team_name = match["home_team"]
             away_team_name = match["away_team"]
             home_odds = match["odds"][0].get("homeWin", None)
@@ -72,9 +73,11 @@ class TeamComparison:
 
                 # ساختاردهی اطلاعات تیم‌ها
                 team_info = {
+                    "id": match_id,
                     "Team A": {"name": a_team_name, "odds": a_odds, "last5_points": a_team_points, "rank": a_rank},
                     "Team B": {"name": b_team_name, "odds": b_odds, "last5_points": b_team_points, "rank": b_rank},
-                    "Ranking Difference": rank_diff_status
+                    "Ranking Difference": rank_diff_status,
+                    "Home Team Name" : home_team_name
                 }
                 teams_info.append(team_info)
 

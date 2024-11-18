@@ -300,16 +300,42 @@ class GameResultPredictor:
             a_recent_group = classify_a_points(team_info["Team A"]["last5_points"])
             b_recent_group = classify_b_points(team_info["Team B"]["last5_points"])
             rank_diff_status = team_info["Ranking Difference"]
+            home_team_name = team_info["Home Team Name"]
+            match_id = team_info["id"]
             # Generate the game result based on the classifications
             result, rule_number = self.generate_result(a_team_class, b_team_class, a_recent_group, b_recent_group, rank_diff_status)
-            
+            card = ""
+            if result == "A win or draw":
+                card = "Win or Draw Home Team" if team_info["Team A"]["name"] == home_team_name else "Win or Draw Away Team"
+            elif result == "A or B win":
+                card = "Win Home or Away Team"
+            elif result == "A win":
+                card = "Win Home Team" if team_info["Team A"]["name"] == home_team_name else "Win Away Team"
+            elif result == "B win or Draw":
+                card = "Win or Draw Home Team" if team_info["Team B"]["name"] == home_team_name else "Win or Draw Away Team"
+            else:
+                card = "none"
+            if home_team_name == team_info["Team A"]["name"]:
             # Append the result with details for each team
-            results.append({
-                "Team A": team_info["Team A"]["name"],
-                "Team B": team_info["Team B"]["name"],
-                "Result": result,
-                "Rule Applied": rule_number
-            })
+                results.append({
+                    "id": match_id,
+                    "Home Team":team_info["Team A"]["name"],
+                    "Away Team":team_info["Team B"]["name"],
+                    "Team A": team_info["Team A"]["name"],
+                    "Team B": team_info["Team B"]["name"],
+                    "Card": card,
+                    "Rule Applied": rule_number
+                })
+            elif home_team_name == team_info["Team B"]["name"]:
+                results.append({
+                    "id": match_id,
+                    "Home Team":team_info["Team B"]["name"],
+                    "Away Team":team_info["Team A"]["name"],
+                    "Team A": team_info["Team A"]["name"],
+                    "Team B": team_info["Team B"]["name"],
+                    "Card": card,
+                    "Rule Applied": rule_number
+                })
             saver = JsonSaver()
             saver.save_to_json(results, "match_prediction_result.json")
 
