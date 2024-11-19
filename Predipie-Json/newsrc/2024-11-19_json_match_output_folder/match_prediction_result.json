@@ -1,0 +1,62 @@
+[
+    {
+        "id": 10471,
+        "home_team_name": "Bosnia-Herzegovina",
+        "home_team_logo": "https://img.thesports.com/football/team/7e2715cb1a79a2947617c86e6b17f8e0.png",
+        "away_team_name": "Netherlands",
+        "away_team_logo": "https://img.thesports.com/football/team/dccc15fd9c7ef51b5c442cd705fd91bd.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Netherlands",
+        "Team B": "Bosnia-Herzegovina",
+        "Rule Applied": 1,
+        "Card": "Win Away Team"
+    },
+    {
+        "id": 10472,
+        "home_team_name": "Bolivia",
+        "home_team_logo": "https://img.thesports.com/football/team/347a948f4171491109e251d7b23685eb.png",
+        "away_team_name": "Paraguay",
+        "away_team_logo": "https://img.thesports.com/football/team/a65ccc6bb50e46cef99dd71b9ad92c9f.png",
+        "startTimestamp": "2024-11-19T20:00:00.000Z",
+        "Team A": "Bolivia",
+        "Team B": "Paraguay",
+        "Rule Applied": 27,
+        "Card": "Win or Draw Home Team"
+    },
+    {
+        "id": 10469,
+        "home_team_name": "Wales",
+        "home_team_logo": "https://img.thesports.com/football/team/08ff7441a0089a034191d6f4ab93a145.png",
+        "away_team_name": "Iceland",
+        "away_team_logo": "https://img.thesports.com/football/team/6cff443cdf72b6dbe440a7814ff9c171.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Wales",
+        "Team B": "Iceland",
+        "Rule Applied": 26,
+        "Card": "Win or Draw Home Team"
+    },
+    {
+        "id": 10466,
+        "home_team_name": "Albania",
+        "home_team_logo": "https://img.thesports.com/football/team/969705867d164cccd13e35c27610576c.png",
+        "away_team_name": "Ukraine",
+        "away_team_logo": "https://img.thesports.com/football/team/19ad3a8df7411246f92daa1087782263.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Ukraine",
+        "Team B": "Albania",
+        "Rule Applied": null,
+        "Card": "none"
+    },
+    {
+        "id": 10470,
+        "home_team_name": "Oxford City",
+        "home_team_logo": "https://img.thesports.com/football/team/ba64076e792d046c65a41ad7bc3407f5.png",
+        "away_team_name": "Alfreton Town",
+        "away_team_logo": "https://img.thesports.com/football/team/f7534f896a87d8f96cde38ab9efd13a9.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Oxford City",
+        "Team B": "Alfreton Town",
+        "Rule Applied": 87,
+        "Card": "Win Home or Away Team"
+    }
+]

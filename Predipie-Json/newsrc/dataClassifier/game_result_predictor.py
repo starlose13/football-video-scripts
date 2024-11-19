@@ -1,4 +1,5 @@
 import logging
+import time
 from .team_comparison import TeamComparison
 from .team_classification_points_based import classify_a_points, classify_b_points
 from .team_classification_odds_based import classify_a_team, classify_b_team
@@ -221,9 +222,9 @@ class GameResultPredictor:
             elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG2" and rank_diff == "mediumDifference":
                 return "A or B win", 98
             elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG2" and rank_diff == "smallDifference":
-                return "B win or Draw", 99
+                return "B win or draw", 99
             elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG5" and b_recent_g == "BRecentG1":
-                return "B win or Draw", 100
+                return "B win or draw", 100
             elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG7" :
                 return "A or B win", 101
             elif a_team == "A6" and b_team == "B6" and a_recent_g == "ARecentG6" and b_recent_g == "BRecentG6":
@@ -293,7 +294,7 @@ class GameResultPredictor:
                 # Default condition if no match is found
                 return "No result found", None
 
-    def predict_game_results(self):
+    def predict_game_results(self, max_retries=1, delay=1):
         """
         Predicts game results based on team odds, recent performance, 
         and ranking differences.
@@ -312,8 +313,21 @@ class GameResultPredictor:
             rank_diff_status = team_info["Ranking Difference"]
             home_team_name = team_info["Home Team Name"]
             match_id = team_info["id"]
-            
-            score = self.base_pipeline.get_final_score(match_id=match_id, start_after=self.end_date)
+
+            # match_info = None
+            # retries = 0
+            # while retries < max_retries:
+            #     match_info = self.base_pipeline.get_match_info(match_id=match_id)
+            # if all(value is not None for value in match_info.values()):
+            #     break  
+            # retries += 1
+            # print(f"Attempt {retries}/{max_retries} failed for match_id {match_id}. Retrying in {delay} seconds...")
+            # time.sleep(delay)
+
+            # if match_info is None or any(value is None for value in match_info.values()):
+            #     print(f"Warning: Failed to retrieve valid data for match_id {match_id} after {max_retries} attempts.")
+            #     continue 
+            match_info = self.base_pipeline.get_match_info(match_id=match_id)
             result, rule_number = self.generate_result(a_team_class, b_team_class, a_recent_group, b_recent_group, rank_diff_status)
             card = ""
             if result == "A win or draw":
@@ -322,22 +336,23 @@ class GameResultPredictor:
                 card = "Win Home or Away Team"
             elif result == "A win":
                 card = "Win Home Team" if team_info["Team A"]["name"] == home_team_name else "Win Away Team"
-            elif result == "B win or Draw":
+            elif result == "B win or draw":
                 card = "Win or Draw Home Team" if team_info["Team B"]["name"] == home_team_name else "Win or Draw Away Team"
             else:
                 card = "none"
             
             result_data = {
                 "id": match_id,
-                "Home Team": team_info["Team A"]["name"] if home_team_name == team_info["Team A"]["name"] else team_info["Team B"]["name"],
-                "Away Team": team_info["Team B"]["name"] if home_team_name == team_info["Team A"]["name"] else team_info["Team A"]["name"],
+                "home_team_name": match_info["home_team_name"],
+                "home_team_logo": match_info["home_team_logo"],
+                "away_team_name": match_info["away_team_name"],
+                "away_team_logo": match_info["away_team_logo"],
+                "startTimestamp": match_info["startTimestamp"],
                 "Team A": team_info["Team A"]["name"],
                 "Team B": team_info["Team B"]["name"],
-                "Card": card,
                 "Rule Applied": rule_number,
-                "Score": score  
+                "Card": card,
             }
-
             results.append(result_data)
 
         saver = JsonSaver()

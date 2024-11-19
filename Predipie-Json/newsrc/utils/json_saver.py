@@ -1,13 +1,14 @@
 import os
 import json
 from datetime import datetime
+from config.config import START_BEFORE,START_AFTER
 
 class JsonSaver:
     """A utility class to save data to JSON files in a specific folder."""
 
     def __init__(self, base_folder="json_match_output_folder"):
         # Get today's date in the format YYYY-MM-DD
-        today_date = datetime.now().strftime("%Y-%m-%d")
+        today_date = START_AFTER
         
         # Set the default output folder path with today's date as prefix
         self.default_output_folder = os.path.join(f"{today_date}_{base_folder}")

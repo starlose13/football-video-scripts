@@ -1,0 +1,67 @@
+[
+    {
+        "id": 9140,
+        "home_team_name": "Dominica",
+        "home_team_logo": "https://img.thesports.com/football/team/7d91786c01b3931e8d94baf248608979.gif",
+        "away_team_name": "Dominican Republic",
+        "away_team_logo": "https://img.thesports.com/football/team/9da5630649a1a692ed87d0bad1e553eb.png",
+        "startTimestamp": "2024-11-16T23:00:00.000Z",
+        "Team A": "Dominican Republic",
+        "Team B": "Dominica",
+        "Rule Applied": 1,
+        "Card": "Win Away Team",
+        "Score": "1-6"
+    },
+    {
+        "id": 10202,
+        "home_team_name": "Coban Imperial",
+        "home_team_logo": "https://img.thesports.com/football/team/3a31c79c215989b231a8219c016ad8ae.png",
+        "away_team_name": "CSD Municipal",
+        "away_team_logo": "https://img.thesports.com/football/team/314911335094cf9787d5791c85fdf676.png",
+        "startTimestamp": "2024-11-16T21:00:00.000Z",
+        "Team A": "Coban Imperial",
+        "Team B": "CSD Municipal",
+        "Rule Applied": 1,
+        "Card": "Win Home Team",
+        "Score": "3-0"
+    },
+    {
+        "id": 9142,
+        "home_team_name": "Academicos Jojutla FC",
+        "home_team_logo": "https://img.thesports.com/football/team/10fdd070bf99d6a282e831580a07bed0.png",
+        "away_team_name": "Atletico Real Morelos",
+        "away_team_logo": "https://img.thesports.com/football/team/7554633bcd2a119369455397d351562c.png",
+        "startTimestamp": "2024-11-16T21:00:00.000Z",
+        "Team A": "Atletico Real Morelos",
+        "Team B": "Academicos Jojutla FC",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Away Team",
+        "Score": "2-2"
+    },
+    {
+        "id": 9146,
+        "home_team_name": "Deportiva Venados",
+        "home_team_logo": "https://img.thesports.com/football/team/a96380dce77f3e5ed00567bfb473a9df.png",
+        "away_team_name": "Irapuato",
+        "away_team_logo": "https://img.thesports.com/football/team/f68cbeb0644c8a79a5ff392e33feb3d1.png",
+        "startTimestamp": "2024-11-16T21:30:00.000Z",
+        "Team A": "Irapuato",
+        "Team B": "Deportiva Venados",
+        "Rule Applied": 1,
+        "Card": "Win Away Team",
+        "Score": "1-1"
+    },
+    {
+        "id": 9134,
+        "home_team_name": "Deportes Recoleta",
+        "home_team_logo": "https://img.thesports.com/football/team/842add410d03457768ca0dfb265906cf.png",
+        "away_team_name": "Santiago Morning",
+        "away_team_logo": "https://img.thesports.com/football/team/ff96facb69826ca5d7573d0880e3b391.png",
+        "startTimestamp": "2024-11-16T20:30:00.000Z",
+        "Team A": "Deportes Recoleta",
+        "Team B": "Santiago Morning",
+        "Rule Applied": 1,
+        "Card": "Win Home Team",
+        "Score": "2-1"
+    }
+]

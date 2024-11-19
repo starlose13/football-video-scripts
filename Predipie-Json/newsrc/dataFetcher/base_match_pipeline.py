@@ -1,6 +1,6 @@
 import requests
 from typing import List, Dict, Any
-from config.config import BASE_URL , START_AFTER
+from config.config import BASE_URL , START_AFTER,START_BEFORE
 
 class BaseMatchPipeline:
     def __init__(self, base_url: str):
@@ -130,6 +130,28 @@ class BaseMatchPipeline:
         }
 
         return classified_data
+    
+    def get_match_info(self, match_id: str) -> Dict[str, str]:
+        """
+        Retrieve the logos, names of the home and away teams, and match start time for a given match_id.
+        """
+        matches = self.get_matches(start_after=START_AFTER)
+        for match in matches:
+            if match.get("id") == match_id:
+                return {
+                    "home_team_name": match["homeInfo"]["teamName"],
+                    "home_team_logo": match["homeInfo"]["logoUrl"],
+                    "away_team_name": match["awayInfo"]["teamName"],
+                    "away_team_logo": match["awayInfo"]["logoUrl"],
+                    "startTimestamp": match["startTimestamp"]
+                }
+        return {
+            "home_team_name": "N/A",
+            "home_team_logo": "N/A",
+            "away_team_name": "N/A",
+            "away_team_logo": "N/A",
+            "startTimestamp": "N/A"
+        }
 
     def get_matches(self, start_after: str) -> List[Dict[str, Any]]:
         """
@@ -142,7 +164,8 @@ class BaseMatchPipeline:
         """
         Retrieve the final score for a specific match by match_id.
         """
-        matches = self.get_matches(start_after=start_after)
+        start_after = START_BEFORE
+        matches = self.get_matches(start_after)
         for match in matches:
             if match.get("id") == match_id:
                 return match.get("scores", {}).get("finalScore", "N/A")

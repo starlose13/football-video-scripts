@@ -1,0 +1,97 @@
+[
+    {
+        "id": 10471,
+        "home_team": "Bosnia-Herzegovina",
+        "away_team": "Netherlands",
+        "home_rank": "74",
+        "away_rank": "8",
+        "odds": [
+            {
+                "draw": 5.5,
+                "score": "0-0",
+                "awayWin": 1.3,
+                "homeWin": 9.5,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732002480,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10472,
+        "home_team": "Bolivia",
+        "away_team": "Paraguay",
+        "home_rank": "79",
+        "away_rank": "55",
+        "odds": [
+            {
+                "draw": 3.1,
+                "score": "0-0",
+                "awayWin": 5,
+                "homeWin": 1.85,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732014910,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10469,
+        "home_team": "Wales",
+        "away_team": "Iceland",
+        "home_rank": "29",
+        "away_rank": "70",
+        "odds": [
+            {
+                "draw": 3.6,
+                "score": "0-0",
+                "awayWin": 6,
+                "homeWin": 1.62,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732011442,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10466,
+        "home_team": "Albania",
+        "away_team": "Ukraine",
+        "home_rank": "65",
+        "away_rank": "25",
+        "odds": [
+            {
+                "draw": 3.2,
+                "score": "0-0",
+                "awayWin": 2.25,
+                "homeWin": 3.2,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732016395,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 10470,
+        "home_team": "Oxford City",
+        "away_team": "Alfreton Town",
+        "home_rank": "19",
+        "away_rank": "9",
+        "odds": [
+            {
+                "draw": 3.1,
+                "score": "0-0",
+                "awayWin": 2.55,
+                "homeWin": 2.45,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732014701,
+                "matchStatus": 1
+            }
+        ]
+    }
+]
