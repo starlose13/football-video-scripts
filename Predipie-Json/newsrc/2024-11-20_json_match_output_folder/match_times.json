@@ -1,0 +1,42 @@
+[
+    {
+        "id": 271,
+        "home_team": "Corinthians Paulista (SP)",
+        "away_team": "Cruzeiro Esporte Clube",
+        "date": "2024-11-20",
+        "day": "Wednesday",
+        "time": "2 pm"
+    },
+    {
+        "id": 298,
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "date": "2024-11-20",
+        "day": "Wednesday",
+        "time": "2:30 pm"
+    },
+    {
+        "id": 308,
+        "home_team": "Fredrikstad U19",
+        "away_team": "Sarpsborg 08 U19",
+        "date": "2024-11-20",
+        "day": "Wednesday",
+        "time": "3 pm"
+    },
+    {
+        "id": 299,
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "date": "2024-11-20",
+        "day": "Wednesday",
+        "time": "2:30 pm"
+    },
+    {
+        "id": 301,
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
+        "date": "2024-11-20",
+        "day": "Wednesday",
+        "time": "3 pm"
+    }
+]

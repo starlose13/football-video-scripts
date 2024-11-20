@@ -1,31 +1,31 @@
 class TemplateManager:
     base_positions = {
         "home_team_logo": (410, 845),
-        "home_team_name": (730, 900),
+        "home_team_name": (670, 900),
         "away_team_logo": (3220, 845),
-        "away_team_name": (2480, 900)
+        "away_team_name": (2468, 900)
     }
 
     position_mappings = [
         {**base_positions},  
-        {**base_positions, "match_date": (1736, 847), "match_time": (2031, 847), "match_day": (1590, 847)}, 
-        {**base_positions, "home_odds": (1298, 1086), "draw_odds": (1870, 1086), "away_odds": (2435, 1086)}, 
+        {**base_positions, "match_date": (1736, 850), "match_time": (2031, 850), "match_day": (1590, 850)}, 
+        {**base_positions, "home_odds": (1298, 1086), "draw_odds": (1880, 1086), "away_odds": (2435, 1086)}, 
         {**base_positions, "home_team_last_5": (1137, 1357), "away_team_last_5": (2350, 1357)}, 
         {**base_positions}  
     ]
 
     adjusted_y_positions = {
         "home_team_logo": (410, 375),
-        "home_team_name": (730, 435),
+        "home_team_name": (670, 435),
         "away_team_logo": (3220, 375),
-        "away_team_name": (2480, 435)
+        "away_team_name": (2468, 435)
     }
 
     fifth_image_positions = {
         "home_team_logo": (410, 340),
-        "home_team_name": (730, 400),
+        "home_team_name": (670, 400),
         "away_team_logo": (3220, 340),
-        "away_team_name": (2660, 400),
+        "away_team_name": (2640, 400),
         "match_date": (1700, 1307),
         "match_time": (1994, 1307),
         "match_day": (1554, 1307),

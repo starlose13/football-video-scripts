@@ -1,0 +1,38 @@
+[
+    {
+        "prompt": "Italy U21 clashes with Ukraine U21 in a spirited showdown! Who will triumph?",
+        "home_team_name": "Italy U21",
+        "away_team_name": "Ukraine U21",
+        "reading_time": 4.55
+    },
+    {
+        "prompt": "Bath City clashes with Maidstone United! Who will dominate? Excitement peaks.",
+        "home_team_name": "Bath City",
+        "away_team_name": "Maidstone United",
+        "reading_time": 4.12
+    },
+    {
+        "prompt": "Haringey Borough clashes with Maldon Tiptree! Drama unfolds; who will triumph?",
+        "home_team_name": "Haringey Borough",
+        "away_team_name": "Maldon   Tiptree",
+        "reading_time": 4.08
+    },
+    {
+        "prompt": "Oxford City clashes with Alfreton Town! Who will dominate this face-off?",
+        "home_team_name": "Oxford City",
+        "away_team_name": "Alfreton Town",
+        "reading_time": 3.91
+    },
+    {
+        "prompt": "Czech clashes with Georgia! Who will dominate this gripping match?",
+        "home_team_name": "Czech",
+        "away_team_name": "Georgia",
+        "reading_time": 3.59
+    },
+    {
+        "prompt": "Malta faces Andorra in a thrilling showdown! Who will triumph?",
+        "home_team_name": "Malta",
+        "away_team_name": "Andorra",
+        "reading_time": 3.59
+    }
+]

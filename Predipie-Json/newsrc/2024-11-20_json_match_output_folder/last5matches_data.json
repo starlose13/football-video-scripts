@@ -1,0 +1,167 @@
+[
+    {
+        "id": 271,
+        "home_team": {
+            "team_name": "Corinthians Paulista (SP)",
+            "last_5_matches": [
+                "W",
+                "L",
+                "L",
+                "W",
+                "D"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Cruzeiro Esporte Clube",
+            "last_5_matches": [
+                "L",
+                "W",
+                "W",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        }
+    },
+    {
+        "id": 298,
+        "home_team": {
+            "team_name": "Al-Adalah",
+            "last_5_matches": [
+                "D",
+                "L",
+                "W",
+                "D",
+                "L"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 2,
+                "draws": 2
+            }
+        },
+        "away_team": {
+            "team_name": "Al Najma(KSA)",
+            "last_5_matches": [
+                "W",
+                "L",
+                "W",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        }
+    },
+    {
+        "id": 308,
+        "home_team": {
+            "team_name": "Fredrikstad U19",
+            "last_5_matches": [
+                "L",
+                "D",
+                "W",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 3,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Sarpsborg 08 U19",
+            "last_5_matches": [
+                "L",
+                "D",
+                "D",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 2,
+                "draws": 3
+            }
+        }
+    },
+    {
+        "id": 299,
+        "home_team": {
+            "team_name": "Al-Adalah",
+            "last_5_matches": [
+                "D",
+                "L",
+                "W",
+                "D",
+                "L"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 2,
+                "draws": 2
+            }
+        },
+        "away_team": {
+            "team_name": "Al Najma(KSA)",
+            "last_5_matches": [
+                "W",
+                "L",
+                "W",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        }
+    },
+    {
+        "id": 301,
+        "home_team": {
+            "team_name": "Elche CF Ilicitano",
+            "last_5_matches": [
+                "L",
+                "L",
+                "D",
+                "W",
+                "W"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Sant Andreu",
+            "last_5_matches": [
+                "W",
+                "W",
+                "W",
+                "L",
+                "D"
+            ],
+            "results_count": {
+                "wins": 3,
+                "losses": 1,
+                "draws": 1
+            }
+        }
+    }
+]

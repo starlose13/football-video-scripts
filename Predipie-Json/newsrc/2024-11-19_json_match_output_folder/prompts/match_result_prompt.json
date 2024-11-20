@@ -1,0 +1,32 @@
+[
+    {
+        "prompt": "Italy U21 shows strong promise! Expect a win or a fighting draw; their skills are tough to match. Who can stop them?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.84
+    },
+    {
+        "prompt": "Maidstone United is set to shine! Expect a win or a sturdy draw against their rivals; excitement guaranteed! Who\u2019s ready for the match?",
+        "card": "Win or Draw Away Team",
+        "reading_time": 8.13
+    },
+    {
+        "prompt": "Maldon & Tiptree to clinch victory! Can they keep up the momentum? Exciting game ahead; don\u2019t miss it!",
+        "card": "Win Away Team",
+        "reading_time": 6.52
+    },
+    {
+        "prompt": "Alfreton Town is set to triumph in this clash! Expect skill, strategy, and some thrilling moments; victory beckons for them. Who\u2019s ready?",
+        "card": "Win Away Team",
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "The Czechs are favored to triumph! Skill, strategy, and stellar team dynamics\u2014can they clinch the win? Watch for their strong offense and defense!",
+        "card": "Win Home Team",
+        "reading_time": 8.38
+    },
+    {
+        "prompt": "Expect excitement as Andorra clashes with their rivals; victory or a draw seems likely! Will they triumph? Stay tuned!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 6.84
+    }
+]

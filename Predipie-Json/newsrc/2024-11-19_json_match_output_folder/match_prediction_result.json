@@ -1,5 +1,18 @@
 [
     {
+        "id": 113,
+        "home_team_name": "Italy U21",
+        "home_team_logo": "https://img.thesports.com/football/team/5c6f40147431366c4017b1396eb32786.png",
+        "away_team_name": "Ukraine U21",
+        "away_team_logo": "https://img.thesports.com/football/team/c0d1f396535e78ad2148ad6dd8d4ea11.png",
+        "startTimestamp": "2024-11-19T17:15:00.000Z",
+        "Team A": "Italy U21",
+        "Team B": "Ukraine U21",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Home Team",
+        "Score": "2-2"
+    },
+    {
         "id": 163,
         "home_team_name": "Bath City",
         "home_team_logo": "https://img.thesports.com/football/team/0ca501f6a362512678303e1edec9b5f6.png",
@@ -9,43 +22,8 @@
         "Team A": "Maidstone United",
         "Team B": "Bath City",
         "Rule Applied": 132,
-        "Card": "Win or Draw Away Team"
-    },
-    {
-        "id": 147,
-        "home_team_name": "Czech",
-        "home_team_logo": "https://img.thesports.com/football/team/254d87f50ceb9708e7ff233328848e23.png",
-        "away_team_name": "Georgia",
-        "away_team_logo": "https://img.thesports.com/football/team/4c1495e22d54732334011d3ea15a1eb1.png",
-        "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Czech",
-        "Team B": "Georgia",
-        "Rule Applied": 1,
-        "Card": "Win Home Team"
-    },
-    {
-        "id": 162,
-        "home_team_name": "Malta",
-        "home_team_logo": "https://img.thesports.com/football/team/f0221343111004aa15623603a9e8a443.png",
-        "away_team_name": "Andorra",
-        "away_team_logo": "https://img.thesports.com/football/team/2236fac5b6cba3fa80036565d6d75a6e.png",
-        "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Andorra",
-        "Team B": "Malta",
-        "Rule Applied": 132,
-        "Card": "Win or Draw Away Team"
-    },
-    {
-        "id": 154,
-        "home_team_name": "Oxford City",
-        "home_team_logo": "https://img.thesports.com/football/team/ba64076e792d046c65a41ad7bc3407f5.png",
-        "away_team_name": "Alfreton Town",
-        "away_team_logo": "https://img.thesports.com/football/team/f7534f896a87d8f96cde38ab9efd13a9.png",
-        "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Alfreton Town",
-        "Team B": "Oxford City",
-        "Rule Applied": 1,
-        "Card": "Win Away Team"
+        "Card": "Win or Draw Away Team",
+        "Score": "3-3"
     },
     {
         "id": 175,
@@ -57,6 +35,46 @@
         "Team A": "Maldon   Tiptree",
         "Team B": "Haringey Borough",
         "Rule Applied": 1,
-        "Card": "Win Away Team"
+        "Card": "Win Away Team",
+        "Score": "1-2"
+    },
+    {
+        "id": 154,
+        "home_team_name": "Oxford City",
+        "home_team_logo": "https://img.thesports.com/football/team/ba64076e792d046c65a41ad7bc3407f5.png",
+        "away_team_name": "Alfreton Town",
+        "away_team_logo": "https://img.thesports.com/football/team/f7534f896a87d8f96cde38ab9efd13a9.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Alfreton Town",
+        "Team B": "Oxford City",
+        "Rule Applied": 1,
+        "Card": "Win Away Team",
+        "Score": "1-2"
+    },
+    {
+        "id": 147,
+        "home_team_name": "Czech",
+        "home_team_logo": "https://img.thesports.com/football/team/254d87f50ceb9708e7ff233328848e23.png",
+        "away_team_name": "Georgia",
+        "away_team_logo": "https://img.thesports.com/football/team/4c1495e22d54732334011d3ea15a1eb1.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Czech",
+        "Team B": "Georgia",
+        "Rule Applied": 1,
+        "Card": "Win Home Team",
+        "Score": "2-1"
+    },
+    {
+        "id": 162,
+        "home_team_name": "Malta",
+        "home_team_logo": "https://img.thesports.com/football/team/f0221343111004aa15623603a9e8a443.png",
+        "away_team_name": "Andorra",
+        "away_team_logo": "https://img.thesports.com/football/team/2236fac5b6cba3fa80036565d6d75a6e.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Andorra",
+        "Team B": "Malta",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Away Team",
+        "Score": "0-0"
     }
 ]

@@ -1,0 +1,26 @@
+[
+    {
+        "prompt": "Italy U21 has been struggling with only one win in their last five matches, alongside two draws and two losses. Ukraine U21 has an even tougher run, managing just one win, one draw, and suffering three losses.",
+        "reading_time": 13.2
+    },
+    {
+        "prompt": "Bath City has won three and lost two of their last five matches. Maidstone United has not won recently, with two draws and three losses.",
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "Haringey Borough has drawn twice and lost three times recently. Maldon & Tiptree, on the other hand, have two wins, one draw, and two losses.",
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Oxford City has a mixed recent form with two wins, two draws, and one loss. Alfreton Town has been less consistent, securing two wins but suffering three losses.",
+        "reading_time": 10.08
+    },
+    {
+        "prompt": "The Czech team has struggled recently, drawing twice and losing three times. Georgia, meanwhile, has been inconsistent with two wins, one draw, and two losses.",
+        "reading_time": 9.53
+    },
+    {
+        "prompt": "Malta has been inconsistent recently, winning two games but losing three. Andorra also won two matches, yet they faced three defeats.",
+        "reading_time": 7.61
+    }
+]

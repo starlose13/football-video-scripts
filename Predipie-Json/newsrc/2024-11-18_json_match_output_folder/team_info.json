@@ -33,12 +33,5 @@
         "home_team_logo": "https://img.thesports.com/football/team/08862d863f581ff830e5ba84dd723f4c.png",
         "away_team_name": "Switzerland",
         "away_team_logo": "https://img.thesports.com/football/team/f84be480c54f0ff871b91fab14a36b36.png"
-    },
-    {
-        "id": 10404,
-        "home_team_name": "Aruba",
-        "home_team_logo": "https://img.thesports.com/football/team/220787ad7829c9cbc7e9953cb1c36fb3.gif",
-        "away_team_name": "Sint Maarten",
-        "away_team_logo": "https://img.thesports.com/football/team/3358f441ecdd93c315c8c4e570ca15f2.png"
     }
 ]

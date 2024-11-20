@@ -15,6 +15,7 @@ from config.config import BASE_URL, START_AFTER, START_BEFORE, PROGRAM_NAME
 from dataClassifier.game_result_predictor import GameResultPredictor
 from utils.program_counter import increment_program_number, get_program_number
 from openai.error import RateLimitError
+from finalScore.results_with_start_before import ScoreCalculator
 
 load_dotenv()
 
@@ -38,6 +39,23 @@ class GeneratePrompts:
                 delay *= 2  # Exponential backoff
         print("Max retries reached. Could not complete the request.")
         return None
+    
+    def extract_scores(self, score: str) -> Dict[str, int]:
+        """Extract the home and away scores from the score string."""
+        try:
+            home_score, away_score = map(int, score.split("-"))
+            return {"home_score": home_score, "away_score": away_score}
+        except ValueError:
+            print(f"Invalid score format: {score}")
+            return {"home_score": 0, "away_score": 0}
+        
+    def parse_timestamp(self, timestamp: str) -> Dict[str, str]:
+        """Parse the timestamp into date, day, and time."""
+        match_datetime = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+        date_str = match_datetime.strftime("%Y-%m-%d")
+        day_str = match_datetime.strftime("%A")
+        time_str = match_datetime.strftime("%I:%M %p").lstrip("0")
+        return {"date": date_str, "day": day_str, "time": time_str}
 
     def load_json_file(self, filename: str) -> List[Dict[str, Any]]:
         """Load JSON data from a file in the data folder."""
@@ -71,43 +89,44 @@ class GeneratePrompts:
         
         return {"prompt": generated_intro, "reading_time": reading_time}
 
-    def generate_final_score_prompt(self) -> Dict[str, Any]:
-        """Reads final score from the folder with START_BEFORE and generates a prompt with it."""
-        
-        # Set the output folder path based on START_BEFORE date
-        output_folder = f"{START_BEFORE}_output"
-        final_score_path = os.path.join(output_folder, "final_scores.json")
-        
-        if os.path.exists(final_score_path):
-            with open(final_score_path, 'r') as file:
-                final_score_data = json.load(file)
-                
-                # Check if final_score_data is a list and get the first item if so
-                if isinstance(final_score_data, list) and final_score_data:
-                    final_score = final_score_data[0].get("finalScore", "unknown")
-                elif isinstance(final_score_data, dict):
-                    final_score = final_score_data.get("finalScore", "unknown")
-                else:
-                    final_score = "unknown"
-            
-            prompt = f"The result of the game was {final_score}. Generate a brief commentary for this score."
-            response = self.openai_request_with_retry(
-                model="gpt-4-turbo",
-                messages=[
-                    {"role": "system", "content": "You are an AI assistant generating commentary based on the final score of a football match."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=100
+    def generate_final_score_prompt(self, match_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Generate prompts based on final scores for each match."""
+        prompts = []
+
+        for match in match_data:
+            home_team = match.get("home_team_name", "N/A")
+            away_team = match.get("away_team_name", "N/A")
+            start_timestamp = match.get("startTimestamp", "N/A")
+            score = match.get("Score", "N/A")
+
+            # Parse timestamp and scores
+            parsed_timestamp = self.parse_timestamp(start_timestamp)
+            extracted_scores = self.extract_scores(score)
+
+            if extracted_scores['home_score'] > extracted_scores['away_score']:
+                result_sentence = f"{home_team} won the match with a score of {extracted_scores['home_score']}-{extracted_scores['away_score']} against {away_team}."
+            elif extracted_scores['home_score'] < extracted_scores['away_score']:
+                result_sentence = f"{away_team} won the match with a score of {extracted_scores['away_score']}-{extracted_scores['home_score']} against {home_team}."
+            else:
+                result_sentence = f"The match ended in a draw with a score of {extracted_scores['home_score']}-{extracted_scores['away_score']} between {home_team} and {away_team}."
+
+            prompt = (
+            f"The match between {home_team} and {away_team} was held on {parsed_timestamp['day']} at {parsed_timestamp['time']}."
+            f"{result_sentence}"
             )
-            
-            generated_script = response['choices'][0]['message']['content'].strip()
-            processor = MatchDataProcessor(generated_script)
-            reading_time = processor.calculate_reading_time()
-            
-            return {"prompt": generated_script, "reading_time": reading_time}
-        else:
-            print(f"No final score file found at {final_score_path}")
-            return {"prompt": "No final score available", "reading_time": 0}
+
+            # Append prompt
+            prompts.append({"match_id": match.get("id", "N/A"), "prompt": prompt})
+
+        return prompts
+
+    def save_prompts(self, prompts: List[Dict[str, Any]], filename: str, custom_folder: str):
+        """Save generated prompts to a JSON file."""
+        output_path = os.path.join(custom_folder, filename)
+        os.makedirs(custom_folder, exist_ok=True)
+        with open(output_path, 'w', encoding="utf-8") as file:
+            json.dump(prompts, file, ensure_ascii=False, indent=4)
+        print(f"Prompts saved to {output_path}")
         
     def generate_first_video_closing_with_openai(self) -> Dict[str, Any]:
         """Generates an introduction for the narration using OpenAI."""
@@ -464,7 +483,9 @@ if __name__ == "__main__":
     openai.api_key = os.getenv('OPENAI_API_KEY')
     api_key = openai.api_key
     prompt_generator = GeneratePrompts(api_key=api_key)
-    
+    json_saver = JsonSaver()
+    today_date = START_AFTER
+    yesterday_date = START_BEFORE
     # Increase program number
     increment_program_number()
     program_number = get_program_number()
@@ -474,30 +495,41 @@ if __name__ == "__main__":
     fetch_match_stats = FetchMatchTime(base_url=BASE_URL)
     fetch_odds = FetchOddsRanks(base_url=BASE_URL)
     fetch_team_info = FetchTeamInfo(base_url=BASE_URL)
+    game_result_predictor = GameResultPredictor()
+    fetch_final_score = ScoreCalculator(base_url=BASE_URL,start_after=START_BEFORE)
     
+    game_results = game_result_predictor.predict_game_results()
+
+    ##################################### GENERATE PROMPTS OF FIRST VIDEO  #####################################
+    ############################################################################################################
+    fetch_final_score.update_scores_in_file()
+    final_score_prompt_output_folder_name = "first_video"
+    output_folder = os.path.join(START_BEFORE + "_json_match_output_folder", "final_score_prompt_output_folder_name")
+    final_score_data_path = os.path.join(yesterday_date + "_json_match_output_folder", "match_prediction_result.json")
+    if os.path.exists(final_score_data_path):
+        with open(final_score_data_path, 'r', encoding="utf-8") as file:
+            final_score_data = json.load(file)
+    else:
+        print(f"Error: File {final_score_data_path} not found.")
+        final_score_data = []
+    final_score_prompts = prompt_generator.generate_final_score_prompt(final_score_data)
+    json_saver.save_to_json(final_score_prompts, "final_score_prompt.json",custom_folder=output_folder)
+    
+    ##################################### GENERATE PROMPTS OF SECOND VIDEO  #####################################
+    #############################################################################################################
     last5matches_data = fetch_last5matches.get_last5matches(start_after=START_AFTER)
     match_stats_data = fetch_match_stats.get_match_times(start_after=START_AFTER)
     odds_data = fetch_odds.get_odds_ranks(start_after=START_AFTER)
     team_info_data = fetch_team_info.get_team_info(start_after=START_AFTER)
-    
-    game_result_predictor = GameResultPredictor()
-    game_results = game_result_predictor.predict_game_results()
-
-    json_saver = JsonSaver()
-    today_date = START_AFTER
 
     narration_folder = os.path.join(today_date + "_json_match_output_folder", "narrations")
     prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
 
-    # Generate prompts
     intro_result = prompt_generator.generate_second_video_intro_with_openai()
     json_saver.save_to_json(intro_result, "intro_prompt.json",custom_folder=prompt_folder)
 
     closing_result = prompt_generator.generate_second_video_closing_with_openai(program_number=program_number)
     json_saver.save_to_json(closing_result, "closing_prompt.json",custom_folder=prompt_folder)
-
-    final_score_prompt = prompt_generator.generate_final_score_prompt()
-    json_saver.save_to_json(final_score_prompt, "final_score_prompt.json",custom_folder=prompt_folder)
 
     last5matches_result = prompt_generator.prompt_for_last5matches(last5matches_data)
     json_saver.save_to_json(last5matches_result, "last5matches_prompt.json",custom_folder=prompt_folder)

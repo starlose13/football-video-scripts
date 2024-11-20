@@ -27,11 +27,11 @@ class ImageRenderer:
         draw = ImageDraw.Draw(image)
         
         if image_index == 4:
-            team_name_font = self.load_font(font_path, 60)
+            team_name_font = self.load_font(font_path, 55)
         else:
-            team_name_font = self.load_font(font_path, 80)
+            team_name_font = self.load_font(font_path, 70)
 
-        stats_font = self.load_font(font_path, 30)
+        stats_font = self.load_font(font_path, 26)
         odds_font = self.load_font(font_path, 55)
         
         for key, pos in positions.items():

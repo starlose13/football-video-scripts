@@ -6,14 +6,12 @@ from config.config import SHOTSTACK_API_KEY,CREATIFY_API_ID,CREATIFY_API_KEY,STA
 load_dotenv()
 
 class Config:
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    
-    output_dir = os.path.join(base_dir, "output_second_video_images")
-    os.makedirs(output_dir, exist_ok=True)
-
     today_date = START_AFTER
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     json_base_dir = os.path.join(base_dir, f"{today_date}_json_match_output_folder")
-
+    output_dir = os.path.join(json_base_dir, "second_video_images")
+    os.makedirs(output_dir, exist_ok=True)
+    
     shotstack_api_key = SHOTSTACK_API_KEY
     creatify_api_id = CREATIFY_API_ID
     creatify_api_key = CREATIFY_API_KEY

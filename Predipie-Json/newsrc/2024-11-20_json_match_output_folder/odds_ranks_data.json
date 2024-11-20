@@ -1,0 +1,97 @@
+[
+    {
+        "id": 271,
+        "home_team": "Corinthians Paulista (SP)",
+        "away_team": "Cruzeiro Esporte Clube",
+        "home_rank": "11",
+        "away_rank": "7",
+        "odds": [
+            {
+                "draw": 4,
+                "score": "0-0",
+                "awayWin": 6.5,
+                "homeWin": 1.5,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732103287,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 298,
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "home_rank": "11",
+        "away_rank": "5",
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 2.25,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732094091,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 308,
+        "home_team": "Fredrikstad U19",
+        "away_team": "Sarpsborg 08 U19",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 4.5,
+                "score": "0-0",
+                "awayWin": 3.6,
+                "homeWin": 1.62,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732099381,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 299,
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "home_rank": "11",
+        "away_rank": "5",
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 2.25,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732094091,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 301,
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
+        "home_rank": "38",
+        "away_rank": "39",
+        "odds": [
+            {
+                "draw": 2.9,
+                "score": "0-0",
+                "awayWin": 2.8,
+                "homeWin": 2.45,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732102792,
+                "matchStatus": 1
+            }
+        ]
+    }
+]

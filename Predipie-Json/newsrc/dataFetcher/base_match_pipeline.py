@@ -164,13 +164,12 @@ class BaseMatchPipeline:
         """
         Retrieve the final score for a specific match by match_id.
         """
-        start_after = START_BEFORE
+        start_after = start_after
         matches = self.get_matches(start_after)
         for match in matches:
             if match.get("id") == match_id:
                 return match.get("scores", {}).get("finalScore", "N/A")
         return "N/A"
-
     
 if __name__ == "__main__":
     base_pipeline = BaseMatchPipeline(base_url=BASE_URL)

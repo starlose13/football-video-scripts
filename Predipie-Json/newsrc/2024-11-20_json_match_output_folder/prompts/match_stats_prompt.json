@@ -1,47 +1,47 @@
 [
     {
-        "prompt": "Get ready for an exhilarating clash as Bath City takes on Maidstone United! Who will dominate? Tune in to find out!",
-        "home_team": "Bath City",
-        "away_team": "Maidstone United",
+        "prompt": "Get ready for thrilling action as Corinthians take on Cruzeiro in a clash of giants! Who will dominate? Tune in and find out!",
+        "home_team": "Corinthians Paulista (SP)",
+        "away_team": "Cruzeiro Esporte Clube",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.31
+        "reading_time": 7.96
     },
     {
-        "prompt": "Get ready for an electrifying showdown as Czech clashes with Georgia in football! Don't miss the action-packed excitement! Tune in!",
-        "home_team": "Czech",
-        "away_team": "Georgia",
+        "prompt": "Get ready for thrilling action as Al-Adalah faces Al Najma! Who will dominate the pitch? Don't miss this epic showdown!",
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
         "reading_time": 6.99
     },
     {
-        "prompt": "Get ready for an exhilarating clash as Malta takes on Andorra! Who will triumph in this epic football showdown? Tune in!",
-        "home_team": "Malta",
-        "away_team": "Andorra",
+        "prompt": "Get ready for thrilling action as Fredrikstad U19 takes on Sarpsborg 08 U19! Who will dominate? Tune in to find out!",
+        "home_team": "Fredrikstad U19",
+        "away_team": "Sarpsborg 08 U19",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
         "reading_time": 7.31
     },
     {
-        "prompt": "Get ready for a thrilling clash as Oxford City takes on Alfreton Town! Who will dominate? Tune in to find out!",
-        "home_team": "Oxford City",
-        "away_team": "Alfreton Town",
+        "prompt": "Get ready for a thrilling clash as Al-Adalah takes on Al Najma! Who will dominate the pitch? Don't miss this epic showdown!",
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.31
+        "reading_time": 7.64
     },
     {
-        "prompt": "Get ready for thrilling football as Haringey Borough clashes with Maldon & Tiptree! Don't miss the action; time and date coming soon!",
-        "home_team": "Haringey Borough",
-        "away_team": "Maldon   Tiptree",
+        "prompt": "Gear up for an electrifying clash as Elche CF Ilicitano battles Sant Andreu! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.63
+        "reading_time": 7.52
     }
 ]

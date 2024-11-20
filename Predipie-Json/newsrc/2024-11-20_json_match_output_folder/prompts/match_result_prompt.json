@@ -1,27 +1,27 @@
 [
     {
-        "prompt": "Maidstone United aims high! Expect excitement, skillful play; a win or stable draw is on the horizon! Who's ready for an unforgettable match?",
-        "card": "Win or Draw Away Team",
+        "prompt": "Expect Corinthians Paulista (SP) to shine! Victory or a draw? Likely. Don\u2019t miss out; it\u2019s football at its finest!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.05
+    },
+    {
+        "prompt": "Al-Adalah and Al Najma(KSA) are set to clash! Who will triumph? Expect thrill, strategy, and a fierce battle for victory! Don't miss it!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.56
+    },
+    {
+        "prompt": "Expect fireworks! Fredrikstad U19 is set to triumph or draw; their tenacity and skill are undeniable. Who could resist watching? Don\u2019t miss out!",
+        "card": "Win or Draw Home Team",
         "reading_time": 8.34
     },
     {
-        "prompt": "Czech team to clinch victory! Precision, strategy, triumph; can they outplay and outlast? Watch the magic unfold!",
-        "card": "Win Home Team",
-        "reading_time": 6.61
+        "prompt": "Al-Adalah vs. Al Najma(KSA): A thrilling clash awaits! Who will dominate; skill, strategy, or sheer passion? Victory hangs in the balance! Who's your pick?",
+        "card": "Win Home or Away Team",
+        "reading_time": 9.26
     },
     {
-        "prompt": "Andorra is set to shine, eyeing a win or a solid draw! Can they defy expectations? Watch the drama unfold; excitement guaranteed!",
-        "card": "Win or Draw Away Team",
-        "reading_time": 8.02
-    },
-    {
-        "prompt": "Expect excitement as Alfreton Town clinches victory! Precision, pace, passion; who can stop them?",
-        "card": "Win Away Team",
-        "reading_time": 5.47
-    },
-    {
-        "prompt": "Maldon & Tiptree to triumph! Expect thrilling plays, seamless teamwork, and a victory dance; can they outshine their rivals? Watch closely!",
-        "card": "Win Away Team",
-        "reading_time": 7.9
+        "prompt": "Elche CF Ilicitano and Sant Andreu face off; who will triumph? Expect thrilling plays, goals, and a victor as the final whistle blows!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.37
     }
 ]

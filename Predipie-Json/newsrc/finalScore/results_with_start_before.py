@@ -10,15 +10,10 @@ class ScoreCalculator(BaseMatchPipeline):
         self.file_path = os.path.join(f"{START_BEFORE}_json_match_output_folder", "match_prediction_result.json")
 
     def calculate_score(self, match_id: str) -> str:
-        """
-        Calculate the final score for a given match_id.
-        """
+ 
         return self.get_final_score(match_id=match_id, start_after=self.start_after)
 
     def update_scores_in_file(self):
-        """
-        Update scores in the match_prediction_result.json file by adding a score field.
-        """
         # Check if the file exists
         if not os.path.exists(self.file_path):
             print(f"Error: File {self.file_path} not found.")

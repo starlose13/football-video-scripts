@@ -71,13 +71,13 @@ class ImageGenerator:
             return
 
         base_positions = {
-            "home_team_name": (595, 465),
+            "home_team_name": (595, 475),
             "home_team_logo": (370, 420),
-            "away_team_name": (2500, 465),
+            "away_team_name": (2500, 475),
             "away_team_logo": (3280, 420),
-            "date": (1717, 830),
-            "day": (1605, 830),
-            "time": (2053, 830),  
+            "date": (1753, 830),
+            "day": (1595, 830),
+            "time": (2048, 830),  
             "Score": (1845, 1187),
             "icon": (1847, 0) 
         }
@@ -112,10 +112,10 @@ class ImageGenerator:
 
     def add_text_and_logos(self, template_manager, match_info, positions, date_str, day_str, time_str):
 
-        template_manager.add_text(match_info.get('home_team_name', 'Home Team'), position=positions["home_team_name"], font_size=84)  
-        template_manager.add_text(match_info.get('away_team_name', 'Away Team'), position=positions["away_team_name"], font_size=84) 
-        template_manager.add_text(date_str, position=positions["date"], font_size=32) 
-        template_manager.add_text(day_str, position=positions["day"], font_size=32)   
+        template_manager.add_text(match_info.get('home_team_name', 'Home Team'), position=positions["home_team_name"], font_size=74)  
+        template_manager.add_text(match_info.get('away_team_name', 'Away Team'), position=positions["away_team_name"], font_size=74) 
+        template_manager.add_text(date_str, position=positions["date"], font_size=28) 
+        template_manager.add_text(day_str, position=positions["day"], font_size=28)   
         template_manager.add_text(time_str, position=positions["time"], font_size=32)  
         template_manager.add_text(match_info.get('Score', 'Final Score'), position=positions["Score"], font_size=108)  
 
