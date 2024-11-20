@@ -1,30 +1,46 @@
 [
     {
-        "id": 9513,
-        "home_team": "El Salvador",
-        "away_team": "Montserrat",
-        "date": "2024-11-18",
-        "day": "Monday",
-        "time": "1 am"
+        "id": 13,
+        "home_team": "Haiti",
+        "away_team": "Puerto Rico",
+        "date": "2024-11-19",
+        "day": "Tuesday",
+        "time": "12 am"
     },
     {
-        "id": 10402,
-        "home_team": "Grenada",
-        "away_team": "French Saint-Martin",
-        "date": "2024-11-18",
-        "day": "Monday",
-        "time": "8 pm"
+        "id": 14,
+        "home_team": "Botafogo SP",
+        "away_team": "Ava\u00ed FC",
+        "date": "2024-11-19",
+        "day": "Tuesday",
+        "time": "12 am"
     },
     {
-        "id": 9541,
-        "home_team": "Bulgaria",
-        "away_team": "Belarus",
+        "id": 12,
+        "home_team": "Internacional (w)",
+        "away_team": "Gremio (w)",
         "date": "2024-11-18",
         "day": "Monday",
-        "time": "7:45 pm"
+        "time": "11 pm"
     },
     {
-        "id": 9463,
+        "id": 3,
+        "home_team": "Dunbeholden FC",
+        "away_team": "Molynes United",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "10 pm"
+    },
+    {
+        "id": 11,
+        "home_team": "Deportes Quindio",
+        "away_team": "Orsomarso",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "11 pm"
+    },
+    {
+        "id": 8,
         "home_team": "Cerro Montevideo",
         "away_team": "Boston River",
         "date": "2024-11-18",
@@ -32,19 +48,67 @@
         "time": "10 pm"
     },
     {
-        "id": 9458,
-        "home_team": "Spain",
-        "away_team": "Switzerland",
+        "id": 9,
+        "home_team": "CA Platense",
+        "away_team": "Godoy Cruz Antonio Tomba",
         "date": "2024-11-18",
         "day": "Monday",
-        "time": "7:45 pm"
+        "time": "10:15 pm"
     },
     {
-        "id": 10404,
+        "id": 1,
+        "home_team": "Curacao",
+        "away_team": "St. Lucia",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "11 pm"
+    },
+    {
+        "id": 5,
+        "home_team": "Defensa Y Justicia",
+        "away_team": "Deportivo Riestra",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "10:15 pm"
+    },
+    {
+        "id": 2,
         "home_team": "Aruba",
         "away_team": "Sint Maarten",
         "date": "2024-11-18",
         "day": "Monday",
         "time": "9 pm"
+    },
+    {
+        "id": 4,
+        "home_team": "Santos U23",
+        "away_team": "Botafogo U23",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "10 pm"
+    },
+    {
+        "id": 7,
+        "home_team": "Torque Reserves",
+        "away_team": "Nacional de Montevideo Reserves",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "9 pm"
+    },
+    {
+        "id": 6,
+        "home_team": "Real Soacha Cundinamarca",
+        "away_team": "Atletico Huila",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "9 pm"
+    },
+    {
+        "id": 10,
+        "home_team": "Guarani MG",
+        "away_team": "Paracatu DF",
+        "date": "2024-11-18",
+        "day": "Monday",
+        "time": "10:30 pm"
     }
 ]

@@ -1,0 +1,72 @@
+[
+    {
+        "prompt": "Haiti's on fire, set to clinch victory! Fast-paced play, strategic prowess; can they outmaneuver their rivals? Watch out for surprises!",
+        "card": "Win Home Team",
+        "reading_time": 7.58
+    },
+    {
+        "prompt": "Ava\u00ed FC is set to shine! Strong form, fierce dedication; victory seems imminent. Can they clinch it? Watch out for an exhilarating performance!",
+        "card": "Win Away Team",
+        "reading_time": 8.55
+    },
+    {
+        "prompt": "Gremio (w) to triumph! Their form, skill, and strategy suggest a victory; can their opponents keep up? Expect excitement and skillful plays!",
+        "card": "Win Away Team",
+        "reading_time": 8.23
+    },
+    {
+        "prompt": "Expect excitement as Molynes United clinches the win! Strength, strategy, and surprise\u2014are you ready for the thrill? Watch the magic unfold.",
+        "card": "Win Away Team",
+        "reading_time": 7.76
+    },
+    {
+        "prompt": "Orsomarso to clinch victory! Strength, strategy, precision; can anyone stop them? Watch, wonder, cheer!",
+        "card": "Win Away Team",
+        "reading_time": 6.07
+    },
+    {
+        "prompt": "Expect Cerro Montevideo to shine! Either a victory is on the horizon, or they'll battle to a draw; disappointment isn't in today's script!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.16
+    },
+    {
+        "prompt": "Expect excitement as CA Platense clinches the win tonight! Skill, strategy, and spirit; can their opponents match up? Watch and see!",
+        "card": "Win Home Team",
+        "reading_time": 7.9
+    },
+    {
+        "prompt": "Curacao to clinch the victory today! Expect skill, strategy, and flair; will their opponent keep up? Excitement unfolds!",
+        "card": "Win Home Team",
+        "reading_time": 6.94
+    },
+    {
+        "prompt": "Expect Defensa Y Justicia to shine; either a victory awaits or a sturdy draw! Who's ready for an exhilarating match?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 6.98
+    },
+    {
+        "prompt": "Expect Sint Maarten to triumph in thrilling fashion! Goals, excitement, victory; can they deliver the spectacle? Watch out!",
+        "card": "Win Away Team",
+        "reading_time": 6.94
+    },
+    {
+        "prompt": "Expect excitement as Botafogo U23 heads into the clash with determination; victory or a draw seems likely! Who will shine today?",
+        "card": "Win or Draw Away Team",
+        "reading_time": 7.3
+    },
+    {
+        "prompt": "Expect excitement as Nacional de Montevideo Reserves clinch the win! Who could doubt their prowess? Victory is calling; watch them soar!",
+        "card": "Win Away Team",
+        "reading_time": 7.48
+    },
+    {
+        "prompt": "Real Soacha Cundinamarca is set to triumph! Expect skill, strategy, and excitement; who can match their fervor? Victory awaits!",
+        "card": "Win Home Team",
+        "reading_time": 7.26
+    },
+    {
+        "prompt": "Guarani MG is set to shine! Expect them to clinch a win or hold steady with a draw; excitement guaranteed! Who's ready?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.81
+    }
+]

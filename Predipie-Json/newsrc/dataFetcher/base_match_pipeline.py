@@ -99,7 +99,6 @@ class BaseMatchPipeline:
                 "finalScore": match_data["scores"].get("finalScore"),
             },
             
-            # "headToHead": match_data.get("headToHead", []),
             
             "odds": [
                 {

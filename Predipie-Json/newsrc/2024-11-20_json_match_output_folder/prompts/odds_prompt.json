@@ -1,47 +1,578 @@
 [
     {
-        "prompt": "The odds of winning for the home team are 1.5; for the away team, 6.5. A draw has odds of 4. Who will triumph, or will it end in a stalemate?",
-        "home_team": "Corinthians Paulista (SP)",
-        "away_team": "Cruzeiro Esporte Clube",
-        "home_odds": 1.5,
-        "draw_odds": 4,
-        "away_odds": 6.5,
-        "reading_time": 11.61
-    },
-    {
-        "prompt": "The odds for a win are 2.7 for the home team and 2.25 for the away team. A draw stands at 3.3.",
-        "home_team": "Al-Adalah",
-        "away_team": "Al Najma(KSA)",
-        "home_odds": 2.7,
-        "draw_odds": 3.3,
-        "away_odds": 2.25,
-        "reading_time": 8.15
-    },
-    {
-        "prompt": "Win odds for the home team are 1.62! Away team winning odds stand at 3.6. Odds for a draw are 4.5. Bet wisely!",
-        "home_team": "Fredrikstad U19",
-        "away_team": "Sarpsborg 08 U19",
-        "home_odds": 1.62,
-        "draw_odds": 4.5,
-        "away_odds": 3.6,
+        "prompt": "Orihuela CF has odds of winning at 2.2! Aguilas CF's victory odds are at 3.1. A draw is rated at 2.88. Choose wisely!",
+        "home_team": "Orihuela CF",
+        "away_team": "Aguilas CF",
+        "home_odds": 2.2,
+        "draw_odds": 2.88,
+        "away_odds": 3.1,
         "reading_time": 8.83
     },
     {
-        "prompt": "The odds for a win are 2.7 for the home team and 2.25 for the away team; a draw has odds of 3.3.",
+        "prompt": "Winning odds for the home team stand at 3.6. The away team is favored with odds of 1.8. A draw also presents odds of 3.6. Choose wisely!",
+        "home_team": "2 de Mayo PJC Reserves",
+        "away_team": "Olimpia Asuncion Reserves",
+        "home_odds": 3.6,
+        "draw_odds": 3.6,
+        "away_odds": 1.8,
+        "reading_time": 10.15
+    },
+    {
+        "prompt": "The odds for the home team to win are 3.9. The away team has odds of 1.8 for a victory. A draw is set at 3.3.",
+        "home_team": "Algeria U20",
+        "away_team": "Morocco U20",
+        "home_odds": 3.9,
+        "draw_odds": 3.3,
+        "away_odds": 1.8,
+        "reading_time": 9.65
+    },
+    {
+        "prompt": "The odds for the home team to win are 1.91; for the away team, 3.4. A draw also stands at 3.4. Explore these options and place your bet wisely!",
+        "home_team": "UE Castelldefels",
+        "away_team": "Vilanova Geltru",
+        "home_odds": 1.91,
+        "draw_odds": 3.4,
+        "away_odds": 3.4,
+        "reading_time": 10.96
+    },
+    {
+        "prompt": "Full-time result odds are as follows! Home win: 301; Away win: 1.01; Draw: 21. Explore which option you find more appealing and consider the potential outcomes before placing your bets. Good luck!",
+        "home_team": "KF Dukagjini U21",
+        "away_team": "FC Prishtina U21",
+        "home_odds": 301,
+        "draw_odds": 21,
+        "away_odds": 1.01,
+        "reading_time": 11.65
+    },
+    {
+        "prompt": "Odds of winning are as follows: Home team at 151; Away team at 1; Draw at 51.",
+        "home_team": "Opava U19",
+        "away_team": "Banik Ostrava U19",
+        "home_odds": 151,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 6.03
+    },
+    {
+        "prompt": "Soloda Adwa has odds of winning at 81! Sheger Ketema, the away team, enters with odds of 1.02. The odds for a draw stand at 17.",
+        "home_team": "Soloda Adwa",
+        "away_team": "Sheger Ketema",
+        "home_odds": 81,
+        "draw_odds": 17,
+        "away_odds": 1.02,
+        "reading_time": 9.62
+    },
+    {
+        "prompt": "The odds favor Corinthians Paulista with a winning chance at 1.22; Cruzeiro Esporte Clube trails significantly at 17! A draw stands at 5.",
+        "home_team": "Corinthians Paulista (SP)",
+        "away_team": "Cruzeiro Esporte Clube",
+        "home_odds": 1.22,
+        "draw_odds": 5,
+        "away_odds": 17,
+        "reading_time": 8.19
+    },
+    {
+        "prompt": "The odds for winning are 21 for both teams; for a draw, the odds are 1.01. These odds indicate a highly improbable win for either side, suggesting an almost certain draw.",
+        "home_team": "Roma City",
+        "away_team": "L'Aquila",
+        "home_odds": 21,
+        "draw_odds": 1.01,
+        "away_odds": 21,
+        "reading_time": 11.22
+    },
+    {
+        "prompt": "The odds stand at 2.75 for a home win, 2.1 for an away victory, and 4 for a draw. Consider these figures in planning your bets!",
+        "home_team": "Fredrikstad U19",
+        "away_team": "Sarpsborg 08 U19",
+        "home_odds": 2.75,
+        "draw_odds": 4,
+        "away_odds": 2.1,
+        "reading_time": 9.62
+    },
+    {
+        "prompt": "Home win: 1.66. Away win: 5.5. Draw: 3.4. The stakes are high as competitiveness surges. Who will seize the victory? Make your predictions now!",
+        "home_team": "Barcelona B (w)",
+        "away_team": "Osasuna (w)",
+        "home_odds": 1.66,
+        "draw_odds": 3.4,
+        "away_odds": 5.5,
+        "reading_time": 9.57
+    },
+    {
+        "prompt": "The odds for a victory are 1.57; for America Mineiro, they stand at 5.25. A draw is priced at 3.7.",
+        "home_team": "Cruzeiro (w)",
+        "away_team": "America Mineiro (w)",
+        "home_odds": 1.57,
+        "draw_odds": 3.7,
+        "away_odds": 5.25,
+        "reading_time": 7.88
+    },
+    {
+        "prompt": "The odds favor the home team significantly to win at 1! The away team's chances are much slimmer with odds set at 101. A draw stands at 51.",
+        "home_team": "San Francisco Reserves",
+        "away_team": "Mario Mendez FC",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 101,
+        "reading_time": 9.63
+    },
+    {
+        "prompt": "The odds for the home team to win stand at 6.5; the away team has odds of 1.44. A draw carries odds of 3.75.",
+        "home_team": "Fola Esch",
+        "away_team": "CS Petange",
+        "home_odds": 6.5,
+        "draw_odds": 3.75,
+        "away_odds": 1.44,
+        "reading_time": 8.96
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 1.8; for the away team, winning odds stand at 5. A draw holds odds of 2.8.",
+        "home_team": "MC Alger",
+        "away_team": "CR Belouizdad",
+        "home_odds": 1.8,
+        "draw_odds": 2.8,
+        "away_odds": 5,
+        "reading_time": 9.93
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1, victory for the away team at 251, and a draw at 51.",
+        "home_team": "Erzeni",
+        "away_team": "KF Valbona",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 251,
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "Full-time result odds are: home win at 1.01; away win at 51; draw at 26.",
+        "home_team": "VfL Wolfsburg (w)",
+        "away_team": "Galatasaray SK (w)",
+        "home_odds": 1.01,
+        "draw_odds": 26,
+        "away_odds": 51,
+        "reading_time": 5.6
+    },
+    {
+        "prompt": "Full-time result odds are as follows: the victory for the home team stands at 151; for the away team, it is 1.01; the draw odds are placed at 26.",
+        "home_team": "Banbueng City",
+        "away_team": "Rajpracha FC",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 10.32
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1.85; victory for the away team at 4.75; a draw at 3.2.",
+        "home_team": "Estudiantes La Plata",
+        "away_team": "Rosario Central",
+        "home_odds": 1.85,
+        "draw_odds": 3.2,
+        "away_odds": 4.75,
+        "reading_time": 8.92
+    },
+    {
+        "prompt": "The odds for a win by the home team are 2.5. The odds for a win by the away team are 2.75. The odds for a draw are 3.",
+        "home_team": "Deportivo Merlo Reserves",
+        "away_team": "Excursionistas Reserves",
+        "home_odds": 2.5,
+        "draw_odds": 3,
+        "away_odds": 2.75,
+        "reading_time": 10.4
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1; victory for the away team at 61; a draw at 56. Exciting possibilities await! What will the outcome be?",
+        "home_team": "Surin City FC ",
+        "away_team": "Ubonkids City",
+        "home_odds": 1,
+        "draw_odds": 56,
+        "away_odds": 61,
+        "reading_time": 11.23
+    },
+    {
+        "prompt": "The odds of winning for both teams are 17 each; the odds for a draw stand at 1.02.",
+        "home_team": "Fukui United",
+        "away_team": "J-Lease FC",
+        "home_odds": 17,
+        "draw_odds": 1.02,
+        "away_odds": 17,
+        "reading_time": 6.4
+    },
+    {
+        "prompt": "The odds of winning for the home team are 15; for the away team, 13. Odds for a draw stand at 1.04.",
+        "home_team": "FC Istiklol Dushanbe",
+        "away_team": "Regar-TadAZ Tursunzoda",
+        "home_odds": 15,
+        "draw_odds": 1.04,
+        "away_odds": 13,
+        "reading_time": 8.11
+    },
+    {
+        "prompt": "Match odds are as follows: victory for the home team at 2.05; victory for the away team at 3.1; a draw at 3.2.",
+        "home_team": "AC Palazzolo",
+        "away_team": "Cjarlins Muzane",
+        "home_odds": 2.05,
+        "draw_odds": 3.2,
+        "away_odds": 3.1,
+        "reading_time": 8.6
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 2.7; victory for the away team at 2.3; a draw stands at 3.3. Who will triumph?",
+        "home_team": "Leon U19",
+        "away_team": "CDSyC Cruz Azul U19",
+        "home_odds": 2.7,
+        "draw_odds": 3.3,
+        "away_odds": 2.3,
+        "reading_time": 10.39
+    },
+    {
+        "prompt": "The odds are as follows: for a win by the home team, 1.97; for a win by the away team, 3.6; for a draw, 3.2.",
+        "home_team": "Flamurtari",
+        "away_team": "Besa Kavaje",
+        "home_odds": 1.97,
+        "draw_odds": 3.2,
+        "away_odds": 3.6,
+        "reading_time": 9.87
+    },
+    {
+        "prompt": "Aris Voulas FC boasts winning odds of 1.01. Olympiacos Vari, facing long odds, are set at 67 for a victory. A tie between the teams stands at 26. Choose wisely!",
+        "home_team": "Aris Voulas FC",
+        "away_team": "Olympiacos Vari",
+        "home_odds": 1.01,
+        "draw_odds": 26,
+        "away_odds": 67,
+        "reading_time": 11.12
+    },
+    {
+        "prompt": "Home win odds are 1.02; away win odds stand at 151; the odds for a draw are 19. Each outcome presents a distinct possibility with varying degrees of likelihood! Consider the odds carefully in your betting strategies.",
+        "home_team": "Chonburi Shark FC",
+        "away_team": "Prachuap Khiri Khan",
+        "home_odds": 1.02,
+        "draw_odds": 19,
+        "away_odds": 151,
+        "reading_time": 13.09
+    },
+    {
+        "prompt": "The odds stand as follows: victory for the home team at 2.15; away team win at 2.8; a draw is set at 3.4. Place your bets wisely!",
+        "home_team": "Kilbarrack United",
+        "away_team": "Rosemount Mulvey",
+        "home_odds": 2.15,
+        "draw_odds": 3.4,
+        "away_odds": 2.8,
+        "reading_time": 10.07
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 2. The away team has winning odds of 3.3. A draw is priced at 3.75.",
+        "home_team": "Gualberto Villarroel Deportivo San Jos\u00e9",
+        "away_team": "Club Aurora",
+        "home_odds": 2,
+        "draw_odds": 3.75,
+        "away_odds": 3.3,
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "The odds of winning for the home team are 151, while the away team odds stand at 1. A draw is priced at 51.",
+        "home_team": "Drina HE Visegrad",
+        "away_team": "Laktasi",
+        "home_odds": 151,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 8.37
+    },
+    {
+        "prompt": "The odds for a home victory stand at 2.25; for an away win, they are 3.1. The chances of a draw also sit at 3.1.",
+        "home_team": "Hercules",
+        "away_team": "UD Marbella",
+        "home_odds": 2.25,
+        "draw_odds": 3.1,
+        "away_odds": 3.1,
+        "reading_time": 9.49
+    },
+    {
+        "prompt": "The odds for a win by the home team are 101; a victory for the away team stands at 1. Odds of a draw between the teams are 26.",
+        "home_team": "Budapest Honved II",
+        "away_team": "ESMTK",
+        "home_odds": 101,
+        "draw_odds": 26,
+        "away_odds": 1,
+        "reading_time": 9.94
+    },
+    {
+        "prompt": "The odds for a win by the home team are 26; similarly, the away team has odds of 26 to win. The odds for a draw stand at 1.",
+        "home_team": "Nongbua Pitchaya FC",
+        "away_team": "Khonkaen United",
+        "home_odds": 26,
+        "draw_odds": 1,
+        "away_odds": 26,
+        "reading_time": 10.15
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1.02; victory for the away team at 201; a draw at 19.",
+        "home_team": "Chipukizi FC",
+        "away_team": "Inter Zanzibar FC",
+        "home_odds": 1.02,
+        "draw_odds": 19,
+        "away_odds": 201,
+        "reading_time": 8.5
+    },
+    {
+        "prompt": "The odds for a win by the home team are 3.2; for the away team, 2.2; and for a draw, 3.5.",
+        "home_team": "Bahia",
+        "away_team": "Palmeiras",
+        "home_odds": 3.2,
+        "draw_odds": 3.5,
+        "away_odds": 2.2,
+        "reading_time": 8.37
+    },
+    {
+        "prompt": "The odds of winning for Elche CF Ilicitano are 2.6; for Sant Andreu, they are 3. The odds for a draw stand at 2.62.",
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
+        "home_odds": 2.6,
+        "draw_odds": 2.62,
+        "away_odds": 3,
+        "reading_time": 8.96
+    },
+    {
+        "prompt": "The odds for the home team to win are 251. The away team has odds of 1.01 to win. A draw stands at 21.",
+        "home_team": "Rethymniakos",
+        "away_team": "Marko",
+        "home_odds": 251,
+        "draw_odds": 21,
+        "away_odds": 1.01,
+        "reading_time": 8.58
+    },
+    {
+        "prompt": "Muang Klaeng is set to win with odds of 61; Huasamrong Gateway holds stronger odds at 1. A draw stands at 61.",
+        "home_team": "Muang Klaeng",
+        "away_team": "Huasamrong Gateway",
+        "home_odds": 61,
+        "draw_odds": 61,
+        "away_odds": 1,
+        "reading_time": 7.69
+    },
+    {
+        "prompt": "The odds for Romklao United to win are 100; for Muang Loei United, the odds of winning stand at 1.03. The possibility of a draw carries odds of 7.87.",
+        "home_team": "Romklao United",
+        "away_team": "Muang Loei United",
+        "home_odds": 100,
+        "draw_odds": 7.87,
+        "away_odds": 1.03,
+        "reading_time": 10.57
+    },
+    {
+        "prompt": "The odds for a win are 1.09 for the home team and 21 for the away team. The draw odds stand at 9.5.",
+        "home_team": "Lyon (w)",
+        "away_team": "AS Roma (w)",
+        "home_odds": 1.09,
+        "draw_odds": 9.5,
+        "away_odds": 21,
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "The odds for Ispe FC U20 to win are at 13; for Hantharwady United U20, the odds are 26. The draw comes with odds of 1.03. Who will triumph or will it end in a stalemate?",
+        "home_team": "Ispe FC U20",
+        "away_team": "Hantharwady United U20",
+        "home_odds": 13,
+        "draw_odds": 1.03,
+        "away_odds": 26,
+        "reading_time": 12.8
+    },
+    {
+        "prompt": "The odds of winning are 2.35 for the home team and 2.63 for the away team; the chance of a draw stands at 3.25.",
+        "home_team": "Llosetense",
+        "away_team": "UD Alcudia",
+        "home_odds": 2.35,
+        "draw_odds": 3.25,
+        "away_odds": 2.63,
+        "reading_time": 8.75
+    },
+    {
+        "prompt": "The odds for a win by Dome FC stand at 15; for Nakhon Ratchasima Mazda FC, they are 1.1. A draw is positioned at odds of 7.",
+        "home_team": "Dome FC",
+        "away_team": "Nakhon Ratchasima Mazda FC",
+        "home_odds": 15,
+        "draw_odds": 7,
+        "away_odds": 1.1,
+        "reading_time": 9.72
+    },
+    {
+        "prompt": "The odds for Vigor Senigallia to win are 1.8; for Castelfidardo, they are 3.9. A draw has odds of 3.3.",
+        "home_team": "Vigor Senigallia",
+        "away_team": "Castelfidardo",
+        "home_odds": 1.8,
+        "draw_odds": 3.3,
+        "away_odds": 3.9,
+        "reading_time": 7.88
+    },
+    {
+        "prompt": "The odds for winning are 1 for the home team and 251 for the away team. A draw has odds of 51.",
+        "home_team": "AO Mikrasiatikos",
+        "away_team": "Ethnikos OFPF",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 251,
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "The home team's odds of winning stand at 1.02; the away team's odds are 201. Odds for the match ending in a draw are at 19.",
+        "home_team": "NPA Anchors",
+        "away_team": "Mighty Enforcers",
+        "home_odds": 1.02,
+        "draw_odds": 19,
+        "away_odds": 201,
+        "reading_time": 9.19
+    },
+    {
+        "prompt": "Odds for winning are 2.7 for both teams; the draw stands at 2.88.",
+        "home_team": "Berazategui",
+        "away_team": "Real Pilar",
+        "home_odds": 2.7,
+        "draw_odds": 2.88,
+        "away_odds": 2.7,
+        "reading_time": 4.99
+    },
+    {
+        "prompt": "Full-time result odds are as follows! Al-Adalah to win at 3.25; Al Najma to win at 2.62; odds for a draw are 2.4. Choose your pick wisely.",
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "home_odds": 3.25,
+        "draw_odds": 2.4,
+        "away_odds": 2.62,
+        "reading_time": 10.28
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for Tshwane South College FC at 15; victory for University of Johannesburg at 1.25; a draw is set at 4.5.",
+        "home_team": "Tshwane South College FC",
+        "away_team": "University of the Johannesburg",
+        "home_odds": 15,
+        "draw_odds": 4.5,
+        "away_odds": 1.25,
+        "reading_time": 9.68
+    },
+    {
+        "prompt": "The odds for a win are 12 for the home team and 1.18 for the away team. A draw is set at odds of 7.",
+        "home_team": "FC Twente Enschede (w)",
+        "away_team": "Real Madrid (w)",
+        "home_odds": 12,
+        "draw_odds": 7,
+        "away_odds": 1.18,
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "Match odds are as follows: North District U22 winning at 12; Hong Kong FC U22 winning at 15; a draw at 1.06. Choose wisely!",
+        "home_team": "North District U22",
+        "away_team": "Hong Kong FC U22",
+        "home_odds": 12,
+        "draw_odds": 1.06,
+        "away_odds": 15,
+        "reading_time": 8.68
+    },
+    {
+        "prompt": "The odds for Constancia to win are set at 1.75; for CE Mercadal to win, they stand at 4.1. A draw carries odds of 3.3.",
+        "home_team": "Constancia",
+        "away_team": "CE Mercadal",
+        "home_odds": 1.75,
+        "draw_odds": 3.3,
+        "away_odds": 4.1,
+        "reading_time": 9.49
+    },
+    {
+        "prompt": "The odds of winning for the home team are set at 1; for the away team, the odds are 451. A draw has odds of 51.",
+        "home_team": "Mexico",
+        "away_team": "Honduras",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 451,
+        "reading_time": 9.19
+    },
+    {
+        "prompt": "Full-time result odds are as follows: a win for the home team at 251, a win for the away team at 1.03, and a draw at 15.",
+        "home_team": "Gelbison",
+        "away_team": "LFA Reggio Calabria",
+        "home_odds": 251,
+        "draw_odds": 15,
+        "away_odds": 1.03,
+        "reading_time": 9.55
+    },
+    {
+        "prompt": "The odds for a win by the home team are 19. The odds for a win by the away team are 12. The odds for a draw are 1.05.",
+        "home_team": "Udon Thani",
+        "away_team": "Lopburi City FC",
+        "home_odds": 19,
+        "draw_odds": 1.05,
+        "away_odds": 12,
+        "reading_time": 10.19
+    },
+    {
+        "prompt": "The odds are set with the home team at 2.9 to win, while the away team is favored slightly more at 2.1. A draw is listed at 3.4.",
+        "home_team": "Chivas Guadalajara U23",
+        "away_team": "Tigres UANL U23",
+        "home_odds": 2.9,
+        "draw_odds": 3.4,
+        "away_odds": 2.1,
+        "reading_time": 10.29
+    },
+    {
+        "prompt": "The odds for a win are set at 3.25 for the home team and 1.95 for the away team. A draw has odds of 3.5.",
+        "home_team": "AA Carapebus",
+        "away_team": "Campo Grande CE",
+        "home_odds": 3.25,
+        "draw_odds": 3.5,
+        "away_odds": 1.95,
+        "reading_time": 9.11
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team stands at 2.45; victory for the away team is set at 2.63; a draw has odds of 3.",
+        "home_team": "UE Tona",
+        "away_team": "CF Badalona",
+        "home_odds": 2.45,
+        "draw_odds": 3,
+        "away_odds": 2.63,
+        "reading_time": 10.32
+    },
+    {
+        "prompt": "The odds for a win are 1.75 for the home team and 5 for the away team. A draw has odds of 3.5.",
+        "home_team": "Gremio (RS)",
+        "away_team": "Juventude",
+        "home_odds": 1.75,
+        "draw_odds": 3.5,
+        "away_odds": 5,
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "Full-time result odds are as follows: home win stands at 351; away win is priced at 1.01; a draw has odds of 23.",
+        "home_team": "Shashemene Kenema FC",
+        "away_team": "Axum Ketema",
+        "home_odds": 351,
+        "draw_odds": 23,
+        "away_odds": 1.01,
+        "reading_time": 8.18
+    },
+    {
+        "prompt": "The odds are set with the home team at 1 to win, while the away team faces long odds of 251. A draw stands at 51.",
+        "home_team": "Anthoupoli",
+        "away_team": "Olympiakos Volou",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 251,
+        "reading_time": 9.02
+    },
+    {
+        "prompt": "The odds stand as follows: 2.7 for Al-Adalah to win, 2.25 for Al Najma's victory, and 3.3 for a draw. Choose wisely and place your bets!",
         "home_team": "Al-Adalah",
         "away_team": "Al Najma(KSA)",
         "home_odds": 2.7,
         "draw_odds": 3.3,
         "away_odds": 2.25,
-        "reading_time": 8.43
+        "reading_time": 9.83
     },
     {
-        "prompt": "Odds for a win by Elche CF Ilicitano are 2.45. Odds for a win by Sant Andreu are 2.8. Odds for a draw stand at 2.9.",
-        "home_team": "Elche CF Ilicitano",
-        "away_team": "Sant Andreu",
-        "home_odds": 2.45,
-        "draw_odds": 2.9,
-        "away_odds": 2.8,
-        "reading_time": 9.65
+        "prompt": "The home team has winning odds of 2.6; the away team at 3. A draw stands at odds of 3.",
+        "home_team": "Red Bull Bragantino",
+        "away_team": "Sao Paulo",
+        "home_odds": 2.6,
+        "draw_odds": 3,
+        "away_odds": 3,
+        "reading_time": 7.25
     }
 ]

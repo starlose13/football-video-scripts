@@ -22,13 +22,9 @@ class FetchLast5Matches(BaseMatchPipeline):
         return counts
 
     def get_last5matches(self, start_after: str) -> List[Dict[str, Any]]:
-        """
-        Fetches the last 5 matches information for recent matches.
-        """
-        # Retrieve match data
+
         matches = self.get_matches(start_after)
         
-        # Extract last 5 matches data for each team
         last5matches_data = []
         for match in matches:
             home_last5 = match["homeInfo"].get("last5matches", [])

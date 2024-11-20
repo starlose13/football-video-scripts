@@ -4,28 +4,17 @@ from datetime import datetime
 from config.config import START_BEFORE,START_AFTER
 
 class JsonSaver:
-    """A utility class to save data to JSON files in a specific folder."""
 
     def __init__(self, base_folder="json_match_output_folder"):
-        # Get today's date in the format YYYY-MM-DD
         today_date = START_AFTER
         
-        # Set the default output folder path with today's date as prefix
         self.default_output_folder = os.path.join(f"{today_date}_{base_folder}")
         
-        # Create the default output folder if it does not exist
         if not os.path.exists(self.default_output_folder):
             os.makedirs(self.default_output_folder)
 
     def save_to_json(self, data, filename, custom_folder=None):
-        """
-        Saves the given data to a JSON file inside the specified output folder.
-        
-        Parameters:
-            data (dict): The data to save in JSON format.
-            filename (str): The name of the JSON file.
-            custom_folder (str, optional): A custom folder path for saving the file.
-        """
+
         output_folder = custom_folder if custom_folder else self.default_output_folder
         
         # Create the output folder if it does not exist

@@ -1,5 +1,138 @@
 [
     {
+        "id": 315,
+        "home_team": "Orihuela CF",
+        "away_team": "Aguilas CF",
+        "home_rank": "410",
+        "away_rank": "414",
+        "odds": [
+            {
+                "draw": 2.88,
+                "score": "0-0",
+                "awayWin": 3.1,
+                "homeWin": 2.2,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732107898,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 522,
+        "home_team": "2 de Mayo PJC Reserves",
+        "away_team": "Olimpia Asuncion Reserves",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.6,
+                "score": "0-0",
+                "awayWin": 1.8,
+                "homeWin": 3.6,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732052515,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 310,
+        "home_team": "Algeria U20",
+        "away_team": "Morocco U20",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 1.8,
+                "homeWin": 3.9,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732114275,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 337,
+        "home_team": "UE Castelldefels",
+        "away_team": "Vilanova Geltru",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.4,
+                "score": "0-0",
+                "awayWin": 3.4,
+                "homeWin": 1.91,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732013939,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 538,
+        "home_team": "KF Dukagjini U21",
+        "away_team": "FC Prishtina U21",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 21,
+                "score": "1-2",
+                "awayWin": 1.01,
+                "homeWin": 301,
+                "isSealed": 0,
+                "matchTime": "93",
+                "changeTime": 1732110532,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 264,
+        "home_team": "Opava U19",
+        "away_team": "Banik Ostrava U19",
+        "home_rank": "15",
+        "away_rank": "1",
+        "odds": [
+            {
+                "draw": 51,
+                "score": "1-4",
+                "awayWin": 1,
+                "homeWin": 151,
+                "isSealed": 0,
+                "matchTime": "81",
+                "changeTime": 1732114026,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 235,
+        "home_team": "Soloda Adwa",
+        "away_team": "Sheger Ketema",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 17,
+                "score": "0-1",
+                "awayWin": 1.02,
+                "homeWin": 81,
+                "isSealed": 0,
+                "matchTime": "97",
+                "changeTime": 1732103635,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
         "id": 271,
         "home_team": "Corinthians Paulista (SP)",
         "away_team": "Cruzeiro Esporte Clube",
@@ -7,14 +140,1040 @@
         "away_rank": "7",
         "odds": [
             {
+                "draw": 5,
+                "score": "2-1",
+                "awayWin": 17,
+                "homeWin": 1.22,
+                "isSealed": 0,
+                "matchTime": "53",
+                "changeTime": 1732116043,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 268,
+        "home_team": "Roma City",
+        "away_team": "L'Aquila",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "0-0",
+                "awayWin": 21,
+                "homeWin": 21,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1732115916,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 308,
+        "home_team": "Fredrikstad U19",
+        "away_team": "Sarpsborg 08 U19",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
                 "draw": 4,
                 "score": "0-0",
-                "awayWin": 6.5,
-                "homeWin": 1.5,
+                "awayWin": 2.1,
+                "homeWin": 2.75,
+                "isSealed": 0,
+                "matchTime": "23",
+                "changeTime": 1732116088,
+                "matchStatus": 2
+            }
+        ]
+    },
+    {
+        "id": 306,
+        "home_team": "Barcelona B (w)",
+        "away_team": "Osasuna (w)",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.4,
+                "score": "0-0",
+                "awayWin": 5.5,
+                "homeWin": 1.66,
+                "isSealed": 0,
+                "matchTime": "23",
+                "changeTime": 1732116112,
+                "matchStatus": 2
+            }
+        ]
+    },
+    {
+        "id": 575,
+        "home_team": "Cruzeiro (w)",
+        "away_team": "America Mineiro (w)",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.7,
+                "score": "0-0",
+                "awayWin": 5.25,
+                "homeWin": 1.57,
                 "isSealed": 0,
                 "matchTime": "",
-                "changeTime": 1732103287,
+                "changeTime": 1732094978,
                 "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 200,
+        "home_team": "San Francisco Reserves",
+        "away_team": "Mario Mendez FC",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 51,
+                "score": "1-0",
+                "awayWin": 101,
+                "homeWin": 1,
+                "isSealed": 0,
+                "matchTime": "92",
+                "changeTime": 1732075569,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 329,
+        "home_team": "Fola Esch",
+        "away_team": "CS Petange",
+        "home_rank": "15",
+        "away_rank": "10",
+        "odds": [
+            {
+                "draw": 3.75,
+                "score": "0-0",
+                "awayWin": 1.44,
+                "homeWin": 6.5,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732019594,
+                "matchStatus": 12
+            }
+        ]
+    },
+    {
+        "id": 305,
+        "home_team": "MC Alger",
+        "away_team": "CR Belouizdad",
+        "home_rank": "2",
+        "away_rank": "14",
+        "odds": [
+            {
+                "draw": 2.8,
+                "score": "0-0",
+                "awayWin": 5,
+                "homeWin": 1.8,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732104359,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 245,
+        "home_team": "Erzeni",
+        "away_team": "KF Valbona",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 51,
+                "score": "2-0",
+                "awayWin": 251,
+                "homeWin": 1,
+                "isSealed": 0,
+                "matchTime": "88",
+                "changeTime": 1732110158,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 311,
+        "home_team": "VfL Wolfsburg (w)",
+        "away_team": "Galatasaray SK (w)",
+        "home_rank": "1",
+        "away_rank": "6",
+        "odds": [
+            {
+                "draw": 26,
+                "score": "0-0",
+                "awayWin": 51,
+                "homeWin": 1.01,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732108356,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 225,
+        "home_team": "Banbueng City",
+        "away_team": "Rajpracha FC",
+        "home_rank": 0,
+        "away_rank": "4",
+        "odds": [
+            {
+                "draw": 26,
+                "score": "1-2",
+                "awayWin": 1.01,
+                "homeWin": 151,
+                "isSealed": 0,
+                "matchTime": "96",
+                "changeTime": 1732096498,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 368,
+        "home_team": "Estudiantes La Plata",
+        "away_team": "Rosario Central",
+        "home_rank": "14",
+        "away_rank": "21",
+        "odds": [
+            {
+                "draw": 3.2,
+                "score": "0-0",
+                "awayWin": 4.75,
+                "homeWin": 1.85,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732112214,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 363,
+        "home_team": "Deportivo Merlo Reserves",
+        "away_team": "Excursionistas Reserves",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 2.75,
+                "homeWin": 2.5,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732048656,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 652,
+        "home_team": "Surin City FC ",
+        "away_team": "Ubonkids City",
+        "home_rank": "8",
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 56,
+                "score": "2-0",
+                "awayWin": 61,
+                "homeWin": 1,
+                "isSealed": 1,
+                "matchTime": "92",
+                "changeTime": 1732096086,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 206,
+        "home_team": "Fukui United",
+        "away_team": "J-Lease FC",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "3-3",
+                "awayWin": 17,
+                "homeWin": 17,
+                "isSealed": 0,
+                "matchTime": "97",
+                "changeTime": 1732083845,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 672,
+        "home_team": "FC Istiklol Dushanbe",
+        "away_team": "Regar-TadAZ Tursunzoda",
+        "home_rank": "1",
+        "away_rank": "7",
+        "odds": [
+            {
+                "draw": 1.04,
+                "score": "0-0",
+                "awayWin": 13,
+                "homeWin": 15,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732101877,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 303,
+        "home_team": "AC Palazzolo",
+        "away_team": "Cjarlins Muzane",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.2,
+                "score": "0-0",
+                "awayWin": 3.1,
+                "homeWin": 2.05,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732110929,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 516,
+        "home_team": "Leon U19",
+        "away_team": "CDSyC Cruz Azul U19",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 2.3,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732050584,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 693,
+        "home_team": "Flamurtari",
+        "away_team": "Besa Kavaje",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.2,
+                "score": "0-0",
+                "awayWin": 3.6,
+                "homeWin": 1.97,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732099514,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 669,
+        "home_team": "Aris Voulas FC",
+        "away_team": "Olympiacos Vari",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 26,
+                "score": "2-0",
+                "awayWin": 67,
+                "homeWin": 1.01,
+                "isSealed": 1,
+                "matchTime": "68",
+                "changeTime": 1732111159,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 249,
+        "home_team": "Chonburi Shark FC",
+        "away_team": "Prachuap Khiri Khan",
+        "home_rank": "4",
+        "away_rank": "4",
+        "odds": [
+            {
+                "draw": 19,
+                "score": "2-1",
+                "awayWin": 151,
+                "homeWin": 1.02,
+                "isSealed": 1,
+                "matchTime": "99",
+                "changeTime": 1732109237,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 364,
+        "home_team": "Kilbarrack United",
+        "away_team": "Rosemount Mulvey",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.4,
+                "score": "0-0",
+                "awayWin": 2.8,
+                "homeWin": 2.15,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732021660,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 586,
+        "home_team": "Gualberto Villarroel Deportivo San Jos\u00e9",
+        "away_team": "Club Aurora",
+        "home_rank": "3",
+        "away_rank": "6",
+        "odds": [
+            {
+                "draw": 3.75,
+                "score": "0-0",
+                "awayWin": 3.3,
+                "homeWin": 2,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732114275,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 251,
+        "home_team": "Drina HE Visegrad",
+        "away_team": "Laktasi",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 51,
+                "score": "0-3",
+                "awayWin": 1,
+                "homeWin": 151,
+                "isSealed": 0,
+                "matchTime": "65",
+                "changeTime": 1732108632,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 336,
+        "home_team": "Hercules",
+        "away_team": "UD Marbella",
+        "home_rank": "15",
+        "away_rank": "8",
+        "odds": [
+            {
+                "draw": 3.1,
+                "score": "0-0",
+                "awayWin": 3.1,
+                "homeWin": 2.25,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732105146,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 237,
+        "home_team": "Budapest Honved II",
+        "away_team": "ESMTK",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 26,
+                "score": "1-2",
+                "awayWin": 1,
+                "homeWin": 101,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1732103375,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 239,
+        "home_team": "Nongbua Pitchaya FC",
+        "away_team": "Khonkaen United",
+        "home_rank": "11",
+        "away_rank": "15",
+        "odds": [
+            {
+                "draw": 1,
+                "score": "3-3",
+                "awayWin": 26,
+                "homeWin": 26,
+                "isSealed": 1,
+                "matchTime": "96",
+                "changeTime": 1732107233,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 730,
+        "home_team": "Chipukizi FC",
+        "away_team": "Inter Zanzibar FC",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 19,
+                "score": "1-0",
+                "awayWin": 201,
+                "homeWin": 1.02,
+                "isSealed": 1,
+                "matchTime": "91",
+                "changeTime": 1732114953,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 346,
+        "home_team": "Bahia",
+        "away_team": "Palmeiras",
+        "home_rank": "8",
+        "away_rank": "2",
+        "odds": [
+            {
+                "draw": 3.5,
+                "score": "0-0",
+                "awayWin": 2.2,
+                "homeWin": 3.2,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732109731,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 301,
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
+        "home_rank": "38",
+        "away_rank": "39",
+        "odds": [
+            {
+                "draw": 2.62,
+                "score": "0-0",
+                "awayWin": 3,
+                "homeWin": 2.6,
+                "isSealed": 0,
+                "matchTime": "23",
+                "changeTime": 1732116095,
+                "matchStatus": 2
+            }
+        ]
+    },
+    {
+        "id": 282,
+        "home_team": "Rethymniakos",
+        "away_team": "Marko",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 21,
+                "score": "0-1",
+                "awayWin": 1.01,
+                "homeWin": 251,
+                "isSealed": 0,
+                "matchTime": "93",
+                "changeTime": 1732114331,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 651,
+        "home_team": "Muang Klaeng",
+        "away_team": "Huasamrong Gateway",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 61,
+                "score": "0-2",
+                "awayWin": 1,
+                "homeWin": 61,
+                "isSealed": 1,
+                "matchTime": "85",
+                "changeTime": 1732095884,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 653,
+        "home_team": "Romklao United",
+        "away_team": "Muang Loei United",
+        "home_rank": 0,
+        "away_rank": "6",
+        "odds": [
+            {
+                "draw": 7.87,
+                "score": "0-2",
+                "awayWin": 1.03,
+                "homeWin": 100,
+                "isSealed": 0,
+                "matchTime": "91",
+                "changeTime": 1732096260,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 349,
+        "home_team": "Lyon (w)",
+        "away_team": "AS Roma (w)",
+        "home_rank": "1",
+        "away_rank": "4",
+        "odds": [
+            {
+                "draw": 9.5,
+                "score": "0-0",
+                "awayWin": 21,
+                "homeWin": 1.09,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732114251,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 223,
+        "home_team": "Ispe FC U20",
+        "away_team": "Hantharwady United U20",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.03,
+                "score": "0-0",
+                "awayWin": 26,
+                "homeWin": 13,
+                "isSealed": 0,
+                "matchTime": "93",
+                "changeTime": 1732098121,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 551,
+        "home_team": "Llosetense",
+        "away_team": "UD Alcudia",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.25,
+                "score": "0-0",
+                "awayWin": 2.63,
+                "homeWin": 2.35,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732107917,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 224,
+        "home_team": "Dome FC",
+        "away_team": "Nakhon Ratchasima Mazda FC",
+        "home_rank": "11",
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 7,
+                "score": "0-0",
+                "awayWin": 1.1,
+                "homeWin": 15,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732031427,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 275,
+        "home_team": "Vigor Senigallia",
+        "away_team": "Castelfidardo",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 3.9,
+                "homeWin": 1.8,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732095767,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 285,
+        "home_team": "AO Mikrasiatikos",
+        "away_team": "Ethnikos OFPF",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 51,
+                "score": "2-0",
+                "awayWin": 251,
+                "homeWin": 1,
+                "isSealed": 0,
+                "matchTime": "90",
+                "changeTime": 1732114153,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 699,
+        "home_team": "NPA Anchors",
+        "away_team": "Mighty Enforcers",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 19,
+                "score": "3-2",
+                "awayWin": 201,
+                "homeWin": 1.02,
+                "isSealed": 1,
+                "matchTime": "93",
+                "changeTime": 1732114816,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 355,
+        "home_team": "Berazategui",
+        "away_team": "Real Pilar",
+        "home_rank": "2",
+        "away_rank": "10",
+        "odds": [
+            {
+                "draw": 2.88,
+                "score": "0-0",
+                "awayWin": 2.7,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732114275,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 299,
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "home_rank": "11",
+        "away_rank": "5",
+        "odds": [
+            {
+                "draw": 2.4,
+                "score": "0-0",
+                "awayWin": 2.62,
+                "homeWin": 3.25,
+                "isSealed": 0,
+                "matchTime": "45+",
+                "changeTime": 1732116059,
+                "matchStatus": 2
+            }
+        ]
+    },
+    {
+        "id": 571,
+        "home_team": "Tshwane South College FC",
+        "away_team": "University of the Johannesburg",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 4.5,
+                "score": "1-2",
+                "awayWin": 1.25,
+                "homeWin": 15,
+                "isSealed": 0,
+                "matchTime": "64",
+                "changeTime": 1732116075,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 312,
+        "home_team": "FC Twente Enschede (w)",
+        "away_team": "Real Madrid (w)",
+        "home_rank": "5",
+        "away_rank": "3",
+        "odds": [
+            {
+                "draw": 7,
+                "score": "0-0",
+                "awayWin": 1.18,
+                "homeWin": 12,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732115697,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 267,
+        "home_team": "North District U22",
+        "away_team": "Hong Kong FC U22",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.06,
+                "score": "3-3",
+                "awayWin": 15,
+                "homeWin": 12,
+                "isSealed": 0,
+                "matchTime": "92",
+                "changeTime": 1732112149,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 304,
+        "home_team": "Constancia",
+        "away_team": "CE Mercadal",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.3,
+                "score": "0-0",
+                "awayWin": 4.1,
+                "homeWin": 1.75,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732115697,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 203,
+        "home_team": "Mexico",
+        "away_team": "Honduras",
+        "home_rank": "16",
+        "away_rank": "77",
+        "odds": [
+            {
+                "draw": 51,
+                "score": "2-0",
+                "awayWin": 451,
+                "homeWin": 1,
+                "isSealed": 0,
+                "matchTime": "83",
+                "changeTime": 1732076159,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 272,
+        "home_team": "Gelbison",
+        "away_team": "LFA Reggio Calabria",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 15,
+                "score": "1-2",
+                "awayWin": 1.03,
+                "homeWin": 251,
+                "isSealed": 1,
+                "matchTime": "95",
+                "changeTime": 1732115864,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 695,
+        "home_team": "Udon Thani",
+        "away_team": "Lopburi City FC",
+        "home_rank": 0,
+        "away_rank": "2",
+        "odds": [
+            {
+                "draw": 1.05,
+                "score": "1-1",
+                "awayWin": 12,
+                "homeWin": 19,
+                "isSealed": 1,
+                "matchTime": "91",
+                "changeTime": 1732103793,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 509,
+        "home_team": "Chivas Guadalajara U23",
+        "away_team": "Tigres UANL U23",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.4,
+                "score": "0-0",
+                "awayWin": 2.1,
+                "homeWin": 2.9,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732109144,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 614,
+        "home_team": "AA Carapebus",
+        "away_team": "Campo Grande CE",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3.5,
+                "score": "0-0",
+                "awayWin": 1.95,
+                "homeWin": 3.25,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732113526,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 580,
+        "home_team": "UE Tona",
+        "away_team": "CF Badalona",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 2.63,
+                "homeWin": 2.45,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732114855,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 345,
+        "home_team": "Gremio (RS)",
+        "away_team": "Juventude",
+        "home_rank": "12",
+        "away_rank": "17",
+        "odds": [
+            {
+                "draw": 3.5,
+                "score": "0-0",
+                "awayWin": 5,
+                "homeWin": 1.75,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732115967,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 257,
+        "home_team": "Shashemene Kenema FC",
+        "away_team": "Axum Ketema",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 23,
+                "score": "0-1",
+                "awayWin": 1.01,
+                "homeWin": 351,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732110583,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 570,
+        "home_team": "Anthoupoli",
+        "away_team": "Olympiakos Volou",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 51,
+                "score": "2-0",
+                "awayWin": 251,
+                "homeWin": 1,
+                "isSealed": 0,
+                "matchTime": "88",
+                "changeTime": 1732114123,
+                "matchStatus": 4
             }
         ]
     },
@@ -38,58 +1197,20 @@
         ]
     },
     {
-        "id": 308,
-        "home_team": "Fredrikstad U19",
-        "away_team": "Sarpsborg 08 U19",
-        "home_rank": 0,
-        "away_rank": 0,
+        "id": 330,
+        "home_team": "Red Bull Bragantino",
+        "away_team": "Sao Paulo",
+        "home_rank": "18",
+        "away_rank": "6",
         "odds": [
             {
-                "draw": 4.5,
+                "draw": 3,
                 "score": "0-0",
-                "awayWin": 3.6,
-                "homeWin": 1.62,
+                "awayWin": 3,
+                "homeWin": 2.6,
                 "isSealed": 0,
                 "matchTime": "",
-                "changeTime": 1732099381,
-                "matchStatus": 1
-            }
-        ]
-    },
-    {
-        "id": 299,
-        "home_team": "Al-Adalah",
-        "away_team": "Al Najma(KSA)",
-        "home_rank": "11",
-        "away_rank": "5",
-        "odds": [
-            {
-                "draw": 3.3,
-                "score": "0-0",
-                "awayWin": 2.25,
-                "homeWin": 2.7,
-                "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1732094091,
-                "matchStatus": 1
-            }
-        ]
-    },
-    {
-        "id": 301,
-        "home_team": "Elche CF Ilicitano",
-        "away_team": "Sant Andreu",
-        "home_rank": "38",
-        "away_rank": "39",
-        "odds": [
-            {
-                "draw": 2.9,
-                "score": "0-0",
-                "awayWin": 2.8,
-                "homeWin": 2.45,
-                "isSealed": 0,
-                "matchTime": "",
-                "changeTime": 1732102792,
+                "changeTime": 1732115967,
                 "matchStatus": 1
             }
         ]

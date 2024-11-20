@@ -3,9 +3,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def classify_a_points(a_points):
-    """
-    Classifies the points of Team A into specific groups.
-    """
+
     if not isinstance(a_points, (int, float)) or a_points < 0:
         logging.error(f"Invalid points: {a_points}. Points must be a non-negative number.")
         return "Unknown Group"
@@ -29,9 +27,7 @@ def classify_a_points(a_points):
     return group
 
 def classify_b_points(b_points):
-    """
-    Classifies the points of Team B into specific groups.
-    """
+
     if not isinstance(b_points, (int, float)) or b_points < 0:
         logging.error(f"Invalid points: {b_points}. Points must be a non-negative number.")
         return "Unknown Group"

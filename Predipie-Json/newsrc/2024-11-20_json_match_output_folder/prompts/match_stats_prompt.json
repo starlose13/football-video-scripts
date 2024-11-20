@@ -1,24 +1,87 @@
 [
     {
-        "prompt": "Get ready for thrilling action as Corinthians take on Cruzeiro in a clash of giants! Who will dominate? Tune in and find out!",
-        "home_team": "Corinthians Paulista (SP)",
-        "away_team": "Cruzeiro Esporte Clube",
+        "prompt": "Get ready for a thrilling clash as Orihuela CF faces Aguilas CF! Who will triumph? Tune in, feel the excitement!",
+        "home_team": "Orihuela CF",
+        "away_team": "Aguilas CF",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for thrilling action as 2 de Mayo PJC Reserves clash with Olimpia Asuncion Reserves! Who will dominate the field? Tune in!",
+        "home_team": "2 de Mayo PJC Reserves",
+        "away_team": "Olimpia Asuncion Reserves",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
         "reading_time": 7.96
     },
     {
-        "prompt": "Get ready for thrilling action as Al-Adalah faces Al Najma! Who will dominate the pitch? Don't miss this epic showdown!",
-        "home_team": "Al-Adalah",
-        "away_team": "Al Najma(KSA)",
+        "prompt": "Get ready for an electrifying U20 clash as Algeria faces Morocco! Who will dominate the field? Tune in to find out!",
+        "home_team": "Algeria U20",
+        "away_team": "Morocco U20",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 6.99
+        "reading_time": 7.31
     },
     {
-        "prompt": "Get ready for thrilling action as Fredrikstad U19 takes on Sarpsborg 08 U19! Who will dominate? Tune in to find out!",
+        "prompt": "Get ready for thrilling action as UE Castelldefels clashes with Vilanova Geltru! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "UE Castelldefels",
+        "away_team": "Vilanova Geltru",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for thrilling football as KF Dukagjini U21 clashes with FC Prishtina U21! Who will dominate? Tune in to find out!",
+        "home_team": "KF Dukagjini U21",
+        "away_team": "FC Prishtina U21",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for thrilling youth football as Opava U19 clashes with Banik Ostrava U19! Who will dominate the pitch? Stay tuned!",
+        "home_team": "Opava U19",
+        "away_team": "Banik Ostrava U19",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Soloda Adwa takes on Sheger Ketema! Who will dominate? Tune in to find out!",
+        "home_team": "Soloda Adwa",
+        "away_team": "Sheger Ketema",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying showdown as Corinthians takes on Cruzeiro! Who will dominate the pitch? Tune in, feel the excitement!",
+        "home_team": "Corinthians Paulista (SP)",
+        "away_team": "Cruzeiro Esporte Clube",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Roma City battles L'Aquila! Who will dominate? Tune in, feel the excitement! Don't miss out!",
+        "home_team": "Roma City",
+        "away_team": "L'Aquila",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.03
+    },
+    {
+        "prompt": "Get ready for thrilling action as Fredrikstad U19 clashes with Sarpsborg 08 U19! Who will dominate? Tune in and find out!",
         "home_team": "Fredrikstad U19",
         "away_team": "Sarpsborg 08 U19",
         "date": "Unknown Date",
@@ -27,7 +90,475 @@
         "reading_time": 7.31
     },
     {
-        "prompt": "Get ready for a thrilling clash as Al-Adalah takes on Al Najma! Who will dominate the pitch? Don't miss this epic showdown!",
+        "prompt": "Get ready for an electrifying match as Barcelona B (w) faces Osasuna (w)! Who will dominate? Tune in to find out!",
+        "home_team": "Barcelona B (w)",
+        "away_team": "Osasuna (w)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an exhilarating clash as Cruzeiro (w) faces America Mineiro (w)! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "Cruzeiro (w)",
+        "away_team": "America Mineiro (w)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for thrilling action as San Francisco Reserves clash with Mario Mendez FC! Who will dominate? Tune in to find out!",
+        "home_team": "San Francisco Reserves",
+        "away_team": "Mario Mendez FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Fola Esch takes on CS Petange! Who will dominate? Tune in to find out!",
+        "home_team": "Fola Esch",
+        "away_team": "CS Petange",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as MC Alger faces CR Belouizdad! Who will dominate this epic showdown? Tune in and find out!",
+        "home_team": "MC Alger",
+        "away_team": "CR Belouizdad",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for an electrifying match as Erzeni clashes with KF Valbona! Who will dominate the pitch? Tune in to find out!",
+        "home_team": "Erzeni",
+        "away_team": "KF Valbona",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as VfL Wolfsburg takes on Galatasaray! Who will dominate? Tune in, feel the excitement, don\u2019t miss out!",
+        "home_team": "VfL Wolfsburg (w)",
+        "away_team": "Galatasaray SK (w)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.38
+    },
+    {
+        "prompt": "Get ready for thrilling football as Banbueng City clashes with Rajpracha FC! Who will dominate the pitch? Tune in, feel the excitement!",
+        "home_team": "Banbueng City",
+        "away_team": "Rajpracha FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.85
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Estudiantes La Plata faces Rosario Central! Who will dominate the pitch? Tune in to find out!",
+        "home_team": "Estudiantes La Plata",
+        "away_team": "Rosario Central",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for thrilling football as Deportivo Merlo Reserves clash with Excursionistas Reserves! Who will dominate? Tune in and find out!",
+        "home_team": "Deportivo Merlo Reserves",
+        "away_team": "Excursionistas Reserves",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Surin City FC takes on Ubonkids City! Who will dominate the field? Tune in and find out!",
+        "home_team": "Surin City FC ",
+        "away_team": "Ubonkids City",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.28
+    },
+    {
+        "prompt": "Get ready for an electrifying showdown as Fukui United clashes with J-Lease FC! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "Fukui United",
+        "away_team": "J-Lease FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for thrilling action as FC Istiklol Dushanbe faces Regar-TadAZ Tursunzoda! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "FC Istiklol Dushanbe",
+        "away_team": "Regar-TadAZ Tursunzoda",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as AC Palazzolo takes on Cjarlins Muzane! Who will dominate? Tune in to find out!",
+        "home_team": "AC Palazzolo",
+        "away_team": "Cjarlins Muzane",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Leon U19 takes on CDSyC Cruz Azul U19! Who will dominate the field today? Tune in!",
+        "home_team": "Leon U19",
+        "away_team": "CDSyC Cruz Azul U19",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for an exhilarating clash as Flamurtari takes on Besa Kavaje! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "Flamurtari",
+        "away_team": "Besa Kavaje",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for thrilling football as Aris Voulas FC battles Olympiacos Vari! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "Aris Voulas FC",
+        "away_team": "Olympiacos Vari",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Chonburi Shark FC battles Prachuap Khiri Khan! Who will dominate? Tune in to find out!",
+        "home_team": "Chonburi Shark FC",
+        "away_team": "Prachuap Khiri Khan",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for thrilling football as Kilbarrack United clashes with Rosemount Mulvey! Don't miss the action\u2014excitement guaranteed! Tune in!",
+        "home_team": "Kilbarrack United",
+        "away_team": "Rosemount Mulvey",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.67
+    },
+    {
+        "prompt": "Get ready for thrilling football as Gualberto Villarroel Deportivo San Jos\u00e9 clashes with Club Aurora! Who will dominate? Tune in to find out!",
+        "home_team": "Gualberto Villarroel Deportivo San Jos\u00e9",
+        "away_team": "Club Aurora",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for thrilling action as Drina HE Visegrad clashes with Laktasi! Who will dominate the field? Tune in to find out!",
+        "home_team": "Drina HE Visegrad",
+        "away_team": "Laktasi",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for an electrifying match as Hercules takes on UD Marbella! Who will triumph? Tune in, feel the thrill!",
+        "home_team": "Hercules",
+        "away_team": "UD Marbella",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Budapest Honved II clashes with ESMTK! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "Budapest Honved II",
+        "away_team": "ESMTK",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Nongbua Pitchaya FC takes on Khonkaen United! Who will dominate? Tune in and find out!",
+        "home_team": "Nongbua Pitchaya FC",
+        "away_team": "Khonkaen United",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for thrilling action as Chipukizi FC clashes with Inter Zanzibar FC! Who will dominate? Tune in and find out!",
+        "home_team": "Chipukizi FC",
+        "away_team": "Inter Zanzibar FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Bahia takes on Palmeiras! Don't miss the action, the excitement, the drama! Who will triumph?",
+        "home_team": "Bahia",
+        "away_team": "Palmeiras",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.06
+    },
+    {
+        "prompt": "Get ready for an exhilarating clash as Elche CF Ilicitano faces Sant Andreu! Who will triumph? Don't miss this epic match-up!",
+        "home_team": "Elche CF Ilicitano",
+        "away_team": "Sant Andreu",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Rethymniakos takes on Marko! Who will triumph? Tune in, feel the excitement!",
+        "home_team": "Rethymniakos",
+        "away_team": "Marko",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.88
+    },
+    {
+        "prompt": "Get ready for an electrifying football clash as Muang Klaeng takes on Huasamrong Gateway! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "Muang Klaeng",
+        "away_team": "Huasamrong Gateway",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.85
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Romklao United takes on Muang Loei United! Who will dominate the pitch today? Tune in!",
+        "home_team": "Romklao United",
+        "away_team": "Muang Loei United",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Lyon Women take on AS Roma Women! Who will dominate? Tune in and find out!",
+        "home_team": "Lyon (w)",
+        "away_team": "AS Roma (w)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for an electrifying U20 clash as Ispe FC faces Hantharwady United! Who will dominate? Tune in to find out!",
+        "home_team": "Ispe FC U20",
+        "away_team": "Hantharwady United U20",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying match as Llosetense clashes with UD Alcudia! Who will triumph? Tune in, feel the excitement!",
+        "home_team": "Llosetense",
+        "away_team": "UD Alcudia",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Get ready for an electric showdown as Dome FC takes on Nakhon Ratchasima Mazda FC! Who will dominate the field? Tune in!",
+        "home_team": "Dome FC",
+        "away_team": "Nakhon Ratchasima Mazda FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Vigor Senigallia takes on Castelfidardo! Who will dominate? Tune in, join the excitement!",
+        "home_team": "Vigor Senigallia",
+        "away_team": "Castelfidardo",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.2
+    },
+    {
+        "prompt": "Gear up for a thrilling clash as AO Mikrasiatikos takes on Ethnikos OFPF! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "AO Mikrasiatikos",
+        "away_team": "Ethnikos OFPF",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as NPA Anchors take on Mighty Enforcers! Who will dominate the field? Stay tuned!",
+        "home_team": "NPA Anchors",
+        "away_team": "Mighty Enforcers",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.99
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Berazategui takes on Real Pilar! Who will dominate? Tune in, feel the excitement, don't miss it!",
+        "home_team": "Berazategui",
+        "away_team": "Real Pilar",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.38
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Al-Adalah battles Al Najma! Who will dominate? Tune in, feel the excitement, don't miss it!",
+        "home_team": "Al-Adalah",
+        "away_team": "Al Najma(KSA)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.06
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Tshwane South College FC battles University of Johannesburg! Who will dominate? Tune in and find out!",
+        "home_team": "Tshwane South College FC",
+        "away_team": "University of the Johannesburg",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as FC Twente Enschede (w) takes on Real Madrid (w)! Who will dominate the pitch? Tune in!",
+        "home_team": "FC Twente Enschede (w)",
+        "away_team": "Real Madrid (w)",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for thrilling action as North District U22 clashes with Hong Kong FC U22! Who will dominate? Tune in to find out!",
+        "home_team": "North District U22",
+        "away_team": "Hong Kong FC U22",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for thrilling football action as Constancia clashes with CE Mercadal! Don't miss the excitement; tune in for the kickoff!",
+        "home_team": "Constancia",
+        "away_team": "CE Mercadal",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.3
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Mexico clashes with Honduras! Who will dominate? Tune in, feel the excitement, join the action!",
+        "home_team": "Mexico",
+        "away_team": "Honduras",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.06
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Gelbison takes on LFA Reggio Calabria! Who will dominate the field? Tune in to find out!",
+        "home_team": "Gelbison",
+        "away_team": "LFA Reggio Calabria",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.96
+    },
+    {
+        "prompt": "Get ready for thrilling action as Udon Thani clashes with Lopburi City FC! Who will dominate? Tune in, feel the excitement!",
+        "home_team": "Udon Thani",
+        "away_team": "Lopburi City FC",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for thrilling action as Chivas Guadalajara U23 clashes with Tigres UANL U23! Who will dominate? Tune in to find out!",
+        "home_team": "Chivas Guadalajara U23",
+        "away_team": "Tigres UANL U23",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for thrilling action as AA Carapebus takes on Campo Grande CE in football! Who will reign supreme? Tune in and find out!",
+        "home_team": "AA Carapebus",
+        "away_team": "Campo Grande CE",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.28
+    },
+    {
+        "prompt": "Get ready for an electric clash as UE Tona takes on CF Badalona! Who will dominate? Tune in, feel the thrill!",
+        "home_team": "UE Tona",
+        "away_team": "CF Badalona",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Gremio faces Juventude! Who will dominate? Tune in, feel the excitement, and witness epic football action!",
+        "home_team": "Gremio (RS)",
+        "away_team": "Juventude",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 8.38
+    },
+    {
+        "prompt": "Get ready for an electrifying clash as Shashemene Kenema FC battles Axum Ketema! Who will triumph? Tune in, feel the excitement!",
+        "home_team": "Shashemene Kenema FC",
+        "away_team": "Axum Ketema",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.52
+    },
+    {
+        "prompt": "Get ready for a thrilling match as Anthoupoli takes on Olympiakos Volou! Who will dominate the field? Tune in to find out!",
+        "home_team": "Anthoupoli",
+        "away_team": "Olympiakos Volou",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Al-Adalah clashes with Al Najma! Who will dominate? Tune in and catch all the action!",
         "home_team": "Al-Adalah",
         "away_team": "Al Najma(KSA)",
         "date": "Unknown Date",
@@ -36,12 +567,12 @@
         "reading_time": 7.64
     },
     {
-        "prompt": "Gear up for an electrifying clash as Elche CF Ilicitano battles Sant Andreu! Who will dominate? Tune in, feel the thrill!",
-        "home_team": "Elche CF Ilicitano",
-        "away_team": "Sant Andreu",
+        "prompt": "Get ready for thrilling action as Red Bull Bragantino clashes with Sao Paulo! Who will dominate the pitch today? Tune in!",
+        "home_team": "Red Bull Bragantino",
+        "away_team": "Sao Paulo",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.52
+        "reading_time": 7.31
     }
 ]

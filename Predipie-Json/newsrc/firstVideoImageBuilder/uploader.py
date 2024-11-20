@@ -37,9 +37,7 @@ class ShotstackUploader:
         return None
 
     def check_upload_status(self, source_id):
-        """
-        بررسی وضعیت آپلود تصویر در Shotstack.
-        """
+
         status_url = f"https://api.shotstack.io/ingest/v1/sources/{source_id}"
         headers = {"Accept": "application/json", "x-api-key": self.api_key}
         status_response = requests.get(status_url, headers=headers)
@@ -63,7 +61,6 @@ class ShotstackUploader:
                     if status == "ready":
                         print(f"Image {file_name} is ready at {source_url}")
 
-# نحوه استفاده از کد
 if __name__ == "__main__":
     api_key = SHOTSTACK_API_KEY  
     uploader = ShotstackUploader(api_key)

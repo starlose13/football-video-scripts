@@ -1,0 +1,332 @@
+[
+    {
+        "prompt": "In an unexpected turn of events, True Democracy FC secured a resounding 3-0 victory over Nania FC, a result that diverged sharply from the pre-match predictions. Analysts and fans alike anticipated a closer contest, with forecasts favoring Nania FC to at least secure a draw, if not a win. However, True Democracy FC demonstrated a superior match strategy and execution, leading to their decisive win. \n\nFrom the onset, True Democracy FC displayed aggressive attacking tactics, asserting control of the ball and maintaining pressure on Nania FC\u2019s defense. The first goal came early in the game, setting the tone for what was to come. Rather than sit back and consolidate their lead, True Democracy FC continued to press forward. Their midfield was",
+        "evaluation": "incorrect",
+        "reading_time": 42.39
+    },
+    {
+        "prompt": "In a thrilling match, XM Hai Phong FC showcased their dominance on the field with a decisive 2-0 victory over Hoang Anh Gia Lai. The prediction leading into the game favored XM Hai Phong FC as the home team victors, a forecast that rang true as the final whistle blew.\n\nFrom the outset, XM Hai Phong FC took control of the game, applying pressure and consistently threatening the defense of Hoang Anh Gia Lai. Their efforts paid off, as they managed to break through the defense not once, but twice, sealing a well-deserved win. This victory not only fulfilled the pre-match prediction but also highlighted XM Hai Phong FC's strategic preparation and execution.\n\nDefensively, XM Hai",
+        "evaluation": "correct",
+        "reading_time": 40.15
+    },
+    {
+        "prompt": "In an exhilarating match between AO Chaidari FC and Thiva, Thiva emerged victorious, clinching a 2-0 win. This solid performance by Thiva validated the pre-match prediction which favored them as the likely winners. The 'Win Away Team' foresight proved to be spot on as Thiva not only secured the win but also maintained a clean sheet, a testament to their strong defensive setup and effective striking power. This outcome places Thiva in a favorable position as they continue to build momentum in the season, while AO Chaidari FC will have to regroup and seek to bounce back in their next encounter.",
+        "evaluation": "correct",
+        "reading_time": 34.26
+    },
+    {
+        "prompt": "In an unexpected turn of events, the match between Moldova U19 and Azerbaijan U19 concluded in a thrilling 2-2 draw. Despite Azerbaijan entering the game as the predicted favorites, Moldova demonstrated determination and a strong will to challenge that expectation. Throughout the match, both teams displayed commendable spirit and resilience, keeping the spectators on the edge of their seats until the final whistle.\n\nAzerbaijan U19 started off strong, pressing forward and exploiting spaces, but Moldova U19's defense held firm and responded with calculated counterattacks. As the game progressed, it was clear that the Moldovan side was not just there to defend but to pose a significant threat on the transition. Each goal seemed to add to the game\u2019s intensity, cul",
+        "evaluation": "incorrect",
+        "reading_time": 41.44
+    },
+    {
+        "prompt": "In an exhilarating match that defied expectations and thrilled spectators, the HK Rangers FC U22 team delivered an outstanding performance against the Eastern Football Team U22. Predictions had favored the HK Rangers FC U22 as the likely winners, and indeed, they lived up to their billing, clinching a commanding 5-1 victory that showcased their offensive prowess and tactical acumen on the pitch. This win not only confirms the strength of the HK Rangers FC in the youth league but also serves as a testament to their prepared strategy and execution, making the prediction of an 'Away Team Win' spot on.",
+        "evaluation": "correct",
+        "reading_time": 33.94
+    },
+    {
+        "prompt": "In this exciting matchup, Hull U21 displayed excellent strategic play and execution to secure a 3-1 victory over Wigan Athletic U21. The match was predicted to end in favor of the home team, Hull U21, and they did not disappoint, meeting expectations and ensuring the prediction 'Win Home Team' was spot on. This win will undoubtedly boost Hull U21's confidence as they continue their campaign, while Wigan Athletic U21 will have to regroup and look to bounce back in their upcoming fixtures.",
+        "evaluation": "correct",
+        "reading_time": 28.13
+    },
+    {
+        "prompt": "In a thrilling contest between Iceland U19 and the Republic of Ireland U19, the young Irish team emerged victorious with a final score of 2-1. This closely fought match saw both sides displaying great skill and determination, but it was the Republic of Ireland U19 who managed to carve out the win. The pre-match prediction favored the away team to clinch the victory, and indeed, that forecast proved to be accurate. The Republic of Ireland U19's performance was both strategic and resilient, ensuring they topped their opponents in this exciting face-off.",
+        "evaluation": "correct",
+        "reading_time": 31.24
+    },
+    {
+        "prompt": "In an intriguing showdown that unfolded today, Chennaiyin II faced off against Church Boys United in a match that promised thrills and delivered accordingly. As predicted by analysts, the home team, Chennaiyin II, emerged victorious, securing a narrow yet decisive 1-0 win over Church Boys United. This anticipated \u2018Win Home Team\u2019 prediction echoed accurately as Chennaiyin II capitalized on their home advantage, maintaining a robust defense and seizing their opportunity to score the decisive goal. As we break down the game, it's evident that Chennaiyin II's tactical approach and persistence were key to their success, confirming the foresight of the prediction and enriching their standing with this win. This result not only demonstrates Chennaiyin II's tactical ac",
+        "evaluation": "correct",
+        "reading_time": 40.26
+    },
+    {
+        "prompt": "In this keenly contested fixture between RC Kouba and ASM Oran, both teams displayed formidable defensive skills, ultimately resulting in a 0-0 draw. The prediction prior to the match favored RC Kouba, suggesting a potential victory or at least a draw for the home side. The outcome of a goalless draw aligns precisely with the foresight offered in the 'Win or Draw Home Team' prediction, confirming its accuracy. This match displayed an intense strategic battle where neither side could break the deadlock, reflecting the balanced nature of the competition between these two teams.",
+        "evaluation": "correct",
+        "reading_time": 31.89
+    },
+    {
+        "prompt": "In today's match analysis, we focus on the game between Kenya and Namibia which concluded with a goalless draw, 0-0. This outcome, while not the most thrilling in terms of goal action, was significant in terms of strategic play and defense.\n\nDespite the lack of goals, the match was punctuated with several attempts from both sides, testing the defensive mettle and goalkeeping prowess on display. Both teams showcased strong midfield control and there were moments that hinted at potential breakthroughs which ultimately did not materialize.\n\nInterestingly, the prediction ahead of the game was 'Win or Draw for the Away Team,' which proved to be accurate, pointing towards a keen insight into the defensive capabilities and the form of the traveling team, Namibia.",
+        "evaluation": "correct",
+        "reading_time": 42.5
+    },
+    {
+        "prompt": "In the anticipated match between Qatar U23 and Kuwait U23, both teams exhibited remarkable defense but were unable to break the deadlock, culminating in a 0-0 draw. This outcome aligns perfectly with pre-match predictions which favored the home team, Qatar U23, to either win or at least draw. Ultimately, the prediction proved accurate as Qatar U23 held their ground, ensuring that they did not face defeat on their home turf. This result reflects the defensive strategies and resilience on both sides, setting an intriguing precedent for their upcoming encounters.",
+        "evaluation": "correct",
+        "reading_time": 31.02
+    },
+    {
+        "prompt": "In a thrilling encounter that kept fans on the edge of their seats, the match between Palestine and South Korea concluded in a 1-1 draw, delivering a spectacle of resilience and tactical prowess from both teams. This evenly fought battle ensued with both sides showcasing their defensive and offensive skills, ultimately leading to a share of the spoils.\n\nThe prediction prior to the match tipped South Korea as the favorites, suggesting a 'Win or Draw for the Away Team'. True to form, South Korea managed to secure the draw, making the prediction accurate. This performance underlines the strength and consistency of the South Korean side, which was anticipated to at least not lose the match.\n\nSouth Korea, entering the match with high expectations, displayed a combination of strategic gameplay and",
+        "evaluation": "correct",
+        "reading_time": 44.88
+    },
+    {
+        "prompt": "In today's exciting match-up between NA Hussein Dey and JS El Biar, fans were treated to a tight contest that ended in a hard-fought 1-1 draw. Both teams showcased strong defensive strategies, and the attackers on either side had to work hard for every opportunity.\n\nNA Hussein Dey opened the scoring with a well-coordinated play in the first half, putting pressure on JS El Biar early in the game. However, JS El Biar responded after the break with increased intensity, leading to an equalizer midway through the second half. This goal reinvigorated the team, shifting the momentum, though they couldn't quite find the breakthrough to take the lead.\n\nThe prediction for this match was 'Win or Draw Away",
+        "evaluation": "correct",
+        "reading_time": 40.58
+    },
+    {
+        "prompt": "In the thrilling encounter between Edo Queens FC (W) and TP Mazembe (W), fans were treated to an engaging display of football that culminated in a 1-1 draw. Both teams showed great determination and skill, providing an enthralling match for the spectators.\n\nStarting off on a high note, Edo Queens FC (W) took the lead early in the first half, showcasing their offensive abilities that have made them a formidable team this season. The goal came after a beautifully executed play, leaving the crowd on their feet in applause.\n\nHowever, TP Mazembe (W) quickly regrouped and responded with resilience. Their effort paid off when they equalized later in the game, ensuring the match would not slip",
+        "evaluation": "correct",
+        "reading_time": 39.94
+    },
+    {
+        "prompt": "In the tightly contested match between Dundee U20 and Queens Park Reserves, the final whistle blew on a stalemate, with neither team able to break the deadlock, resulting in a 0-0 draw. This outcome proved surprising, especially considering that the pre-match prediction favored a decisive outcome, with expectations pointing towards a victory for either the home or away team. The incorrect prediction highlights the unpredictable nature of football, where, despite odds and analyses, the game can always swing in unexpected directions. Both teams displayed solid defensive performances, but will surely look to enhance their attacking strategies in future fixtures to clinch those crucial wins.",
+        "evaluation": "incorrect",
+        "reading_time": 36.28
+    },
+    {
+        "prompt": "In a tightly contested match between Austria U19 and Spain U19, the latter edged out a victory with a narrow scoreline of 1-0. This encounter showcased the resilience and tactical acumen of Spain's youth team, underlining their prowess in maintaining a slender lead amidst challenging opposition. As predicted, Spain U19 came out on top, affirming the 'Win Away Team' forecast and demonstrating their ability to secure results in critical match situations.",
+        "evaluation": "correct",
+        "reading_time": 24.37
+    },
+    {
+        "prompt": "In a gripping match between Haiti and Puerto Rico, the Haitian team emerged victorious with a commanding 3-0 scoreline. Going into the match, the prediction favored the home team, Haiti, to clinch the win. This forecast proved accurate as Haiti showcased superior skills, strategy, and stamina. Each goal heightened the excitement in the stadium, underscoring the team's dominance and cohesive play throughout the game. Fans and spectators witnessed a well-deserved victory, as Haiti's performance aligned perfectly with the pre-match expectations.",
+        "evaluation": "correct",
+        "reading_time": 28.54
+    },
+    {
+        "prompt": "In a thrilling encounter, Kilmarnock Reserves secured a narrow 3-2 victory over Dunfermline Reserves, proving that the pre-match predictions of an away win were spot on. The match was intense and closely contested, showing off the skill and determination from both sides. Kilmarnock's resilience and tactical prowess eventually gave them the upper hand, enabling them to clinch the victory. This result not only highlights their capability to perform under pressure but also underscores the accuracy of the match predictions.",
+        "evaluation": "correct",
+        "reading_time": 27.16
+    },
+    {
+        "prompt": "In an exciting matchup in youth international football, the Bulgaria U19 team clinched a remarkable victory over Lithuania U19, with the scoreboard reflecting a comfortable 2-0 win for the visiting team. Prior to the match, analysts and fans alike had anticipated a strong performance from Bulgaria, a prediction that turned out to be spot-on as the young Bulgarians showcased their prowess on the field.\n\nFrom the onset, Bulgaria U19 appeared more composed, with better control over the ball and superior tactical execution. Their cohesive gameplay and sharp strategies were evident as they managed to break through Lithuania's defenses twice, converting those opportunities into goals. The Lithuanian team, despite their efforts and a solid game plan, couldn't manage to penetrate Bulgaria's robust defense and",
+        "evaluation": "correct",
+        "reading_time": 42.41
+    },
+    {
+        "prompt": "In a thrilling match that had fans on the edge of their seats, Real Cartagena secured a narrow yet significant victory over Llaneros FC with a scoreline of 1-0. This result reinforced the pre-match prediction of a 'Win Home Team'. Real Cartagena's performance was decisive, clinching the victory that their supporters had hoped for. This win not only boosts their standings but also demonstrates their capability to capitalize on home advantage, effectively turning predictions into reality. The team's cohesive strategy and solid execution were key to overcoming the challenges posed by a resilient Llaneros FC.",
+        "evaluation": "correct",
+        "reading_time": 32.33
+    },
+    {
+        "prompt": "In an intense and closely contested match, Uzbekistan emerged victorious over Korea DPR with a narrow scoreline of 1-0. This closely fought battle saw both teams displaying strong defense and strategic gameplay, but ultimately it was Uzbekistan who managed to find the back of the net. The pre-match prediction favoring an away team win proved accurate, as Uzbekistan clinched the victory, showcasing their determination and tactical prowess on the field. This result not only highlights Uzbekistan's capability and resilience but also sets an exciting precedent for their future encounters.",
+        "evaluation": "correct",
+        "reading_time": 30.39
+    },
+    {
+        "prompt": "In a thrilling display of skill and strategy, Wits University decisively defeated OPOPO FC with an impressive scoreline of 4-0. Before the match, predictions were favoring a win for the home team, Wits University, and indeed, the prediction proved to be spot on. Throughout the game, Wits University dominated both in possession and goal opportunities, effectively dismantling the defense strategies of OPOPO FC. Each goal was met with roars of approval from the home crowd, cementing a memorable victory for Wits University. This match once again demonstrated their prowess on the field and justified the faith bettors had in their ability to clinch the win.",
+        "evaluation": "correct",
+        "reading_time": 36.6
+    },
+    {
+        "prompt": "In an electrifying match between the Italy U20 and Romania U20 teams, the young Italian squad showcased their dominance with an impressive 4-1 victory over their Romanian counterparts. This match, held at the splendid backdrop of a youth international tournament, highlighted the prowess and potential of Italy's rising stars.\n\nThe game kicked off with Italy immediately seizing control, displaying a combination of tactical depth and chemistry among the players. Their aggressive approach paid off early, as they broke through Romania's defenses to get the scoreboard ticking. Throughout the match, Italy maintained a firm grip on the flow of the game, barely giving Romania opportunities to retaliate.\n\nRomania did manage to find a breakthrough, possibly hinting at a comeback, but their efforts were quickly overshadowed",
+        "evaluation": "correct",
+        "reading_time": 42.94
+    },
+    {
+        "prompt": "In a closely contested match that captured the attention of fans, Hong Kong emerged victorious with a narrow 1-0 win over Mauritius. The only goal of the match proved decisive, demonstrating Hong Kong's effective strategy and resilience on the field. Predictions prior to the game favored Hong Kong as the likely winner, and indeed, the prediction 'Win Home Team' proved accurate. This victory showcases Hong Kong's capabilities and sets an optimistic tone for their upcoming fixtures.",
+        "evaluation": "correct",
+        "reading_time": 26.2
+    },
+    {
+        "prompt": "In a thrilling encounter between Livingston Reserves and Queen of South Reserves, Livingston Reserves secured a convincing 3-1 victory. Prior to the match, the prediction favored Livingston Reserves, anticipating a 'Win for the Home Team'. This forecast proved accurate as Livingston dominated the game, showcasing their superiority and strategic prowess on the field. This win not only highlights their strength and cohesion as a squad but also sets a promising tone for their upcoming fixtures.",
+        "evaluation": "correct",
+        "reading_time": 25.87
+    },
+    {
+        "prompt": "In an exciting matchup between the under-19 teams of Belarus and Armenia, Belarus U19 emerged victorious, defeating Armenia U19 with a scoreline of 3-1. The pre-match prediction favoring the home team proved accurate as Belarus U19 capitalized on their opportunities and maintained solid control throughout the game. This victory is a testament to their tactical proficiency and the effective execution of their game plan, underscoring their dominance in this youth encounter. With this win, Belarus U19 not only secured the points but also demonstrated their potential and strength in the tournament. Meanwhile, Armenia U19, despite the loss, showed moments of quality and will look to learn and improve from this experience.",
+        "evaluation": "correct",
+        "reading_time": 38.33
+    },
+    {
+        "prompt": "In a thrilling match that saw Tanzania and Guinea face off, Tanzania emerged victorious with a narrow but decisive 1-0 win. This result aligns perfectly with the pre-match prediction of a 'Win Home Team', highlighting the accuracy of the forecast. Throughout the game, Tanzania displayed solid team coordination and strategic play, which ultimately was pivotal in securing their win against Guinea. This victory not only demonstrates Tanzania's capabilities on the field but also underlines the effectiveness of their game plan and preparation leading up to this encounter.",
+        "evaluation": "correct",
+        "reading_time": 29.74
+    },
+    {
+        "prompt": "In a thrilling contest between Coventry U21 and Barnsley U21, the young talents from both teams gave an outstanding performance, ultimately leading to a 2-2 draw. The prediction leading up to the match favored the Away Team, Barnsley U21, suggesting either a win for them or a draw. As the final whistle blew, this prediction proved accurate, demonstrating keen insight into the capabilities and form of both teams involved. Throughout the match, the teams were neck-and-neck in goals and opportunities, with every moment setting the stage for either side to clinch a victory. However, with the match concluding in a draw, those who backed the prediction of 'Win or Draw Away Team' will certainly feel justified in their assessment,",
+        "evaluation": "correct",
+        "reading_time": 41.54
+    },
+    {
+        "prompt": "In a gripping display of talent and teamwork, South Africa clinched a convincing 3-0 victory against South Sudan in their latest matchup. Entering the game, expectations were high for the home team, and they did not disappoint, fulfilling the prediction of a 'Win Home Team'.\n\nFrom the onset, South Africa dominated both possession and territory, showcasing a dynamic and well-organized approach to their gameplay. The team struck an excellent balance between defensive solidity and offensive creativity. Each goal was a testament to their strategic execution and synergy on the field.\n\nSouth Sudan, while underdogs, showed moments of resilience but ultimately could not withstand the continuous pressure exerted by South Africa. Despite the loss, South Sudan had passages of play that they can build on for",
+        "evaluation": "correct",
+        "reading_time": 43.47
+    },
+    {
+        "prompt": "In the gripping encounter between the U19 teams of China and Kyrgyzstan, the match certainly lived up to the anticipation. Prior to the game, the prediction favored Kyrgyzstan U19 as the likely victors. As the match unfolded at the stadium, filled with an intense atmosphere, both teams displayed robust defense and strategic play.\n\nHowever, Kyrgyzstan U19 managed to edge out their rivals with a decisive 1-0 victory. This lone goal not only demonstrated tactical proficiency but also highlighted the team\u2019s determination to clinch the win. This outcome validated the pre-match prediction of an away win, showing keen insights into the capabilities and form of the Kyrgyzstan U19 squad.\n\nKyrgyzstan's victory could signify a pivotal moment in",
+        "evaluation": "correct",
+        "reading_time": 39.94
+    },
+    {
+        "prompt": "In today's tightly contested match between Derby County Reserve and Stoke City Reserve, both sides demonstrated strong defensive play, resulting in a goalless draw with a final score of 0-0. This outcome confirms the prediction of a 'Win or Draw for the Home Team.'\n\nBoth teams had several opportunities to break the deadlock but were unable to capitalize on their chances. Derby County Reserve, playing on their home ground, seemed to have a slight edge in possession and territorial advantage, which might have suggested a potential win. However, Stoke City Reserve displayed commendable resilience in their defense, effectively neutralizing any threats.\n\nThe goalkeepers on both sides played stellar roles, coming up with crucial saves to keep their teams in the game. Each defensive lineup was organized and",
+        "evaluation": "correct",
+        "reading_time": 43.91
+    },
+    {
+        "prompt": "In a thrilling match-up that had fans on the edge of their seats, Indonesia emerged victorious against Saudi Arabia with a convincing 2-0 win. Heading into the game, predictions favored the home team, Indonesia, to secure a win, and they did not disappoint. The Indonesian team displayed remarkable teamwork and strategy, outplaying Saudi Arabia with skillful maneuvers and solid defense. The two goals that sealed their victory were not just a testament to their offensive prowess but also a reflection of their overall dominance throughout the game. This correct prediction of a 'Win Home Team' highlights not only the strength and potential of the Indonesian team but also the accuracy of the pre-match analysis. This win is sure to boost the morale of the Indonesian team and their supporters as",
+        "evaluation": "correct",
+        "reading_time": 44.25
+    },
+    {
+        "prompt": "In the eagerly anticipated match between Hambericho Durame (W) and Ethio Electric FC (W), the latter team managed to secure a victory, edging out their opponents with a narrow 1-0 win. This result aligned perfectly with the pre-match prediction of an away win, demonstrating insight into the tactical match-ups and team forms. Ethio Electric FC (W) performed admirably, taking advantage of their opportunities and defending their lead until the final whistle, earning them crucial points in their campaign. This carefully contested match underscores the competitive nature of the league and showcases the strategic acumen of Ethio Electric FC\u2019s (W) coaching staff.",
+        "evaluation": "correct",
+        "reading_time": 34.47
+    },
+    {
+        "prompt": "In what was a thrilling encounter at the Vitality Stadium, Bournemouth AFC U21 showcased their prowess by triumphing over Watford U21 with an impressive scoreline of 4-1. This result not only delighted the home fans but also validated the pre-match prediction favoring a home team victory. Bournemouth's young Cherries were in splendid form, aggressively taking control of the game and efficiently converting their chances. Watford U21, while showing bursts of potential, struggled to keep up with the pace and tactical execution of their opponents. This match further highlights the strength and depth of Bournemouth AFC U21, suggesting that they are a formidable force in the league this season. Meanwhile, Watford U21 will have to go back to the",
+        "evaluation": "correct",
+        "reading_time": 40.37
+    },
+    {
+        "prompt": "In an exhilarating match-up between Denmark U19 and Israel U19, the Danish team clinched a narrow victory with a final scoreline of 3-2. As predicted, the home team came out on top in this intense contest. This match not only highlighted Denmark U19\u2019s offensive capabilities but also showcased their resilience under pressure as they fended off a strong comeback attempt by Israel U19. With this win, Denmark U19 continues to display their prowess in the tournament, aligning perfectly with the pre-match prediction of a 'Win Home Team'. The accuracy of the prediction underscores a keen understanding of the team dynamics and current forms, cementing the credibility of the analysis that foresaw a Danish victory.",
+        "evaluation": "correct",
+        "reading_time": 38.87
+    },
+    {
+        "prompt": "In a tightly contested match, Cear\u00e1 emerged victorious with a narrow 1-0 win over Am\u00e9rica MG. This result was in line with the pre-match prediction of a home win for Cear\u00e1, which turned out to be spot on. The game was marked by intense midfield battles and strategic play, with both teams demonstrating strong defensive setups. Ultimately, it was Cear\u00e1 who managed to break the deadlock and secure the crucial three points. This win could be a significant boost for Cear\u00e1 as they look to improve their standings in the league. Meanwhile, Am\u00e9rica MG will have to regroup and look forward to their next game to bounce back from this setback.",
+        "evaluation": "correct",
+        "reading_time": 38.12
+    },
+    {
+        "prompt": "In the captivating encounter between Italy U21 and Ukraine U21, the sides could not be separated, with both teams demonstrating resilience and skill to conclude the match in a 2-2 draw. This tense showdown was a true test of mettle for both young squads, showcasing their offensive capabilities and determination.\n\nPredominantly, the match was a dynamic display of youthful exuberance and tactical execution. Italy, playing in front of a home crowd, showcased their typical flair and attacking prowess, while Ukraine responded robustly, countering effectively to ensure they stayed level.\n\nThe prediction for this match was a 'Win or Draw for the Home Team,' a forecast that aligned perfectly with the outcome. Italy U21, as anticipated, didn\u2019t let a win",
+        "evaluation": "correct",
+        "reading_time": 41.75
+    },
+    {
+        "prompt": "In a thrilling showdown that had fans on the edge of their seats, Valle de Xico FC clinched a narrow victory over Atletico Pachuca with a final scoreline of 1-0. Heading into the match, predictions favored Valle de Xico with a 'Win Away Team' forecast, and indeed, the outcome aligned perfectly with those expectations. Valle de Xico\u2019s tactical discipline and determination paid off, allowing them to walk away with a well-earned three points. This win underscores their ability to perform under pressure and secure crucial results away from home. Congratulations to Valle de Xico FC on a hard-fought victory.",
+        "evaluation": "correct",
+        "reading_time": 34.04
+    },
+    {
+        "prompt": "In a thrilling display of talent and strategy, Ava\u00ed FC notched up a convincing 3-1 victory over Botafogo SP. This result was in line with the pre-match predictions that favored Ava\u00ed FC as the likely winners. The expectations set by the 'Win Away Team' forecast proved accurate, showcasing Ava\u00ed FC's preparation and superior execution on the day. This win not only boosts their own confidence but also signals a clear intent to their rivals as the season progresses. Ava\u00ed FC's players stepped up, decisively seizing their chances and turning them into goals, which eventually sealed their victory against a determined Botafogo SP.",
+        "evaluation": "correct",
+        "reading_time": 34.79
+    },
+    {
+        "prompt": "In an exhilarating display of football, Cerro Largo decisively outplayed Montevideo Wanderers FC, clinching a resounding 4-0 victory. As predicted, Cerro Largo, playing on home turf, leveraged their advantage fully, converting their opportunities brilliantly and capturing the essence of a well-drilled and highly motivated team. This commanding win highlights their strategic preparation and superior execution on the field, aligning perfectly with the pre-match prediction of a 'Win for Home Team'. This result not only bolsters Cerro Largo's confidence but also adds valuable points to their tally in the league campaign.",
+        "evaluation": "correct",
+        "reading_time": 31.34
+    },
+    {
+        "prompt": "In a thrilling encounter that truly delivered, Fleetwood Town U21 took on Crewe Alexandra U21 in a match that had fans on the edge of their seats. The final whistle blew with Fleetwood Town U21 emerging victorious, securing a 3-2 win over their opponents.\n\nThe matchup was a riveting display of young talent and strategic gameplay, with both teams giving their all on the pitch. Fleetwood Town U21 showcased a cohesive team effort and a resilient spirit, overcoming Crewe Alexandra U21 by a narrow margin. There was dynamic play from both sides, indicative of the skill and promise within their squads.\n\nPrior to the match, the prediction favored Fleetwood Town U21 with a 'Win Home Team' outcome, suggesting a belief",
+        "evaluation": "correct",
+        "reading_time": 41.23
+    },
+    {
+        "prompt": "In a splendid display of football in the match between Egypt and Botswana, the two teams clashed with vigor, ultimately settling with a scoreline of 1-1. Each team showcased determination and flair, pleasing the crowd with their efforts. As the final whistle blew, the verdict was a draw, confirming the pre-match prediction which suggested a favorable outcome towards the home team, with options of a win or draw for Egypt. The prediction was spot on, mirroring the final results accurately, demonstrating a sharp analysis. Moving forward, both teams have displayed promising potentials which could be pivotal in their upcoming fixtures.",
+        "evaluation": "correct",
+        "reading_time": 35.2
+    },
+    {
+        "prompt": "In the recent match between Liechtenstein U19 and Wales U19, it was a display of dominance by the young Welsh side as they secured a comprehensive 5-0 victory over Liechtenstein U19. Prior to the match, the prediction was heavily favored towards the visiting team, suggesting a 'Win for the Away Team.' Impressively, Wales U19 lived up to the expectations, showcasing their superior skills and tactics throughout the game.\n\nThe Welsh team's aggressive approach and sharp execution allowed them to maintain control of the game, effectively keeping the opposition on the defensive. Their ability to convert opportunities into goals was particularly noteworthy, as they capitalized on Liechtenstein's defensive vulnerabilities. Each goal added to the mounting pressure on Liechtenstein U19",
+        "evaluation": "correct",
+        "reading_time": 40.58
+    },
+    {
+        "prompt": "In a thrilling display of youthful talent and strategy, the Portugal U18 team secured a resounding victory over Ireland U18, clinching a 4-0 win in their recent matchup. The match left fans and spectators in awe as Portugal executed a near-flawless game plan that dismantled the Irish defense.\n\nFrom the outset, Portugal U18 showed their intent with aggressive play and precise ball control. The team's cohesion was evident, as they moved the ball with purpose and intent, creating numerous scoring opportunities. The first goal came early in the game, setting the tone and boosting the team's confidence. This early score was pivotal, as it unsettled the Ireland U18 squad and put them on the back foot.\n\nThroughout the match, Portugal",
+        "evaluation": "correct",
+        "reading_time": 41.65
+    },
+    {
+        "prompt": "In an engaging UEFA European Under-21 Championship qualifier, Bosnia-Herzegovina U21 squared off against Bulgaria U21. The match proved to be a tightly contested battle, showcasing the talents of young, promising players from both teams. Ultimately, Bosnia-Herzegovina U21 emerged victorious with a narrow 1-0 win, keeping their hopes alive in the qualifying rounds. \n\nThe match's sole goal solidified the team's tactical prowess and ability to capitalize on critical opportunities. As the game progressed, both teams exhibited solid defensive strategies, but the home side managed to find a crack in the Bulgarian defense, scoring the pivotal goal that would eventually decide the match. \n\nThe prediction for the game was a 'Win Home Team,' which",
+        "evaluation": "correct",
+        "reading_time": 39.07
+    },
+    {
+        "prompt": "In a thrilling battle between Central American rivals, the match between Panama and Costa Rica ended in a gripping 2-2 draw. This intense encounter was part of the ongoing rivalry that never fails to captivate audiences with the passionate displays from both sides. The prediction leading into the match favored Costa Rica either winning or at least securing a draw, a testament to their resilience and tactical acumen on foreign soil. That prediction proved accurate, as Costa Rica fought valiantly to come back and secure a point, maintaining their solid form away from home. This result not only reflects the closely matched skills and determination of both teams but also affirms the accuracy of the anticipated match outcome. As we reflect on this high-energy face-off, it is clear that fans",
+        "evaluation": "correct",
+        "reading_time": 44.04
+    },
+    {
+        "prompt": "In a thrilling encounter that lived up to the expectations, Iran emerged victorious against Kyrgyzstan with a narrow scoreline of 3-2. This match was a testament to the skill and determination displayed by both teams, making for an exhilarating 90 minutes of play.\n\nIran, predicted to win as the away team, justified the expectations by taking control of the game early on. Their tactical approach and precision paid dividends, enabling them to carve out significant chances and convert three key opportunities. Kyrgyzstan, on the other hand, showcased resilience and fighting spirit, pushing their opponents to the limit and managing to score twice, keeping the match competitive until the final whistle.\n\nThis result not only highlights Iran's capability and readiness on the international stage but also",
+        "evaluation": "correct",
+        "reading_time": 43.26
+    },
+    {
+        "prompt": "In a closely contested match between Chapelton and Mount Pleasant FA, the teams ended up locking horns in a 1-1 draw, displaying strong performances on both sides. The result matched pre-match predictions which favored Mount Pleasant FA to either win or at least draw. This prediction came to fruition, underscoring the accurate assessment of Mount Pleasant FA's capabilities on the field. The outcome not only highlights the competitive spirit of the clash but also showcases the predictive insight into Mount Pleasant FA's resilience and consistency as they managed to secure a key point away from home.",
+        "evaluation": "correct",
+        "reading_time": 32.44
+    },
+    {
+        "prompt": "In the recent football match featuring Na God FC against Koforidua, expectations were set for an engaging encounter, but ended in a stalemate, with neither team able to break the deadlock, concluding in a 0-0 draw. Heading into the match, the prediction favored Na God FC, suggesting a 'Win or Draw for the Home Team'. This forecast proved to be accurate as Na God FC managed to hold their ground and secure a draw at home. Both teams showed commendable defense but will no doubt be looking to improve on their offensive strategies in future games to clinch more decisive outcomes.",
+        "evaluation": "correct",
+        "reading_time": 34.68
+    },
+    {
+        "prompt": "In the highly anticipated match between Malta and Andorra, fans were left on the edge of their seats as both teams fought valiantly, yet neither could break the deadlock, culminating in a 0-0 draw. This evenly matched encounter displayed solid defensive strategies from both sides, underpinning their commitment to not conceding goals.\n\nFor those who followed the prediction of a 'Win or Draw for the Away Team,' this result confirmed the reliability of that forecast. Andorra played robustly as the visiting team, managing to secure a critical draw. This outcome not only reflects the growing competencies of smaller football nations in tight contests but also exemplifies the unpredictable nature of football, where determination often equals the finesse of larger football powerhouses.",
+        "evaluation": "correct",
+        "reading_time": 41.55
+    },
+    {
+        "prompt": "In a closely contested match between Notts County (R) and Mansfield Town Reserve, the two teams battled it out to a 0-0 draw. The result signifies a defensively strong game from both sides, with neither team managing to break the deadlock despite their efforts. Prior to the game, the prediction favored Mansfield Town Reserve, anticipating a 'Win or Draw Away Team' scenario. This prediction turned out to be spot on, as Mansfield Town Reserve held their ground and secured a draw. This outcome not only reaffirms the resilience and strategic execution of Mansfield's defensive lineup but also highlights the challenges faced by Notts County (R) in finding the back of the net. As both teams share the spoils, analysts and fans",
+        "evaluation": "correct",
+        "reading_time": 41.34
+    },
+    {
+        "prompt": "In a thrilling contest that lived up to all expectations, Lebanon emerged victorious over Myanmar with a nail-biting scoreline of 3-2. Heading into the match, the prediction favored Lebanon as the team to beat, tagging them with a 'Win Away Team' forecast. True to form and pre-match analyses, Lebanon showcased resilience and tactics that ultimately saw them clinching the win. This victory not only emphasized their prowess on the field but also upheld the accuracy of the initial prediction.",
+        "evaluation": "correct",
+        "reading_time": 27.16
+    },
+    {
+        "prompt": "In a tightly contested match at the stadium, the Mumbai Marines faced off against ICL Youngstars, resulting in a gripping yet goalless draw, marking the final score at 0-0. Coming into the game, expectations leaned towards a decisive outcome with predictions favoring either a home or away win. However, the match defied these predictions, showcasing the unpredictability of the sport.\n\nThroughout the match, both teams exhibited strong defensive strategies, limiting scoring opportunities. The Mumbai Marines controlled the possession early on but were unable to penetrate the resolute defense of the ICL Youngstars. On the flip side, Youngstars launched several promising counterattacks, though they found themselves stifled by an equally firm defense from the Marines.\n\nThe goalkeepers on both",
+        "evaluation": "incorrect",
+        "reading_time": 41.42
+    },
+    {
+        "prompt": "In the closely contested match between Hapoel Nir Ramat Hasharon U19 and Hapoel Haifa U19, both teams displayed solid defensive skills, resulting in a 0-0 draw. The outcome has verified the pre-game prediction of a 'Win or Draw for Home Team' to be accurate.\n\nThroughout the game, Hapoel Nir Ramat Hasharon U19 showed resilience and strategic play, leveraging their home advantage effectively to keep the scoring at bay. Despite several opportunities, neither team was able to break the deadlock, leading to each team taking a point from the encounter.\n\nThis draw highlights the competitive nature of the league and showcases the proficient organizational structures and tactical setups from both teams, particularly in their defense. Fans and analysts watching",
+        "evaluation": "correct",
+        "reading_time": 40.58
+    },
+    {
+        "prompt": "In a thrilling match-up that pitted Czech Republic against Georgia, expectations were high, and the game certainly delivered. The Czech team emerged victorious with a close scoreline of 2-1, turning the pre-match prediction of a 'Win Home Team' into reality. Throughout the match, the Czech team displayed a combination of tactical discipline and creative flair, managing to outscore a determined Georgian side. As predicted, the home advantage may have indeed played a crucial role, possibly giving the Czech players the extra boost needed for success. This victory not only highlights the accuracy of the prediction but also underscores Czech Republic's strength and resilience on their home turf.",
+        "evaluation": "correct",
+        "reading_time": 37.04
+    },
+    {
+        "prompt": "In a tightly contested match between Oman and Iraq, the predicted outcome aligned perfectly with reality as Iraq emerged victorious with a narrow 1-0 win. The strategic foresight in expecting an away win for Iraq proved spot-on. Throughout the match, Iraq demonstrated tactical discipline and timely execution which ultimately led them to clinch the victory against Oman. This result highlights the robustness of the prediction and the keen awareness of the dynamics at play in this specific matchup.",
+        "evaluation": "correct",
+        "reading_time": 26.42
+    },
+    {
+        "prompt": "In today's thrilling encounter between Bath City and Maidstone United, the match delivered everything a football fan could hope for, concluding with an electrifying 3-3 draw. Both teams showcased resilience and determination, battling fiercely until the final whistle. Maidstone United, undeterred by the away disadvantage, managed to secure a result in line with pre-match expectations, which leaned towards a 'Win or Draw' for the away team. This prediction indeed held true, underscoring Maidstone's capability to rise to the occasion and fight back, earning a well-deserved point on the road. This outcome not only highlights the competitive spirit of the teams but also validates the accuracy of the pre-game analysis.",
+        "evaluation": "correct",
+        "reading_time": 37.89
+    },
+    {
+        "prompt": "In the thrilling encounter between Haringey Borough and Maldon & Tiptree, predictions were high as both teams took to the field with a lot to prove. Experts and fans alike had their eyes on this match, expecting a fiercely contested battle. With a forecast favoring Maldon & Tiptree, the anticipation built up around their performance did not go unmet.\n\nAs the game kicked off, both teams showed intense commitment, battling for every ball and creating chances. It was a game that promised goals and it didn\u2019t disappoint. Maldon & Tiptree, riding on the momentum of favorable predictions, managed to secure a 2-1 victory over Haringey Borough. Their tactical discipline and sharp execution in crucial moments",
+        "evaluation": "correct",
+        "reading_time": 39.83
+    },
+    {
+        "prompt": "In a tightly contested match between Ossett United and Bradford Park Avenue, the scoreboard remained untouched as both teams failed to find the back of the net, ending the game in a 0-0 draw. As it turned out, the pre-match prediction of 'Win or Draw Away Team' held true, with Bradford Park Avenue managing to secure at least a point in this fixture. Despite numerous attempts from both sides, the defences stood tall, keeping the attackers at bay throughout the match. As a result, both teams had to settle for a share of the spoils in this evenly matched encounter.",
+        "evaluation": "correct",
+        "reading_time": 34.57
+    },
+    {
+        "prompt": "In the captivating showdown between Sierra Leone and Zambia, Zambia emerged victorious with a convincing 2-0 win. This outcome validated the pre-match prediction favoring an away win for Zambia. The Zambian team showcased a tactical superiority and cohesive gameplay, which allowed them to dominate the match and clinch the victory. This win is pivotal for Zambia as it boosts their confidence and standings in the tournament. The prediction of 'Win Away Team' was spot-on, reflecting a deep understanding of the current form and strength of the Zambian squad compared to their opponents, Sierra Leone.",
+        "evaluation": "correct",
+        "reading_time": 32.21
+    },
+    {
+        "prompt": "In an exhilarating display of football prowess, Russia showcased their dominance on the field with an emphatic 4-0 victory against Syria. The match, predicted as a 'Win for the Home Team', saw expectations met as Russia controlled the game from the outset. Their aggressive strategy and sharp execution left little room for Syria to maneuver, effectively sealing a triumphant win for the Russian team. This performance not only boosted their standings but also echoed the keen strategic insights of the prediction, affirming it as spot-on.",
+        "evaluation": "correct",
+        "reading_time": 29.31
+    },
+    {
+        "prompt": "In a thrilling encounter between France U21 and Germany U21, the match concluded with a 2-2 draw, showcasing the young talents from both sides. Ahead of the game, the prediction leaned towards a 'Win or Draw Home Team' outcome, which proved to be accurate as France, playing at home, managed to secure a draw, thus not losing the match. This result once again underscores the reliability of the pre-match analysis and how tightly contested the game was, with both teams demonstrating strong offensive and strategic plays, leading to this evenly scored outcome.",
+        "evaluation": "correct",
+        "reading_time": 32.2
+    },
+    {
+        "prompt": "In the thrilling encounter between Spain U21 and Denmark U21, the young Spanish squad demonstrated their skill and determination. Coming into the match, predictions favored Spain U21 as the likely victors, which added an element of expectation on their shoulders. Living up to their billing, Spain U21 edged out a closely contested 2-1 victory over Denmark U21.\n\nThe match was characterized by dynamic plays and strategic prowess from both teams. Spain U21 took an early lead, leveraging their sharp attacking skills to break down the Danish defense. However, Denmark U21 was not to be underestimated, as they clawed back into the game, leveling the score and setting up a nail-biting scenario. Pushed by the necessity to live up to the pre",
+        "evaluation": "correct",
+        "reading_time": 41.97
+    },
+    {
+        "prompt": "In a tightly contested match between Mickleover Sports and Macclesfield Town, the teams battled to a 0-0 draw. Despite several promising attacks, neither side managed to break the deadlock. This outcome solidified the pre-match prediction of 'Win or Draw Away Team' being accurate. Throughout the match, both teams demonstrated strong defensive performances. Macclesfield Town, as predicted, ensured they came away with at least a point, reflecting their resilience and tactical discipline on the road.",
+        "evaluation": "correct",
+        "reading_time": 26.18
+    },
+    {
+        "prompt": "In an exhilarating match at The Lamb Ground, the Sunderland U21 team showcased exceptional skill and teamwork, culminating in a dominating 5-1 victory over Tamworth. This outcome matched the pre-match prediction pointing towards an away win, which turned out spot on.\n\nSunderland U21's performance was marked by aggressive offense and strategic plays, which overwhelmed the Tamworth defense. Each of Sunderland\u2019s five goals exhibited a blend of individual brilliance and cohesive team effort. This decisive win not only boosts the morale of the young Sunderland squad but also highlights their potential in upcoming fixtures.\n\nOn the other side, despite the loss, Tamworth had moments of resilience and managed to put one past Sunderland, a reminder of the fighting spirit the team possesses. Going",
+        "evaluation": "correct",
+        "reading_time": 42.08
+    },
+    {
+        "prompt": "In an exhilarating match-up at the Oxford City ground, Alfreton Town pulled off a thrilling victory against Oxford City with a final score of 2-1. The pre-game prediction favored Alfreton Town as the likely winner, and indeed, the prediction came true, demonstrating their resilience and strategic gameplay.\n\nThroughout the match, Alfreton Town showed superior ball control and made several strategic plays that kept the spectators on the edge of their seats. Their first goal came in early in the game, setting a strong tone that they maintained throughout the match. Oxford City, not to be underestimated, responded robustly, equalizing the score and momentarily shifting the momentum.\n\nAs the game progressed towards the second half, both teams exhibited strong defense and midfield",
+        "evaluation": "correct",
+        "reading_time": 42.18
+    }
+]

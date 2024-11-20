@@ -1,26 +1,266 @@
 [
     {
-        "prompt": "Italy U21 has been struggling with only one win in their last five matches, alongside two draws and two losses. Ukraine U21 has an even tougher run, managing just one win, one draw, and suffering three losses.",
-        "reading_time": 13.2
-    },
-    {
-        "prompt": "Bath City has won three and lost two of their last five matches. Maidstone United has not won recently, with two draws and three losses.",
-        "reading_time": 8.69
-    },
-    {
-        "prompt": "Haringey Borough has drawn twice and lost three times recently. Maldon & Tiptree, on the other hand, have two wins, one draw, and two losses.",
-        "reading_time": 9.32
-    },
-    {
-        "prompt": "Oxford City has a mixed recent form with two wins, two draws, and one loss. Alfreton Town has been less consistent, securing two wins but suffering three losses.",
+        "prompt": "XM Hai Phong FC has a mixed recent form: one loss, two draws, and two wins. Hoang Anh Gia Lai has struggled, with three losses and two draws.",
         "reading_time": 10.08
     },
     {
-        "prompt": "The Czech team has struggled recently, drawing twice and losing three times. Georgia, meanwhile, has been inconsistent with two wins, one draw, and two losses.",
-        "reading_time": 9.53
+        "prompt": "AO Chaidari FC has had a mixed run recently, with two wins, one draw, and two losses. Thiva, meanwhile, has won once, drawn twice, and lost twice.",
+        "reading_time": 10.6
     },
     {
-        "prompt": "Malta has been inconsistent recently, winning two games but losing three. Andorra also won two matches, yet they faced three defeats.",
+        "prompt": "Moldova U19 has been struggling with two losses, two draws, and one win. Azerbaijan U19 shows mixed results with two wins, one draw, and two losses.",
+        "reading_time": 9.65
+    },
+    {
+        "prompt": "Eastern Football Team U22 has not played any matches recently. HK Rangers FC U22 recently won their last match.",
+        "reading_time": 6.55
+    },
+    {
+        "prompt": "True Democracy FC has remained unbeaten with one win and one draw. Nania FC, however, has struggled with three losses, one win, and one draw.",
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Hull U21 has struggled recently, losing three of their last five, but managed two victories. Wigan Athletic U21 has been more consistent with three wins and two losses in their recent matches.",
+        "reading_time": 11.16
+    },
+    {
+        "prompt": "Iceland U19 has shown strong form, winning four of their last five matches after an initial loss. The Republic of Ireland U19 has struggled, managing only one win accompanied by three draws and a loss.",
+        "reading_time": 12.13
+    },
+    {
+        "prompt": "Ossett United has struggled recently with three losses, one win, and one draw. Bradford Park Avenue has been more consistent, achieving two wins, two draws, and suffering one loss.",
+        "reading_time": 10.82
+    },
+    {
+        "prompt": "Chennaiyin II has struggled recently, with four losses and one draw. Church Boys United has been more balanced, securing two wins, one draw, and two losses.",
+        "reading_time": 9.65
+    },
+    {
+        "prompt": "RC Kouba has been inconsistent recently, recording one win, two draws, and two losses. ASM Oran is struggling more, with four losses and just one draw in their last five matches.",
+        "reading_time": 11.26
+    },
+    {
+        "prompt": "Kenya has one win, two draws, and two losses in recent matches. Namibia has secured one win, one draw, and suffered three losses.",
+        "reading_time": 8.68
+    },
+    {
+        "prompt": "Palestine has won once, drawn twice, and lost twice recently; South Korea, on the other hand, boasts three wins, one draw, and one loss.",
+        "reading_time": 9.38
+    },
+    {
+        "prompt": "NA Hussein Dey has struggled recently, with no wins, three draws, and two losses. JS El Biar has been mixed, securing two wins, one draw, and two losses.",
+        "reading_time": 10.71
+    },
+    {
+        "prompt": "Edo Queens FC have won once, drawn once, and lost once in their last three matches. TP Mazembe have won three times and lost twice in their last five games.",
+        "reading_time": 10.52
+    },
+    {
+        "prompt": "Austria U19 has won three of their last five matches, drawing once and losing once. Spain U19, in contrast, has won only once in their recent five games, with one draw and three losses.",
+        "reading_time": 12.23
+    },
+    {
+        "prompt": "Haiti has been inconsistent recently, securing three wins and suffering two losses. Puerto Rico started poorly with three defeats but managed to win their last two matches.",
+        "reading_time": 9.34
+    },
+    {
+        "prompt": "Dunfermline Reserves have struggled recently, winning only once and losing four times. Kilmarnock (R) has not found success either, with two draws and three losses.",
+        "reading_time": 8.9
+    },
+    {
+        "prompt": "Lithuania U19 has balanced results with two wins, one draw, and two losses recently. Bulgaria U19 struggles without wins, having three draws and two losses.",
+        "reading_time": 9.11
+    },
+    {
+        "prompt": "Real Cartagena has lost their last five matches! Llaneros FC has also struggled, losing four of their last five games but managed one win.",
+        "reading_time": 8.34
+    },
+    {
+        "prompt": "Korea DPR has one win, two draws, and two losses recently. Uzbekistan secured one win, one draw, and suffered three losses.",
+        "reading_time": 8.03
+    },
+    {
+        "prompt": "The Wits University has lost twice and won once recently; OPOPO FC remains undefeated with one win and three draws.",
+        "reading_time": 6.83
+    },
+    {
+        "prompt": "Italy U20 has been performing strongly with four wins and one draw; they are undefeated! Romania U20, on the other hand, has a mixed record of two wins, two draws, and one loss.",
+        "reading_time": 12.05
+    },
+    {
+        "prompt": "Hong Kong has struggled recently, with three losses, one draw, and a single win. Mauritius also faces challenges, having one win, one draw, and three losses.",
+        "reading_time": 10.07
+    },
+    {
+        "prompt": "Livingston Reserves have won once, drawn three times, and lost once recently. Queen of South Reserves have two draws and three losses.",
+        "reading_time": 7.94
+    },
+    {
+        "prompt": "Belarus U19 has won once, drawn twice, and lost twice recently. In contrast, Armenia U19 has two wins, two draws, and one loss.",
+        "reading_time": 8.89
+    },
+    {
+        "prompt": "Oman has struggled recently, securing just one win in their last five matches, with four losses. Meanwhile, Iraq has not won in their last five, drawing twice and losing three times.",
+        "reading_time": 11.26
+    },
+    {
+        "prompt": "Tanzania has been inconsistent, with two wins and three losses in their last five games. Guinea also mirrors this form, securing two victories and suffering three defeats.",
+        "reading_time": 9.55
+    },
+    {
+        "prompt": "Coventry U21 has had a mixed run with two wins, one draw, and two losses. Barnsley U21 shows one win, two draws, and two losses, indicating a struggle for consistency.",
+        "reading_time": 11.15
+    },
+    {
+        "prompt": "China U19 has been inconsistent, recording one win, two draws, and two losses. Kyrgyzstan U19 shows mixed results with two wins and three losses.",
+        "reading_time": 8.79
+    },
+    {
+        "prompt": "Indonesia has won once, drawn three times, and lost once recently. Saudi Arabia remains unbeaten with two wins and three draws.",
         "reading_time": 7.61
+    },
+    {
+        "prompt": "Derby County has won four of their last five matches with one loss. Stoke City Reserve has three wins, one draw, and one loss in their recent games.",
+        "reading_time": 9.87
+    },
+    {
+        "prompt": "Hambericho Durame has won three and lost two of their last five matches. Ethio Electric FC has one win, one draw, and three losses in their recent games.",
+        "reading_time": 9.87
+    },
+    {
+        "prompt": "South Africa has won two, drawn two, and lost one in their last five matches. South Sudan has won once, drawn once, and lost three times in their recent outings.",
+        "reading_time": 10.94
+    },
+    {
+        "prompt": "Bournemouth AFC U21 have been inconsistent, winning two games, drawing one, and losing two. Watford U21 struggle with form, securing just one win against four losses.",
+        "reading_time": 9.65
+    },
+    {
+        "prompt": "Denmark U19 has been unpredictable recently, winning twice, drawing once, and losing twice. Israel U19, starting with losses, improved to draw one and win the last two matches.",
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "Ceara has won twice and lost three times recently. Meanwhile, America MG has not won in their last five games, losing four and drawing one.",
+        "reading_time": 8.9
+    },
+    {
+        "prompt": "Italy U21 has been struggling, managing only one win, two draws, and two losses recently. Ukraine U21, on the other hand, has fared slightly worse with one win, one draw, and three losses.",
+        "reading_time": 12.54
+    },
+    {
+        "prompt": "Atletico Pachuca has won three and lost two of their last five matches. Valle de Xico FC, on the other hand, has one win, one draw, and three losses in their recent matches.",
+        "reading_time": 11.91
+    },
+    {
+        "prompt": "Botafogo SP has been strong recently, winning four of their last five matches, but they lost the most recent one. Meanwhile, Ava\u00ed FC has struggled, losing four out of their last five games, with only one draw.",
+        "reading_time": 13.41
+    },
+    {
+        "prompt": "Cerro Largo has struggled recently, securing no wins, two draws, and three losses. Montevideo Wanderers FC, on the other hand, is unbeaten with two wins and three draws.",
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "Fleetwood Town U21 has been inconsistent, winning two and losing three of their last five matches. Crewe Alexandra U21 struggles continue with one win and four losses in their recent outings.",
+        "reading_time": 10.63
+    },
+    {
+        "prompt": "Egypt has won twice, drawn once, and lost twice recently; Botswana also shows two wins, one draw, and two losses.",
+        "reading_time": 7.67
+    },
+    {
+        "prompt": "Liechtenstein U19 has lost four of their last five matches, clinching one victory. Wales U19 has won twice, drawn once, and lost twice in their recent outings.",
+        "reading_time": 9.76
+    },
+    {
+        "prompt": "Portugal U18 struggles with no wins, one draw, and four losses. Ireland U18 has a mixed outcome with one win, two draws, and two losses.",
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Bosnia-Herzegovina U21 has been inconsistent with two wins and three losses. Bulgaria U21 also shows mixed results, securing two wins, one draw, and two losses.",
+        "reading_time": 9.11
+    },
+    {
+        "prompt": "Panama has had mixed results recently, winning two games and losing three. Costa Rica won once, drew twice, and lost twice in their last five matches.",
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "Kyrgyzstan has struggled recently with four losses and only one win. Iran shows mixed results with two wins, one draw, and two losses.",
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "The Chapelton team has struggled recently, enduring three losses and two draws. Similarly, Mount Pleasant FA has faced three losses followed by two draws.",
+        "reading_time": 8.58
+    },
+    {
+        "prompt": "The Czech team has struggled recently, with no wins, two draws, and three losses. In contrast, Georgia has shown mixed results, securing two wins, one draw, and two losses.",
+        "reading_time": 11.24
+    },
+    {
+        "prompt": "Malta has struggled recently, securing two wins and suffering three losses. Andorra shares a similar story with two victories intertwined with three defeats.",
+        "reading_time": 8.05
+    },
+    {
+        "prompt": "Myanmar has struggled recently, winning only once, drawing once, and losing three times. Lebanon is also in poor form, with no wins, two draws, and three losses.",
+        "reading_time": 10.39
+    },
+    {
+        "prompt": "The Mumbai Marines have had a mixed run recently, winning twice, drawing once, and losing twice. In contrast, the ICL Youngstars have also won twice but suffered three losses.",
+        "reading_time": 10.61
+    },
+    {
+        "prompt": "Hapoel Nir Ramat Hasharon U19 remains unbeaten recently with two wins and three draws. Hapoel Haifa U19 has won three, drawn one, and lost one in their last five matches.",
+        "reading_time": 10.52
+    },
+    {
+        "prompt": "Bath City has won three and lost two of their last five matches. Maidstone United hasn't won recently, with two draws and three losses.",
+        "reading_time": 8.37
+    },
+    {
+        "prompt": "Haringey Borough has been struggling recently, with no wins, two draws, and three losses. Maldon Tiptree's form is mixed with two wins, one draw, and two losses.",
+        "reading_time": 10.18
+    },
+    {
+        "prompt": "Na God FC has struggled recently, winning only once and losing four times. Koforidua remains unbeaten with two wins and three draws.",
+        "reading_time": 7.73
+    },
+    {
+        "prompt": "Dundee U20 has achieved one win, two draws, and two losses recently. Queens Park Reserves have one win and four losses in their latest matches.",
+        "reading_time": 8.9
+    },
+    {
+        "prompt": "Notts County Reserve recently won once, drew once, and lost three times. Mansfield Town Reserve managed one win and suffered four defeats.",
+        "reading_time": 7.94
+    },
+    {
+        "prompt": "Qatar U23 has struggled recently, with no wins, two draws, and three losses. Kuwait U23 shows mixed results, securing two wins and three losses.",
+        "reading_time": 9.0
+    },
+    {
+        "prompt": "Russia has been inconsistent with two wins and three losses. Syria struggles more, having won only once in their last five games.",
+        "reading_time": 7.73
+    },
+    {
+        "prompt": "Sierra Leone has won once, drawn twice, and lost twice recently; Zambia recorded one win, one draw, and three losses.",
+        "reading_time": 7.67
+    },
+    {
+        "prompt": "France U21 has been inconsistent with two wins, two draws, and one loss. Germany U21 also shows mixed results, securing two wins, one draw, and two losses.",
+        "reading_time": 10.18
+    },
+    {
+        "prompt": "Spain U21 has been inconsistent recently, with two wins, one draw, and two losses. Denmark U21 is struggling, having lost four times and drawn once.",
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Tamworth has struggled recently, with no wins, two draws, and three losses. Sunderland U21 shows mixed results, securing two wins but suffering three losses.",
+        "reading_time": 9.0
+    },
+    {
+        "prompt": "Mickleover Sports has been inconsistent, winning two and losing three of their last five matches. Macclesfield Town won one, drew one, and lost three in the same period.",
+        "reading_time": 10.08
+    },
+    {
+        "prompt": "Oxford City has won twice, drawn twice, and lost once recently. Alfreton Town has two wins and three losses in their last five matches.",
+        "reading_time": 8.58
     }
 ]

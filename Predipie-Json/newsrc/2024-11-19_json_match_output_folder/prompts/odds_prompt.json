@@ -1,56 +1,596 @@
 [
     {
-        "prompt": "The odds for a win are 19 for the home team and 23 for the away team. The odds of a draw stand at 1.02.",
+        "prompt": "Full-time win odds are as follows. Home victory: 1; away victory: 81; draw: 51. Place your bets wisely!",
+        "home_team": "XM Hai Phong FC",
+        "away_team": "Hoang Anh Gia Lai",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 81,
+        "reading_time": 6.75
+    },
+    {
+        "prompt": "The odds for a victory by the home team are 81; for the away team, 1. Odds for a draw stand at 51. Choose wisely!",
+        "home_team": "AO Chaidari FC",
+        "away_team": "Thiva",
+        "home_odds": 81,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 9.04
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 151; the away team to win are significantly lower at 1.01. Meanwhile, the odds for a draw are marked at 26.",
+        "home_team": "Moldova U19",
+        "away_team": "Azerbaijan U19",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 11.33
+    },
+    {
+        "prompt": "The odds of winning for the home team are 67. The away team has winning odds of 1. Odds for a draw stand at 51.",
+        "home_team": "Eastern Football Team U22",
+        "away_team": "HK Rangers FC U22",
+        "home_odds": 67,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "True Democracy FC has odds of winning at 3.8; Nania FC at 1.73; and the odds for a draw stand at 3.6.",
+        "home_team": "True Democracy FC",
+        "away_team": "Nania FC",
+        "home_odds": 3.8,
+        "draw_odds": 3.6,
+        "away_odds": 1.73,
+        "reading_time": 8.28
+    },
+    {
+        "prompt": "Hull U21 have winning odds of 1! Wigan Athletic U21 are less favored, with odds of 81. A draw between the teams stands at odds of 51. Consider your choices wisely!",
+        "home_team": "Hull U21",
+        "away_team": "Wigan Athletic U21",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 81,
+        "reading_time": 10.99
+    },
+    {
+        "prompt": "Iceland U19 has odds of winning at 151. Republic of Ireland U19 has odds at 1.01. The draw odds are set at 26.",
+        "home_team": "Iceland U19",
+        "away_team": "Republic of Ireland U19",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 3.9; victory for the away team at 1.53; a draw at 4.75.",
+        "home_team": "Ossett United",
+        "away_team": "Bradford Park Avenue",
+        "home_odds": 3.9,
+        "draw_odds": 4.75,
+        "away_odds": 1.53,
+        "reading_time": 8.92
+    },
+    {
+        "prompt": "The odds are: winning for the home team, 1.02; winning for the away team, 101; draw, 19.",
+        "home_team": "Chennaiyin II",
+        "away_team": "Church Boys United",
+        "home_odds": 1.02,
+        "draw_odds": 19,
+        "away_odds": 101,
+        "reading_time": 6.87
+    },
+    {
+        "prompt": "The odds for the home team winning are 21; for the away team, 26. Odds for a draw stand at 1.01.",
+        "home_team": "RC Kouba",
+        "away_team": "ASM Oran",
+        "home_odds": 21,
+        "draw_odds": 1.01,
+        "away_odds": 26,
+        "reading_time": 7.78
+    },
+    {
+        "prompt": "The odds for a win by the home team are 26; the same odds apply to the away team. A draw has odds of 1.01.",
+        "home_team": "Kenya",
+        "away_team": "Namibia",
+        "home_odds": 26,
+        "draw_odds": 1.01,
+        "away_odds": 26,
+        "reading_time": 8.86
+    },
+    {
+        "prompt": "Full-time result odds are as follows: a win for the home team at 51; a win for the away team at 17; a draw at 1.02.",
+        "home_team": "Palestine",
+        "away_team": "South Korea",
+        "home_odds": 51,
+        "draw_odds": 1.02,
+        "away_odds": 17,
+        "reading_time": 9.15
+    },
+    {
+        "prompt": "Full-time result odds are as follows: both NA Hussein Dey and JS El Biar have equal odds of winning at 19; a draw is set at 1.02.",
+        "home_team": "NA Hussein Dey",
+        "away_team": "JS El Biar",
+        "home_odds": 19,
+        "draw_odds": 1.02,
+        "away_odds": 19,
+        "reading_time": 9.3
+    },
+    {
+        "prompt": "The odds for a win are 13 for the home team and 11 for the away team! The draw odds stand at 1.04.",
+        "home_team": "Edo Queens FC (W)",
+        "away_team": "TP Mazembe (W)",
+        "home_odds": 13,
+        "draw_odds": 1.04,
+        "away_odds": 11,
+        "reading_time": 8.02
+    },
+    {
+        "prompt": "The odds for Austria U19 to win are 151; for Spain U19, they are 1.01. A draw has odds set at 26. Explore these as you consider your bets!",
+        "home_team": "Austria U19",
+        "away_team": "Spain U19",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 10.54
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1; victory for the away team at 151; a draw is set at 34. Explore these options! What's your pick?",
+        "home_team": "Haiti",
+        "away_team": "Puerto Rico",
+        "home_odds": 1,
+        "draw_odds": 34,
+        "away_odds": 151,
+        "reading_time": 11.23
+    },
+    {
+        "prompt": "The odds are as follows: victory for the home team at 67; away team winning at 1.03; a draw set at 15. Always consider the risks when placing bets!",
+        "home_team": "Dunfermline Reserves",
+        "away_team": "Kilmarnock (R)",
+        "home_odds": 67,
+        "draw_odds": 15,
+        "away_odds": 1.03,
+        "reading_time": 10.29
+    },
+    {
+        "prompt": "The odds for the home team winning stand at 126, while the away team has odds of 1. A draw is set at odds of 51.",
+        "home_team": "Lithuania U19",
+        "away_team": "Bulgaria U19",
+        "home_odds": 126,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 9.02
+    },
+    {
+        "prompt": "The odds for a victory by the home team are set at 1; for the away team winning, the odds are 151. Odds for a draw stand at 34.",
+        "home_team": "Real Cartagena",
+        "away_team": "Llaneros FC",
+        "home_odds": 1,
+        "draw_odds": 34,
+        "away_odds": 151,
+        "reading_time": 10.15
+    },
+    {
+        "prompt": "The odds for Korea DPR to win are 501! Uzbekistan has odds to win at 1.01. A draw comes with odds of 21.",
+        "home_team": "Korea DPR",
+        "away_team": "Uzbekistan",
+        "home_odds": 501,
+        "draw_odds": 21,
+        "away_odds": 1.01,
+        "reading_time": 8.23
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 1; the away team's victory odds stand at 67; odds for a draw are 51.",
+        "home_team": "Wits University",
+        "away_team": "OPOPO FC",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 67,
+        "reading_time": 8.94
+    },
+    {
+        "prompt": "Full-time result odds are as follows: Italy U20 winning at 1; Romania U20 at 67; and a draw at 51. Choose wisely!",
+        "home_team": "Italy U20",
+        "away_team": "Romania U20",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 67,
+        "reading_time": 7.83
+    },
+    {
+        "prompt": "The odds of winning for the home team are 1.01. The away team's victory odds stand at 501. A draw outcome is marked at odds of 26.",
+        "home_team": "Hong Kong",
+        "away_team": "Mauritius",
+        "home_odds": 1.01,
+        "draw_odds": 26,
+        "away_odds": 501,
+        "reading_time": 9.55
+    },
+    {
+        "prompt": "Full-Time Result odds: home win at 1; away win at 81; draw at 51.",
+        "home_team": "Livingston Reserves",
+        "away_team": "Queen of South (R)",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 81,
+        "reading_time": 5.07
+    },
+    {
+        "prompt": "Full-time result odds are as follows: win for the home team at 1, win for the away team at 126, and a draw at 51.",
+        "home_team": "Belarus U19",
+        "away_team": "Armenia U19",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 126,
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "The odds for the home team winning are set at 501; for the away team, they are at 1. A draw is listed with odds of 29.",
+        "home_team": "Oman",
+        "away_team": "Iraq",
+        "home_odds": 501,
+        "draw_odds": 29,
+        "away_odds": 1,
+        "reading_time": 9.51
+    },
+    {
+        "prompt": "The odds for the home team winning are 1.01; for the away team, 151; for a draw, 26. These reflect a high probability of a home victory and a low likelihood for the away team or a draw.",
+        "home_team": "Tanzania",
+        "away_team": "Guinea",
+        "home_odds": 1.01,
+        "draw_odds": 26,
+        "away_odds": 151,
+        "reading_time": 13.65
+    },
+    {
+        "prompt": "The odds for a win by the home team and the away team are both set at 12; odds for a draw stand at 1.04.",
+        "home_team": "Coventry U21",
+        "away_team": "Barnsley U21",
+        "home_odds": 12,
+        "draw_odds": 1.04,
+        "away_odds": 12,
+        "reading_time": 8.65
+    },
+    {
+        "prompt": "The odds for a win are strikingly different! China U19 stands at 126 while Kyrgyzstan U19 leads significantly at 1.03. If the match draws, the odds are 13.",
+        "home_team": "China U19",
+        "away_team": "Kyrgyzstan U19",
+        "home_odds": 126,
+        "draw_odds": 13,
+        "away_odds": 1.03,
+        "reading_time": 10.05
+    },
+    {
+        "prompt": "The odds for the home team to win are 1; for the away team, 501; and for a draw, 51. Which outcome will prevail in this surprising mismatch?",
+        "home_team": "Indonesia",
+        "away_team": "Saudi Arabia",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 501,
+        "reading_time": 10.18
+    },
+    {
+        "prompt": "The odds for winning are set at 1.7 for the home team and 3.4 for the away team. The possibility of a draw is rated at 4.33.",
+        "home_team": "Derby County (R)",
+        "away_team": "Stoke City Reserve",
+        "home_odds": 1.7,
+        "draw_odds": 4.33,
+        "away_odds": 3.4,
+        "reading_time": 9.76
+    },
+    {
+        "prompt": "The odds of winning for the home team are 101; for the away team, 1. The odds of a draw stand at 26.",
+        "home_team": "Hambericho Durame (W)",
+        "away_team": "Ethio Electric FC (W)",
+        "home_odds": 101,
+        "draw_odds": 26,
+        "away_odds": 1,
+        "reading_time": 8.22
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1; victory for the away team at 67; a draw at 41.",
+        "home_team": "South Africa",
+        "away_team": "South Sudan",
+        "home_odds": 1,
+        "draw_odds": 41,
+        "away_odds": 67,
+        "reading_time": 8.29
+    },
+    {
+        "prompt": "The odds are set with the home team at 1 to win! For the away team victory, the odds stand at 81. Should the match end in a draw, odds are 51. Choose wisely and place your bets!",
+        "home_team": "Bournemouth AFC U21",
+        "away_team": "Watford U21",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 81,
+        "reading_time": 13.46
+    },
+    {
+        "prompt": "Full-time result odds stand as follows: the home team winning is at 1; the away team winning at 151; a draw is set at 26.",
+        "home_team": "Denmark U19",
+        "away_team": "Israel U19",
+        "home_odds": 1,
+        "draw_odds": 26,
+        "away_odds": 151,
+        "reading_time": 8.61
+    },
+    {
+        "prompt": "Full-time result odds are as follows: win for the home team at 1; win for the away team at 501; a draw stands at 29. Choose wisely!",
+        "home_team": "Ceara",
+        "away_team": "America MG",
+        "home_odds": 1,
+        "draw_odds": 29,
+        "away_odds": 501,
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "The odds for Italy U21 to win are set at 19; for Ukraine U21, the odds are 23. A draw is considerably more likely with odds of 1.02.",
         "home_team": "Italy U21",
         "away_team": "Ukraine U21",
         "home_odds": 19,
         "draw_odds": 1.02,
         "away_odds": 23,
-        "reading_time": 8.69
+        "reading_time": 10.04
     },
     {
-        "prompt": "The odds are in favor of Bath City at 26. Maidstone United follows closely with odds of 19. A draw is most likely, reflected by the odds at 1.02.",
-        "home_team": "Bath City",
-        "away_team": "Maidstone United",
-        "home_odds": 26,
+        "prompt": "The odds for winning are set at 81 for the home team and 1 for the away team. The odds for a draw stand at 26.",
+        "home_team": "Atletico Pachuca",
+        "away_team": "Valle de Xico FC",
+        "home_odds": 81,
+        "draw_odds": 26,
+        "away_odds": 1,
+        "reading_time": 8.81
+    },
+    {
+        "prompt": "The odds for a win are strikingly in favor of the away team at 1, compared to the home team at 501! Meanwhile, the likelihood of a draw stands at 34.",
+        "home_team": "Botafogo SP",
+        "away_team": "Ava\u00ed FC",
+        "home_odds": 501,
+        "draw_odds": 34,
+        "away_odds": 1,
+        "reading_time": 10.81
+    },
+    {
+        "prompt": "Cerro Largo has odds of winning at 1! Montevideo Wanderers FC stands at 201! A draw has been placed at 51.",
+        "home_team": "Cerro Largo",
+        "away_team": "Montevideo Wanderers FC",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 201,
+        "reading_time": 7.34
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1.02; win for the away team at 81; draw at 19.",
+        "home_team": "Fleetwood Town U21",
+        "away_team": "Crewe Alexandra U21",
+        "home_odds": 1.02,
+        "draw_odds": 19,
+        "away_odds": 81,
+        "reading_time": 8.18
+    },
+    {
+        "prompt": "The odds of winning for the home team are 19; for the away team, 26. The odds for a draw stand at 1.02.",
+        "home_team": "Egypt",
+        "away_team": "Botswana",
+        "home_odds": 19,
         "draw_odds": 1.02,
-        "away_odds": 19,
-        "reading_time": 10.4
+        "away_odds": 26,
+        "reading_time": 8.43
     },
     {
-        "prompt": "The odds for Haringey Borough to win are 126. Maldon & Tiptree have winning odds of 1.01. A draw is set at odds of 26.",
-        "home_team": "Haringey Borough",
-        "away_team": "Maldon   Tiptree",
-        "home_odds": 126,
-        "draw_odds": 26,
-        "away_odds": 1.01,
-        "reading_time": 8.9
+        "prompt": "The odds for the home team to win are set at 51; for the away team, the odds stand at 1. Odds for a draw are marked at 29.",
+        "home_team": "Liechtenstein U19",
+        "away_team": "Wales U19",
+        "home_odds": 51,
+        "draw_odds": 29,
+        "away_odds": 1,
+        "reading_time": 10.15
     },
     {
-        "prompt": "Oxford City has winning odds of 151; Alfreton Town at 1.01; draw odds are 26.",
-        "home_team": "Oxford City",
-        "away_team": "Alfreton Town",
-        "home_odds": 151,
-        "draw_odds": 26,
-        "away_odds": 1.01,
-        "reading_time": 5.6
+        "prompt": "Winning odds are 1.12 for the home team! Away victory odds are set at 18.5. A draw has odds of 7.35. Choose wisely!",
+        "home_team": "Portugal U18",
+        "away_team": "Ireland U18",
+        "home_odds": 1.12,
+        "draw_odds": 7.35,
+        "away_odds": 18.5,
+        "reading_time": 8.83
     },
     {
-        "prompt": "Czech has winning odds of 1.01; Georgia's odds are 501; the odds for a draw stand at 26.",
+        "prompt": "Full-time result odds are as follows: victory for the home team at 1; victory for the away team at 501; a draw at 29.",
+        "home_team": "Bosnia-Herzegovina U21",
+        "away_team": "Bulgaria U21",
+        "home_odds": 1,
+        "draw_odds": 29,
+        "away_odds": 501,
+        "reading_time": 8.29
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 23; the away team has winning odds of 17. A draw is more likely, with odds at 1.03.",
+        "home_team": "Panama",
+        "away_team": "Costa Rica",
+        "home_odds": 23,
+        "draw_odds": 1.03,
+        "away_odds": 17,
+        "reading_time": 10.36
+    },
+    {
+        "prompt": "The odds for victory favor the away team sharply at 1; the home team faces long odds of 501. A draw sits at 41.",
+        "home_team": "Kyrgyzstan",
+        "away_team": "Iran",
+        "home_odds": 501,
+        "draw_odds": 41,
+        "away_odds": 1,
+        "reading_time": 8.33
+    },
+    {
+        "prompt": "The odds for the home team to win are 21; for the away team to win, 21; and for a draw, 1.01.",
+        "home_team": "Chapelton",
+        "away_team": "Mount Pleasant FA",
+        "home_odds": 21,
+        "draw_odds": 1.01,
+        "away_odds": 21,
+        "reading_time": 8.28
+    },
+    {
+        "prompt": "The odds for the home team to win are 1.01; for the away team, 501; and for a draw, 26.",
         "home_team": "Czech",
         "away_team": "Georgia",
         "home_odds": 1.01,
         "draw_odds": 26,
         "away_odds": 501,
-        "reading_time": 6.57
+        "reading_time": 7.63
     },
     {
-        "prompt": "The odds for a win are 26 for both teams; a draw is notably more likely with odds at 1. Which outcome will prevail? Place your bets!",
+        "prompt": "The odds for a win stand at 26 for both teams; the odds for a draw are set at 1. These figures indicate an evenly matched game, presenting equal probabilities for either team's victory or a draw.",
         "home_team": "Malta",
         "away_team": "Andorra",
         "home_odds": 26,
         "draw_odds": 1,
         "away_odds": 26,
-        "reading_time": 9.45
+        "reading_time": 12.74
+    },
+    {
+        "prompt": "The odds for a win are 501 for the home side and 1 for the visitors. A draw is set at 26. These figures reflect probabilities of each outcome in the upcoming match!",
+        "home_team": "Myanmar",
+        "away_team": "Lebanon",
+        "home_odds": 501,
+        "draw_odds": 26,
+        "away_odds": 1,
+        "reading_time": 11.25
+    },
+    {
+        "prompt": "The odds for the home team to win are 2.45; the away team to win, 2.1. A draw comes in at 4.33. Will tensions run high, or will the match end in equilibrium?",
+        "home_team": "Mumbai Marines",
+        "away_team": "ICL Youngstars",
+        "home_odds": 2.45,
+        "draw_odds": 4.33,
+        "away_odds": 2.1,
+        "reading_time": 12.47
+    },
+    {
+        "prompt": "The odds of winning for the home team are 2.79; for the away team, 2.47. A draw has odds of 2.93.",
+        "home_team": "Hapoel Nir Ramat Hasharon U19",
+        "away_team": "Hapoel Haifa U19",
+        "home_odds": 2.79,
+        "draw_odds": 2.93,
+        "away_odds": 2.47,
+        "reading_time": 8.2
+    },
+    {
+        "prompt": "Full-time result odds are as follows: home win at 26, away win at 19, and a draw at 1.02. Place your bets wisely and enjoy the game!",
+        "home_team": "Bath City",
+        "away_team": "Maidstone United",
+        "home_odds": 26,
+        "draw_odds": 1.02,
+        "away_odds": 19,
+        "reading_time": 9.73
+    },
+    {
+        "prompt": "The odds for Haringey Borough to win are 126; Maldon Tiptree, 1.01. A draw stands at 26. Check who triumphs in this showdown!",
+        "home_team": "Haringey Borough",
+        "away_team": "Maldon   Tiptree",
+        "home_odds": 126,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 8.61
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 2; victory for the away team at 3.75; a draw set at 2.88.",
+        "home_team": "Na God FC",
+        "away_team": "Koforidua",
+        "home_odds": 2,
+        "draw_odds": 2.88,
+        "away_odds": 3.75,
+        "reading_time": 9.03
+    },
+    {
+        "prompt": "Dundee U20 are given odds of 2.65 to win! Queens Park Reserves hold odds of 2.1 for a victory. The possibility of a draw stands at odds of 4.",
+        "home_team": "Dundee U20",
+        "away_team": "Queens Park Reserves",
+        "home_odds": 2.65,
+        "draw_odds": 4,
+        "away_odds": 2.1,
+        "reading_time": 10.37
+    },
+    {
+        "prompt": "Odds for winning are 3 for Notts County Reserve and 1.85 for Mansfield Town Reserve. The odds for a draw stand at 4.1.",
+        "home_team": "Notts County (R)",
+        "away_team": "Mansfield Town Reserve",
+        "home_odds": 3,
+        "draw_odds": 4.1,
+        "away_odds": 1.85,
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "The odds for winning are 1.65 for the home team and 4.33 for the away team. The odds for a draw stand at 3.7.",
+        "home_team": "Qatar U23",
+        "away_team": "Kuwait U23",
+        "home_odds": 1.65,
+        "draw_odds": 3.7,
+        "away_odds": 4.33,
+        "reading_time": 8.79
+    },
+    {
+        "prompt": "Full Time Result odds are as follows: a home win at 1.02; an away win at 87.82; a draw at 10.83.",
+        "home_team": "Russia",
+        "away_team": "Syria",
+        "home_odds": 1.02,
+        "draw_odds": 10.83,
+        "away_odds": 87.82,
+        "reading_time": 7.95
+    },
+    {
+        "prompt": "The odds for a win are as follows: the home team at 126, the away team at 1. For a draw, the odds are set at 51. Explore these options and choose wisely!",
+        "home_team": "Sierra Leone",
+        "away_team": "Zambia",
+        "home_odds": 126,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 11.67
+    },
+    {
+        "prompt": "The odds for winning are 21 for the home team and 23 for the away team. The odds for a draw stand at 1.02.",
+        "home_team": "France U21",
+        "away_team": "Germany U21",
+        "home_odds": 21,
+        "draw_odds": 1.02,
+        "away_odds": 23,
+        "reading_time": 8.37
+    },
+    {
+        "prompt": "Spain U21 has odds of winning at 1. Denmark U21 has odds of winning at 501. The odds for a draw are 51.",
+        "home_team": "Spain U21",
+        "away_team": "Denmark U21",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 501,
+        "reading_time": 8.05
+    },
+    {
+        "prompt": "The odds for a win by the home team are 67; for the away team, 1; and for a draw, 51. These reflect probabilities for each outcome in this matchup. Which team will prevail?",
+        "home_team": "Tamworth",
+        "away_team": "Sunderland U21",
+        "home_odds": 67,
+        "draw_odds": 51,
+        "away_odds": 1,
+        "reading_time": 12.33
+    },
+    {
+        "prompt": "Full-time result odds are as follows: victory for the home team at 6.25; win for the away team at 1.4; a draw is set at 4.33.",
+        "home_team": "Mickleover Sports",
+        "away_team": "Macclesfield Town",
+        "home_odds": 6.25,
+        "draw_odds": 4.33,
+        "away_odds": 1.4,
+        "reading_time": 9.57
+    },
+    {
+        "prompt": "The odds for victory are 151 for the home side and 1.01 for the away team; a draw is priced at 26.",
+        "home_team": "Oxford City",
+        "away_team": "Alfreton Town",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 7.69
     }
 ]

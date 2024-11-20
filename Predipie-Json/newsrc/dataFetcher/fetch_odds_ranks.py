@@ -9,9 +9,7 @@ class FetchOddsRanks(BaseMatchPipeline):
         super().__init__(base_url)
 
     def get_odds_ranks(self, start_after: str) -> List[Dict[str, Any]]:
-        """
-        Fetches the odds and rank information for recent matches.
-        """
+
         matches = self.get_matches(start_after)
         
         odds_ranks_data = []

@@ -4,11 +4,7 @@ from config.config import BASE_URL, START_AFTER
 from .team_status import RankingDifference
 
 class TeamComparison:
-    """
-    Compares two teams based on their odds, last 5 matches,
-    assigns them as Team A and Team B, calculates their recent points,
-    and evaluates ranking difference.
-    """
+
     def __init__(self, api_url: str = BASE_URL, start_date: str = START_AFTER):
         self.api_url = api_url
         self.start_date = start_date
@@ -75,10 +71,7 @@ class TeamComparison:
         return teams_info
 
     def calculate_points(self, last5matches):
-        """
-        Calculates the total points for the last 5 matches.
-        win = 3 points, draw = 1 point, lose = 0 points.
-        """
+
         points = 0
         for match in last5matches:
             if match.lower() == 'w':

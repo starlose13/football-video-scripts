@@ -19,4 +19,4 @@ yesterday = today - timedelta(days=1)
 
 
 START_AFTER = "2024-11-20" 
-START_BEFORE = "2024-11-19"
+START_BEFORE = "2024-11-18"

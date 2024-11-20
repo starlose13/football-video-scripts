@@ -1,22 +1,258 @@
 [
     {
-        "prompt": "Corinthians Paulista (SP) has won twice, drawn once, and lost twice recently. Cruzeiro Esporte Clube also shows two wins, one draw, and two losses.",
-        "reading_time": 9.0
+        "prompt": "Orihuela CF has won twice, drawn once, and lost twice recently. Aguilas CF has secured one win, two draws, and two losses.",
+        "reading_time": 8.36
     },
     {
-        "prompt": "Al-Adalah has been inconsistent, with one win, two draws, and two losses. Al Najma has recorded two wins, one draw, and two losses, showing a slightly better form.",
+        "prompt": "The 2 de Mayo PJC Reserves started strong with three wins, but slipped with two losses recently. Olimpia Asuncion Reserves have a mixed record with three wins and two losses in their last five games.",
+        "reading_time": 11.92
+    },
+    {
+        "prompt": "Algeria U20 recently won once, drew once, and lost three times; Morocco U20 has one win followed by four losses.",
+        "reading_time": 7.25
+    },
+    {
+        "prompt": "UE Castelldefels has won three, drawn one, and lost one in their last five matches. Vilanova Geltru has won their only recent match.",
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "KF Dukagjini U21 have not played any matches recently; FC Prishtina U21 has struggled, recording two draws and two losses.",
+        "reading_time": 7.04
+    },
+    {
+        "prompt": "Opava U19 has struggled lately, securing only one win, two draws, and suffering two losses. Banik Ostrava U19 has been more balanced, with two wins, two draws, and one loss.",
+        "reading_time": 11.36
+    },
+    {
+        "prompt": "Soloda Adwa has been inconsistent, with one win and one loss. Sheger Ketema has struggled; they have one win, two draws, and two losses.",
+        "reading_time": 8.96
+    },
+    {
+        "prompt": "Corinthians Paulista (SP) has been inconsistent with two wins, one draw, and two losses recently. Cruzeiro Esporte Clube mirrors this form, also claiming two victories, one draw, and two defeats.",
+        "reading_time": 11.15
+    },
+    {
+        "prompt": "Roma City has struggled recently, securing only one win and facing four losses. L'Aquila's form is slightly better with one win, two draws, and two losses.",
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "Fredrikstad U19 has one win, one draw, and three losses; recent struggles are evident. Sarpsborg 08 U19 remains winless with three draws and two losses, showing consistency in draws.",
+        "reading_time": 10.57
+    },
+    {
+        "prompt": "Barcelona B has struggled recently, with one win, one draw, and three losses. Osasuna has been more stable, securing two wins, two draws, and suffering one loss.",
+        "reading_time": 10.39
+    },
+    {
+        "prompt": "Cruzeiro has won two, drawn two, and lost one in their recent matches. America Mineiro has not won recently, with three draws and two losses.",
+        "reading_time": 9.11
+    },
+    {
+        "prompt": "The San Francisco Reserves are on a hot streak, winning their last five matches! In contrast, Mario Mendez FC has struggled, with two draws and three losses in their recent games.",
+        "reading_time": 11.02
+    },
+    {
+        "prompt": "Fola Esch has been inconsistent recently, with two wins, one draw, and two losses. CS Petange, on the other hand, is undefeated in their last five matches, recording three wins and two draws.",
+        "reading_time": 12.33
+    },
+    {
+        "prompt": "MC Alger has been inconsistent recently, with two wins, two draws, and a loss. CR Belouizdad matches this form, also recording two wins, two draws, and a loss.",
         "reading_time": 10.71
     },
     {
-        "prompt": "Fredrikstad U19 has won once, drawn once, and lost three times recently. Sarpsborg 08 U19 hasn't won recently, with three draws and two losses.",
+        "prompt": "Erzeni has had a mixed performance with two wins, one draw, and two losses. KF Valbona also shows varied results, recording two wins, one draw, and two losses.",
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "VfL Wolfsburg has been inconsistent recently, with three wins and two losses in their last five matches. Galatasaray SK is struggling slightly more, managing two wins and suffering three losses.",
+        "reading_time": 10.52
+    },
+    {
+        "prompt": "Banbueng City enters the match with a single recent victory. Rajpracha FC has been inconsistent, securing two wins amid three losses.",
+        "reading_time": 7.4
+    },
+    {
+        "prompt": "Estudiantes La Plata has struggled, drawing four times and losing once recently. Rosario Central, on the other hand, remains unbeaten with two wins and three draws.",
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "Deportivo Merlo Reserves have struggled recently, recording two losses, two draws, and one win. Excursionistas Reserves are in better form with three wins, one draw, and one loss.",
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "Surin City FC has been mixed lately with two wins, two draws, and one loss. Ubonkids City recently had a draw and a loss.",
+        "reading_time": 8.58
+    },
+    {
+        "prompt": "Fukui United has won all their last five matches. J-Lease FC has one win, two draws, and two losses in their recent games.",
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "FC Istiklol Dushanbe has been struggling, securing only one win, one draw, and three losses recently. In contrast, Regar-TadAZ Tursunzoda has won once, drawn twice, and lost twice.",
+        "reading_time": 10.71
+    },
+    {
+        "prompt": "AC Palazzolo has enjoyed a solid run, securing two wins and three draws without a loss. In contrast, Cjarlins Muzane has struggled, losing all of their last five matches.",
+        "reading_time": 10.4
+    },
+    {
+        "prompt": "Leon U19 has struggled recently, with three losses and just one win. Cruz Azul U19 remains unbeaten, securing one win and three draws.",
+        "reading_time": 8.26
+    },
+    {
+        "prompt": "Flamurtari struggle with one win, two draws, and two losses. Besa Kavaje show mixed results with one win, three draws, and a single loss.",
+        "reading_time": 9.0
+    },
+    {
+        "prompt": "Aris Voulas FC has been strong recently, securing three wins and two draws, remaining unbeaten. In contrast, Olympiacos Vari experienced one loss in their latest match.",
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "Chonburi Shark FC struggled recently, with no wins, two draws, and three losses. Prachuap Khiri Khan's form is mixed, securing two wins, one draw, and two losses.",
+        "reading_time": 10.39
+    },
+    {
+        "prompt": "Kilbarrack United has been mixed recently, with two wins, two draws, and one loss. Rosemount Mulvey has played once and lost.",
+        "reading_time": 7.82
+    },
+    {
+        "prompt": "Gualberto Villarroel Deportivo San Jos\u00e9 has struggled recently with three losses, one draw, and one win. Club Aurora's form is mixed, securing two wins and suffering three losses.",
+        "reading_time": 10.08
+    },
+    {
+        "prompt": "Drina HE Visegrad has struggled recently, securing only one win, one draw, and suffering three losses. Laktasi, on the other hand, has recorded two wins, one draw, and two losses.",
+        "reading_time": 11.57
+    },
+    {
+        "prompt": "Hercules has been inconsistent recently, securing two wins, one draw, and suffering two losses. UD Marbella also shows mixed results with one win, two draws, and two losses.",
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "Budapest Honved II has struggled recently, securing only one win, one draw, and suffering three losses. In contrast, ESMTK has been more consistent, with one win and four draws, remaining undefeated.",
+        "reading_time": 11.68
+    },
+    {
+        "prompt": "Nongbua Pitchaya FC has struggled recently, winning only once and losing four times. Khonkaen United shows better form, with two wins, two draws, and a single loss.",
+        "reading_time": 9.97
+    },
+    {
+        "prompt": "Chipukizi FC has been struggling recently, managing only draws in four of their last five matches and suffering one loss. Inter Zanzibar FC, on the other hand, has been more successful, winning three, drawing one, and losing one.",
+        "reading_time": 13.94
+    },
+    {
+        "prompt": "Bahia has been inconsistent, recording two wins, one draw, and two losses. Palmeiras also struggled, managing one win, two draws, and two losses.",
+        "reading_time": 9.1
+    },
+    {
+        "prompt": "Elche CF Ilicitano has had a mixed run; they lost twice, drew once, and won twice recently. Sant Andreu, on the other hand, has performed better with three wins, one draw, and one loss.",
+        "reading_time": 12.82
+    },
+    {
+        "prompt": "Rethymniakos has struggled recently, losing four of their last five games but won their most recent match. Marko has not won any of their last five matches, drawing three and losing two.",
+        "reading_time": 11.16
+    },
+    {
+        "prompt": "Muang Klaeng has not played any matches recently; Huasamrong Gateway also has no recent games recorded.",
+        "reading_time": 5.54
+    },
+    {
+        "prompt": "Romklao United has struggled recently, recording one draw and one loss. Muang Loei United has been inconsistent, with one win, two draws, and two losses.",
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Lyon women have won two, drawn one, and lost two in their recent matches. AS Roma women, meanwhile, have secured three wins and suffered two losses.",
+        "reading_time": 9.65
+    },
+    {
+        "prompt": "Ispe FC U20 has won once, drawn twice, and lost twice recently; Hantharwady United U20 is without a win, with two draws and three losses.",
+        "reading_time": 9.07
+    },
+    {
+        "prompt": "Llosetense has had a mixed run recently, with one win, two draws, and two losses. UD Alcudia is struggling, managing just one win in their last five games alongside four losses.",
+        "reading_time": 11.26
+    },
+    {
+        "prompt": "The Dome FC has struggled recently, recording three draws and two losses; they have not won any of their last five matches. Nakhon Ratchasima Mazda FC has had mixed results with two wins, one draw, and two losses.",
+        "reading_time": 13.48
+    },
+    {
+        "prompt": "Vigor Senigallia has been inconsistent, with two wins, one draw, and two losses. Castelfidardo struggled initially but found form with two recent victories after three losses.",
+        "reading_time": 9.44
+    },
+    {
+        "prompt": "AO Mikrasiatikos has been inconsistent, with two wins, one draw, and two losses. Ethnikos OFPF, on the other hand, appears stronger, securing three wins, one draw, and only one loss.",
+        "reading_time": 11.78
+    },
+    {
+        "prompt": "The NPA Anchors have been inconsistent recently, recording two wins, one draw, and two losses. The Mighty Enforcers are struggling, with no wins, two draws, and three losses.",
+        "reading_time": 10.71
+    },
+    {
+        "prompt": "Berazategui is unbeaten recently, securing three wins and two draws. Real Pilar has struggled, with one win, two draws, and two losses.",
+        "reading_time": 8.36
+    },
+    {
+        "prompt": "Al-Adalah has struggled recently, winning once, drawing twice, and losing twice. Al Najma, on the other hand, has been slightly more consistent with two wins, one draw, and two losses.",
+        "reading_time": 11.57
+    },
+    {
+        "prompt": "Tshwane South College FC has not played any matches recently. Meanwhile, the University of Johannesburg has lost twice and drawn once in their last three games.",
+        "reading_time": 9.02
+    },
+    {
+        "prompt": "FC Twente Enschede women have lost three times and won twice recently; Real Madrid women have a better run with three wins and two losses.",
+        "reading_time": 8.44
+    },
+    {
+        "prompt": "North District U22 recently lost their last match; Hong Kong FC U22 have won their last two games.",
+        "reading_time": 6.19
+    },
+    {
+        "prompt": "Constancia has struggled recently, drawing three times and losing twice, failing to secure a win. CE Mercadal has been slightly more dynamic, winning once, drawing twice, and losing twice.",
+        "reading_time": 10.82
+    },
+    {
+        "prompt": "Mexico has struggled recently, losing three times and drawing twice. Honduras has been mixed, with two wins, one draw, and two losses.",
+        "reading_time": 8.36
+    },
+    {
+        "prompt": "Gelbison has had a mixed performance recently; they have two wins, a draw, and two losses. LFA Reggio Calabria won once, drew twice, and lost twice.",
+        "reading_time": 9.82
+    },
+    {
+        "prompt": "Udon Thani has two wins, one draw, and two losses recently; Lopburi City FC has a win, two draws, and two losses.",
+        "reading_time": 8.32
+    },
+    {
+        "prompt": "Chivas Guadalajara U23 has been inconsistent recently, recording one win, two draws, and two losses. Tigres UANL U23, on the other hand, shows a slightly struggling form with two wins and three losses.",
+        "reading_time": 12.12
+    },
+    {
+        "prompt": "AA Carapebus has lost three, drawn one, and won one in their last five matches. Campo Grande CE has won two, drawn two, and lost one in their recent outings.",
+        "reading_time": 10.94
+    },
+    {
+        "prompt": "UE Tona has been inconsistent recently, securing two wins, one draw, and two losses. CF Badalona remains unbeaten with two victories and three draws.",
         "reading_time": 8.79
     },
     {
-        "prompt": "Al-Adalah has been inconsistent recently with one win, two draws, and two losses. Al Najma(KSA) shows a slightly better performance with two wins, one draw, and two losses.",
-        "reading_time": 10.29
+        "prompt": "Gremio (RS) has struggled recently, recording one draw and four losses. Juventude, on the other hand, achieved two wins, one draw, and suffered two losses.",
+        "reading_time": 9.53
     },
     {
-        "prompt": "Elche CF Ilicitano has two wins, one draw, and two losses recently, showing a recovery with recent victories. Sant Andreu boasts three wins, one draw, and one loss, demonstrating strong form.",
-        "reading_time": 11.68
+        "prompt": "Shashemene Kenema FC has won four of their last five games, losing once; while Axum Ketema won one, drew one, and lost one in their last three matches.",
+        "reading_time": 10.04
+    },
+    {
+        "prompt": "Anthoupoli has been impressive with four wins and one draw; unbeaten in their last five matches. Olympiakos Volou has been inconsistent, with two wins, one draw, and two losses.",
+        "reading_time": 10.57
+    },
+    {
+        "prompt": "Al-Adalah has been inconsistent recently, with one win, two draws, and two losses. Al Najma has also shown mixed results, securing two wins, one draw, and two losses.",
+        "reading_time": 10.71
+    },
+    {
+        "prompt": "Red Bull Bragantino has been mixed recently, with one win, three draws, and a loss. Sao Paulo has struggled, securing one win, one draw, and suffering three losses.",
+        "reading_time": 10.71
     }
 ]

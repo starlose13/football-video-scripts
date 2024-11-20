@@ -4,10 +4,7 @@ from .team_status import TeamAStatus, TeamBStatus
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def classify_a_team(a_odds):
-    """
-    Classifies the odds of Team A into specific levels A0 to A6 based on predefined odds ranges.
-    """
-    # Validate input
+
     if not isinstance(a_odds, (int, float)) or a_odds < 0:
         logging.error(f"Invalid odds: {a_odds}. Odds must be a non-negative number.")
         return "Unknown Classification"
@@ -35,10 +32,7 @@ def classify_a_team(a_odds):
 
 
 def classify_b_team(b_odds):
-    """
-    Classifies the odds of Team B into specific levels B0 to B6 based on predefined odds ranges.
-    """
-    # Validate input
+
     if not isinstance(b_odds, (int, float)) or b_odds < 0:
         logging.error(f"Invalid odds: {b_odds}. Odds must be a non-negative number.")
         return "Unknown Classification"
@@ -59,7 +53,6 @@ def classify_b_team(b_odds):
     else:
         b_status = TeamBStatus(7)
 
-    # Log the classification result
     classification = f"B{b_status.status}"
     logging.info(f"Odds {b_odds} classified as: {classification}")
     return classification

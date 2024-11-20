@@ -291,21 +291,15 @@ class GameResultPredictor:
                 return "A win or draw", 132
             else :
                 logging.warning(f"No result found for the combination: {a_team}, {b_team}, {a_recent_g}, {b_recent_g}, {rank_diff}")
-                # Default condition if no match is found
                 return "No result found", None
 
     def predict_game_results(self):
-        """
-        Predicts game results based on team odds, recent performance, 
-        and ranking differences.
-        """
-        # Create an instance of TeamComparison to get team information
+
         team_comparator = TeamComparison()
         team_comparison_results = team_comparator.determine_teams(self.start_date)
 
         results = []
         for team_info in team_comparison_results:
-            # Classify each team's odds and recent performance
             a_team_class = classify_a_team(team_info["Team A"]["odds"])
             b_team_class = classify_b_team(team_info["Team B"]["odds"])
             a_recent_group = classify_a_points(team_info["Team A"]["last5_points"])

@@ -1,27 +1,322 @@
 [
     {
-        "prompt": "Expect Corinthians Paulista (SP) to shine! Victory or a draw? Likely. Don\u2019t miss out; it\u2019s football at its finest!",
-        "card": "Win or Draw Home Team",
-        "reading_time": 7.05
-    },
-    {
-        "prompt": "Al-Adalah and Al Najma(KSA) are set to clash! Who will triumph? Expect thrill, strategy, and a fierce battle for victory! Don't miss it!",
+        "prompt": "UE Tona clashes with CF Badalona! Who will dominate? Expect excitement, skillful moves, and a fierce contest; one will emerge victorious!",
         "card": "Win Home or Away Team",
-        "reading_time": 8.56
+        "reading_time": 7.9
     },
     {
-        "prompt": "Expect fireworks! Fredrikstad U19 is set to triumph or draw; their tenacity and skill are undeniable. Who could resist watching? Don\u2019t miss out!",
+        "prompt": "North District U22 is favored! Expect them to clinch a win or hold steady for a draw; excitement guaranteed! Will they triumph?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.81
+    },
+    {
+        "prompt": "Expect fireworks when Deportivo Merlo Reserves clash with Excursionistas Reserves! Will skill or strategy prevail? Victory looms for one; who will seize it?",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.13
+    },
+    {
+        "prompt": "UE Castelldefels is set to shine: expect a win or a sturdy draw! Who can resist their charm and skill? Watch out, opponents!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.17
+    },
+    {
+        "prompt": "Surin City FC is set to clinch victory today! Expect thrilling plays, strategic mastery, and a win for them; who could ask for more?",
+        "card": "Win Home Team",
+        "reading_time": 8.69
+    },
+    {
+        "prompt": "Expect Flamurtari to shine today! Will they clinch a victory or grab a draw? Excitement assured, don't miss it!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 6.88
+    },
+    {
+        "prompt": "Expect Barcelona B (w) to shine\u2014victory or draw likely! Stellar performance awaits; can they maintain their streak? Don\u2019t miss out!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.16
+    },
+    {
+        "prompt": "Expect an electrifying clash! Will Leon U19 roar to victory, or can Cruz Azul U19 surge ahead? It's anyone's game; excitement guaranteed!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.02
+    },
+    {
+        "prompt": "Expect a thrilling match! Corinthians Paulista (SP) are favored; can they clinch victory? Watch out for dynamic plays, skillful tactics!",
+        "card": "Win Home Team",
+        "reading_time": 7.37
+    },
+    {
+        "prompt": "Expect a thrilling showdown! Will Fredrikstad U19 dominate, or can Sarpsborg 08 U19 pull off a win? Excitement peaks; mark the date!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.02
+    },
+    {
+        "prompt": "Laktasi is set to clinch victory! Precision, skill, momentum; can anyone stop them? Watch as they aim to dominate the field!",
+        "card": "Win Away Team",
+        "reading_time": 7.9
+    },
+    {
+        "prompt": "Mexico is set to triumph! Expect excitement, skillful plays, and a victory dance; who can match their fervor? Watch and see!",
+        "card": "Win Home Team",
+        "reading_time": 7.9
+    },
+    {
+        "prompt": "Expect a thrilling clash full of surprises! Who will dominate, defense or attack? Goals, drama, and skill guaranteed; don't miss it!",
+        "card": "none",
+        "reading_time": 8.11
+    },
+    {
+        "prompt": "J-Lease FC heads into the match as favorites! Expect them to clinch victory or snatch a draw; excitement guaranteed! Who's ready for thrilling action?",
+        "card": "Win or Draw Away Team",
+        "reading_time": 8.45
+    },
+    {
+        "prompt": "Expect excitement as Gualberto Villarroel Deportivo San Jos\u00e9 looks poised to triumph or draw; victory is on the horizon! Will they clinch it?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.95
+    },
+    {
+        "prompt": "Get ready for a thrilling clash! Expect skill, speed, and suspense; who will triumph? Don't miss out\u2014it's anyone's game!",
+        "card": "none",
+        "reading_time": 7.26
+    },
+    {
+        "prompt": "Expect excitement as Cruzeiro (w) clashes with their rivals; victory or a draw? Odds are in their favor! Don't miss out!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.48
+    },
+    {
+        "prompt": "Expect excitement as Morocco U20 looks poised to clinch victory or draw! Will their defensive prowess shine? Don't miss it!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 6.99
+    },
+    {
+        "prompt": "Expect excitement as MC Alger clashes with their rivals; a win or a draw is in sight! Will they dominate? Stay tuned!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.81
+    },
+    {
+        "prompt": "Expect excitement as Khonkaen United aims to triumph or draw; can they maintain their momentum? Watch for goals, drama, and thrilling play!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 8.05
+    },
+    {
+        "prompt": "Regar-TadAZ Tursunzoda looks strong! Expect them to clinch victory or battle to a gritty draw; their resilience is key. Who's ready for action?",
+        "card": "Win or Draw Away Team",
+        "reading_time": 8.16
+    },
+    {
+        "prompt": "Expect excitement as Constancia clashes with rivals! Victory or draw? Odds favor them; resilience is key. Watch the drama unfold!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.37
+    },
+    {
+        "prompt": "Exciting face-off ahead! Expect swift attacks, stunning saves, and a thrill to the last whistle! Who will clinch the victory? Stay tuned!",
+        "card": "none",
+        "reading_time": 8.24
+    },
+    {
+        "prompt": "Aris Voulas FC is set to dominate! Expect skill, speed, and strategy to shine through; victory beckons for them. Who can stop them?",
+        "card": "Win Home Team",
+        "reading_time": 8.58
+    },
+    {
+        "prompt": "Llosetense versus UD Alcudia: Who will dominate? Expect thrill, skills, and goals; a victory is imminent for one! Who will triumph, and how!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.76
+    },
+    {
+        "prompt": "Axum Ketema on the rise! Expect a thrilling win with finesse and strategy; can anyone stop them? Excitement peaks\u2014watch out!",
+        "card": "Win Away Team",
+        "reading_time": 7.16
+    },
+    {
+        "prompt": "Expect excitement as Anthoupoli dominates! Sharp offense, solid defense; will they triumph? Watch the magic unfold.",
+        "card": "Win Home Team",
+        "reading_time": 6.11
+    },
+    {
+        "prompt": "The NPA Anchors are set to sail to victory! Expect skill, strategy, and excitement; will their opponents even catch up? Watch the match unfold!",
+        "card": "Win Home Team",
+        "reading_time": 8.87
+    },
+    {
+        "prompt": "Elche CF Ilicitano versus Sant Andreu: a thrilling match ahead! Who will dominate? Expect energy, skill, and a dash of unpredictability! Victory is looming!",
+        "card": "Win Home or Away Team",
+        "reading_time": 8.88
+    },
+    {
+        "prompt": "Expect fire and flair as Estudiantes La Plata takes the field; victory or a draw seems likely! Who will stop them?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.3
+    },
+    {
+        "prompt": "Expect Kilbarrack United to shine! They'll clinch a win or draw; their robust gameplay ensures it. Who's ready for the match?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.51
+    },
+    {
+        "prompt": "Al-Adalah vs. Al Najma: sparks will fly! Who will dominate\u2014grit or flair? Expect an exhilarating clash; only one can triumph!",
+        "card": "Win Home or Away Team",
+        "reading_time": 7.37
+    },
+    {
+        "prompt": "Get ready for an electrifying face-off! Who will dominate, power through defenses, and clinch victory? Don't miss the action\u2014tune in!",
+        "card": "none",
+        "reading_time": 7.41
+    },
+    {
+        "prompt": "Campo Grande CE is set to impress! Expect a win or a strong draw; excitement guaranteed! Who's ready for the match?",
+        "card": "Win or Draw Away Team",
+        "reading_time": 7.48
+    },
+    {
+        "prompt": "Exciting times ahead! Real Madrid (w) is poised to dominate; flair, strategy, and passion on their side. Will they triumph? Stay tuned!",
+        "card": "Win Away Team",
+        "reading_time": 8.44
+    },
+    {
+        "prompt": "Red Bull Bragantino battles Sao Paulo; intensity peaks! Who will dominate: fiery youth or seasoned skill? Victory is imminent for one!",
+        "card": "Win Home or Away Team",
+        "reading_time": 7.48
+    },
+    {
+        "prompt": "Sheger Ketema to triumph! Expect skill, finesse, and a victory dance; who could resist the excitement? Watch them shine, unstoppable!",
+        "card": "Win Away Team",
+        "reading_time": 7.79
+    },
+    {
+        "prompt": "Expect excitement as Ispe FC U20 aims to triumph or draw! Stellar defense, robust offense; can anyone stop them? Watch the action unfold!",
         "card": "Win or Draw Home Team",
         "reading_time": 8.34
     },
     {
-        "prompt": "Al-Adalah vs. Al Najma(KSA): A thrilling clash awaits! Who will dominate; skill, strategy, or sheer passion? Victory hangs in the balance! Who's your pick?",
-        "card": "Win Home or Away Team",
-        "reading_time": 9.26
+        "prompt": "Expect excitement as VfL Wolfsburg (w) takes the lead; victory is in sight! Who can stop them? Watch the magic unfold!",
+        "card": "Win Home Team",
+        "reading_time": 7.48
     },
     {
-        "prompt": "Elche CF Ilicitano and Sant Andreu face off; who will triumph? Expect thrilling plays, goals, and a victor as the final whistle blows!",
+        "prompt": "Chipukizi FC to triumph! Watch them dominate the field; skill, strategy, and speed on their side. Ready for victory? Excitement awaits!",
+        "card": "Win Home Team",
+        "reading_time": 8.11
+    },
+    {
+        "prompt": "Expect excitement as Lyon (w) clinches victory! Skill, strategy, and speed combine; who can stop them? Watch the magic unfold.",
+        "card": "Win Home Team",
+        "reading_time": 7.61
+    },
+    {
+        "prompt": "Marko is set to triumph! Expect excitement, skillful plays, and a stellar performance; can anyone match his pace? Victory is in sight!",
+        "card": "Win Away Team",
+        "reading_time": 8.23
+    },
+    {
+        "prompt": "Rajpracha FC is set to triumph! Expect skill, strategy, and excitement; can they outplay the competition? Stay tuned!",
+        "card": "Win Away Team",
+        "reading_time": 6.94
+    },
+    {
+        "prompt": "Muang Loei United is set to triumph! Can their rivals match up? Expect excitement, skillful plays, and maybe a surprise twist; don't miss it!",
+        "card": "Win Away Team",
+        "reading_time": 8.87
+    },
+    {
+        "prompt": "Expect excitement as Huasamrong Gateway clinches victory! Precision, pace, unstoppable; who can match them? Victory seems written in the stars!",
+        "card": "Win Away Team",
+        "reading_time": 7.58
+    },
+    {
+        "prompt": "Expect excitement as Lopburi City FC aims to clinch victory or a draw; don't miss the thrilling action! Who will dominate? Stay tuned!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 8.13
+    },
+    {
+        "prompt": "Banik Ostrava U19 is set to shine! Expect skill, strategy, and a victorious outcome; will they dominate? Watch and see!",
+        "card": "Win Away Team",
+        "reading_time": 7.58
+    },
+    {
+        "prompt": "Chonburi Shark FC to clinch victory! Expect skill, speed, and strategy; will their opponents rise to the challenge? Stay tuned!",
+        "card": "Win Home Team",
+        "reading_time": 7.58
+    },
+    {
+        "prompt": "ESMTK is set to dominate! Strong form, great tactics; victory appears certain. Can their opponent turn the tables? Unlikely! Watch the magic unfold.",
+        "card": "Win Away Team",
+        "reading_time": 8.76
+    },
+    {
+        "prompt": "Expect excitement as CS Petange aims for victory or a draw! Can they pull it off? Watch the magic unfold.",
+        "card": "Win or Draw Away Team",
+        "reading_time": 7.02
+    },
+    {
+        "prompt": "Expect Vigor Senigallia to shine today! Will they clinch victory or hold for a draw? Excitement mounts; don't miss out!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 7.16
+    },
+    {
+        "prompt": "Nakhon Ratchasima Mazda FC to triumph! Expect excitement, skillful plays, and a victorious outcome; who could resist this thrilling match?",
+        "card": "Win Away Team",
+        "reading_time": 7.4
+    },
+    {
+        "prompt": "Watch as Erzeni claims victory! Strength, strategy, and surprise at play; can their opponents keep up? Excitement awaits!",
+        "card": "Win Home Team",
+        "reading_time": 6.94
+    },
+    {
+        "prompt": "FC Prishtina U21 is set for victory! Expect skill, strategy, and score; will their opponents catch up? Stay tuned!",
+        "card": "Win Away Team",
+        "reading_time": 7.26
+    },
+    {
+        "prompt": "Expect Berazategui to shine! Will they clinch victory, or grab a draw? Excitement looms; don\u2019t miss out!",
+        "card": "Win or Draw Home Team",
+        "reading_time": 6.4
+    },
+    {
+        "prompt": "University of Johannesburg to triumph! Expect skill, grit, and thrill; who can resist the excitement? Victory is on the horizon.",
+        "card": "Win Away Team",
+        "reading_time": 7.61
+    },
+    {
+        "prompt": "Expect excitement as Olimpia Asuncion Reserves aim for victory; will they triumph or hold steady for a draw? Watch out for action-packed performance!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 7.95
+    },
+    {
+        "prompt": "Get ready for an electric clash! Who will dominate\u2014home power or the daring visitors? Expect skill, speed, and surprises!",
+        "card": "none",
+        "reading_time": 7.09
+    },
+    {
+        "prompt": "Expect Gremio (RS) to shine! Victory or a sturdy draw seems likely; their form and fervor suggest nothing less. Who\u2019s ready for the match?",
+        "card": "Win or Draw Home Team",
+        "reading_time": 8.48
+    },
+    {
+        "prompt": "LFA Reggio Calabria is set to shine tonight! Expect thrilling plays, strategic masterstrokes, and, ultimately, a victory; who's ready for excitement?",
+        "card": "Win Away Team",
+        "reading_time": 8.14
+    },
+    {
+        "prompt": "Exciting prediction! The San Francisco Reserves are favored to clinch victory; can their strategy outplay the opposition? Stay tuned!",
+        "card": "Win Home Team",
+        "reading_time": 6.84
+    },
+    {
+        "prompt": "Expect AO Mikrasiatikos to clinch victory! Their form is unmatched; can anyone stop them now? Watch as they dominate the field!",
+        "card": "Win Home Team",
+        "reading_time": 7.48
+    },
+    {
+        "prompt": "Who will triumph? Al-Adalah or Al Najma\u2014tension mounts! Expect skillful plays, strategic moves, and a thrilling finish; excitement guaranteed! Who's your pick?",
         "card": "Win Home or Away Team",
-        "reading_time": 8.37
+        "reading_time": 8.41
+    },
+    {
+        "prompt": "Expect excitement as L'Aquila clashes with rivals; victory or a draw loom large! Who will dominate? Stay tuned!",
+        "card": "Win or Draw Away Team",
+        "reading_time": 6.52
     }
 ]
