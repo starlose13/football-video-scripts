@@ -144,7 +144,7 @@ class GeneratePrompts:
     def generate_second_video_intro_with_openai(self) -> Dict[str, Any]:
         """Generates an introduction for the narration using OpenAI."""
         prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
+            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you 5 fantastic lineup of top matches for you. "
             f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
             f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
             f"Important: Do not mention any game statistics, player names, or game history information in the output."
@@ -163,12 +163,26 @@ class GeneratePrompts:
         
         return {"prompt": generated_intro, "reading_time": reading_time}
     
-  
     def prompt_for_team_info(self, team_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on team information for each game."""
+        """Generate prompts based on team information for each game with a dynamic introductory phrase."""
         prompts = []
-        for team_info in team_data:
-            prompt = f"PLACEHOLDER PROMPT for team info based on: {team_info}"
+        for i, team_info in enumerate(team_data, start=1):
+            home_team_name = team_info.get("home_team_name", "Unknown Home Team")
+            away_team_name = team_info.get("away_team_name", "Unknown Away Team")
+
+            if i == 1:
+                intro = f"Let's start with the first match: {home_team_name} versus {away_team_name}."
+            elif i in [2, 3, 4]:
+                ordinal = {2: "second", 3: "third", 4: "fourth"}[i]
+                intro = f"Let's continue with the {ordinal} match: {home_team_name} against {away_team_name}."
+            else:  
+                intro = f"And the last match: {home_team_name} versus {away_team_name}."
+
+            prompt = (
+                f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+                f"Important: Do not mention any game statistics, player names, or game history information."
+            )
+
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
@@ -177,117 +191,216 @@ class GeneratePrompts:
                 ],
                 max_tokens=100
             )
+            
             generated_script = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
-            prompts.append({"prompt": generated_script, "reading_time": reading_time})
+            
+            prompts.append({
+                "prompt": generated_script,
+                "home_team_name": home_team_name,
+                "away_team_name": away_team_name,
+                "reading_time": reading_time
+            })
             
         return prompts
-
     
     def prompt_for_match_stats(self, match_stats: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on match stats for each game."""
+        """Generate prompts based on match stats for each game with specific match details."""
         prompts = []
         for stats in match_stats:
-            prompt = f"PLACEHOLDER PROMPT for match stats based on: {stats}"
+            # Extract match details
+            home_team = stats.get("home_team", "Unknown Home Team")
+            away_team = stats.get("away_team", "Unknown Away Team")
+            match_time = stats.get("time", "Unknown Time")
+            start_timestamp = stats.get("startTimestamp", "")
+            
+            # Format the match time
+            if start_timestamp:
+                match_datetime = datetime.strptime(start_timestamp, "%Y-%m-%dT%H:%M:%SZ")
+                time_str = match_datetime.strftime("%I:%M %p").lstrip("0")
+                day_str = match_datetime.strftime("%A")
+                date_str = match_datetime.strftime("%Y-%m-%d")
+            else:
+                time_str = "Unknown Time"
+                day_str = "Unknown Day"
+                date_str = "Unknown Date"
+
+            # Construct the prompt with the chosen format
+            prompt = (
+                f"As if you're a live TV host, build excitement for the game of football between {home_team} and {away_team}. "
+                f"This match starts at: {time_str} on {day_str}, {date_str}. "
+                "Keep it upbeat, clear, and full of energy to captivate the audience. "
+                "Also, make it concise and under 22 words. "
+                "Remember: only use these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+            )
+
+            # Generate response from OpenAI
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on match stats."},
+                    {"role": "system", "content": "You are an AI assistant helping to create dynamic football match descriptions."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=100
+                max_tokens=50
             )
+            
             generated_script = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
-            prompts.append({"prompt": generated_script, "reading_time": reading_time})
+
+            # Store the generated prompt and reading time
+            prompts.append({
+                "prompt": generated_script,
+                "home_team": home_team,
+                "away_team": away_team,
+                "date": date_str,
+                "day": day_str,
+                "time": time_str,
+                "reading_time": reading_time
+            })
             
         return prompts
 
     def prompt_for_odds(self, odds_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on odds for each game."""
+        """Generate prompts based on odds information for each game."""
         prompts = []
         for odds in odds_data:
-            prompt = f"PLACEHOLDER PROMPT for match odds based on: {odds}"
+            # Extract relevant details
+            home_team = odds.get("home_team", "Unknown Home Team")
+            away_team = odds.get("away_team", "Unknown Away Team")
+            
+            # Extract odds information if available
+            if odds.get("odds"):
+                home_odds = odds["odds"][0].get("homeWin", "N/A")
+                draw_odds = odds["odds"][0].get("draw", "N/A")
+                away_odds = odds["odds"][0].get("awayWin", "N/A")
+            else:
+                home_odds = "N/A"
+                draw_odds = "N/A"
+                away_odds = "N/A"
+            
+            # Construct the prompt similar to the required output
+            prompt = (
+                f"[Generate a concise and complete description for football match odds, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+                f"Provide only the odds information directly, without introducing the teams or match. State each type of odds clearly and avoid abbreviations or parentheses. Keep it under 45 words.] "
+                f"The home team, {home_team}, has odds of winning at {home_odds}. The away team, {away_team}, has odds of winning at {away_odds}. The odds for a draw are {draw_odds}."
+            )
+
+            # Generate response from OpenAI
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on match odds."},
+                    {"role": "system", "content": "You are an AI assistant helping to create dynamic football match descriptions with odds information."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
             )
+            
             generated_script = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
-            prompts.append({"prompt": generated_script, "reading_time": reading_time})
+
+            # Store the generated prompt and reading time
+            prompts.append({
+                "prompt": generated_script,
+                "home_team": home_team,
+                "away_team": away_team,
+                "home_odds": home_odds,
+                "draw_odds": draw_odds,
+                "away_odds": away_odds,
+                "reading_time": reading_time
+            })
             
         return prompts
 
-    
+
     def prompt_for_last5matches(self, matches_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Generate prompts based on the last 5 matches for each game."""
         prompts = []
         for match_info in matches_data:
-            prompt = f"Generate a summary of the last 5 matches. The results are: {match_info}"
+            home_team = match_info["home_team"]["team_name"]
+            guest_team = match_info["away_team"]["team_name"]
+            home_results = match_info["home_team"]["last_5_matches"]
+            guest_results = match_info["away_team"]["last_5_matches"]
+
+            home_wins = match_info["home_team"]["results_count"]["wins"]
+            home_draws = match_info["home_team"]["results_count"]["draws"]
+            home_losses = match_info["home_team"]["results_count"]["losses"]
+
+            guest_wins = match_info["away_team"]["results_count"]["wins"]
+            guest_draws = match_info["away_team"]["results_count"]["draws"]
+            guest_losses = match_info["away_team"]["results_count"]["losses"]
+
+            prompt = (
+                f"[Generate a concise description of each team’s recent form, using full words for clarity and avoiding abbreviations like 'W', 'D', or 'L'. "
+                f"Focus on readability. Limit to 200 characters. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon.] "
+                f"The {home_team} recent form shows {home_results} (Wins: {home_wins}, Draws: {home_draws}, Losses: {home_losses}), "
+                f"while the {guest_team} has recorded {guest_results} (Wins: {guest_wins}, Draws: {guest_draws}, Losses: {guest_losses})."
+            )
+
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on recent form."},
+                    {"role": "system", "content": "You are an AI assistant helping to create dynamic football match descriptions with recent form information."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
             )
+            
             generated_script = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
+
             prompts.append({"prompt": generated_script, "reading_time": reading_time})
             
         return prompts
 
-    def prompt_for_match_result(self, predictions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+
+    def prompt_for_match_result(self, match_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Generate prompts based on predicted match results for each game."""
         prompts = []
-        for prediction in predictions:
-            a_team_name = prediction["Team A"]
-            b_team_name = prediction["Team B"]
-            prediction_result = prediction["Result"]
+        for result in match_results:
+            # اطلاعات تیم میزبان، تیم مهمان، و Card
+            home_team_name = result["home_team_name"]
+            away_team_name = result["away_team_name"]
+            card = result["Card"]
 
-            if prediction_result == "A win or draw":
-                condition_text = f"My AI analysis suggests {a_team_name} will win or draw."
-                card = f"Win or Draw {a_team_name} Team" 
-            elif prediction_result == "A or B win":
-                condition_text = f"My AI analysis suggests either {a_team_name} or {b_team_name} will win."
-                card = "Win Home or Away Team"
-            elif prediction_result == "A win":
-                condition_text = f"My AI analysis suggests {a_team_name} will win."
-                card = f"Win {a_team_name} Team"
-            elif prediction_result == "B win or Draw":
-                condition_text = f"My AI analysis suggests {b_team_name} will win or draw."
-                card = f"Win or Draw {b_team_name} Team"
+            # ساخت شرط‌ها برای پرامپت
+            if card == "Win Home Team":
+                condition_text = f"My analysis predicts the {home_team_name} will win this match."
+            elif card == "Win Away Team":
+                condition_text = f"My analysis predicts the {away_team_name} will win this match."
+            elif card == "Win or Draw Home Team":
+                condition_text = f"The prediction suggests that the {home_team_name} will win or at least secure a draw."
+            elif card == "Win or Draw Away Team":
+                condition_text = f"The prediction suggests that the {away_team_name} will win or at least secure a draw."
+            elif card == "Win Home or Away Team":
+                condition_text = f"The prediction suggests that either the {home_team_name} or the {away_team_name} will claim victory."
             else:
-                condition_text = "No specific result is found for this prediction."
-                card = "none"
+                condition_text = "No specific prediction is available for this match."
 
             prompt = (
-                f"{condition_text} Write this dynamically for football fans, keeping it very brief—under 25 words! "
-                "Use punctuation marks like dot, comma, exclamation mark, question mark, and semicolon. "
-                "Avoid words like 'bet,' 'betting,' or 'place bet.'"
+                f"{condition_text} Keep it concise and engaging—under 25 words! "
+                "Use these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+                "Avoid mentioning betting or related terminology."
             )
+
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant generating football match result summaries."},
+                    {"role": "system", "content": "You are an AI assistant generating dynamic and engaging football match result predictions."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
             )
+
             generated_script = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
+
             prompts.append({"prompt": generated_script, "card": card, "reading_time": reading_time})
-            
+
         return prompts
 
 
@@ -371,7 +484,7 @@ if __name__ == "__main__":
     game_results = game_result_predictor.predict_game_results()
 
     json_saver = JsonSaver()
-    today_date = datetime.now().strftime("%Y-%m-%d")
+    today_date = START_AFTER
 
     narration_folder = os.path.join(today_date + "_json_match_output_folder", "narrations")
     prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")

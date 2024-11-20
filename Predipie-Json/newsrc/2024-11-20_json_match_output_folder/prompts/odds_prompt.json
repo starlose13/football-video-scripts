@@ -1,0 +1,47 @@
+[
+    {
+        "prompt": "The odds favor a draw at 1.02! Bath City to win is set at 26, while Maidstone United to win is slightly favored at 19. Each outcome presents a unique opportunity for betting enthusiasts.",
+        "home_team": "Bath City",
+        "away_team": "Maidstone United",
+        "home_odds": 26,
+        "draw_odds": 1.02,
+        "away_odds": 19,
+        "reading_time": 11.99
+    },
+    {
+        "prompt": "The odds for the home team to win are set at 1.01; for the away team, they stand at 501. A draw holds odds of 26. These figures reflect varying expectations of outcomes, highlighting a clear favorite and underdog scenario!",
+        "home_team": "Czech",
+        "away_team": "Georgia",
+        "home_odds": 1.01,
+        "draw_odds": 26,
+        "away_odds": 501,
+        "reading_time": 14.3
+    },
+    {
+        "prompt": "The odds for a win are set at 26 for both teams. A draw is significantly more likely with odds at 1. This balance suggests a closely matched game! Each outcome presents a unique opportunity for bettors.",
+        "home_team": "Malta",
+        "away_team": "Andorra",
+        "home_odds": 26,
+        "draw_odds": 1,
+        "away_odds": 26,
+        "reading_time": 12.75
+    },
+    {
+        "prompt": "Full-time result odds are as follows: a win for the home team at 151, a win for the away team at 1.01, and a draw at 26.",
+        "home_team": "Oxford City",
+        "away_team": "Alfreton Town",
+        "home_odds": 151,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 9.55
+    },
+    {
+        "prompt": "Home win odds are 126. Away win odds for Maldon Tiptree are 1.01. Draw odds stand at 26. Each bet type reflects potential outcomes with distinct profitability!",
+        "home_team": "Haringey Borough",
+        "away_team": "Maldon   Tiptree",
+        "home_odds": 126,
+        "draw_odds": 26,
+        "away_odds": 1.01,
+        "reading_time": 9.73
+    }
+]

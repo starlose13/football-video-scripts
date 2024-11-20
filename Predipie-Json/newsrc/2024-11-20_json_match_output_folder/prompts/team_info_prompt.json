@@ -1,0 +1,32 @@
+[
+    {
+        "prompt": "Bath City clashes with Maidstone United! Anticipation runs high; who will triumph?",
+        "home_team_name": "Bath City",
+        "away_team_name": "Maidstone United",
+        "reading_time": 4.4
+    },
+    {
+        "prompt": "Czech clashes with Georgia! Who will dominate this electrifying match?",
+        "home_team_name": "Czech",
+        "away_team_name": "Georgia",
+        "reading_time": 3.59
+    },
+    {
+        "prompt": "Malta battles Andorra in a thrilling showdown! Who will triumph? Tune in!",
+        "home_team_name": "Malta",
+        "away_team_name": "Andorra",
+        "reading_time": 4.41
+    },
+    {
+        "prompt": "Oxford City clashes with Alfreton Town! Who will triumph? Join the excitement.",
+        "home_team_name": "Oxford City",
+        "away_team_name": "Alfreton Town",
+        "reading_time": 4.44
+    },
+    {
+        "prompt": "Haringey Borough clashes with Maldon & Tiptree! Expect excitement; who will triumph?",
+        "home_team_name": "Haringey Borough",
+        "away_team_name": "Maldon   Tiptree",
+        "reading_time": 4.4
+    }
+]

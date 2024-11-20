@@ -1,0 +1,47 @@
+[
+    {
+        "prompt": "Get ready for an exhilarating clash as Bath City takes on Maidstone United! Who will dominate? Tune in to find out!",
+        "home_team": "Bath City",
+        "away_team": "Maidstone United",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for an electrifying showdown as Czech clashes with Georgia in football! Don't miss the action-packed excitement! Tune in!",
+        "home_team": "Czech",
+        "away_team": "Georgia",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.99
+    },
+    {
+        "prompt": "Get ready for an exhilarating clash as Malta takes on Andorra! Who will triumph in this epic football showdown? Tune in!",
+        "home_team": "Malta",
+        "away_team": "Andorra",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for a thrilling clash as Oxford City takes on Alfreton Town! Who will dominate? Tune in to find out!",
+        "home_team": "Oxford City",
+        "away_team": "Alfreton Town",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.31
+    },
+    {
+        "prompt": "Get ready for thrilling football as Haringey Borough clashes with Maldon & Tiptree! Don't miss the action; time and date coming soon!",
+        "home_team": "Haringey Borough",
+        "away_team": "Maldon   Tiptree",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.63
+    }
+]

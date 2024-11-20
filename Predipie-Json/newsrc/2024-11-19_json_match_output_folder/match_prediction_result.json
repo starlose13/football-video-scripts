@@ -1,62 +1,62 @@
 [
     {
-        "id": 10471,
-        "home_team_name": "Bosnia-Herzegovina",
-        "home_team_logo": "https://img.thesports.com/football/team/7e2715cb1a79a2947617c86e6b17f8e0.png",
-        "away_team_name": "Netherlands",
-        "away_team_logo": "https://img.thesports.com/football/team/dccc15fd9c7ef51b5c442cd705fd91bd.png",
+        "id": 163,
+        "home_team_name": "Bath City",
+        "home_team_logo": "https://img.thesports.com/football/team/0ca501f6a362512678303e1edec9b5f6.png",
+        "away_team_name": "Maidstone United",
+        "away_team_logo": "https://img.thesports.com/football/team/ec5f8ea07e9b72cd7bea464c0e29f68a.png",
         "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Netherlands",
-        "Team B": "Bosnia-Herzegovina",
+        "Team A": "Maidstone United",
+        "Team B": "Bath City",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Away Team"
+    },
+    {
+        "id": 147,
+        "home_team_name": "Czech",
+        "home_team_logo": "https://img.thesports.com/football/team/254d87f50ceb9708e7ff233328848e23.png",
+        "away_team_name": "Georgia",
+        "away_team_logo": "https://img.thesports.com/football/team/4c1495e22d54732334011d3ea15a1eb1.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Czech",
+        "Team B": "Georgia",
         "Rule Applied": 1,
-        "Card": "Win Away Team"
+        "Card": "Win Home Team"
     },
     {
-        "id": 10472,
-        "home_team_name": "Bolivia",
-        "home_team_logo": "https://img.thesports.com/football/team/347a948f4171491109e251d7b23685eb.png",
-        "away_team_name": "Paraguay",
-        "away_team_logo": "https://img.thesports.com/football/team/a65ccc6bb50e46cef99dd71b9ad92c9f.png",
-        "startTimestamp": "2024-11-19T20:00:00.000Z",
-        "Team A": "Bolivia",
-        "Team B": "Paraguay",
-        "Rule Applied": 27,
-        "Card": "Win or Draw Home Team"
-    },
-    {
-        "id": 10469,
-        "home_team_name": "Wales",
-        "home_team_logo": "https://img.thesports.com/football/team/08ff7441a0089a034191d6f4ab93a145.png",
-        "away_team_name": "Iceland",
-        "away_team_logo": "https://img.thesports.com/football/team/6cff443cdf72b6dbe440a7814ff9c171.png",
+        "id": 162,
+        "home_team_name": "Malta",
+        "home_team_logo": "https://img.thesports.com/football/team/f0221343111004aa15623603a9e8a443.png",
+        "away_team_name": "Andorra",
+        "away_team_logo": "https://img.thesports.com/football/team/2236fac5b6cba3fa80036565d6d75a6e.png",
         "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Wales",
-        "Team B": "Iceland",
-        "Rule Applied": 26,
-        "Card": "Win or Draw Home Team"
+        "Team A": "Andorra",
+        "Team B": "Malta",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Away Team"
     },
     {
-        "id": 10466,
-        "home_team_name": "Albania",
-        "home_team_logo": "https://img.thesports.com/football/team/969705867d164cccd13e35c27610576c.png",
-        "away_team_name": "Ukraine",
-        "away_team_logo": "https://img.thesports.com/football/team/19ad3a8df7411246f92daa1087782263.png",
-        "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Ukraine",
-        "Team B": "Albania",
-        "Rule Applied": null,
-        "Card": "none"
-    },
-    {
-        "id": 10470,
+        "id": 154,
         "home_team_name": "Oxford City",
         "home_team_logo": "https://img.thesports.com/football/team/ba64076e792d046c65a41ad7bc3407f5.png",
         "away_team_name": "Alfreton Town",
         "away_team_logo": "https://img.thesports.com/football/team/f7534f896a87d8f96cde38ab9efd13a9.png",
         "startTimestamp": "2024-11-19T19:45:00.000Z",
-        "Team A": "Oxford City",
-        "Team B": "Alfreton Town",
-        "Rule Applied": 87,
-        "Card": "Win Home or Away Team"
+        "Team A": "Alfreton Town",
+        "Team B": "Oxford City",
+        "Rule Applied": 1,
+        "Card": "Win Away Team"
+    },
+    {
+        "id": 175,
+        "home_team_name": "Haringey Borough",
+        "home_team_logo": "https://img.thesports.com/football/team/25b2f2c579909543882af6cd8b7e2f7a.png",
+        "away_team_name": "Maldon   Tiptree",
+        "away_team_logo": "https://img.thesports.com/football/team/e985e6e1f1d25eb2efe57d6888462adc.png",
+        "startTimestamp": "2024-11-19T19:45:00.000Z",
+        "Team A": "Maldon   Tiptree",
+        "Team B": "Haringey Borough",
+        "Rule Applied": 1,
+        "Card": "Win Away Team"
     }
 ]

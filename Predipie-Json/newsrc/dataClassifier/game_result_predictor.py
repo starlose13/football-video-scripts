@@ -294,7 +294,7 @@ class GameResultPredictor:
                 # Default condition if no match is found
                 return "No result found", None
 
-    def predict_game_results(self, max_retries=1, delay=1):
+    def predict_game_results(self):
         """
         Predicts game results based on team odds, recent performance, 
         and ranking differences.
@@ -314,19 +314,6 @@ class GameResultPredictor:
             home_team_name = team_info["Home Team Name"]
             match_id = team_info["id"]
 
-            # match_info = None
-            # retries = 0
-            # while retries < max_retries:
-            #     match_info = self.base_pipeline.get_match_info(match_id=match_id)
-            # if all(value is not None for value in match_info.values()):
-            #     break  
-            # retries += 1
-            # print(f"Attempt {retries}/{max_retries} failed for match_id {match_id}. Retrying in {delay} seconds...")
-            # time.sleep(delay)
-
-            # if match_info is None or any(value is None for value in match_info.values()):
-            #     print(f"Warning: Failed to retrieve valid data for match_id {match_id} after {max_retries} attempts.")
-            #     continue 
             match_info = self.base_pipeline.get_match_info(match_id=match_id)
             result, rule_number = self.generate_result(a_team_class, b_team_class, a_recent_group, b_recent_group, rank_diff_status)
             card = ""

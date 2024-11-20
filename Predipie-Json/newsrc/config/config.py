@@ -18,5 +18,5 @@ yesterday = today - timedelta(days=1)
 # START_BEFORE = yesterday.strftime("%Y-%m-%d")
 
 
-START_AFTER = "2024-11-18" 
-START_BEFORE = "2024-11-18"
+START_AFTER = "2024-11-19" 
+START_BEFORE = "2024-11-19"
