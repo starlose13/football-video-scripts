@@ -44,8 +44,104 @@ class GeneratePrompts:
         filepath = os.path.join(self.data_folder, filename)
         with open(filepath, 'r') as file:
             return json.load(file)
+   
+#################################################################################################################
+######################################FIRST VIDEO STARTED HERE###################################################
+#################################################################################################################
 
-    def generate_intro_with_openai(self) -> Dict[str, Any]:
+    def generate_first_video_intro_with_openai(self) -> Dict[str, Any]:
+        """Generates an introduction for the narration using OpenAI."""
+        prompt = (
+            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
+            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
+            f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+            f"Important: Do not mention any game statistics, player names, or game history information in the output."
+        )
+        response = self.openai_request_with_retry(
+            model="gpt-4-turbo",
+            messages=[
+                {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=100
+        )
+        generated_intro = response['choices'][0]['message']['content'].strip()
+        processor = MatchDataProcessor(generated_intro)
+        reading_time = processor.calculate_reading_time()
+        
+        return {"prompt": generated_intro, "reading_time": reading_time}
+
+    def generate_final_score_prompt(self) -> Dict[str, Any]:
+        """Reads final score from the folder with START_BEFORE and generates a prompt with it."""
+        
+        # Set the output folder path based on START_BEFORE date
+        output_folder = f"{START_BEFORE}_output"
+        final_score_path = os.path.join(output_folder, "final_scores.json")
+        
+        if os.path.exists(final_score_path):
+            with open(final_score_path, 'r') as file:
+                final_score_data = json.load(file)
+                
+                # Check if final_score_data is a list and get the first item if so
+                if isinstance(final_score_data, list) and final_score_data:
+                    final_score = final_score_data[0].get("finalScore", "unknown")
+                elif isinstance(final_score_data, dict):
+                    final_score = final_score_data.get("finalScore", "unknown")
+                else:
+                    final_score = "unknown"
+            
+            prompt = f"The result of the game was {final_score}. Generate a brief commentary for this score."
+            response = self.openai_request_with_retry(
+                model="gpt-4-turbo",
+                messages=[
+                    {"role": "system", "content": "You are an AI assistant generating commentary based on the final score of a football match."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=100
+            )
+            
+            generated_script = response['choices'][0]['message']['content'].strip()
+            processor = MatchDataProcessor(generated_script)
+            reading_time = processor.calculate_reading_time()
+            
+            return {"prompt": generated_script, "reading_time": reading_time}
+        else:
+            print(f"No final score file found at {final_score_path}")
+            return {"prompt": "No final score available", "reading_time": 0}
+        
+    def generate_first_video_closing_with_openai(self) -> Dict[str, Any]:
+        """Generates an introduction for the narration using OpenAI."""
+        prompt = (
+            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
+            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
+            f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
+            f"Important: Do not mention any game statistics, player names, or game history information in the output."
+        )
+        response = self.openai_request_with_retry(
+            model="gpt-4-turbo",
+            messages=[
+                {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=100
+        )
+        generated_intro = response['choices'][0]['message']['content'].strip()
+        processor = MatchDataProcessor(generated_intro)
+        reading_time = processor.calculate_reading_time()
+        
+        return {"prompt": generated_intro, "reading_time": reading_time}
+
+#################################################################################################################
+######################################FIRST VIDEO ENDED HERE#####################################################
+#################################################################################################################
+
+                                                #####
+
+#################################################################################################################
+######################################SECOND VIDEO STARTED HERE##################################################
+#################################################################################################################
+
+    def generate_second_video_intro_with_openai(self) -> Dict[str, Any]:
         """Generates an introduction for the narration using OpenAI."""
         prompt = (
             f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
@@ -67,38 +163,16 @@ class GeneratePrompts:
         
         return {"prompt": generated_intro, "reading_time": reading_time}
     
-
-    def generate_closing_with_openai(self, program_number: int) -> Dict[str, Any]:
-        """Generates a closing statement for the narration using OpenAI."""
-        prompt = (
-            f"Wrap up Episode {program_number} with a friendly closing: 'Just a reminder, I'm only an AI, this isn’t financial advice!' "
-            f"Encourage viewers to tune in daily, join the {PROGRAM_NAME} community, and get ready for Episode {program_number + 1} tomorrow. "
-            f"End with: 'don't trade your life for entertainment! Goodbye!' "
-            f"Keep it complete and under 40 words. Use these punctuation marks frequently: dot, comma, exclamation mark, question mark, and semicolon. Don't use dash or underscore."
-        )
-        response = self.openai_request_with_retry(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": "You are an AI assistant generating a friendly closing statement for a sports program."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=100
-        )
-        generated_closing = response['choices'][0]['message']['content'].strip()
-        processor = MatchDataProcessor(generated_closing)
-        reading_time = processor.calculate_reading_time()
-        
-        return {"prompt": generated_closing, "reading_time": reading_time}
-
-    def prompt_for_last5matches(self, matches_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on the last 5 matches for each game."""
+  
+    def prompt_for_team_info(self, team_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Generate prompts based on team information for each game."""
         prompts = []
-        for match_info in matches_data:
-            prompt = f"Generate a summary of the last 5 matches. The results are: {match_info}"
+        for team_info in team_data:
+            prompt = f"PLACEHOLDER PROMPT for team info based on: {team_info}"
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on recent form."},
+                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on team info."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
@@ -109,6 +183,7 @@ class GeneratePrompts:
             prompts.append({"prompt": generated_script, "reading_time": reading_time})
             
         return prompts
+
     
     def prompt_for_match_stats(self, match_stats: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Generate prompts based on match stats for each game."""
@@ -150,15 +225,16 @@ class GeneratePrompts:
             
         return prompts
 
-    def prompt_for_team_info(self, team_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on team information for each game."""
+    
+    def prompt_for_last5matches(self, matches_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Generate prompts based on the last 5 matches for each game."""
         prompts = []
-        for team_info in team_data:
-            prompt = f"PLACEHOLDER PROMPT for team info based on: {team_info}"
+        for match_info in matches_data:
+            prompt = f"Generate a summary of the last 5 matches. The results are: {match_info}"
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on team info."},
+                    {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on recent form."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
@@ -213,46 +289,33 @@ class GeneratePrompts:
             prompts.append({"prompt": generated_script, "card": card, "reading_time": reading_time})
             
         return prompts
-    
 
-    def generate_final_score_prompt(self) -> Dict[str, Any]:
-        """Reads final score from the folder with START_BEFORE and generates a prompt with it."""
+
+    def generate_second_video_closing_with_openai(self, program_number: int) -> Dict[str, Any]:
+        """Generates a closing statement for the narration using OpenAI."""
+        prompt = (
+            f"Wrap up Episode {program_number} with a friendly closing: 'Just a reminder, I'm only an AI, this isn’t financial advice!' "
+            f"Encourage viewers to tune in daily, join the {PROGRAM_NAME} community, and get ready for Episode {program_number + 1} tomorrow. "
+            f"End with: 'don't trade your life for entertainment! Goodbye!' "
+            f"Keep it complete and under 40 words. Use these punctuation marks frequently: dot, comma, exclamation mark, question mark, and semicolon. Don't use dash or underscore."
+        )
+        response = self.openai_request_with_retry(
+            model="gpt-4-turbo",
+            messages=[
+                {"role": "system", "content": "You are an AI assistant generating a friendly closing statement for a sports program."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=100
+        )
+        generated_closing = response['choices'][0]['message']['content'].strip()
+        processor = MatchDataProcessor(generated_closing)
+        reading_time = processor.calculate_reading_time()
         
-        # Set the output folder path based on START_BEFORE date
-        output_folder = f"{START_BEFORE}_output"
-        final_score_path = os.path.join(output_folder, "final_scores.json")
-        
-        if os.path.exists(final_score_path):
-            with open(final_score_path, 'r') as file:
-                final_score_data = json.load(file)
-                
-                # Check if final_score_data is a list and get the first item if so
-                if isinstance(final_score_data, list) and final_score_data:
-                    final_score = final_score_data[0].get("finalScore", "unknown")
-                elif isinstance(final_score_data, dict):
-                    final_score = final_score_data.get("finalScore", "unknown")
-                else:
-                    final_score = "unknown"
-            
-            prompt = f"The result of the game was {final_score}. Generate a brief commentary for this score."
-            response = self.openai_request_with_retry(
-                model="gpt-4-turbo",
-                messages=[
-                    {"role": "system", "content": "You are an AI assistant generating commentary based on the final score of a football match."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=100
-            )
-            
-            generated_script = response['choices'][0]['message']['content'].strip()
-            processor = MatchDataProcessor(generated_script)
-            reading_time = processor.calculate_reading_time()
-            
-            return {"prompt": generated_script, "reading_time": reading_time}
-        else:
-            print(f"No final score file found at {final_score_path}")
-            return {"prompt": "No final score available", "reading_time": 0}
-        
+        return {"prompt": generated_closing, "reading_time": reading_time}
+    
+#################################################################################################################
+######################################SECOND VIDEO ENDED HERE####################################################
+#################################################################################################################
 
     def generate_second_video_narration(
         self,
@@ -283,7 +346,7 @@ class GeneratePrompts:
 
         # Return a single dictionary with the combined narration
         return {"narration": narration_text}
-
+    
 if __name__ == "__main__":
     openai.api_key = os.getenv('OPENAI_API_KEY')
     api_key = openai.api_key
@@ -314,10 +377,10 @@ if __name__ == "__main__":
     prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
 
     # Generate prompts
-    intro_result = prompt_generator.generate_intro_with_openai()
+    intro_result = prompt_generator.generate_second_video_intro_with_openai()
     json_saver.save_to_json(intro_result, "intro_prompt.json",custom_folder=prompt_folder)
 
-    closing_result = prompt_generator.generate_closing_with_openai(program_number=program_number)
+    closing_result = prompt_generator.generate_second_video_closing_with_openai(program_number=program_number)
     json_saver.save_to_json(closing_result, "closing_prompt.json",custom_folder=prompt_folder)
 
     final_score_prompt = prompt_generator.generate_final_score_prompt()
