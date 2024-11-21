@@ -1,0 +1,54 @@
+[
+    {
+        "id": 592,
+        "home_team_name": "Debre Birhan Ketema",
+        "home_team_logo": "https://img.thesports.com/football/team/7133356f7ae034d30b3c03a205dab047.png",
+        "away_team_name": "Ambo Ketema",
+        "away_team_logo": "https://img.thesports.com/football/team/3324c0d1ac023484c8064e832ecb33e9.png",
+        "startTimestamp": "2024-11-21T12:00:00.000Z",
+        "Team A": "Debre Birhan Ketema",
+        "Team B": "Ambo Ketema",
+        "Rule Applied": 1,
+        "Card": "Win Home Team",
+        "Score": "2-0"
+    },
+    {
+        "id": 402,
+        "home_team_name": "Barracas Central",
+        "home_team_logo": "https://img.thesports.com/football/team/b8ff3b78b8ff52dbca3b7eb27fb1c1fb.png",
+        "away_team_name": "Belgrano",
+        "away_team_logo": "https://img.thesports.com/football/team/f24c6d2696f439d43875fba52100991d.png",
+        "startTimestamp": "2024-11-21T20:00:00.000Z",
+        "Team A": "Belgrano",
+        "Team B": "Barracas Central",
+        "Rule Applied": 28,
+        "Card": "Win or Draw Away Team",
+        "Score": "0-0"
+    },
+    {
+        "id": 1093,
+        "home_team_name": "Mumbai Young Boys",
+        "home_team_logo": "https://img.thesports.com/football/team/6a28adfefe02ce3cc8502014a90f772e.png",
+        "away_team_name": "Anstrengung United",
+        "away_team_logo": "https://img.thesports.com/football/team/8f232ae317360cffddf10fd63ff11098.png",
+        "startTimestamp": "2024-11-21T06:00:00.000Z",
+        "Team A": "Anstrengung United",
+        "Team B": "Mumbai Young Boys",
+        "Rule Applied": 132,
+        "Card": "Win or Draw Away Team",
+        "Score": "1-1"
+    },
+    {
+        "id": 557,
+        "home_team_name": "CS Constantine U21",
+        "home_team_logo": "https://img.thesports.com/football/team/9d344166215cf2fc5741ab704295ee0d.png",
+        "away_team_name": "USM Alger U21",
+        "away_team_logo": "https://img.thesports.com/football/team/5ea74f1fc31b8beff2dfce516a8d659f.png",
+        "startTimestamp": "2024-11-21T14:00:00.000Z",
+        "Team A": "USM Alger U21",
+        "Team B": "CS Constantine U21",
+        "Rule Applied": 26,
+        "Card": "Win or Draw Away Team",
+        "Score": "0-1"
+    }
+]

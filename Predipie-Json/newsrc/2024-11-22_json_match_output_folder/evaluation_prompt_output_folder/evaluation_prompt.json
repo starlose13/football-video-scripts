@@ -1,0 +1,22 @@
+[
+    {
+        "prompt": "Spot-on prediction: Debre Birhan Ketema triumphed 2-0 over Ambo Ketema! Stay tuned for more thrilling forecasts.",
+        "evaluation": "correct",
+        "reading_time": 5.55
+    },
+    {
+        "prompt": "Spot on prediction - 'Win or Draw Away Team'! Barracas Central and Belgrano ended in a nail-biting 0-0 draw. Stay tuned for more thrilling predictions!",
+        "evaluation": "correct",
+        "reading_time": 8.63
+    },
+    {
+        "prompt": "Spot-on prediction with a 1-1 draw between Mumbai Young Boys and Anstrengung United! Stay tuned for more thrilling forecasts!",
+        "evaluation": "correct",
+        "reading_time": 6.49
+    },
+    {
+        "prompt": "Spot-on prediction! USM Alger U21 won 1-0 against CS Constantine U21! Stay tuned for more thrilling predictions.",
+        "evaluation": "correct",
+        "reading_time": 6.05
+    }
+]

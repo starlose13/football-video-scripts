@@ -1,0 +1,38 @@
+[
+    {
+        "prompt": "Get ready for an electrifying face-off as Debre Birhan Ketema clashes with Ambo Ketema! Who will dominate? Tune in and find out!",
+        "home_team": "Debre Birhan Ketema",
+        "away_team": "Ambo Ketema",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    },
+    {
+        "prompt": "Get ready for a thrilling showdown as Barracas Central takes on Belgrano! Don't miss the action-packed football spectacle! Tune in!",
+        "home_team": "Barracas Central",
+        "away_team": "Belgrano",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.99
+    },
+    {
+        "prompt": "Gear up for thrill as Mumbai Young Boys clash with Anstrengung United! Who will dominate? Don't miss this electrifying showdown!",
+        "home_team": "Mumbai Young Boys",
+        "away_team": "Anstrengung United",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 6.99
+    },
+    {
+        "prompt": "Get ready for an electrifying U21 showdown as CS Constantine clashes with USM Alger! Who will dominate? Tune in and find out!",
+        "home_team": "CS Constantine U21",
+        "away_team": "USM Alger U21",
+        "date": "Unknown Date",
+        "day": "Unknown Day",
+        "time": "Unknown Time",
+        "reading_time": 7.64
+    }
+]

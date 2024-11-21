@@ -20,6 +20,7 @@ from finalScore.results_with_start_before import ScoreCalculator
 load_dotenv()
 
 class GeneratePrompts:
+    correct_predictions_count = 0  
     def __init__(self, api_key: str):
         openai.api_key = api_key
     def openai_request_with_retry(self, model, messages, max_tokens, retries=5):
@@ -40,7 +41,6 @@ class GeneratePrompts:
         return None
     
     def extract_scores(self, score: str) -> Dict[str, int]:
-        """Extract the home and away scores from the score string."""
         try:
             home_score, away_score = map(int, score.split("-"))
             return {"home_score": home_score, "away_score": away_score}
@@ -49,7 +49,6 @@ class GeneratePrompts:
             return {"home_score": 0, "away_score": 0}
         
     def parse_timestamp(self, timestamp: str) -> Dict[str, str]:
-        """Parse the timestamp into date, day, and time."""
         match_datetime = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
         date_str = match_datetime.strftime("%Y-%m-%d")
         day_str = match_datetime.strftime("%A")
@@ -57,84 +56,93 @@ class GeneratePrompts:
         return {"date": date_str, "day": day_str, "time": time_str}
 
     def load_json_file(self, filename: str) -> List[Dict[str, Any]]:
-        """Load JSON data from a file in the data folder."""
         filepath = os.path.join(self.data_folder, filename)
         with open(filepath, 'r') as file:
             return json.load(file)
    
 #################################################################################################################
-######################################FIRST VIDEO STARTED HERE###################################################
+###################################### FIRST VIDEO STARTED HERE #################################################
 #################################################################################################################
 
-    def generate_first_video_intro_with_openai(self) -> Dict[str, Any]:
-        """Generates an introduction for the narration using OpenAI."""
+    def generate_first_video_intro_with_openai(self , program_number: int) -> Dict[str, Any]:
         prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
-            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
-            f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
-            f"Important: Do not mention any game statistics, player names, or game history information in the output."
+            f"Imagine you are a football program host introducing todays episode. "
+            f"Start with: 'Hi {PROGRAM_NAME} fans!' "
+            f"Welcome to episode {program_number}! "
+            f"In this episode, we will review the results of yesterdays matches and see how accurate our predictions were. "
+            f"Keep the tone lively, professional, and engaging. Make it concise—under 50 words with a confident and energetic delivery! "
+            f"Output should be less than 35 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+            f"Important: Do not use apostrophes in the output."
         )
         response = self.openai_request_with_retry(
             model="gpt-4-turbo",
             messages=[
-                {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
+                {"role": "system", "content": "You are an AI assistant generating a dynamic introduction for a football program segment about reviewing match predictions."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=100
+            max_tokens=80
         )
         generated_intro = response['choices'][0]['message']['content'].strip()
         processor = MatchDataProcessor(generated_intro)
         reading_time = processor.calculate_reading_time()
-        
+
         return {"prompt": generated_intro, "reading_time": reading_time}
 
     def generate_final_score_prompt(self, match_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on final scores for each match."""
         prompts = []
-
         for match in match_data:
             home_team = match.get("home_team_name", "N/A")
             away_team = match.get("away_team_name", "N/A")
             start_timestamp = match.get("startTimestamp", "N/A")
             score = match.get("Score", "N/A")
-
-            # Parse timestamp and scores
+            
             parsed_timestamp = self.parse_timestamp(start_timestamp)
             extracted_scores = self.extract_scores(score)
 
             if extracted_scores['home_score'] > extracted_scores['away_score']:
-                result_sentence = f"{home_team} won the match with a score of {extracted_scores['home_score']}-{extracted_scores['away_score']} against {away_team}."
+                result_sentence = f"{home_team} triumphed with a score of {extracted_scores['home_score']}-{extracted_scores['away_score']} over {away_team}."
             elif extracted_scores['home_score'] < extracted_scores['away_score']:
-                result_sentence = f"{away_team} won the match with a score of {extracted_scores['away_score']}-{extracted_scores['home_score']} against {home_team}."
+                result_sentence = f"{away_team} emerged victorious with a score of {extracted_scores['away_score']}-{extracted_scores['home_score']} against {home_team}."
             else:
-                result_sentence = f"The match ended in a draw with a score of {extracted_scores['home_score']}-{extracted_scores['away_score']} between {home_team} and {away_team}."
+                result_sentence = f"The match between {home_team} and {away_team} concluded in a thrilling draw, with a final score of {extracted_scores['home_score']}-{extracted_scores['away_score']}."
 
             prompt = (
-            f"The match between {home_team} and {away_team} was held on {parsed_timestamp['day']} at {parsed_timestamp['time']}."
-            f"{result_sentence}"
+                f"As part of our sports coverage, here is a quick recap of the match between {home_team} and {away_team}. "
+                f"The game took place on {parsed_timestamp['day']} at {parsed_timestamp['time']}. "
+                f"{result_sentence} "
+                f"Lets see what we have predicted."
+                f"Output should be less than 30 words. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+                f"Important: Do not use apostrophes in the output."
             )
+
+            # Request OpenAI to refine the narration
             response = self.openai_request_with_retry(
-            model="gpt-4-turbo",
-            messages=[
-                {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=100
-        )
-        generated_final_score = response['choices'][0]['message']['content'].strip()
-        processor = MatchDataProcessor(generated_final_score)
-        reading_time = processor.calculate_reading_time()
-        
-        return {"prompt": generated_final_score, "reading_time": reading_time}
+                model="gpt-4-turbo",
+                messages=[
+                    {"role": "system", "content": "You are an AI assistant generating sportscaster-style narrations for football match results."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=100
+            )
+
+            # Process the generated narration
+            generated_final_score = response['choices'][0]['message']['content'].strip()
+            processor = MatchDataProcessor(generated_final_score)
+            reading_time = processor.calculate_reading_time()
+
+            # Append results
+            prompts.append({
+                "prompt": generated_final_score,
+                "reading_time": reading_time
+            })
+
+        return prompts
+
     
 
-
     def generate_prediction_evaluation_prompt(self, match_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-
         prompts = []
-
         for match in match_data:
-            # Extract data
             home_team = match.get("home_team_name", "N/A")
             away_team = match.get("away_team_name", "N/A")
             score = match.get("Score", "N/A")
@@ -143,41 +151,52 @@ class GeneratePrompts:
             home_score = extracted_scores.get('home_score', 0)
             away_score = extracted_scores.get('away_score', 0)
 
-            prediction_correct = True  # Default to true unless a condition sets it to false
+            prediction_correct = True
             if card_value == "Win Home or Away Team":
-                prediction_correct = False if home_score == away_score else True
+                prediction_correct = home_score != away_score
             elif card_value == "Win Away Team":
-                prediction_correct = False if away_score <= home_score else True
+                prediction_correct = away_score > home_score
             elif card_value == "Win Home Team":
-                prediction_correct = False if home_score <= away_score else True
+                prediction_correct = home_score > away_score
             elif card_value == "Win or Draw Home Team":
-                prediction_correct = False if home_score < away_score else True
+                prediction_correct = home_score >= away_score
             elif card_value == "Win or Draw Away Team":
-                prediction_correct = False if away_score < home_score else True
+                prediction_correct = away_score >= home_score
 
-            # Generate result sentence
+
             if home_score > away_score:
-                result_sentence = f"{home_team} won the match with a score of {home_score}-{away_score} against {away_team}."
+                result_sentence = f"{home_team} delivered a stunning victory, defeating {away_team} {home_score}-{away_score}!"
             elif home_score < away_score:
-                result_sentence = f"{away_team} won the match with a score of {away_score}-{home_score} against {home_team}."
+                result_sentence = f"{away_team} pulled off an incredible win, taking down {home_team} {away_score}-{home_score}!"
             else:
-                result_sentence = f"The match ended in a draw with a score of {home_score}-{away_score} between {home_team} and {away_team}."
+                result_sentence = f"It was a nail-biting draw, {home_score}-{away_score}, between {home_team} and {away_team}!"
 
-            # Add prediction evaluation
-            prediction_result = "correct" if prediction_correct else "incorrect"
+            # Construct evaluation comment
+            if prediction_correct:
+                self.correct_predictions_count += 1
+                evaluation_comment = (
+                    f"Wow, what a call! Our prediction '{card_value}' was spot on! {result_sentence} Nailed it!"
+                )
+            else:
+                evaluation_comment = (
+                    f"Ah, tough luck! Our prediction '{card_value}' didn’t hit the mark this time. {result_sentence} Better luck next round!"
+                )
+
+            # Create engaging sportscaster-style prompt
             prompt = (
-                f"In The match between {home_team} and {away_team}. "
-                f"{result_sentence} The prediction was '{card_value}', and it was {prediction_result}."
+                f"Ladies and gentlemen, here is the breakdown: {evaluation_comment} "
+                f"Stay with us as we gear up for the next thrilling predictions!"
+                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+                f"Important: Do not use apostrophes in the output."
             )
-
             # Generate response from OpenAI
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant generating an evaluation narration for a sports program."},
+                    {"role": "system", "content": "You are an AI assistant generating sports prediction evaluations."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=150
+                max_tokens=100
             )
             generated_evaluation = response['choices'][0]['message']['content'].strip()
             processor = MatchDataProcessor(generated_evaluation)
@@ -186,33 +205,48 @@ class GeneratePrompts:
             # Append to prompts list
             prompts.append({
                 "prompt": generated_evaluation,
-                "evaluation": prediction_result,
+                "evaluation": "correct" if prediction_correct else "incorrect",
                 "reading_time": reading_time
             })
 
         return prompts
+                
         
-    def generate_first_video_closing_with_openai(self) -> Dict[str, Any]:
-        """Generates an introduction for the narration using OpenAI."""
-        prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we’re bringing you 5 fantastic lineup of top matches for you. "
-            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
-            f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
-            f"Important: Do not mention any game statistics, player names, or game history information in the output."
-        )
+    def generate_first_video_closing_with_openai(self, correct_predictions_count: int, program_number: int) -> Dict[str, Any]:
+        # Calculate success rate
+        success_rate = (correct_predictions_count / 5) * 100
+
+        # Generate dynamic closing prompt based on success rate
+        if success_rate > 70:
+            prompt = (
+                f"Congratulations to us! Yesterday, we nailed it with an impressive success rate of {success_rate:.2f} percent ! "
+                f"Now, let us go to my colleague and see which games are being predicted today. Thomas, what do you have for us?"
+                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+                f" Important: Do not use apostrophes in the output."
+            )
+        else:
+            prompt = (
+                f"Our success rate yesterday was {success_rate:.2f}%. While it wasn not our best, we are ready to bounce back stronger! "
+                f"Now, let us go to my colleague and see which games are being predicted today. Thomas, what do you have for us? we hope so today we have better predictions."
+                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."                
+                f" Important: Do not use apostrophes in the output."
+            )
+
+        # Send prompt to OpenAI
         response = self.openai_request_with_retry(
             model="gpt-4-turbo",
             messages=[
-                {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
+                {"role": "system", "content": "You are an AI assistant generating an engaging and dynamic closing narration for a sports program."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=100
+            max_tokens=60
         )
-        generated_intro = response['choices'][0]['message']['content'].strip()
-        processor = MatchDataProcessor(generated_intro)
+        generated_closing = response['choices'][0]['message']['content'].strip()
+        processor = MatchDataProcessor(generated_closing)
         reading_time = processor.calculate_reading_time()
-        
-        return {"prompt": generated_intro, "reading_time": reading_time}
+
+        return {"prompt": generated_closing, "reading_time": reading_time}
+
 
 #################################################################################################################
 ######################################FIRST VIDEO ENDED HERE#####################################################
@@ -237,7 +271,7 @@ class GeneratePrompts:
                 {"role": "system", "content": "You are an AI assistant generating an introductory narration for a sports program."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=100
+            max_tokens=60
         )
         generated_intro = response['choices'][0]['message']['content'].strip()
         processor = MatchDataProcessor(generated_intro)
@@ -258,7 +292,7 @@ class GeneratePrompts:
                 intro = f"Let's continue with the {ordinal} match: {home_team_name} against {away_team_name}."
             else:  
                 intro = f"And the last match: {home_team_name} versus {away_team_name}."
-
+    
             prompt = (
                 f"{intro} Create a brief, dynamic match description under 80 characters, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
                 f"Important: Do not mention any game statistics, player names, or game history information."
@@ -270,7 +304,7 @@ class GeneratePrompts:
                     {"role": "system", "content": "You are an AI assistant creating dynamic descriptions based on team info."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=100
+                max_tokens=80
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
@@ -289,13 +323,10 @@ class GeneratePrompts:
     def prompt_for_match_stats(self, match_stats: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         prompts = []
         for stats in match_stats:
-            # Extract match details
             home_team = stats.get("home_team", "Unknown Home Team")
             away_team = stats.get("away_team", "Unknown Away Team")
-            match_time = stats.get("time", "Unknown Time")
             start_timestamp = stats.get("startTimestamp", "")
             
-            # Format the match time
             if start_timestamp:
                 match_datetime = datetime.strptime(start_timestamp, "%Y-%m-%dT%H:%M:%SZ")
                 time_str = match_datetime.strftime("%I:%M %p").lstrip("0")
@@ -305,6 +336,7 @@ class GeneratePrompts:
                 time_str = "Unknown Time"
                 day_str = "Unknown Day"
                 date_str = "Unknown Date"
+
 
             prompt = (
                 f"As if you're a live TV host, build excitement for the game of football between {home_team} and {away_team}. "
@@ -320,7 +352,7 @@ class GeneratePrompts:
                     {"role": "system", "content": "You are an AI assistant helping to create dynamic football match descriptions."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=50
+                max_tokens=100
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
@@ -342,11 +374,9 @@ class GeneratePrompts:
     def prompt_for_odds(self, odds_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         prompts = []
         for odds in odds_data:
-            # Extract relevant details
             home_team = odds.get("home_team", "Unknown Home Team")
             away_team = odds.get("away_team", "Unknown Away Team")
             
-            # Extract odds information if available
             if odds.get("odds"):
                 home_odds = odds["odds"][0].get("homeWin", "N/A")
                 draw_odds = odds["odds"][0].get("draw", "N/A")
@@ -355,7 +385,7 @@ class GeneratePrompts:
                 home_odds = "N/A"
                 draw_odds = "N/A"
                 away_odds = "N/A"
-            
+        
             prompt = (
                 f"[Generate a concise and complete description for football match odds, using only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
                 f"Provide only the odds information directly, without introducing the teams or match. State each type of odds clearly and avoid abbreviations or parentheses. Keep it under 45 words.] "
@@ -390,7 +420,6 @@ class GeneratePrompts:
 
 
     def prompt_for_last5matches(self, matches_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on the last 5 matches for each game."""
         prompts = []
         for match_info in matches_data:
             home_team = match_info["home_team"]["team_name"]
@@ -432,7 +461,6 @@ class GeneratePrompts:
 
 
     def prompt_for_match_result(self, match_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Generate prompts based on predicted match results for each game."""
         prompts = []
         for result in match_results:
             home_team_name = result["home_team_name"]
@@ -464,7 +492,7 @@ class GeneratePrompts:
                     {"role": "system", "content": "You are an AI assistant generating dynamic and engaging football match result predictions."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=100
+                max_tokens=150
             )
 
             generated_script = response['choices'][0]['message']['content'].strip()
@@ -477,7 +505,7 @@ class GeneratePrompts:
 
 
     def generate_second_video_closing_with_openai(self, program_number: int) -> Dict[str, Any]:
-        """Generates a closing statement for the narration using OpenAI."""
+
         prompt = (
             f"Wrap up Episode {program_number} with a friendly closing: 'Just a reminder, I'm only an AI, this isn’t financial advice!' "
             f"Encourage viewers to tune in daily, join the {PROGRAM_NAME} community, and get ready for Episode {program_number + 1} tomorrow. "
@@ -502,6 +530,39 @@ class GeneratePrompts:
 ######################################SECOND VIDEO ENDED HERE####################################################
 #################################################################################################################
 
+    def generate_first_video_narration(
+        self,
+        intro_result: Dict[str, Any],
+        final_score_result: List[Dict[str, Any]],
+        evaluation_result: List[Dict[str, Any]],
+        closing_result: Dict[str, Any]
+    ) -> Dict[str, str]:
+        # Add the intro
+        narration_text = intro_result["prompt"] 
+
+        # Process each match
+        for i in range(len(final_score_result)):
+            # Add match narration
+            narration_text += final_score_result[i]["prompt"] 
+            narration_text += "So, what did we predict for this match?"
+            
+            # Add prediction evaluation
+            if evaluation_result[i]["evaluation"] == "correct":
+                narration_text += "Yes, we got it right! " + evaluation_result[i]["prompt"] 
+            else:
+                narration_text += "Oh no, we missed it! Unfortunately, our prediction was incorrect. " + evaluation_result[i]["prompt"] 
+            
+            # Add transition phrase for all matches except the last one
+            if i < len(final_score_result) - 1:
+                narration_text += "Alright, let's move on to the next match."
+
+        # Add the closing statement
+        narration_text +=  closing_result["prompt"]
+
+        return {"narration": narration_text}
+
+
+
     def generate_second_video_narration(
         self,
         intro_result: Dict[str, Any],
@@ -512,11 +573,10 @@ class GeneratePrompts:
         match_result_prompts: List[Dict[str, Any]],
         closing_result: Dict[str, Any]
     ) -> Dict[str, str]:
-        """Generates a combined narration for the second video in a single field."""
 
         narration_text = intro_result["prompt"] 
 
-        for i in range(5):
+        for i in range(len(team_info_result)):
             narration_text += (
                 team_info_result[i]["prompt"] +
                 match_stats_result[i]["prompt"] +
@@ -539,7 +599,9 @@ if __name__ == "__main__":
     # Increase program number
     increment_program_number()
     program_number = get_program_number()
-    
+    prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
+    narration_folder = os.path.join(today_date + "_json_match_output_folder", "narrations")
+
     # Fetch data
     fetch_last5matches = FetchLast5Matches(base_url=BASE_URL)
     fetch_match_stats = FetchMatchTime(base_url=BASE_URL)
@@ -553,8 +615,8 @@ if __name__ == "__main__":
     ##################################### GENERATE PROMPTS OF FIRST VIDEO  #####################################
     ############################################################################################################
     fetch_final_score.update_scores_in_file()
-    score_output_folder = os.path.join(START_BEFORE + "_json_match_output_folder", "final_score_prompt_output_folder")
-    evaluation_output_folder = os.path.join(START_BEFORE + "_json_match_output_folder", "evaluation_prompt_output_folder")
+    score_output_folder = os.path.join(START_AFTER + "_json_match_output_folder", "final_score_prompt_output_folder")
+    evaluation_output_folder = os.path.join(START_AFTER + "_json_match_output_folder", "evaluation_prompt_output_folder")
     final_score_data_path = os.path.join(yesterday_date + "_json_match_output_folder", "match_prediction_result.json")
     if os.path.exists(final_score_data_path):
         with open(final_score_data_path, 'r', encoding="utf-8") as file:
@@ -567,21 +629,34 @@ if __name__ == "__main__":
 
     evaluation_result = prompt_generator.generate_prediction_evaluation_prompt(final_score_data)
     json_saver.save_to_json(evaluation_result, "evaluation_prompt.json",custom_folder=evaluation_output_folder)
+
+
+    first_intro_result = prompt_generator.generate_first_video_intro_with_openai(program_number=program_number)
+    json_saver.save_to_json(first_intro_result, "first_intro_prompt.json",custom_folder=prompt_folder)
+
+    first_closing_result = prompt_generator.generate_first_video_closing_with_openai(correct_predictions_count=prompt_generator.correct_predictions_count,program_number=program_number)
+    json_saver.save_to_json(first_closing_result, "first_closing_prompt.json",custom_folder=prompt_folder)
+
+    
+    first_video_result = prompt_generator.generate_first_video_narration(
+        intro_result= first_intro_result,
+        final_score_result= final_score_result,
+        evaluation_result= evaluation_result,
+        closing_result = first_closing_result,
+    )
+    json_saver.save_to_json(first_video_result, "first_video_narration.json", custom_folder=narration_folder)
+
     ##################################### GENERATE PROMPTS OF SECOND VIDEO  #####################################
     #############################################################################################################
     last5matches_data = fetch_last5matches.get_last5matches(start_after=START_AFTER)
     match_stats_data = fetch_match_stats.get_match_times(start_after=START_AFTER)
     odds_data = fetch_odds.get_odds_ranks(start_after=START_AFTER)
     team_info_data = fetch_team_info.get_team_info(start_after=START_AFTER)
+    second_intro_result = prompt_generator.generate_second_video_intro_with_openai()
+    json_saver.save_to_json(second_intro_result, "second_intro_prompt.json",custom_folder=prompt_folder)
 
-    narration_folder = os.path.join(today_date + "_json_match_output_folder", "narrations")
-    prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
-
-    intro_result = prompt_generator.generate_second_video_intro_with_openai()
-    json_saver.save_to_json(intro_result, "intro_prompt.json",custom_folder=prompt_folder)
-
-    closing_result = prompt_generator.generate_second_video_closing_with_openai(program_number=program_number)
-    json_saver.save_to_json(closing_result, "closing_prompt.json",custom_folder=prompt_folder)
+    second_closing_result = prompt_generator.generate_second_video_closing_with_openai(program_number=program_number)
+    json_saver.save_to_json(second_closing_result, "second_closing_prompt.json",custom_folder=prompt_folder)
 
     last5matches_result = prompt_generator.prompt_for_last5matches(last5matches_data)
     json_saver.save_to_json(last5matches_result, "last5matches_prompt.json",custom_folder=prompt_folder)
@@ -599,12 +674,12 @@ if __name__ == "__main__":
     json_saver.save_to_json(match_result_prompt, "match_result_prompt.json",custom_folder=prompt_folder)
 
     second_video_result = prompt_generator.generate_second_video_narration(
-        intro_result=intro_result,
-        team_info_result=team_info_result,
-        match_stats_result=match_stats_result,
-        odds_result=odds_result,
-        last5matches_result=last5matches_result,
-        match_result_prompts =match_result_prompt,
-        closing_result=closing_result
+        intro_result= second_intro_result,
+        team_info_result= team_info_result,
+        match_stats_result= match_stats_result,
+        odds_result= odds_result,
+        last5matches_result= last5matches_result,
+        match_result_prompts = match_result_prompt,
+        closing_result= second_closing_result
     )
     json_saver.save_to_json(second_video_result, "second_video_narration.json", custom_folder=narration_folder)

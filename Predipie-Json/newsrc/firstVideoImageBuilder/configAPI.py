@@ -1,8 +1,6 @@
 import os
-from config.config import START_BEFORE
+from config.config import START_BEFORE,BASE_DIR,ASSET_DIR
 class ConfigAPI:
-    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    ASSET_DIR = os.path.abspath(os.path.join(BASE_DIR, "assets"))
 
     DATA_FOLDER = os.path.join(BASE_DIR,f"{START_BEFORE}_json_match_output_folder")
     JSON_FILE = os.path.join(DATA_FOLDER, "match_prediction_result.json")

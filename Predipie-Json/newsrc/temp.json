@@ -1,0 +1,230 @@
+[
+    {
+        "id": 199,
+        "home_team": "Brazil",
+        "away_team": "Uruguay",
+        "home_rank": "5",
+        "away_rank": "14",
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "1-1",
+                "awayWin": 41,
+                "homeWin": 21,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1732070400,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 352,
+        "home_team": "El Porvenir",
+        "away_team": "CA Atlas",
+        "home_rank": "18",
+        "away_rank": "8",
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "2-2",
+                "awayWin": 26,
+                "homeWin": 26,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1732139830,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 673,
+        "home_team": "Pioneers Club",
+        "away_team": "Belqas",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "1-1",
+                "awayWin": 19,
+                "homeWin": 19,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732112938,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 368,
+        "home_team": "Estudiantes La Plata",
+        "away_team": "Rosario Central",
+        "home_rank": "14",
+        "away_rank": "21",
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "1-1",
+                "awayWin": 34,
+                "homeWin": 21,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732147713,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 310,
+        "home_team": "Algeria U20",
+        "away_team": "Morocco U20",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.03,
+                "score": "1-1",
+                "awayWin": 13,
+                "homeWin": 17,
+                "isSealed": 0,
+                "matchTime": "94",
+                "changeTime": 1732132318,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 362,
+        "home_team": "Argentino Quilmes Reserves",
+        "away_team": "Los Andes Reserves",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "0-0",
+                "awayWin": 19,
+                "homeWin": 19,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732139667,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 672,
+        "home_team": "FC Istiklol Dushanbe",
+        "away_team": "Regar-TadAZ Tursunzoda",
+        "home_rank": "1",
+        "away_rank": "7",
+        "odds": [
+            {
+                "draw": 1.04,
+                "score": "0-0",
+                "awayWin": 13,
+                "homeWin": 15,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732101877,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 577,
+        "home_team": "UE Tavernes",
+        "away_team": "CD Thader",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "2-2",
+                "awayWin": 23,
+                "homeWin": 23,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732137841,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 376,
+        "home_team": "Ituzaingo",
+        "away_team": "Deportivo Espanol",
+        "home_rank": "11",
+        "away_rank": "7",
+        "odds": [
+            {
+                "draw": 1.01,
+                "score": "1-1",
+                "awayWin": 21,
+                "homeWin": 21,
+                "isSealed": 0,
+                "matchTime": "95",
+                "changeTime": 1732146798,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 345,
+        "home_team": "Gremio (RS)",
+        "away_team": "Juventude",
+        "home_rank": "13",
+        "away_rank": "17",
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "2-2",
+                "awayWin": 26,
+                "homeWin": 21,
+                "isSealed": 0,
+                "matchTime": "97",
+                "changeTime": 1732147223,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 212,
+        "home_team": "Porvenir Asuka SC",
+        "away_team": "VONDS Ichihara",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "1-1",
+                "awayWin": 19,
+                "homeWin": 19,
+                "isSealed": 0,
+                "matchTime": "93",
+                "changeTime": 1732073729,
+                "matchStatus": 4
+            }
+        ]
+    },
+    {
+        "id": 208,
+        "home_team": "Maharashtra",
+        "away_team": "Gujarat State FA",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 1.02,
+                "score": "0-0",
+                "awayWin": 17,
+                "homeWin": 17,
+                "isSealed": 0,
+                "matchTime": "92",
+                "changeTime": 1732080278,
+                "matchStatus": 4
+            }
+        ]
+    }
+]

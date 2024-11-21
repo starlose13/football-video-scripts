@@ -75,7 +75,7 @@ class GameResultPredictor:
                 return "A win or draw", 26  
             elif a_team == "A4":
                 return "A win or draw", 27
-            elif a_team == "A5" and b_team == "B7" and a_recent_g == "ARecentG1":
+            elif a_team == "A5" and b_team == "B7":
                 return "A win or draw", 28
             elif a_team == "A5" and b_team == "B6" and a_recent_g == "ARecentG1":
                 return "A win or draw", 29

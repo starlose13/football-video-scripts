@@ -1,0 +1,47 @@
+[
+    {
+        "prompt": "Winning odds for the home team are 2.55; for the away team, the odds are 2.85. Odds for a draw stand also at 2.85.",
+        "home_team": " Masr El Makasa",
+        "away_team": "Asyut Cement",
+        "home_odds": 2.55,
+        "draw_odds": 2.85,
+        "away_odds": 2.85,
+        "reading_time": 9.17
+    },
+    {
+        "prompt": "The odds for the home team to win are 2.2; the away team, 2.55. Odds for a draw stand at 3.7.",
+        "home_team": "SpVgg Oberfranken Bayreuth",
+        "away_team": "Bayern Munchen (Youth)",
+        "home_odds": 2.2,
+        "draw_odds": 3.7,
+        "away_odds": 2.55,
+        "reading_time": 8.2
+    },
+    {
+        "prompt": "Match odds are as follows: victory for the home team at 3.4; victory for the away team at 2; draw at 3.1. Who will emerge victorious? Place your bets!",
+        "home_team": "Um Alhassam",
+        "away_team": "Al-Ittifaq",
+        "home_odds": 3.4,
+        "draw_odds": 3.1,
+        "away_odds": 2,
+        "reading_time": 10.68
+    },
+    {
+        "prompt": "The odds for a win by the home team are 2.8; for the away team, 2.38. A draw is set at 3.",
+        "home_team": "Gamo Chencha",
+        "away_team": "Bench Maji Buna FC",
+        "home_odds": 2.8,
+        "draw_odds": 3,
+        "away_odds": 2.38,
+        "reading_time": 8.32
+    },
+    {
+        "prompt": "The odds stand as follows: a win for the home team is at 2.9; for the away team, it is 2.14; a draw comes in at 2.95.",
+        "home_team": "Neftchi Fargona",
+        "away_team": "Nasaf Qarshi",
+        "home_odds": 2.9,
+        "draw_odds": 2.95,
+        "away_odds": 2.14,
+        "reading_time": 10.1
+    }
+]

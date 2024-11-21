@@ -1,0 +1,34 @@
+[
+    {
+        "id": 592,
+        "home_team": "Debre Birhan Ketema",
+        "away_team": "Ambo Ketema",
+        "date": "2024-11-21",
+        "day": "Thursday",
+        "time": "12 pm"
+    },
+    {
+        "id": 402,
+        "home_team": "Barracas Central",
+        "away_team": "Belgrano",
+        "date": "2024-11-21",
+        "day": "Thursday",
+        "time": "8 pm"
+    },
+    {
+        "id": 1093,
+        "home_team": "Mumbai Young Boys",
+        "away_team": "Anstrengung United",
+        "date": "2024-11-21",
+        "day": "Thursday",
+        "time": "6 am"
+    },
+    {
+        "id": 557,
+        "home_team": "CS Constantine U21",
+        "away_team": "USM Alger U21",
+        "date": "2024-11-21",
+        "day": "Thursday",
+        "time": "2 pm"
+    }
+]

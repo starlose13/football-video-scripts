@@ -155,9 +155,27 @@ class BaseMatchPipeline:
     def get_matches(self, start_after: str) -> List[Dict[str, Any]]:
         """
         Get and classify matches data.
+        Only include matches where at least one team's odds are below 8.
         """
         raw_matches = self.get_recent_matches(start_after)
-        return [self.classify_match_data(match) for match in raw_matches]
+        classified_matches = []
+
+        for match in raw_matches:
+            # Check odds for the match
+            odds = match.get("odds", [])
+            if not odds:
+                continue  # Skip matches with no odds data
+            
+            # Extract home and away odds from the first odds entry
+            home_odds = odds[0].get("homeWin")
+            away_odds = odds[0].get("awayWin")
+
+            # Include match if at least one team's odds are below 8
+            if (home_odds is not None and home_odds < 8) or (away_odds is not None and away_odds < 8):
+                classified_matches.append(self.classify_match_data(match))
+
+        return classified_matches
+
     
     def get_final_score(self, match_id: str, start_after: str) -> str:
         """
