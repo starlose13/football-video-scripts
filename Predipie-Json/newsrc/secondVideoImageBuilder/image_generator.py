@@ -103,7 +103,7 @@ class ImageGenerator:
         card_templates = {
             "Win Home Team": os.path.join(Config.assets_dir, 'home.jpg'),
             "Win or Draw Home Team": os.path.join(Config.assets_dir, 'home-draw.jpg'),
-            "Win or Draw Away Team": os.path.join(Config.assets_dir, 'away-draw.jpg'),
+            "Win or Draw Away Team": os.path.join(Config.assets_dir, 'draw-away.jpg'),
             "Win Away Team": os.path.join(Config.assets_dir, 'away.jpg'),
             "Win Home or Away Team": os.path.join(Config.assets_dir, 'home-away.jpg')
         }

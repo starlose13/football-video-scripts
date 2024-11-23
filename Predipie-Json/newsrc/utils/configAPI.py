@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from config.config import BASE_DIR, START_BEFORE, START_AFTER, ASSET_DIR
+from config.config import BASE_DIR, START_BEFORE, START_AFTER, ASSET_DIR,OUTPUT_FOLDER
 
 load_dotenv()
 
@@ -23,6 +23,14 @@ class ConfigAPI:
                 "recent_matches": os.path.join(json_base_dir, "last5matches_data.json"),
                 "card_results": os.path.join(json_base_dir, "match_prediction_result.json"),
             }
+            assets_dir = os.path.abspath(os.path.join(BASE_DIR, "assets"))
+            templates = [
+                os.path.join(assets_dir, "match-introduction.jpg"),
+                os.path.join(assets_dir, "stats.jpg"),
+                os.path.join(assets_dir, "odds.jpg"),
+                os.path.join(assets_dir, "recent-matches.jpg"),
+                os.path.join(assets_dir, "away.jpg")
+            ]
             template_path = None
         else:
             raise ValueError(f"Unknown video type: {video_type}")
