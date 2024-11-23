@@ -1,38 +1,38 @@
 [
     {
-        "prompt": "Full-time result odds are as follows: victory for the home team at 1; victory for the away team at 101; a draw at 51.",
-        "home_team": "Debre Birhan Ketema",
-        "away_team": "Ambo Ketema",
-        "home_odds": 1,
-        "draw_odds": 51,
-        "away_odds": 101,
-        "reading_time": 8.29
-    },
-    {
-        "prompt": "The odds are as follows: winning for the home team is 3.6; the away team has odds of 2.2; and for a draw, it is 3.1. Who will take the victory?",
-        "home_team": "Barracas Central",
-        "away_team": "Belgrano",
-        "home_odds": 3.6,
-        "draw_odds": 3.1,
-        "away_odds": 2.2,
-        "reading_time": 11.57
-    },
-    {
-        "prompt": "The odds for a win by the home team are 13. The away team has odds of 7.5 for a win. A draw is quoted at 1.11.",
+        "prompt": "The odds of winning for the home team are 13; for the away team, they are 7.5. A draw is set at odds of 1.11. Choose wisely!",
         "home_team": "Mumbai Young Boys",
         "away_team": "Anstrengung United",
         "home_odds": 13,
         "draw_odds": 1.11,
         "away_odds": 7.5,
-        "reading_time": 9.76
+        "reading_time": 10.11
     },
     {
-        "prompt": "The odds of winning are 5 for the home team and 1.66 for the away team. The odds for a draw stand at 3.4. Each outcome presents a distinct possibility! What will the final result reveal?",
+        "prompt": "The odds for winning are set at 1 for the home team; for the away team, they are much higher at 101. A draw comes in with odds of 51. Who will emerge victorious?",
+        "home_team": "Debre Birhan Ketema",
+        "away_team": "Ambo Ketema",
+        "home_odds": 1,
+        "draw_odds": 51,
+        "away_odds": 101,
+        "reading_time": 11.95
+    },
+    {
+        "prompt": "The odds for winning are set at 5 for the home team and 1.66 for the away team. A draw is placed at 3.4.",
         "home_team": "CS Constantine U21",
         "away_team": "USM Alger U21",
         "home_odds": 5,
         "draw_odds": 3.4,
         "away_odds": 1.66,
-        "reading_time": 12.81
+        "reading_time": 8.58
+    },
+    {
+        "prompt": "Match Odds! Barracas Central winning: 3.7; Belgrano winning: 2.15; Draw: 3.1.",
+        "home_team": "Barracas Central",
+        "away_team": "Belgrano",
+        "home_odds": 3.7,
+        "draw_odds": 3.1,
+        "away_odds": 2.15,
+        "reading_time": 4.91
     }
 ]

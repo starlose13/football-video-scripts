@@ -20,5 +20,5 @@ yesterday = today - timedelta(days=1)
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSET_DIR = os.path.abspath(os.path.join(BASE_DIR, "assets"))
 
-START_AFTER = "2024-11-22" 
+START_AFTER = "2024-11-21" 
 START_BEFORE = "2024-11-21"

@@ -1,18 +1,18 @@
 [
     {
-        "prompt": "Debre Birhan Ketema has won two games, drawn one, and lost two recently. Ambo Ketema won once, drew once, and lost twice.",
-        "reading_time": 8.36
+        "prompt": "The Mumbai Young Boys have struggled recently, drawing four and losing one of their last five matches. Anstrengung United has mixed results with one win and one loss in their recent outings.",
+        "reading_time": 10.95
     },
     {
-        "prompt": "Barracas Central have had mixed results lately: two wins, one draw, and two losses. Belgrano has been more consistent, securing two wins, two draws, and only one loss.",
-        "reading_time": 10.5
+        "prompt": "Debre Birhan Ketema has two wins, one draw, and two losses in their last five games. Ambo Ketema won once, drew once, and lost twice in their recent four matches.",
+        "reading_time": 10.94
     },
     {
-        "prompt": "Mumbai Young Boys are without a win, drawing four times and losing once recently. Anstrengung United have one win and one loss.",
-        "reading_time": 7.73
+        "prompt": "CS Constantine U21 has one win and four draws; they remain unbeaten recently. USM Alger U21 secured two wins, two draws, and suffered one loss.",
+        "reading_time": 9.07
     },
     {
-        "prompt": "CS Constantine U21 has been hard to beat, winning once and drawing four times. USM Alger U21 has a mixed record with two wins, two draws, and one loss.",
-        "reading_time": 10.4
+        "prompt": "Barracas Central has been inconsistent, with two wins, one draw, and two losses. Belgrano, more stable, secured two victories, two draws, and one defeat.",
+        "reading_time": 9.63
     }
 ]

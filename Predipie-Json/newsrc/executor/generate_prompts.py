@@ -83,6 +83,13 @@ class GeneratePrompts:
             max_tokens=80
         )
         generated_intro = response['choices'][0]['message']['content'].strip()
+        generated_intro = (
+                generated_intro.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
         processor = MatchDataProcessor(generated_intro)
         reading_time = processor.calculate_reading_time()
 
@@ -127,6 +134,14 @@ class GeneratePrompts:
 
             # Process the generated narration
             generated_final_score = response['choices'][0]['message']['content'].strip()
+            generated_final_score = (
+                generated_final_score.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
+
             processor = MatchDataProcessor(generated_final_score)
             reading_time = processor.calculate_reading_time()
 
@@ -138,19 +153,18 @@ class GeneratePrompts:
 
         return prompts
 
-    
-
+        
     def generate_prediction_evaluation_prompt(self, match_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         prompts = []
         for match in match_data:
-            home_team = match.get("home_team_name", "N/A")
-            away_team = match.get("away_team_name", "N/A")
-            score = match.get("Score", "N/A")
+            # Extract necessary data
             card_value = match.get("Card", "N/A")
+            score = match.get("Score", "N/A")
             extracted_scores = self.extract_scores(score)
-            home_score = extracted_scores.get('home_score', 0)
-            away_score = extracted_scores.get('away_score', 0)
+            home_score = extracted_scores.get("home_score", 0)
+            away_score = extracted_scores.get("away_score", 0)
 
+            # Determine if the prediction was correct
             prediction_correct = True
             if card_value == "Win Home or Away Team":
                 prediction_correct = home_score != away_score
@@ -162,73 +176,75 @@ class GeneratePrompts:
                 prediction_correct = home_score >= away_score
             elif card_value == "Win or Draw Away Team":
                 prediction_correct = away_score >= home_score
+            elif card_value == "Draw":
+                prediction_correct = home_score == away_score
 
-
-            if home_score > away_score:
-                result_sentence = f"{home_team} delivered a stunning victory, defeating {away_team} {home_score}-{away_score}!"
-            elif home_score < away_score:
-                result_sentence = f"{away_team} pulled off an incredible win, taking down {home_team} {away_score}-{home_score}!"
-            else:
-                result_sentence = f"It was a nail-biting draw, {home_score}-{away_score}, between {home_team} and {away_team}!"
-
-            # Construct evaluation comment
             if prediction_correct:
                 self.correct_predictions_count += 1
-                evaluation_comment = (
-                    f"Wow, what a call! Our prediction '{card_value}' was spot on! {result_sentence} Nailed it!"
-                )
-            else:
-                evaluation_comment = (
-                    f"Ah, tough luck! Our prediction '{card_value}' didn’t hit the mark this time. {result_sentence} Better luck next round!"
-                )
 
-            # Create engaging sportscaster-style prompt
+            # Generate a dynamic and diverse prompt
             prompt = (
-                f"Ladies and gentlemen, here is the breakdown: {evaluation_comment} "
-                f"Stay with us as we gear up for the next thrilling predictions!"
-                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
-                f"Important: Do not use apostrophes in the output."
+                f"As a sports commentator, analyze the prediction based on: "
+                f"- Predicted Outcome: {card_value}"
+                f"- Prediction Status: {'Correct' if prediction_correct else 'Incorrect'}]"
+                f"Write an exciting commentary to reflect the result. Use simple punctuation (e.g., '-', '.', ',') "
+                f"and avoid typographic substitutions like fancy dashes or quotes. For correct predictions, "
+                f"celebrate with enthusiasm and creativity (e.g., 'Spot on!' or 'What a call!'). For incorrect ones, express "
+                f"humor, sportsmanship, or optimism (e.g., 'Close but not quite,' or 'Next time for sure!'). "
+                f"Keep the output concise, under 45 words."
             )
-            # Generate response from OpenAI
+
+            # Generate commentary using OpenAI
             response = self.openai_request_with_retry(
                 model="gpt-4-turbo",
                 messages=[
-                    {"role": "system", "content": "You are an AI assistant generating sports prediction evaluations."},
+                    {"role": "system", "content": "You are an AI sports commentator providing dynamic and engaging evaluations."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=100
             )
-            generated_evaluation = response['choices'][0]['message']['content'].strip()
-            processor = MatchDataProcessor(generated_evaluation)
+            # Replace any fancy characters with simple ones
+            generated_commentary = response["choices"][0]["message"]["content"].strip()
+            generated_commentary = (
+                generated_commentary.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
+
+            # Calculate reading time
+            processor = MatchDataProcessor(generated_commentary)
             reading_time = processor.calculate_reading_time()
 
-            # Append to prompts list
+            # Append result to prompts list
             prompts.append({
-                "prompt": generated_evaluation,
+                "prompt": generated_commentary,
                 "evaluation": "correct" if prediction_correct else "incorrect",
                 "reading_time": reading_time
             })
 
         return prompts
-                
+
+
+                    
         
     def generate_first_video_closing_with_openai(self, correct_predictions_count: int, program_number: int) -> Dict[str, Any]:
         # Calculate success rate
-        success_rate = (correct_predictions_count / 5) * 100
-
+        success_rate = int((correct_predictions_count / len(game_results)) * 100)
         # Generate dynamic closing prompt based on success rate
         if success_rate > 70:
             prompt = (
-                f"Congratulations to us! Yesterday, we nailed it with an impressive success rate of {success_rate:.2f} percent ! "
-                f"Now, let us go to my colleague and see which games are being predicted today. Thomas, what do you have for us?"
-                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+                f"Congratulations to us! Yesterday, we nailed it with an impressive success rate about {success_rate} percent ! "
+                f"Now, let us go to my colleague and see which games are being predicted today. Zoobin, what do you have for us?"
+                f"Output should be less than 50 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
                 f" Important: Do not use apostrophes in the output."
             )
         else:
             prompt = (
-                f"Our success rate yesterday was {success_rate:.2f}%. While it wasn not our best, we are ready to bounce back stronger! "
-                f"Now, let us go to my colleague and see which games are being predicted today. Thomas, what do you have for us? we hope so today we have better predictions."
-                f"Output should be less than 30 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."                
+                f"Our success rate yesterday was {success_rate}%. While it wasn not our best, we are ready to bounce back stronger! "
+                f"Now, let us go to my colleague and see which games are being predicted today. Zoobin, what do you have for us? we hope so today we have better predictions."
+                f"Output should be less than 50 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."                
                 f" Important: Do not use apostrophes in the output."
             )
 
@@ -242,6 +258,13 @@ class GeneratePrompts:
             max_tokens=60
         )
         generated_closing = response['choices'][0]['message']['content'].strip()
+        generated_closing = (
+                generated_closing.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
         processor = MatchDataProcessor(generated_closing)
         reading_time = processor.calculate_reading_time()
 
@@ -260,7 +283,7 @@ class GeneratePrompts:
 
     def generate_second_video_intro_with_openai(self) -> Dict[str, Any]:
         prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you 5 fantastic lineup of top matches for you. "
+            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you some fantastic lineup of top matches for you. "
             f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
             f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
             f"Important: Do not mention any game statistics, player names, or game history information in the output."
@@ -274,6 +297,13 @@ class GeneratePrompts:
             max_tokens=60
         )
         generated_intro = response['choices'][0]['message']['content'].strip()
+        generated_intro = (
+                generated_intro.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
         processor = MatchDataProcessor(generated_intro)
         reading_time = processor.calculate_reading_time()
         
@@ -308,6 +338,14 @@ class GeneratePrompts:
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
+            generated_script = (
+                generated_script.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
+
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
             
@@ -356,6 +394,13 @@ class GeneratePrompts:
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
+            generated_script = (
+                generated_script.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
 
@@ -403,6 +448,13 @@ class GeneratePrompts:
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
+            generated_script = (
+                generated_script.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
 
@@ -452,6 +504,13 @@ class GeneratePrompts:
             )
             
             generated_script = response['choices'][0]['message']['content'].strip()
+            generated_script = (
+                generated_script.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
 
@@ -496,6 +555,13 @@ class GeneratePrompts:
             )
 
             generated_script = response['choices'][0]['message']['content'].strip()
+            generated_script = (
+                generated_script.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
             processor = MatchDataProcessor(generated_script)
             reading_time = processor.calculate_reading_time()
 
@@ -521,6 +587,13 @@ class GeneratePrompts:
             max_tokens=100
         )
         generated_closing = response['choices'][0]['message']['content'].strip()
+        generated_closing = (
+                generated_closing.replace("’", "'")
+                .replace("‘", "'")
+                .replace("“", '"')
+                .replace("”", '"')
+                .replace("—", "-")
+            )
         processor = MatchDataProcessor(generated_closing)
         reading_time = processor.calculate_reading_time()
         
