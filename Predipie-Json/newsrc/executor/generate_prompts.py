@@ -283,7 +283,7 @@ class GeneratePrompts:
 
     def generate_second_video_intro_with_openai(self) -> Dict[str, Any]:
         prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you some fantastic lineup of top matches for you. "
+            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you {len(game_results)} fantastic lineup of top matches for you. "
             f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
             f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
             f"Important: Do not mention any game statistics, player names, or game history information in the output."
