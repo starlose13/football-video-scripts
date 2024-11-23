@@ -1,0 +1,12 @@
+[
+    {
+        "creatify_video_id": "c590da83-5f49-42bf-a46a-36305a1eb4c6",
+        "shotstack_render_id": "a15be193-ba5d-401f-9078-726f19eb4113",
+        "shotstack_video_url": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/a15be193-ba5d-401f-9078-726f19eb4113.mp4"
+    },
+    {
+        "creatify_video_id": "d20cb609-b810-439e-9ea3-f3c007080b4b",
+        "shotstack_render_id": "c1784c53-2540-4995-b897-169876906a50",
+        "shotstack_video_url": "https://shotstack-api-v1-output.s3-ap-southeast-2.amazonaws.com/4c7kem3rad/c1784c53-2540-4995-b897-169876906a50.mp4"
+    }
+]

@@ -11,11 +11,12 @@ from dataFetcher.fetch_match_stats import FetchMatchTime
 from dataFetcher.fetch_odds_ranks import FetchOddsRanks
 from dataFetcher.fetch_team_info import FetchTeamInfo
 from utils.reading_time_consumer import MatchDataProcessor
-from config.config import BASE_URL, START_AFTER, START_BEFORE, PROGRAM_NAME
+from config.config import BASE_URL, START_AFTER, START_BEFORE, PROGRAM_NAME , CREATIFY_API_KEY ,CREATIFY_API_ID , FIRST_NARRAITOR_ID ,SECOND_NARRAITOR_ID
 from dataClassifier.game_result_predictor import GameResultPredictor
 from utils.program_counter import increment_program_number, get_program_number
 from openai.error import RateLimitError
 from finalScore.results_with_start_before import ScoreCalculator
+from utils.creatify_uploader import CreatifyUploader
 
 load_dotenv()
 
@@ -70,8 +71,8 @@ class GeneratePrompts:
             f"Start with: 'Hi {PROGRAM_NAME} fans!' "
             f"Welcome to episode {program_number}! "
             f"In this episode, we will review the results of yesterdays matches and see how accurate our predictions were. "
-            f"Keep the tone lively, professional, and engaging. Make it concise—under 50 words with a confident and energetic delivery! "
-            f"Output should be less than 35 words.Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+            f"Keep the tone lively, professional, and engaging. Make it concise—under 60 words with a confident and energetic delivery! "
+            f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
             f"Important: Do not use apostrophes in the output."
         )
         response = self.openai_request_with_retry(
@@ -118,7 +119,7 @@ class GeneratePrompts:
                 f"The game took place on {parsed_timestamp['day']} at {parsed_timestamp['time']}. "
                 f"{result_sentence} "
                 f"Lets see what we have predicted."
-                f"Output should be less than 30 words. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
+                f"Output should be less than 45 words. Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon."
                 f"Important: Do not use apostrophes in the output."
             )
 
@@ -189,9 +190,9 @@ class GeneratePrompts:
                 f"- Prediction Status: {'Correct' if prediction_correct else 'Incorrect'}]"
                 f"Write an exciting commentary to reflect the result. Use simple punctuation (e.g., '-', '.', ',') "
                 f"and avoid typographic substitutions like fancy dashes or quotes. For correct predictions, "
-                f"celebrate with enthusiasm and creativity (e.g., 'Spot on!' or 'What a call!'). For incorrect ones, express "
-                f"humor, sportsmanship, or optimism (e.g., 'Close but not quite,' or 'Next time for sure!'). "
-                f"Keep the output concise, under 45 words."
+                f"celebrate with enthusiasm and creativity . For incorrect ones, express "
+                f"humor, sportsmanship, or optimism."
+                f"Keep the output concise, under 50 words."
             )
 
             # Generate commentary using OpenAI
@@ -283,8 +284,8 @@ class GeneratePrompts:
 
     def generate_second_video_intro_with_openai(self) -> Dict[str, Any]:
         prompt = (
-            f"Start with: 'Hi {PROGRAM_NAME}! ' Tonight, we are bringing you {len(game_results)} fantastic lineup of top matches for you. "
-            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 40 words with a punchy, engaging tone! "
+            f"Start with: 'Hello everyone, thank you Jennifer for reviewing the previous day's predictions.' Tonight, we are bringing you {len(game_results)} fantastic lineup of top matches for you. "
+            f"Keep it upbeat, friendly, and super energetic. Make it concise—under 30 words with a punchy, engaging tone! "
             f"Use only these punctuation marks: dot, comma, exclamation mark, question mark, and semicolon. "
             f"Important: Do not mention any game statistics, player names, or game history information in the output."
         )
@@ -669,7 +670,16 @@ if __name__ == "__main__":
     json_saver = JsonSaver()
     today_date = START_AFTER
     yesterday_date = START_BEFORE
+
+
+    creatify_uploader = CreatifyUploader(
+        api_id= CREATIFY_API_ID,
+        api_key= CREATIFY_API_KEY
+    )
+
     # Increase program number
+
+    
     increment_program_number()
     program_number = get_program_number()
     prompt_folder = os.path.join(today_date + "_json_match_output_folder", "prompts")
@@ -687,6 +697,7 @@ if __name__ == "__main__":
 
     ##################################### GENERATE PROMPTS OF FIRST VIDEO  #####################################
     ############################################################################################################
+    first_creator_id =  FIRST_NARRAITOR_ID
     fetch_final_score.update_scores_in_file()
     score_output_folder = os.path.join(START_AFTER + "_json_match_output_folder", "final_score_prompt_output_folder")
     evaluation_output_folder = os.path.join(START_AFTER + "_json_match_output_folder", "evaluation_prompt_output_folder")
@@ -719,8 +730,16 @@ if __name__ == "__main__":
     )
     json_saver.save_to_json(first_video_result, "first_video_narration.json", custom_folder=narration_folder)
 
+    first_video_narration = first_video_result["narration"]
+    first_video_url = creatify_uploader.create_video(first_video_narration, creator_id=first_creator_id)
+    if first_video_url:
+        print(f"First video successfully uploaded. URL: {first_video_url}")
+    else:
+        print("First video upload failed.")
+
     ##################################### GENERATE PROMPTS OF SECOND VIDEO  #####################################
     #############################################################################################################
+    second_creator_id = SECOND_NARRAITOR_ID
     last5matches_data = fetch_last5matches.get_last5matches(start_after=START_AFTER)
     match_stats_data = fetch_match_stats.get_match_times(start_after=START_AFTER)
     odds_data = fetch_odds.get_odds_ranks(start_after=START_AFTER)
@@ -756,3 +775,12 @@ if __name__ == "__main__":
         closing_result= second_closing_result
     )
     json_saver.save_to_json(second_video_result, "second_video_narration.json", custom_folder=narration_folder)
+    time.sleep(30)
+    second_video_narration = second_video_result["narration"]
+    second_video_url = creatify_uploader.create_video(second_video_narration, creator_id=second_creator_id)
+    print("Second video narration:", second_video_narration)
+    print("Second creator ID:", second_creator_id)
+    if second_video_url:
+        print(f"Second video successfully uploaded. URL: {second_video_url}")
+    else:
+        print("Second video upload failed.")

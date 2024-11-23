@@ -66,9 +66,7 @@ class ImageGenerator:
 
 # در image_generator.py
     def generate_images(self):
-        """
-        مدیریت تولید تصاویر برای تمام بازی‌ها.
-        """
+
         data = self.data_loader.load_data()
         if not data:
             print("No data loaded for image generation.")
@@ -78,9 +76,7 @@ class ImageGenerator:
             self.generate_images_for_game(game_id, match_info)
 
     def generate_images_for_game(self, game_id, match_info):
-        """
-        تولید تصاویر برای یک بازی خاص.
-        """
+  
         base_positions = {
             "home_team_name": (595, 475),
             "home_team_logo": (370, 420),
@@ -100,7 +96,6 @@ class ImageGenerator:
             match_info.get('startTimestamp', '2024-01-01T00:00:00.000Z')
         )
 
-        # تولید تصویر اول
         output_path_1 = os.path.join(self.output_folder, f"game_{game_id}_prediction1.jpg")
         template_manager_1 = TemplateManager(ConfigAPI.TEMPLATE_PATH)
 
@@ -109,7 +104,6 @@ class ImageGenerator:
         template_manager_1.save_image(output_path_1)
         print(f"Saved image 1 for game {game_id} at {output_path_1}")
 
-        # تولید تصویر دوم
         output_path_2 = os.path.join(self.output_folder, f"game_{game_id}_prediction2.jpg")
         template_manager_2 = TemplateManager(template_path)
 

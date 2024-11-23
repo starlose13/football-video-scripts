@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1364,
+        "home_team": "Neftchi Fargona",
+        "away_team": "Nasaf Qarshi",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "11 am"
+    },
+    {
+        "id": 561,
+        "home_team": "Um Alhassam",
+        "away_team": "Al-Ittifaq",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "4 pm"
+    },
+    {
+        "id": 1228,
+        "home_team": "Gamo Chencha",
+        "away_team": "Bench Maji Buna FC",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "9:50 am"
+    },
+    {
+        "id": 217,
+        "home_team": "Mawkhar SC",
+        "away_team": "Sohryngkham",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "5:30 am"
+    },
+    {
+        "id": 1311,
+        "home_team": " Masr El Makasa",
+        "away_team": "Asyut Cement",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "12:30 pm"
+    },
+    {
+        "id": 1173,
+        "home_team": "SpVgg Oberfranken Bayreuth",
+        "away_team": "Bayern Munchen (Youth)",
+        "date": "2024-11-22",
+        "day": "Friday",
+        "time": "6 pm"
+    }
+]

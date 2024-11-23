@@ -1,38 +1,38 @@
 [
     {
-        "prompt": "The odds of winning for the home team are 13; for the away team, they are 7.5. A draw is set at odds of 1.11. Choose wisely!",
+        "prompt": "The odds for the home team winning stand at 13; for the away team, the odds are 7.5. A draw has odds of 1.11.",
         "home_team": "Mumbai Young Boys",
         "away_team": "Anstrengung United",
         "home_odds": 13,
         "draw_odds": 1.11,
         "away_odds": 7.5,
-        "reading_time": 10.11
+        "reading_time": 8.96
     },
     {
-        "prompt": "The odds for winning are set at 1 for the home team; for the away team, they are much higher at 101. A draw comes in with odds of 51. Who will emerge victorious?",
+        "prompt": "The odds for a win by the home team are 1; for the away team, they are 101. A draw has odds of 51. Choose wisely!",
         "home_team": "Debre Birhan Ketema",
         "away_team": "Ambo Ketema",
         "home_odds": 1,
         "draw_odds": 51,
         "away_odds": 101,
-        "reading_time": 11.95
+        "reading_time": 9.37
     },
     {
-        "prompt": "The odds for winning are set at 5 for the home team and 1.66 for the away team. A draw is placed at 3.4.",
+        "prompt": "Full-time win odds: Home team at 5; Away team at 1.66. Draw odds stand at 3.4.",
         "home_team": "CS Constantine U21",
         "away_team": "USM Alger U21",
         "home_odds": 5,
         "draw_odds": 3.4,
         "away_odds": 1.66,
-        "reading_time": 8.58
+        "reading_time": 6.17
     },
     {
-        "prompt": "Match Odds! Barracas Central winning: 3.7; Belgrano winning: 2.15; Draw: 3.1.",
+        "prompt": "The odds for a win by the home team are 3.7; for the away team, 2.15. A draw comes in at 3.1.",
         "home_team": "Barracas Central",
         "away_team": "Belgrano",
         "home_odds": 3.7,
         "draw_odds": 3.1,
         "away_odds": 2.15,
-        "reading_time": 4.91
+        "reading_time": 8.53
     }
 ]

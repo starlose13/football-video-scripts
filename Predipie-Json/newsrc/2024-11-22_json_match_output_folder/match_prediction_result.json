@@ -1,0 +1,74 @@
+[
+    {
+        "id": 561,
+        "home_team_name": "Um Alhassam",
+        "home_team_logo": "https://img.thesports.com/football/team/d47eeca20e48bd80433033989cf7e355.png",
+        "away_team_name": "Al-Ittifaq",
+        "away_team_logo": "https://img.thesports.com/football/team/d91fb359652b5c9d9842b11d1c6fada5.jpg",
+        "startTimestamp": "2024-11-22T16:00:00.000Z",
+        "Team A": "Al-Ittifaq",
+        "Team B": "Um Alhassam",
+        "Rule Applied": 110,
+        "Card": "Win or Draw Home Team"
+    },
+    {
+        "id": 1364,
+        "home_team_name": "Neftchi Fargona",
+        "home_team_logo": "https://img.thesports.com/football/team/5b880ea9815173996cd07ab4898b295c.png",
+        "away_team_name": "Nasaf Qarshi",
+        "away_team_logo": "https://img.thesports.com/football/team/04cfb325bb967b2dd4c71a1cd4bb38a3.png",
+        "startTimestamp": "2024-11-22T11:00:00.000Z",
+        "Team A": "Nasaf Qarshi",
+        "Team B": "Neftchi Fargona",
+        "Rule Applied": 28,
+        "Card": "Win or Draw Away Team"
+    },
+    {
+        "id": 1228,
+        "home_team_name": "Gamo Chencha",
+        "home_team_logo": "https://img.thesports.com/football/team/5e78529a1f940ee12fd9f30961d12b4a.png",
+        "away_team_name": "Bench Maji Buna FC",
+        "away_team_logo": "https://img.thesports.com/football/team/1d20b222ead010520ba83e65dea1020d.png",
+        "startTimestamp": "2024-11-22T09:50:00.000Z",
+        "Team A": "Bench Maji Buna FC",
+        "Team B": "Gamo Chencha",
+        "Rule Applied": 110,
+        "Card": "Win or Draw Home Team"
+    },
+    {
+        "id": 217,
+        "home_team_name": "Mawkhar SC",
+        "home_team_logo": "https://img.thesports.com/football/team/70be6ec3352e7a56b1d0445f46251c9d.png",
+        "away_team_name": "Sohryngkham",
+        "away_team_logo": "https://img.thesports.com/football/team/54d7e08799c605da626a24a388fd1405.png",
+        "startTimestamp": "2024-11-22T05:30:00.000Z",
+        "Team A": "Mawkhar SC",
+        "Team B": "Sohryngkham",
+        "Rule Applied": 53,
+        "Card": "Win Home or Away Team"
+    },
+    {
+        "id": 1311,
+        "home_team_name": " Masr El Makasa",
+        "home_team_logo": "https://img.thesports.com/football/team/81e09184cf59156df484757791ebb76d.png",
+        "away_team_name": "Asyut Cement",
+        "away_team_logo": "https://img.thesports.com/football/team/44a1776ffb0ce368616541c49a8998a0.png",
+        "startTimestamp": "2024-11-22T12:30:00.000Z",
+        "Team A": " Masr El Makasa",
+        "Team B": "Asyut Cement",
+        "Rule Applied": 115,
+        "Card": "Win or Draw Away Team"
+    },
+    {
+        "id": 1173,
+        "home_team_name": "SpVgg Oberfranken Bayreuth",
+        "home_team_logo": "https://img.thesports.com/football/team/718a0a78c9e76075916fd08c960c1ed9.png",
+        "away_team_name": "Bayern Munchen (Youth)",
+        "away_team_logo": "https://img.thesports.com/football/team/82249785b6b61b7cc029db65b6f7cc38.png",
+        "startTimestamp": "2024-11-22T18:00:00.000Z",
+        "Team A": "SpVgg Oberfranken Bayreuth",
+        "Team B": "Bayern Munchen (Youth)",
+        "Rule Applied": 32,
+        "Card": "Win or Draw Home Team"
+    }
+]

@@ -1,21 +1,21 @@
 [
     {
-        "prompt": "Get ready for thrilling football as Mumbai Young Boys clash with Anstrengung United! Who will triumph? Don't miss out! Tune in!",
+        "prompt": "Get ready for thrilling action as Mumbai Young Boys clash with Anstrengung United! Who will dominate? Tune in to catch every moment!",
         "home_team": "Mumbai Young Boys",
         "away_team": "Anstrengung United",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.49
+        "reading_time": 7.64
     },
     {
-        "prompt": "Get ready for an electrifying clash as Debre Birhan Ketema takes on Ambo Ketema! Who will triumph? Tune in to find out!",
+        "prompt": "Get ready for an electrifying clash as Debre Birhan Ketema faces Ambo Ketema. Who will dominate? Tune in to find out!",
         "home_team": "Debre Birhan Ketema",
         "away_team": "Ambo Ketema",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 7.64
+        "reading_time": 7.34
     },
     {
         "prompt": "Get ready for thrilling action as CS Constantine U21 clashes with USM Alger U21! Who will dominate? Tune in to find out!",
@@ -27,12 +27,12 @@
         "reading_time": 7.64
     },
     {
-        "prompt": "Get ready for thrill as Barracas Central clashes with Belgrano! Who will dominate? Tune in, feel the excitement, and witness football magic!",
+        "prompt": "Get ready for an electrifying clash as Barracas Central takes on Belgrano! Who will dominate the pitch? Don't miss out!",
         "home_team": "Barracas Central",
         "away_team": "Belgrano",
         "date": "Unknown Date",
         "day": "Unknown Day",
         "time": "Unknown Time",
-        "reading_time": 8.06
+        "reading_time": 6.99
     }
 ]

@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1364,
+        "home_team": "Neftchi Fargona",
+        "away_team": "Nasaf Qarshi",
+        "home_rank": "6",
+        "away_rank": "1",
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 2.2,
+                "homeWin": 3.3,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732258546,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 561,
+        "home_team": "Um Alhassam",
+        "away_team": "Al-Ittifaq",
+        "home_rank": "6",
+        "away_rank": "9",
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 2.45,
+                "homeWin": 2.7,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732271653,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 1228,
+        "home_team": "Gamo Chencha",
+        "away_team": "Bench Maji Buna FC",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 3,
+                "score": "0-0",
+                "awayWin": 2.38,
+                "homeWin": 2.8,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732144091,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 217,
+        "home_team": "Mawkhar SC",
+        "away_team": "Sohryngkham",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 2.63,
+                "score": "0-0",
+                "awayWin": 2.88,
+                "homeWin": 2.6,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732022769,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 1311,
+        "home_team": " Masr El Makasa",
+        "away_team": "Asyut Cement",
+        "home_rank": 0,
+        "away_rank": 0,
+        "odds": [
+            {
+                "draw": 2.8,
+                "score": "0-0",
+                "awayWin": 2.8,
+                "homeWin": 2.5,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732242015,
+                "matchStatus": 1
+            }
+        ]
+    },
+    {
+        "id": 1173,
+        "home_team": "SpVgg Oberfranken Bayreuth",
+        "away_team": "Bayern Munchen (Youth)",
+        "home_rank": "2",
+        "away_rank": "4",
+        "odds": [
+            {
+                "draw": 3.6,
+                "score": "0-0",
+                "awayWin": 2.6,
+                "homeWin": 2.25,
+                "isSealed": 0,
+                "matchTime": "",
+                "changeTime": 1732294797,
+                "matchStatus": 1
+            }
+        ]
+    }
+]

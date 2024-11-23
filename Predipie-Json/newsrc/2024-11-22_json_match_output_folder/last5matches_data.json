@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1364,
+        "home_team": {
+            "team_name": "Neftchi Fargona",
+            "last_5_matches": [
+                "D",
+                "L",
+                "W",
+                "D",
+                "D"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 1,
+                "draws": 3
+            }
+        },
+        "away_team": {
+            "team_name": "Nasaf Qarshi",
+            "last_5_matches": [
+                "W",
+                "W",
+                "W",
+                "W",
+                "L"
+            ],
+            "results_count": {
+                "wins": 4,
+                "losses": 1,
+                "draws": 0
+            }
+        }
+    },
+    {
+        "id": 561,
+        "home_team": {
+            "team_name": "Um Alhassam",
+            "last_5_matches": [
+                "W",
+                "D",
+                "W",
+                "W",
+                "L"
+            ],
+            "results_count": {
+                "wins": 3,
+                "losses": 1,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Al-Ittifaq",
+            "last_5_matches": [
+                "L",
+                "D",
+                "D",
+                "L",
+                "W"
+            ],
+            "results_count": {
+                "wins": 1,
+                "losses": 2,
+                "draws": 2
+            }
+        }
+    },
+    {
+        "id": 1228,
+        "home_team": {
+            "team_name": "Gamo Chencha",
+            "last_5_matches": [
+                "W",
+                "L",
+                "D",
+                "W",
+                "L"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Bench Maji Buna FC",
+            "last_5_matches": [
+                "L",
+                "L",
+                "L",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 5,
+                "draws": 0
+            }
+        }
+    },
+    {
+        "id": 217,
+        "home_team": {
+            "team_name": "Mawkhar SC",
+            "last_5_matches": [
+                "L",
+                "L",
+                "D",
+                "D",
+                "L"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 3,
+                "draws": 2
+            }
+        },
+        "away_team": {
+            "team_name": "Sohryngkham",
+            "last_5_matches": [
+                "L",
+                "W",
+                "D",
+                "L",
+                "W"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        }
+    },
+    {
+        "id": 1311,
+        "home_team": {
+            "team_name": " Masr El Makasa",
+            "last_5_matches": [
+                "L",
+                "L",
+                "L",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 5,
+                "draws": 0
+            }
+        },
+        "away_team": {
+            "team_name": "Asyut Cement",
+            "last_5_matches": [
+                "D",
+                "W",
+                "L",
+                "W",
+                "D"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 1,
+                "draws": 2
+            }
+        }
+    },
+    {
+        "id": 1173,
+        "home_team": {
+            "team_name": "SpVgg Oberfranken Bayreuth",
+            "last_5_matches": [
+                "W",
+                "D",
+                "L",
+                "W",
+                "L"
+            ],
+            "results_count": {
+                "wins": 2,
+                "losses": 2,
+                "draws": 1
+            }
+        },
+        "away_team": {
+            "team_name": "Bayern Munchen (Youth)",
+            "last_5_matches": [
+                "L",
+                "L",
+                "L",
+                "L",
+                "L"
+            ],
+            "results_count": {
+                "wins": 0,
+                "losses": 5,
+                "draws": 0
+            }
+        }
+    }
+]

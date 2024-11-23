@@ -1,0 +1,56 @@
+[
+    {
+        "prompt": "The match features odds of 3.3 for Neftchi Fargona to win! Nasaf Qarshi holds odds of 2.2 to secure a victory. A draw is valued at 3. What will be the outcome? Place your bets!",
+        "home_team": "Neftchi Fargona",
+        "away_team": "Nasaf Qarshi",
+        "home_odds": 3.3,
+        "draw_odds": 3,
+        "away_odds": 2.2,
+        "reading_time": 12.67
+    },
+    {
+        "prompt": "Home win odds are 2.7; away win odds are 2.45; draw odds stand at 3. Bet wisely and consider these numbers for your prediction!",
+        "home_team": "Um Alhassam",
+        "away_team": "Al-Ittifaq",
+        "home_odds": 2.7,
+        "draw_odds": 3,
+        "away_odds": 2.45,
+        "reading_time": 8.89
+    },
+    {
+        "prompt": "Full-time result odds are as follows: a win for the home team at 2.8; victory for the away team at 2.38; a draw at 3. Which outcome will prevail?",
+        "home_team": "Gamo Chencha",
+        "away_team": "Bench Maji Buna FC",
+        "home_odds": 2.8,
+        "draw_odds": 3,
+        "away_odds": 2.38,
+        "reading_time": 10.5
+    },
+    {
+        "prompt": "The odds for a win by the home team are 2.6. The away team has winning odds of 2.88. A draw is set at 2.63.",
+        "home_team": "Mawkhar SC",
+        "away_team": "Sohryngkham",
+        "home_odds": 2.6,
+        "draw_odds": 2.63,
+        "away_odds": 2.88,
+        "reading_time": 9.32
+    },
+    {
+        "prompt": "Full-time result odds: Masr El Makasa at 2.5; Asyut Cement at 2.8; Draw at 2.8.",
+        "home_team": " Masr El Makasa",
+        "away_team": "Asyut Cement",
+        "home_odds": 2.5,
+        "draw_odds": 2.8,
+        "away_odds": 2.8,
+        "reading_time": 6.02
+    },
+    {
+        "prompt": "Winning odds are 2.25 for the home team and 2.6 for the away team! A draw is set at 3.6.",
+        "home_team": "SpVgg Oberfranken Bayreuth",
+        "away_team": "Bayern Munchen (Youth)",
+        "home_odds": 2.25,
+        "draw_odds": 3.6,
+        "away_odds": 2.6,
+        "reading_time": 7.47
+    }
+]
