@@ -36,7 +36,7 @@ def main():
                 source_ids[file_name] = source_id
 
     # Save all source IDs to a JSON file
-    source_ids_path = os.path.join(Config.output_dir, "uploaded_source_ids.json")
+    source_ids_path = os.path.join(Config.output_dir, "second_video_uploaded_source_ids.json")
     with open(source_ids_path, "w") as json_file:
         json.dump(source_ids, json_file, indent=4)
         print(f"Source IDs saved to {source_ids_path}")
